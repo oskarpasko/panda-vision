@@ -1,0 +1,129 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+
+
+\graphicspath{{images/}}
+
+%--------------------------------------------------------------------------------------------------
+%       TITLE SECTION
+%--------------------------------------------------------------------------------------------------
+\begin{titlepage}
+
+\begin{center}
+	\includegraphics[scale=0.2]{ur_inf_logo}\\ \\ \\ \\
+\end{center}
+
+\begin{center}
+
+	{ \huge \bfseries Inżynieria oprogramowania}\\[0.4cm] 
+
+	\textsc{\Large PandaVision}\\[0.5cm] \\ \\ \\ \\ 
+	
+	\vspace{0.8cm}	
+	
+	\emph{Autor:} \\
+	\textbf{Oskar Paśko} (117987)\\
+	
+	
+	\vspace{0.8cm}
+	
+	\emph{Kierunek:} \\
+	Informatyka i ekonometria
+	
+	\vspace{8cm}
+	
+	\emph{Prowadzący:} \\
+	mgr inż. Ewa Żesławska\\ \\ \\ \\ 
+	
+	\vspace{2cm}
+	
+	Rzeszów, 2023
+\end{center}
+\end{titlepage}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=25mm,
+ top=25mm,
+ right=25mm,
+ bottom=25mm 
+ }
+ 
+%--------------------------------------------------------------------------------------------------
+%       BEGIN DOCUMENT
+%--------------------------------------------------------------------------------------------------
+
+\begin{document}
+\newpage
+
+%--------------------------------------------------------------------------------------------------
+%       TABLE OF CONTENTS
+%--------------------------------------------------------------------------------------------------
+\tableofcontents
+
+\newpage
+
+%--------------------------------------------------------------------------------------------------
+%       OPIS ŚWIATA RZECZYWISTEGO
+%--------------------------------------------------------------------------------------------------
+
+\section{Opis świata rzeczywistego}
+
+	\subsection{Opis zasobów ludzkich}
+
+	Gra na urządzenia wirtualnej rzeczywistości takich jak Oculus Quest 2 polegająca na zabawie kolorami z użyciem sześcianów lub innych obiektów na różnych planszach. Gra ma pomagać nad diagnozowaniem ewentualnych schorzeń daltonizmu lub jemu podobnych. Aplikacja może być również używana do zabawy rywalizacyjnej. Gra powinna być przystosowana dla użytkownika w dowolnym wieku. Gra pozwala na zapisywanie za pomocą eye-trackera ścieżki wzroku z jaką badany podążał podczas rozgrywki. Podczas rozgrywki mierzymy również czas wykonania zadania. Dzięki wynikom czasu, poprawności oraz ścieżkom eye-trackera jesteśmy w stanie bardzo dobrze przeanalizować zachowanie gracza oraz stwierdzić podejrzenie schorzenia. Wszystkie wyniki oraz przebieg badań jest zapisywany w postaci danych w bazie danych, do której dostęp ma administrator.
+	
+
+	\subsection{Przepisy i strategia firmy}
+	
+	Strategią firmy jest pomoc dzieciom oraz osobom dorosłym w diagnozowaniu schorzeń takich jak daltonizm itp. Dążymy do jak najlepszego kontaktu z naszymi pacjentami. Chcemy żeby nasi użytkownicy mieli jak największy wpływ na rozwój oprogramowania, które jest tworzone bezpośrednio dla nich. Przewidywane są częste aktualizacje oprogramowania w celu poprawy działania aplikacji oraz dodawanie nowych funkcjonalności i badań w przyszłości. Aplikacja dodatkowo będzie wysyłać w przeciągu tygodnia wyniki z najnowszych badań razem z ich interpretacją i ewentualnymi zaleceniami. Dodatkowo priorytetem firmy będzie zadbanie o bezpieczeństwo wrażliwych danych osobowych oraz danych konta naszych użytkowników.
+	
+
+	\subsection{Dane techniczne}
+	
+	Użytkownicy mogą korzystać z aplikacji tylko na urządzeniach wirtualnej rzeczywistości. Użytkownicy mogą się zalogować do aplikacji tylko wtedy gdy mają połączenie z internetem. Jeśli użytkownik nie posiada konta może je darmowo utworzyć. Zarejestrowany użytkownik może się zalogować za pomocą unikatowego numeru telefonu oraz hasła. Aplikacja umożliwia kontakt z administratorem w celu weryfikacji oraz konsultacji przeprowadzonych badań.
+	
+
+	\subsection{Wymagania funkcjonalne i niefunkcjonalne}
+
+		\subsubsection{Wymagania funkcjonalne}
+		
+			\begin{itemize}
+				\item Logowanie do systemu za pomocą numeru telefonu i hasła
+				\item Możliwość zarejestrowania się do systemu
+				\item Możliwość przeglądania historii badań
+				\item Możliwość przeczytania opisów poszczególnych badań,
+				\item Możliwość wyboru badań z listy,
+				\item Wykonanie badania wybranego z listy,
+			\end{itemize}
+			
+		\subsubsection{Wymagania niefunkcjonalne}
+		
+			\begin{itemize}
+				\item Aplikacja zapewnia bezpieczeństwo wrażliwych danych,
+				\item Aplikacja jest prosta w obsłudze,
+				\item Aplikacja zapewnia schludny i przejrzysty interface,
+				\item Aplikacja działa na urządzeniach wirtualnych Oculus Quest 2,
+				\item Aplikacja jest tworzona w środowisku Unity,
+				\item Aplikacja wykorzystuje bazę danych
+			\end{itemize}
+			
+		\subsection{Requirement Diagram}
+		
+		W oparciu o opis świata rzeczywistego oraz zdefiniowane wymagania funkcjonalne i funkcjonalne na Rys.1 przedstawiono diagram wymagań dla opisywanego oprogramowania.
+		
+		\section{Diagramy UML}
+		\subsection{Diagram przypadków użycia}
+		\subsection{Diagram aktywności}
+		\subsection{Diagram czynności}
+		\subsection{Diagram sekwencji}
+
+
+ 
+\end{document}
