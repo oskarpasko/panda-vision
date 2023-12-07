@@ -945,7 +945,7 @@
               <stereotype name="activity" />
             </stereotypes>
             <stereotype-instances>
-              <stereotype id="_c" type="activity" creation-date="12/04/2023 19:30:19" ref="" />
+              <stereotype id="_c" type="activity" creation-date="12/04/2023 19:22:34" ref="" />
             </stereotype-instances>
             <activity />
           </item>
