@@ -7,8 +7,20 @@
 \contentsline {subsubsection}{\numberline {1.4.1}Wymagania funkcjonalne}{2}{}%
 \contentsline {subsubsection}{\numberline {1.4.2}Wymagania niefunkcjonalne}{3}{}%
 \contentsline {subsection}{\numberline {1.5}Requirement Diagram}{3}{}%
-\contentsline {section}{\numberline {2}Diagramy UML}{3}{}%
-\contentsline {subsection}{\numberline {2.1}Diagram przypadków użycia}{3}{}%
-\contentsline {subsection}{\numberline {2.2}Diagram aktywności}{3}{}%
-\contentsline {subsection}{\numberline {2.3}Diagram czynności}{3}{}%
-\contentsline {subsection}{\numberline {2.4}Diagram sekwencji}{3}{}%
+\contentsline {section}{\numberline {2}Diagramy UML}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Diagram przypadków użycia}{4}{}%
+\contentsline {subsubsection}{\numberline {2.1.1}Definicja aktorów}{5}{}%
+\contentsline {subsubsection}{\numberline {2.1.2}PU Logowanie}{6}{}%
+\contentsline {subsubsection}{\numberline {2.1.3}PU Rejestracja}{6}{}%
+\contentsline {subsubsection}{\numberline {2.1.4}PU Lista badań}{6}{}%
+\contentsline {subsubsection}{\numberline {2.1.5}PU Opis Badania}{7}{}%
+\contentsline {subsubsection}{\numberline {2.1.6}PU Opis badań}{7}{}%
+\contentsline {subsubsection}{\numberline {2.1.7}PU Historia badań}{7}{}%
+\contentsline {subsubsection}{\numberline {2.1.8}PU Badanie}{8}{}%
+\contentsline {subsubsection}{\numberline {2.1.9}PU Lista użytkowników}{8}{}%
+\contentsline {subsubsection}{\numberline {2.1.10}PU Historia badań użytkownika}{8}{}%
+\contentsline {subsection}{\numberline {2.2}Diagram aktywności}{9}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Diagram aktywności - Logowanie}{9}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}Diagram aktywności - Rejestracja}{10}{}%
+\contentsline {subsection}{\numberline {2.3}Diagram czynności}{10}{}%
+\contentsline {subsection}{\numberline {2.4}Diagram sekwencji}{10}{}%

@@ -82,20 +82,23 @@
 
 	\subsection{Przepisy i strategia firmy}
 	
-	Strategią firmy jest pomoc dzieciom oraz osobom dorosłym w diagnozowaniu schorzeń takich jak daltonizm itp. Dążymy do jak najlepszego kontaktu z naszymi pacjentami. Chcemy żeby nasi użytkownicy mieli jak największy wpływ na rozwój oprogramowania, które jest tworzone bezpośrednio dla nich. Przewidywane są częste aktualizacje oprogramowania w celu poprawy działania aplikacji oraz dodawanie nowych funkcjonalności i badań w przyszłości. Aplikacja dodatkowo będzie wysyłać w przeciągu tygodnia wyniki z najnowszych badań razem z ich interpretacją i ewentualnymi zaleceniami. Dodatkowo priorytetem firmy będzie zadbanie o bezpieczeństwo wrażliwych danych osobowych oraz danych konta naszych użytkowników.
+	Strategią firmy jest pomoc dzieciom oraz osobom dorosłym w diagnozowaniu schorzeń takich jak daltonizm itp. Dążymy do jak najlepszego kontaktu z naszymi użytkownikami. Chcemy żeby nasi użytkownicy mieli jak największy wpływ na rozwój oprogramowania, które jest tworzone bezpośrednio dla nich. Przewidywane są częste aktualizacje oprogramowania w celu poprawy działania aplikacji oraz dodawanie nowych funkcjonalności i badań w przyszłości. Aplikacja dodatkowo będzie wysyłać w przeciągu tygodnia wyniki z najnowszych badań razem z ich interpretacją i ewentualnymi zaleceniami. Dodatkowo priorytetem firmy będzie zadbanie o bezpieczeństwo wrażliwych danych osobowych oraz danych konta naszych użytkowników.
 	
 
 	\subsection{Dane techniczne}
 	
 	Użytkownicy mogą korzystać z aplikacji tylko na urządzeniach wirtualnej rzeczywistości. Użytkownicy mogą się zalogować do aplikacji tylko wtedy gdy mają połączenie z internetem. Jeśli użytkownik nie posiada konta może je darmowo utworzyć. Zarejestrowany użytkownik może się zalogować za pomocą unikatowego numeru telefonu oraz hasła. Aplikacja umożliwia kontakt z administratorem w celu weryfikacji oraz konsultacji przeprowadzonych badań.
 	
+%--------------------------------------------------------------------------------------------------
+%       wYMAGANIA FUNKCJONALNE I NIEFUNKCJONALNE
+%--------------------------------------------------------------------------------------------------
 
 	\subsection{Wymagania funkcjonalne i niefunkcjonalne}
 
 		\subsubsection{Wymagania funkcjonalne}
 		
 			\begin{itemize}
-				\item Logowanie do systemu za pomocą numeru telefonu i hasła
+				\item Logowanie do systemu za pomocą adresu email i hasła
 				\item Możliwość zarejestrowania się do systemu
 				\item Możliwość przeglądania historii badań
 				\item Możliwość przeczytania opisów poszczególnych badań,
@@ -114,14 +117,266 @@
 				\item Aplikacja wykorzystuje bazę danych
 			\end{itemize}
 			
+%--------------------------------------------------------------------------------------------------
+%      	REQUREMENT DIAGRAM
+%--------------------------------------------------------------------------------------------------
+			
 		\subsection{Requirement Diagram}
 		
 		W oparciu o opis świata rzeczywistego oraz zdefiniowane wymagania funkcjonalne i funkcjonalne na Rys.1 przedstawiono diagram wymagań dla opisywanego oprogramowania.
 		
+		\begin{center}
+			\includegraphics[scale=0.5]{req_diagram}\\
+			\caption{Rys.1 Diagram wymagań}
+		\end{center}
+		
+%--------------------------------------------------------------------------------------------------
+%       DIAGRAMY UML
+%--------------------------------------------------------------------------------------------------
+		
 		\section{Diagramy UML}
 		\subsection{Diagram przypadków użycia}
+		
+		\begin{center}
+			\includegraphics[scale=0.5]{usecase_diagram}\\
+			\caption{Rys.2 Diagram przypadków użycia}
+		\end{center}		
+		
+		\textbf{Definicje scenariuszy przypadków użycia} (PU - przypadek użycia, WS - warunki wstępne, WK - warunki końcowe)\\
+		
+		\newpage
+		
+%--------------------------------------------------------------------------------------------------
+%       DEFINICJA AKTORÓW
+%--------------------------------------------------------------------------------------------------
+		
+		\subsubsection{Definicja aktorów}
+		
+		\quad		
+		
+		\textbf{Aktor:} Gość\\
+		
+		\textbf{Opis:} Gość może się zalogować lub zarejestrować do systemu.\\
+		
+		\textbf{Przypadki użycia:}
+		
+		\begin{itemize}
+			\item PU Logowanie
+			\item PU Rejestracja
+		\end{itemize}
+		
+		\vspace{1cm}
+		
+		\textbf{Aktor:} Użytkownik\\
+		
+		\textbf{Opis:} Użytkownik oprócz funkcjonalności gości może przeglądać listę badań, opisy badań oraz historie swoich badań. Użytkownik może również zacząć dowolne badanie dostępne z listy.\\
+		
+		\textbf{Przypadki użycia:}
+		
+		\begin{itemize}
+			\item PU Opis badań
+			\item PU Historia badań
+			\item PU Lista badań powiązane przez << extend >> z PU Opis badania oraz powiązane przez\\ << extend >> z PU Badanie
+		\end{itemize}
+		
+		\vspace{1cm}
+		
+		\textbf{Aktor:} Administrator\\
+		
+		\textbf{Opis:} Administrator zarządza systemem, bazą danych oraz analizuje wyniki badań użytkowników.\\
+		
+		\textbf{Przypadki użycia:}
+		
+		\begin{itemize}
+			\item PU Lista użytkowników powiązane przez << extend >> z PU Historia badań użytkownika
+		\end{itemize}		
+		
+		\newpage
+		
+		
+%-------------------------------------------
+%       PU LOGOWANIE
+%-------------------------------------------	
+		
+		\subsubsection{PU Logowanie}
+		
+		\quad
+		
+		\textbf{Cel: Zalogowanie do systemu}\\
+		
+		WS: może być wywołany z PU Logowanie\\
+		
+		WK: podanie niezbędnych danych do zalogowania tj. adres e-mail i hasło\\
+		
+		\textbf{Przebieg:}\\
+		Logowanie dostępne jest poprzez zakładkę "Logowanie". Podczas logowania należy podać adres e-mail oraz hasło. W przypadku podania błędnych danych pojawi się informacja o niepowodzeniu logowania w postaci komunikatu "Podano błędne dane". Użytkownik może ponownie podać dane lub wyjść z aplikacji. W przypadku 5 błędnych logowań system zablokuje konto i wyświetli komunikat "Prosimy o kontakt w celu odblokowania konta". Jeśli użytkownik wprowadzi poprawne dane to użytkownik zostanie zalogowany do systemu i przeniesie się automatycznie do panelu głównego aplikacji.\\
+		
+%-------------------------------------------
+%       PU REJESTRACJA
+%-------------------------------------------	
+		
+		\subsubsection{PU Rejestracja}
+		
+		\quad
+		
+		\textbf{Cel: Rejestracja do systemu}\\
+		
+		WS: może być wywołany z PU Rejestracja\\
+		
+		WK: podanie niezbędnych danych do zalogowania tj. imię, nazwisko, adres e-mail, hasło, numer telefonu, data urodzenia\\
+		
+		\textbf{Przebieg:}\\
+		Rejestracja jest dostępna przez zakładkę "Rejestracja". Podczas rejestracji należy podać imię, nazwisko, datę urodzenia, numer telefonu, unikalny adres e-mail oraz hasło. W przypadku podania niewłaściwych danych np. numeru telefonu o długości 10 cyfr lub adresu e-mail bez znaku "@" wyskoczy komunikat "Wprowadzono nieprawidłowe dane". W przypadku podania adresu e-mail, który już jest przypisany do innego konta wyskoczy komunikat "Konto z podanym adresem e-mail już istnieje". Użytkownik może ponownie podać dane lub wyjść z aplikacji. Jeśli użytkownik wprowadzi poprawne dane to zostanie przekierowany do panelu logowania, gdzie będzie mógł się zalogować odpowiednimi danymi. \\
+		
+%-------------------------------------------
+%       PU LISTA BADAŃ
+%-------------------------------------------	
+		
+		\subsubsection{PU Lista badań}
+		
+		\quad
+		
+		\textbf{Cel: Wybór badania z listy}\\
+		
+		WS: może być wywołany z PU Lista badań\\
+		
+		WK: wybór oraz wykonanie badania z listy\\
+		
+		\textbf{Przebieg:}\\
+		Lista badań jest dostępna przez zakładkę "Lista badań". Użytkownik może przeglądać dostępne badania, które są zaprezentowane w postaci listy za pomocą nazw badań oraz miniaturki zrzutu ekranu z przebiegu badania. Po kliknięciu w wybrane badanie użytkownik zostanie przekierowany do panelu badania. W panelu będzie mógł przeczytać szczegółowy opis badania przez wybranie zakładki "Opis badania", kryteria jakie będą brane pod uwagę, czas trwania badania oraz zacząć badanie. \\
+		
+%-------------------------------------------
+%       PU OPIS BADANIA
+%-------------------------------------------	
+		
+		\subsubsection{PU Opis Badania}
+		
+		\quad
+		
+		\textbf{Cel: Zapoznanie się z badaniem}\\
+		
+		WS: może być wywołany z PU Opis badania\\
+		
+		WK: szczegółowe zapoznanie się z przebiegiem badania \\
+		
+		\textbf{Przebieg:}\\
+		Po wyborze zakładki "Opis badania" w panelu badania użytkownikowi wyświetli się szczegółowy opis badania, który będzie zawierał wszystkie potrzebne informację do prawidłowego przebiegu badania oraz informację na temat optymalnych wyników badania. \\
+		
+%-------------------------------------------
+%       PU OPIS BADAŃ
+%-------------------------------------------	
+		
+		\subsubsection{PU Opis badań}
+		
+		\quad
+		
+		\textbf{Cel: Zapoznanie się z badaniami}\\
+		
+		WS: może być wywołany z PU Opis badań\\
+		
+		WK: zapoznanie się z dostępnymi badaniami\\
+		
+		\textbf{Przebieg:}\\
+		Opis badań jest dostępny przez zakładkę "Opis badań". Użytkownik może przeglądać opisy badań, które będą zaprezentowane w postaci listy za pomocą nazw badań oraz ogólnych informacji na temat badania tj. średni czas trwania badania, krótki opis przebiegu oraz receptorów jakie będą badanie. \\
+		
+%-------------------------------------------
+%       PU HISTORIA BADAŃ
+%-------------------------------------------	
+		
+		\subsubsection{PU Historia badań}
+		
+		\quad
+		
+		\textbf{Cel: Zapoznanie się wynikami poprzednik badań}\\
+		
+		WS: może być wywołany z PU Historia badań\\
+		
+		WK: zapoznanie się z dostępnymi wynikami z poprzednich wykonanych badań\\
+		
+		\textbf{Przebieg:}\\
+		Historia badań jest dostępny przez zakładkę "Historia badań". Użytkownik może przeglądać historię badań, które będą zaprezentowane w postaci listy za pomocą nazw badań oraz daty ich wykonania, dodatkowo każde badanie będzie można rozwinąć aby zobaczyć ewentualne ogólne informacje na temat przebiegu badania. Użytkownik zobaczy również komunikat "Po szczegółowe informacje na temat badania prosimy o kontakt". \\
+		
+%-------------------------------------------
+%       PU BADANIE
+%-------------------------------------------	
+		
+		\subsubsection{PU Badanie}
+		
+		\quad
+		
+		\textbf{Cel: Badanie receptorów wzroku}\\
+		
+		WS: może być wywołany z PU Badanie\\
+		
+		WK: wykonanie badanie \\
+		
+		\textbf{Przebieg:}\\
+		Po wyborze badania z listy badań użytkownik przez zakładkę "zacznij" z panelu badania może zacząć badanie. Każde badanie będzie przebiegać inaczej od pozostałych. Celem jest aby użytkownik komfortowo oraz bez wstępnej presji czasu wykonał zadanie na miarę jego możliwości. Po wykonaniu badania wyświetlą się komunikaty związane z odpowiednim badaniem. Mogą to być informację na temat czasy w jakim użytkownik wykonał badanie, liczba punktów jaką uzyskał oraz średnie wyniki innych użytkowników poddanym badaniom. Badanie zapisze się w historii badań użytkownika. \\	
+		
+%-------------------------------------------
+%       PU LISTA UŻYTKOWNIKÓW
+%-------------------------------------------	
+		
+		\subsubsection{PU Lista użytkowników}
+		
+		\quad
+		
+		\textbf{Cel: Przeglądanie listy użytkowników}\\
+		
+		WS: może być wywołany z PU Lista użytkowników\\
+		
+		WK: Przeglądanie danych użytkowników \\
+		
+		\textbf{Przebieg:}\\
+		Jeśli administrator prawidłowo zaloguje się do systemu to zostaje wyświetlona w panelu głównym lista użytkowników zarejestrowanych do systemu w postaci listy. Lista jest reprezentowana za pomocą imienia, nazwiska oraz adresu e-mail użytkownika. Klikając w użytkownika z listy możemy przejść do szczegółów jego konta.\\	
+		
+%-------------------------------------------
+%       PU HISTORIA BADAŃ UŻYTKOWNIKA
+%-------------------------------------------	
+		
+		\subsubsection{PU Historia badań użytkownika}
+		
+		\quad
+		
+		\textbf{Cel: Przeglądanie historii badań użytkownika}\\
+		
+		WS: może być wywołany z PU Historia badań użytkownika\\
+		
+		WK: Przeglądanie historii badań użytkownika \\
+		
+		\textbf{Przebieg:}\\
+		Po wybraniu użytkownika z list administrator zobaczy listę badań konkretnego użytkownika. Wyświetlane będą takie informacje jak: data badania, rodzaj badania oraz wyniki badań, dodatkowo powinny być pokazane pliki do pobrania, które stworzyły się podczas badania jak np. ścieżka śledzenia wzroku lub wykresy danych dostarczonych podczas badania. W przypadku stwierdzenia podejrzenia choroby poprzez nieprawidłowości związane z badaniem administrator przez zakładkę "Kontakt" powinien mieć bezpośrednią możliwość wysłania na adres e-mail użytkownika informacji na temat wyników badania wraz z udostępnieniem wszelkich danych oraz plików.
+		
+
+		
+
+%--------------------------------------------------------------------------------------------------
+%       DIAGRAM AKTYWNOŚCI
+%--------------------------------------------------------------------------------------------------
 		\subsection{Diagram aktywności}
+		
+		\subsubsection{Diagram aktywności - Logowanie}
+		
+		\begin{center}
+			\includegraphics[scale=0.5]{aclogowanie}\\
+			\caption{Rys.3 Diagram aktywności - Logowanie}
+		\end{center}	
+		
+		\subsubsection{Diagram aktywności - Rejestracja}
+		
+		\begin{center}
+			\includegraphics[scale=0.5]{acrejestracja}\\
+			\caption{Rys.3 Diagram aktywności - Rejestracja}
+		\end{center}
+		
+%--------------------------------------------------------------------------------------------------
+%       DIAGRAM CZYNNOŚCI
+%--------------------------------------------------------------------------------------------------
 		\subsection{Diagram czynności}
+		
+%--------------------------------------------------------------------------------------------------
+%       DIAGRAM SEKWENCJI
+%--------------------------------------------------------------------------------------------------
 		\subsection{Diagram sekwencji}
 
 
