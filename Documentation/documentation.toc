@@ -10,17 +10,20 @@
 \contentsline {section}{\numberline {2}Diagramy UML}{4}{}%
 \contentsline {subsection}{\numberline {2.1}Diagram przypadków użycia}{4}{}%
 \contentsline {subsubsection}{\numberline {2.1.1}Definicja aktorów}{5}{}%
-\contentsline {subsubsection}{\numberline {2.1.2}PU Logowanie}{6}{}%
-\contentsline {subsubsection}{\numberline {2.1.3}PU Rejestracja}{6}{}%
-\contentsline {subsubsection}{\numberline {2.1.4}PU Lista badań}{6}{}%
-\contentsline {subsubsection}{\numberline {2.1.5}PU Opis Badania}{7}{}%
-\contentsline {subsubsection}{\numberline {2.1.6}PU Opis badań}{7}{}%
-\contentsline {subsubsection}{\numberline {2.1.7}PU Historia badań}{7}{}%
-\contentsline {subsubsection}{\numberline {2.1.8}PU Badanie}{8}{}%
-\contentsline {subsubsection}{\numberline {2.1.9}PU Lista użytkowników}{8}{}%
-\contentsline {subsubsection}{\numberline {2.1.10}PU Historia badań użytkownika}{8}{}%
-\contentsline {subsection}{\numberline {2.2}Diagram aktywności}{9}{}%
-\contentsline {subsubsection}{\numberline {2.2.1}Diagram aktywności - Logowanie}{9}{}%
-\contentsline {subsubsection}{\numberline {2.2.2}Diagram aktywności - Rejestracja}{10}{}%
-\contentsline {subsection}{\numberline {2.3}Diagram czynności}{10}{}%
-\contentsline {subsection}{\numberline {2.4}Diagram sekwencji}{10}{}%
+\contentsline {subsubsection}{\numberline {2.1.2}PU Baza danych}{6}{}%
+\contentsline {subsubsection}{\numberline {2.1.3}PU Logowanie}{6}{}%
+\contentsline {subsubsection}{\numberline {2.1.4}PU Rejestracja}{6}{}%
+\contentsline {subsubsection}{\numberline {2.1.5}PU Lista badań}{7}{}%
+\contentsline {subsubsection}{\numberline {2.1.6}PU Badanie}{7}{}%
+\contentsline {subsubsection}{\numberline {2.1.7}PU Opis Badania}{7}{}%
+\contentsline {subsubsection}{\numberline {2.1.8}PU Zarządzanie kontem}{7}{}%
+\contentsline {subsubsection}{\numberline {2.1.9}PU Historia badań}{8}{}%
+\contentsline {subsubsection}{\numberline {2.1.10}PU Zmiana danych}{8}{}%
+\contentsline {subsubsection}{\numberline {2.1.11}PU Lista użytkowników}{8}{}%
+\contentsline {subsubsection}{\numberline {2.1.12}PU Historia badań użytkownika}{8}{}%
+\contentsline {subsubsection}{\numberline {2.1.13}PU Zarządzanie danymi użytkownika}{9}{}%
+\contentsline {subsection}{\numberline {2.2}Diagram aktywności}{10}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Diagram aktywności - Logowanie}{10}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}Diagram aktywności - Rejestracja}{11}{}%
+\contentsline {subsection}{\numberline {2.3}Diagram czynności}{11}{}%
+\contentsline {subsection}{\numberline {2.4}Diagram sekwencji}{11}{}%
