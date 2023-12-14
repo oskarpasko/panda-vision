@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.10.4)  10 DEC 2023 18:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.10.4)  14 DEC 2023 20:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -378,11 +378,11 @@ l.130 			\caption
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<usecase_diagram.png, id=22, 588.69937pt x 495.35063pt>
-File: usecase_diagram.png Graphic file (type png)
-<use usecase_diagram.png>
-Package pdftex.def Info: usecase_diagram.png  used on input line 141.
-(pdftex.def)             Requested size: 294.34895pt x 247.67471pt.
+<useCaseDiagram.png, id=22, 718.93594pt x 670.75594pt>
+File: useCaseDiagram.png Graphic file (type png)
+<use useCaseDiagram.png>
+Package pdftex.def Info: useCaseDiagram.png  used on input line 141.
+(pdftex.def)             Requested size: 359.46709pt x 335.37714pt.
 
 ! LaTeX Error: \caption outside float.
 
@@ -400,7 +400,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
  []
 
-[4 <./usecase_diagram.png>]
+[4 <./useCaseDiagram.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
@@ -658,7 +658,7 @@ L3 programming layer <2023-08-29>
  ) 
 Here is how much of TeX's memory you used:
  3395 strings out of 475247
- 54442 string characters out of 5774207
+ 54431 string characters out of 5774207
  1926801 words of memory out of 5000000
  24895 multiletter control sequences out of 15000+600000
  580664 words of font info for 63 fonts, out of 8000000 for 9000
@@ -671,7 +671,7 @@ Here is how much of TeX's memory you used:
 pen/ec/dpi600\eccc1728.pk> <C:\Users\oskar\AppData\Local\MiKTeX\fonts/pk/ljfour
 /jknappen/ec/dpi600\ecrb2488.pk><F:/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><F:
 /MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on documentation.pdf (11 pages, 453502 bytes).
+Output written on documentation.pdf (11 pages, 497171 bytes).
 PDF statistics:
  161 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
