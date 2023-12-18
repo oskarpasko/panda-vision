@@ -194,20 +194,21 @@
 		\newpage
 		
 %-------------------------------------------
-%       PU Baza danych
+%       PU BAZA DANYCH
 %-------------------------------------------	
 		
 		\subsubsection{PU Baza danych}
 		
 		\quad
 		
-		\textbf{Cel: }\\
+		\textbf{Cel: Zarządzanie danymi}\\
 		
-		WS: \\
+		WS: Rest API\\
 		
-		WK: \\
+		WK: Możliwość zarządzania danymi\\
 		
-		\textbf{Przebieg:}\\
+		\textbf{Przebieg: }\\
+		Baza danych będzie wykorzystywana do możliwości logowania oraz rejestracji. Ponadto będą się w niej znajdować wyniki badań użytkowników.
 		 \\
 		
 		
@@ -263,88 +264,111 @@
 		Lista badań jest dostępna przez zakładkę "Lista badań". Użytkownik może przeglądać dostępne badania, które są zaprezentowane w postaci listy za pomocą nazw badań oraz miniaturki zrzutu ekranu z przebiegu badania. Po kliknięciu w wybrane badanie użytkownik zostanie przekierowany do panelu badania. W panelu będzie mógł przeczytać szczegółowy opis badania przez wybranie zakładki "Opis badania", kryteria jakie będą brane pod uwagę, czas trwania badania oraz zacząć badanie. \\
 		
 %-------------------------------------------
-%       PU Badanie
+%       PU BADANIE
 %-------------------------------------------	
 		
 		\subsubsection{PU Badanie}
 		
 		\quad
 		
-		\textbf{Cel: }\\
+		\textbf{Cel: Zaznajomienie się z badaniem}\\
 		
-		WS: \\
+		WS: może być wywołany z PU Badanie\\
 		
-		WK: \\
+		WK: Zaznajomienie się z badaniem\\
 		
-		\textbf{Przebieg:}\\
+		\textbf{Przebieg: }\\
+		Badanie możemy wywołać po wybraniu odpowiedniego badania z listy. Użytkownik będzie mógł sprawdzić konkretne dane związane z badaniem takie jak czas trwania badania, rzeczy które będą brane pod uwagę podczas badania, średnie wyniki badań oraz opis przebiegu badania. Po kliknięciu w przycisk "Zacznij badanie" użytkownik zacznie badanie. Po kliknięciu w przycisk "Opis" użytkownikowi wyświetli się opis badania.
 		 \\
 		 
 %-------------------------------------------
-%       PU Opis Badania
+%       PU OPIS BADANIA
 %-------------------------------------------	
 		
-		\subsubsection{PU Opis Badania}
+		\subsubsection{PU Opis badania}
 		
 		\quad
 		
-		\textbf{Cel: }\\
+		\textbf{Cel: Zaznajomienie się z przebiegiem badania}\\
 		
-		WS: \\
+		WS: może być wywołany z PU badania\\
 		
-		WK: \\
+		WK: Zaznajomienie się z przebiegiem badania\\
 		
-		\textbf{Przebieg:}\\
+		\textbf{Przebieg: }\\
+		Użytkownik będzie mógł przeczytać szczegółowy opis na temat konkretnego badania oraz przeczytać szczegółowy przebieg badania.
 		 \\
 		 
 %-------------------------------------------
-%       PU Zarządzanie kontem
+%       PU ZBIERANIE DANYCH
+%-------------------------------------------	
+		
+		\subsubsection{PU Zbieranie danych}
+		
+		\quad
+		
+		\textbf{Cel: Przebieg badania}\\
+		
+		WS: może być wywołany z PU Zbieranie danych\\
+		
+		WK: Przebieg badania\\
+		
+		\textbf{Przebieg: }\\
+		Przebieg badania będzie się różnić w zależności od badania. Użytkownik będzie przechodzić przez testy podczas badania związane z receptorami wzroku. Podczas badania będzie śledzona trasa wzroku za pomocą technologi eye-trackingowej. Ponadto podczas badania nieustannie będą zbierane dane, które odpowiednio przeliczone będą reprezentowane dla użytkownika po zakończeniu badania oraz wysłane do bazy danych.
+		 \\
+		 
+%-------------------------------------------
+%       PU ZARZĄDZANIE KONTEM
 %-------------------------------------------	
 		
 		\subsubsection{PU Zarządzanie kontem}
 		
 		\quad
 		
-		\textbf{Cel: }\\
+		\textbf{Cel: Zarządzanie danymi}\\
 		
-		WS: \\
+		WS: może być wywołany z PU Zarządzanie kontem\\
 		
-		WK: \\
+		WK: Zarządzanie danymi\\
 		
 		\textbf{Przebieg:}\\
+		Użytkownik może wybrać zakładkę "Historia badań" lub zakładkę "Zmiana danych" za pomocą, których będzie mógł zarządzać swoimi danymi lub historią swoich badań.
 		 \\
 		 
 %-------------------------------------------
-%       PU Historia badań
+%       PU HISOTRIA BADAŃ
 %-------------------------------------------	
 		
 		\subsubsection{PU Historia badań}
 		
 		\quad
 		
-		\textbf{Cel: }\\
+		\textbf{Cel: Przeglądanie historii badań}\\
 		
-		WS: \\
+		WS: może być wywołany z PU Historia badań\\
 		
-		WK: \\
+		WK: Przeglądanie historii badań\\
 		
 		\textbf{Przebieg:}\\
+		Użytkownik może przeglądać listę z historią swoich badań reprezentowaną nazwą badania oraz datą. Po kliknięciu w badanie rozwinie się zakładka z szczegółowymi danymi dotyczącymi konkretnego badania.
 		 \\
 		 
 %-------------------------------------------
-%       PU Zmiana danych
+%       PU ZMIANA DANYCH
 %-------------------------------------------	
 		
 		\subsubsection{PU Zmiana danych}
 		
 		\quad
 		
-		\textbf{Cel: }\\
+		\textbf{Cel: Możliwość zmiany danych personalnych}\\
 		
-		WS: \\
+		WS: może być wywołany z PU Zmiana danych\\
 		
-		WK: \\
+		WK: Możliwość zmiany danych personalnych\\
 		
 		\textbf{Przebieg:}\\
+		Użytkownik może zarządzać wszystkimi swoimi danymi, które podał podczas rejestracji. Po kliknięciu w odpowiedni przycisk tj. "Zmień imię", "Zmień nazwisko", "Zmień adres e-mail", "Zmień datę urodzenia", "Zmień numer telefonu", "Zmień hasło" użytkownik będzie miał możliwość zmiany konkretnych danych swojego konta za pośrednictwem wpisania starych danych oraz wpisania nowych.
 		 \\
 			
 		
@@ -383,20 +407,21 @@
 		Po wybraniu użytkownika z list administrator zobaczy listę badań konkretnego użytkownika. Wyświetlane będą takie informacje jak: data badania, rodzaj badania oraz wyniki badań, dodatkowo powinny być pokazane pliki do pobrania, które stworzyły się podczas badania jak np. ścieżka śledzenia wzroku lub wykresy danych dostarczonych podczas badania. W przypadku stwierdzenia podejrzenia choroby poprzez nieprawidłowości związane z badaniem administrator przez zakładkę "Kontakt" powinien mieć bezpośrednią możliwość wysłania na adres e-mail użytkownika informacji na temat wyników badania wraz z udostępnieniem wszelkich danych oraz plików.
 		
 %-------------------------------------------
-%       PU Zarządzanie danymi użytkownika
+%       PU ZARZĄDZANIE DANYMI UŻYTKOWNIKA
 %-------------------------------------------	
 		
 		\subsubsection{PU Zarządzanie danymi użytkownika}
 		
 		\quad
 		
-		\textbf{Cel: }\\
+		\textbf{Cel: Zmiana danych personalnych}\\
 		
-		WS: \\
+		WS: może być wywołany z PU Zarządzanie danymi użytkownika\\
 		
-		WK: \\
+		WK: Zmiana danych personalnych\\
 		
 		\textbf{Przebieg:}\\
+		Administrator ma możliwość odblokowania konta użytkownika oraz ewentualną zmianę danych użytkownika. Ponadto administrator ma dostęp do wszystkich szczegółowych danych związanych z badaniami użytkownika.
 		 \\
 		
 
@@ -418,18 +443,82 @@
 		
 		\begin{center}
 			\includegraphics[scale=0.5]{acrejestracja}\\
-			\caption{Rys.3 Diagram aktywności - Rejestracja}
+			\caption{Rys.4 Diagram aktywności - Rejestracja}
+		\end{center}
+		
+%--------------------------------------------------------------------------------------------------
+%       DIAGRAM KLAS
+%--------------------------------------------------------------------------------------------------
+		\subsection{Diagram klas}
+		
+		\begin{center}
+			\includegraphics[scale=0.5]{classDiagram}\\
+			\caption{Rys.5 Diagram klas}
+		\end{center}
+		
+		\subsubsection{Baza Danych}	
+		
+		Klasa odpowiedzialna za połączenie z bazą danych.
+		
+		\subsubsection{Start}
+		
+		Główna klasa, która będzie wywoływana podczas uruchamiania aplikacji. Klasa będzie tworzyć instancje klas Logowanie lub Rejestracja w zależności od wyboru użytkownika.
+		
+		\subsubsection{Logowanie}
+		
+		Klasa odpowiedzialna za system logowania do aplikacji. Klasa będzie korzystać z klasy BazaDanych. Klasa będzie się znajdować w klasie Start oraz tworzyć instancję klasy Uzytkownik, jeśli nastąpi poprawne logowanie do systemu.
+		
+		\subsubsection{Rejestracja}
+		
+		Klasa odpowiedzialna za rejestrowanie użytkownika do systemu oraz walidacji danych podczas rejestracji. Klasa będzie korzystać z klasy BazaDanych oraz będzie znajdować się w klasie Start. 
+		
+		\subsubsection{Osoba}
+		
+		Klasa abstrakcyjna, po której będzie dziedziczyć klasa reprezentująca użytkowników.
+		
+		\subsubsection{Uzytkownik}
+		
+		Klasa dziedzicząca po klasie Osoba. Zawiera składowe takie jak nr pacjenta oraz imię. Klasa zawiera metody, które będą wykorzystane do reprezentowania danych użytkownika oraz przekazywania numeru pacjenta do innych klas.
+		
+		\subsubsection{Dashboard}
+		
+		Klasa będzie odpowiedzialna za obsługę menu głównego użytkownika. W klasie będzie tworzyć instancje klas ListaBadan lub Konto w zależności od wyboru użytkownika.
+		
+		\subsubsection{Konto}
+		
+		Klasa odpowiedzialna za zarządzanie przez użytkownika swoimi danymi. Klasa będzie połączona z klasą BazaDanych oraz będzie się znajdować w klasie Dashboard.
+		
+		\subsubsection{ListaBadan}
+		
+		Klasa, która będzie tworzyć posortowaną listę klas z badaniami.
+		
+		\subsubsection{Badanie}
+		
+		Klasa abstrakcyjna, po której będą dziedziczyć klasy związane z konkretnymi badaniami. Klasa będzie zawierać metody do obsługi badania tj. np. zacznijBadanie(), wyswietlOpis() itp.
+		
+		\subsubsection{PrzebiegBadania}
+		
+		Interface, który będzie zawierać metody niezbędne podczas badania tj. np. wyślijDane(), pobierzDaneUzytkownika() itp.
+		
+		\subsubsection{<nazwa\_badania>}
+		
+		Klasa, której nazwą będzie konkretne badanie. Zakładamy, że w aplikacji będzie się znajdować więcej niż jedno badanie do wyboru. Klasa będzie odpowiedzialna za mechanizm całego badania, jego przebieg oraz dostarczenie wyników do bazy danych. Klasa korzysta z klasy BazaDanych oraz znajduje się w klasie ListaBadan.
+		
+		
+%--------------------------------------------------------------------------------------------------
+%       DIAGRAM SEKWENCJI
+%--------------------------------------------------------------------------------------------------
+		\subsection{Diagram sekwencji}
+		
+		\begin{center}
+			\includegraphics[scale=0.6]{seqDiagram}\\
+			\caption{Rys.6 Diagram sekwencji (Logowanie)}
 		\end{center}
 		
 %--------------------------------------------------------------------------------------------------
 %       DIAGRAM CZYNNOŚCI
 %--------------------------------------------------------------------------------------------------
 		\subsection{Diagram czynności}
-		
-%--------------------------------------------------------------------------------------------------
-%       DIAGRAM SEKWENCJI
-%--------------------------------------------------------------------------------------------------
-		\subsection{Diagram sekwencji}
 
 
  
