@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.10.4)  15 DEC 2023 21:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.10.4)  31 JAN 2024 22:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -81,6 +81,10 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 ) (F:\MiKTeX\tex/latex/psnfss\times.sty
 Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
 )
+(F:\MiKTeX\tex/latex/psnfss\mathpazo.sty
+Package: mathpazo 2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS) 
+\symupright=\mathgroup4
+)
 
 ! LaTeX Error: Missing \begin{document}.
 
@@ -88,7 +92,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.16 \begin{center}
+l.17 \begin{center}
                    
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -96,7 +100,7 @@ If that doesn't work, type  X <return>  to quit.
 <ur_inf_logo.png, id=1, 1674.255pt x 461.725pt>
 File: ur_inf_logo.png Graphic file (type png)
 <use ur_inf_logo.png>
-Package pdftex.def Info: ur_inf_logo.png  used on input line 17.
+Package pdftex.def Info: ur_inf_logo.png  used on input line 18.
 (pdftex.def)             Requested size: 334.84506pt x 92.34335pt.
 
 ! LaTeX Error: There's no line here to end.
@@ -105,7 +109,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.17 ...cludegraphics[scale=0.2]{ur_inf_logo}\\ \\
+l.18 ...cludegraphics[scale=0.2]{ur_inf_logo}\\ \\
                                                    \\ \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -118,7 +122,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.17 ...degraphics[scale=0.2]{ur_inf_logo}\\ \\ \\
+l.18 ...degraphics[scale=0.2]{ur_inf_logo}\\ \\ \\
                                                    \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -131,7 +135,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.17 ...raphics[scale=0.2]{ur_inf_logo}\\ \\ \\ \\
+l.18 ...raphics[scale=0.2]{ur_inf_logo}\\ \\ \\ \\
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -144,7 +148,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.24 	\textsc{\Large PandaVision}\\[0.5cm] \\
+l.25 	\textsc{\Large PandaVision}\\[0.5cm] \\
                                               \\ \\ \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -157,7 +161,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.24 	\textsc{\Large PandaVision}\\[0.5cm] \\ \\
+l.25 	\textsc{\Large PandaVision}\\[0.5cm] \\ \\
                                                  \\ \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -170,7 +174,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.24 ...xtsc{\Large PandaVision}\\[0.5cm] \\ \\ \\
+l.25 ...xtsc{\Large PandaVision}\\[0.5cm] \\ \\ \\
                                                    \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -183,7 +187,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.24 ...c{\Large PandaVision}\\[0.5cm] \\ \\ \\ \\
+l.25 ...c{\Large PandaVision}\\[0.5cm] \\ \\ \\ \\
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -196,7 +200,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.40 	mgr in≈º. Ewa ≈ªes≈Çawska\\ \\
+l.41 	mgr in≈º. Ewa ≈ªes≈Çawska\\ \\
                                      \\ \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -209,7 +213,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.40 	mgr in≈º. Ewa ≈ªes≈Çawska\\ \\ \\
+l.41 	mgr in≈º. Ewa ≈ªes≈Çawska\\ \\ \\
                                         \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -222,16 +226,16 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.40 	mgr in≈º. Ewa ≈ªes≈Çawska\\ \\ \\ \\
+l.41 	mgr in≈º. Ewa ≈ªes≈Çawska\\ \\ \\ \\
                                           
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 46
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 47
 .
-(F:\MiKTeX\tex/latex/psnfss\t1ptm.fd
-File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+(F:\MiKTeX\tex/latex/psnfss\t1ppl.fd
+File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 ) [1
 
 {C:/Users/oskar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./ur_inf_log
@@ -272,20 +276,20 @@ File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 ) (documentation.aux)
 \openout1 = `documentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
 
 (F:\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -308,6 +312,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (F:\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
+\big@size=\dimen154
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -343,30 +349,49 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 (documentation.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 3.
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 3
+.
+ (F:\MiKTeX\tex/latex/psnfss\ot1ppl.fd
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
+3.
+
+(F:\MiKTeX\tex/latex/psnfss\omlzplm.fd
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
+3.
+ (F:\MiKTeX\tex/latex/psnfss\omszplm.fd
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
+3.
+(F:\MiKTeX\tex/latex/psnfss\omxzplm.fd
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
+3.
+ (F:\MiKTeX\tex/latex/psnfss\ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+))
 \tf@toc=\write3
 \openout3 = `documentation.toc'.
 
- [1{F:/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-01.
+ [1{F:/MiKTeX/fonts/enc/dvips/base/8r.enc}] [2]
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 1
+03.
 
-(F:\MiKTeX\tex/latex/psnfss\ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [2]
+(F:\MiKTeX\tex/latex/psnfss\ts1ppl.fd
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
+)
 <reqDiagram.png, id=21, 1160.83687pt x 720.44156pt>
 File: reqDiagram.png Graphic file (type png)
 <use reqDiagram.png>
-Package pdftex.def Info: reqDiagram.png  used on input line 129.
+Package pdftex.def Info: reqDiagram.png  used on input line 130.
 (pdftex.def)             Requested size: 464.32652pt x 288.17151pt.
 
-Overfull \hbox (9.08241pt too wide) in paragraph at lines 129--129
+Overfull \hbox (9.08241pt too wide) in paragraph at lines 130--130
  [] 
  []
 
@@ -377,16 +402,18 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.130 			\caption
+l.131 			\caption
                  {Rys.1 Diagram wymaga≈Ñ}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<useCaseDiagram.png, id=22, 718.93594pt x 670.75594pt>
+[3 <./reqDiagram.png>]
+<useCaseDiagram.png, id=26, 718.93594pt x 670.75594pt>
 File: useCaseDiagram.png Graphic file (type png)
 <use useCaseDiagram.png>
-Package pdftex.def Info: useCaseDiagram.png  used on input line 141.
+Package pdftex.def Info: useCaseDiagram.png  used on input line 147.
 (pdftex.def)             Requested size: 359.46709pt x 335.37714pt.
+
 
 ! LaTeX Error: \caption outside float.
 
@@ -394,23 +421,23 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.142 			\caption
+l.148 			\caption
                  {Rys.2 Diagram przypadk√≥w u≈ºycia}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[3 <./reqDiagram.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
-
- []
-
 [4 <./useCaseDiagram.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
 
  []
 
@@ -425,277 +452,281 @@ Underfull \hbox (badness 10000) in paragraph at lines 172--173
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--185
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--187
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--207
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--209
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--213
+Underfull \hbox (badness 10000) in paragraph at lines 200--203
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--224
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--231
-
+Overfull \hbox (4.47095pt too wide) in paragraph at lines 219--221
+\T1/ppl/m/n/12 nych lo-go-wa´ sys-tem za-blo-kuje konto i wy-±wie-tli ko-mu-ni-
+kat "Pro-simy o kon-takt w celu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--241
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 242--243
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 244--245
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 246--248
+Underfull \hbox (badness 10000) in paragraph at lines 219--221
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 259--260
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--262
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--265
+Underfull \hbox (badness 10000) in paragraph at lines 238--240
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--275
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--277
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--279
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--283
+Underfull \hbox (badness 10000) in paragraph at lines 255--257
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 294--295
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--301
-
+Overfull \hbox (7.01616pt too wide) in paragraph at lines 272--275
+\T1/ppl/m/n/12 da-nia b¶d° zbie-rane dane z prze-pro-wa-dza-nego ba-da-nia ta-k
+ie jak czas, wy-nik lub ±cieªka
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--311
+Underfull \hbox (badness 10000) in paragraph at lines 272--275
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 312--313
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--315
+Underfull \hbox (badness 10000) in paragraph at lines 286--287
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--319
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
+Underfull \hbox (badness 10000) in paragraph at lines 290--293
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--333
+Underfull \hbox (badness 10000) in paragraph at lines 304--305
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--337
+Underfull \hbox (badness 10000) in paragraph at lines 306--307
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--347
+Underfull \hbox (badness 10000) in paragraph at lines 308--311
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--349
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--351
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--355
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--365
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 366--367
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 368--369
+Underfull \hbox (badness 10000) in paragraph at lines 326--329
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 370--373
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--384
+Underfull \hbox (badness 10000) in paragraph at lines 342--343
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 385--386
+Underfull \hbox (badness 10000) in paragraph at lines 344--345
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 387--388
+Underfull \hbox (badness 10000) in paragraph at lines 346--349
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--391
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 400--401
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--403
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--405
+Underfull \hbox (badness 10000) in paragraph at lines 365--367
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--418
+Underfull \hbox (badness 10000) in paragraph at lines 376--377
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 419--420
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--422
+Underfull \hbox (badness 10000) in paragraph at lines 380--381
 
+ []
+
+
+Overfull \hbox (17.82721pt too wide) in paragraph at lines 382--384
+\T1/ppl/m/n/12 nie-pra-wi-d™o-wo-±ci zwi°-zane z ba-da-niem ad-mi-ni-stra-tor p
+rzez za-k™adk¶ "Kon-takt"powinien
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 423--426
+Underfull \hbox (badness 10000) in paragraph at lines 395--396
 
  []
 
-<aclogowanie.png, id=47, 942.52126pt x 747.54282pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--398
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--400
+
+ []
+
+
+Overfull \hbox (13.68745pt too wide) in paragraph at lines 401--404
+\T1/ppl/m/n/12 Administrator ma moª-li-wo±¢ od-blo-ko-wa-nia konta uªyt-kow-nik
+a oraz ewen-tu-aln° zmian¶
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--404
+
+ []
+
+<aclogowanie.png, id=47, 942.52126pt x 655.69969pt>
 File: aclogowanie.png Graphic file (type png)
 <use aclogowanie.png>
-Package pdftex.def Info: aclogowanie.png  used on input line 438.
-(pdftex.def)             Requested size: 471.25948pt x 373.7705pt.
+Package pdftex.def Info: aclogowanie.png  used on input line 417.
+(pdftex.def)             Requested size: 471.25948pt x 327.84904pt.
 
-Overfull \hbox (16.01537pt too wide) in paragraph at lines 438--438
+Overfull \hbox (16.01537pt too wide) in paragraph at lines 417--417
  [] 
  []
 
@@ -706,18 +737,18 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.439 			\caption
+l.418 			\caption
                  {Rys.3 Diagram aktywno≈õci - Logowanie}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<acrejestracja.png, id=48, 940.26282pt x 980.91469pt>
+<acrejestracja.png, id=48, 928.97063pt x 770.12718pt>
 File: acrejestracja.png Graphic file (type png)
 <use acrejestracja.png>
-Package pdftex.def Info: acrejestracja.png  used on input line 445.
-(pdftex.def)             Requested size: 470.13026pt x 490.45615pt.
+Package pdftex.def Info: acrejestracja.png  used on input line 423.
+(pdftex.def)             Requested size: 464.48418pt x 385.06264pt.
 
-Overfull \hbox (14.88615pt too wide) in paragraph at lines 445--445
+Overfull \hbox (9.24007pt too wide) in paragraph at lines 423--423
  [] 
  []
 
@@ -728,16 +759,36 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.446 			\caption
+l.424 			\caption
                  {Rys.4 Diagram aktywno≈õci - Rejestracja}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [10 <./aclogowanie.png>]
-<classDiagram.png, id=53, 900.36375pt x 684.30656pt>
+Underfull \hbox (badness 10000) in paragraph at lines 432--433
+
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+qcr on input line 43
+4.
+(F:\MiKTeX\tex/latex/tex-gyre\t1qcr.fd
+File: t1qcr.fd 2009/09/25 v1.2 font definition file for T1/qcr
+)
+Overfull \hbox (1.15776pt too wide) in paragraph at lines 434--435
+[]\T1/ppl/m/n/12 Klasa \T1/qcr/m/n/12 Ba-za-Da-nych \T1/ppl/m/n/12 od-po-wie-dz
+ialna jest za po-™°-cze-nie z baz° da-nych. G™Ûwna klasa
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
+
+ []
+
+[11{F:/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec.enc} <./acrejestracja.png>]
+<classDiagram.png, id=58, 900.36375pt x 684.30656pt>
 File: classDiagram.png Graphic file (type png)
 <use classDiagram.png>
-Package pdftex.def Info: classDiagram.png  used on input line 455.
+Package pdftex.def Info: classDiagram.png  used on input line 437.
 (pdftex.def)             Requested size: 450.18077pt x 342.15244pt.
 
 
@@ -747,16 +798,16 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.456 			\caption
+l.438 			\caption
                  {Rys.5 Diagram klas}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[11 <./acrejestracja.png>] [12 <./classDiagram.png>]
-<seqDiagram.png, id=63, 714.41907pt x 534.49687pt>
+[12 <./classDiagram.png>]
+<seqDiagram.png, id=64, 714.41907pt x 534.49687pt>
 File: seqDiagram.png Graphic file (type png)
 <use seqDiagram.png>
-Package pdftex.def Info: seqDiagram.png  used on input line 514.
+Package pdftex.def Info: seqDiagram.png  used on input line 452.
 (pdftex.def)             Requested size: 428.65475pt x 320.70059pt.
 
 
@@ -766,35 +817,36 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.515 			\caption
+l.453 			\caption
                  {Rys.6 Diagram sekwencji (Logowanie)}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[13] [14 <./seqDiagram.png>] (documentation.aux)
+[13 <./seqDiagram.png>] (documentation.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3420 strings out of 475247
- 54920 string characters out of 5774207
- 1932801 words of memory out of 5000000
- 24920 multiletter control sequences out of 15000+600000
- 580664 words of font info for 63 fonts, out of 8000000 for 9000
+ 3648 strings out of 475247
+ 58213 string characters out of 5774207
+ 1924801 words of memory out of 5000000
+ 25125 multiletter control sequences out of 15000+600000
+ 577865 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,65p,906b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,6n,65p,2332b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\oskar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
 1200.pk> <C:\Users\oskar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\ecrb1200.pk> <C:\Users\oskar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
 /dpi600\ecti1200.pk> <C:\Users\oskar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
 pen/ec/dpi600\eccc1728.pk> <C:\Users\oskar\AppData\Local\MiKTeX\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecrb2488.pk><F:/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><F:
-/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on documentation.pdf (15 pages, 653658 bytes).
+/jknappen/ec/dpi600\ecrb2488.pk><F:/MiKTeX/fonts/type1/public/tex-gyre/qcrr.pfb
+><F:/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><F:/MiKTeX/fonts/type1/urw/pala
+tino/uplr8a.pfb>
+Output written on documentation.pdf (14 pages, 664616 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
+ 181 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

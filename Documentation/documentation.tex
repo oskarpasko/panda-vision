@@ -4,6 +4,7 @@
 \usepackage[polish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{times}
+\usepackage{mathpazo}
 
 
 \graphicspath{{images/}}
@@ -77,25 +78,26 @@
 
 	\subsection{Opis zasobów ludzkich}
 
-	Gra na urządzenia wirtualnej rzeczywistości takich jak Oculus Quest 2 polegająca na zabawie kolorami z użyciem sześcianów lub innych obiektów na różnych planszach. Gra ma pomagać nad diagnozowaniem ewentualnych schorzeń daltonizmu lub jemu podobnych. Aplikacja może być również używana do zabawy rywalizacyjnej. Gra powinna być przystosowana dla użytkownika w dowolnym wieku. Gra pozwala na zapisywanie za pomocą eye-trackera ścieżki wzroku z jaką badany podążał podczas rozgrywki. Podczas rozgrywki mierzymy również czas wykonania zadania. Dzięki wynikom czasu, poprawności oraz ścieżkom eye-trackera jesteśmy w stanie bardzo dobrze przeanalizować zachowanie gracza oraz stwierdzić podejrzenie schorzenia. Wszystkie wyniki oraz przebieg badań jest zapisywany w postaci danych w bazie danych, do której dostęp ma administrator.
+	Gra na urządzenia wirtualnej rzeczywistości takich jak Oculus Quest 2 polegająca na zabawie kolorami z~użyciem sześcianów lub innych obiektów na różnych planszach. Gra ma pomagać nad diagnozowaniem ewentualnych schorzeń daltonizmu lub jemu podobnych. Aplikacja może być również używana do zabawy rywalizacyjnej. Gra powinna być przystosowana dla użytkownika w~dowolnym wieku. Gra pozwala na zapisywanie za pomocą eye-trackera ścieżki wzroku z~jaką badany podążał podczas rozgrywki. Podczas rozgrywki mierzymy również czas wykonania zadania. Dzięki wynikom czasu, poprawności oraz ścieżkom eye-trackera jesteśmy w~stanie bardzo dobrze przeanalizować zachowanie gracza oraz stwierdzić podejrzenie schorzenia. Wszystkie wyniki oraz przebieg badań jest zapisywany w~postaci danych w~bazie danych, do której dostęp ma administrator.
 	
 
 	\subsection{Przepisy i strategia firmy}
 	
-	Strategią firmy jest pomoc dzieciom oraz osobom dorosłym w diagnozowaniu schorzeń takich jak daltonizm itp. Dążymy do jak najlepszego kontaktu z naszymi użytkownikami. Chcemy żeby nasi użytkownicy mieli jak największy wpływ na rozwój oprogramowania, które jest tworzone bezpośrednio dla nich. Przewidywane są częste aktualizacje oprogramowania w celu poprawy działania aplikacji oraz dodawanie nowych funkcjonalności i badań w przyszłości. Aplikacja dodatkowo będzie wysyłać w przeciągu tygodnia wyniki z najnowszych badań razem z ich interpretacją i ewentualnymi zaleceniami. Dodatkowo priorytetem firmy będzie zadbanie o bezpieczeństwo wrażliwych danych osobowych oraz danych konta naszych użytkowników.
+	Strategią firmy jest pomoc dzieciom oraz osobom dorosłym w~diagnozowaniu schorzeń takich jak daltonizm itp. Dążymy do jak najlepszego kontaktu z~naszymi użytkownikami. Chcemy żeby nasi użytkownicy mieli jak największy wpływ na rozwój oprogramowania, które jest tworzone bezpośrednio dla nich. Przewidywane są częste aktualizacje oprogramowania w~celu poprawy działania aplikacji oraz dodawanie nowych funkcjonalności i~badań w~przyszłości. Aplikacja dodatkowo będzie wysyłać w~przeciągu tygodnia wyniki z~najnowszych badań razem z~ich interpretacją i~ewentualnymi zaleceniami. Dodatkowo priorytetem firmy będzie zadbanie o~bezpieczeństwo wrażliwych danych osobowych oraz danych konta naszych użytkowników.
 	
 
 	\subsection{Dane techniczne}
 	
-	Użytkownicy mogą korzystać z aplikacji tylko na urządzeniach wirtualnej rzeczywistości. Użytkownicy mogą się zalogować do aplikacji tylko wtedy gdy mają połączenie z internetem. Jeśli użytkownik nie posiada konta może je darmowo utworzyć. Zarejestrowany użytkownik może się zalogować za pomocą unikatowego numeru telefonu oraz hasła. Aplikacja umożliwia kontakt z administratorem w celu weryfikacji oraz konsultacji przeprowadzonych badań.
+	Użytkownicy mogą korzystać z~aplikacji tylko na urządzeniach wirtualnej rzeczywistości. Użytkownicy mogą się zalogować do aplikacji tylko wtedy gdy mają połączenie z internetem. Jeśli użytkownik nie posiada konta może je darmowo utworzyć. Zarejestrowany użytkownik może się zalogować za pomocą unikatowego numeru telefonu oraz hasła. Aplikacja umożliwia kontakt z~administratorem w~celu weryfikacji oraz konsultacji przeprowadzonych badań.
 	
 %--------------------------------------------------------------------------------------------------
 %       WYMAGANIA FUNKCJONALNE I NIEFUNKCJONALNE
 %--------------------------------------------------------------------------------------------------
 
+	\newpage	
+	
 	\subsection{Wymagania funkcjonalne i niefunkcjonalne}
 
-		\subsubsection{Wymagania funkcjonalne}
 		
 			\begin{itemize}
 				\item Logowanie do systemu za pomocą adresu email i hasła
@@ -106,7 +108,6 @@
 				\item Wykonanie badania wybranego z listy,
 			\end{itemize}
 			
-		\subsubsection{Wymagania niefunkcjonalne}
 		
 			\begin{itemize}
 				\item Aplikacja zapewnia bezpieczeństwo wrażliwych danych,
@@ -123,7 +124,7 @@
 			
 		\subsection{Requirement Diagram}
 		
-		W oparciu o opis świata rzeczywistego oraz zdefiniowane wymagania funkcjonalne i funkcjonalne na Rys.1 przedstawiono diagram wymagań dla opisywanego oprogramowania.
+		W~oparciu o~opis świata rzeczywistego oraz zdefiniowane wymagania funkcjonalne i~niefunkcjonalne na Rys.1 przedstawiono diagram wymagań dla opisywanego oprogramowania.
 		
 		\begin{center}
 			\includegraphics[scale=0.4]{reqDiagram}\\
@@ -135,22 +136,26 @@
 %--------------------------------------------------------------------------------------------------
 		
 		\section{Diagramy UML}
+
+		W~tym rozdziale przedstawiona zostanie koncepcja projektowanego systemu za pomocą języka UML.		
+		
 		\subsection{Diagram przypadków użycia}
+		
+		W~oparciu o~opis świata rzeczywistego oraz zdefiniowane wymagania funkcjonalne i~niefunkcjonalne na Rys.2 przedstawiono diagram przypadków użycia dla opisywanego oprogramowania.
 		
 		\begin{center}
 			\includegraphics[scale=0.5]{useCaseDiagram}\\
 			\caption{Rys.2 Diagram przypadków użycia}
 		\end{center}		
 		
-		\textbf{Definicje scenariuszy przypadków użycia} (PU - przypadek użycia, WS - warunki wstępne, WK - warunki końcowe)\\
-		
-		\newpage
 		
 %--------------------------------------------------------------------------------------------------
 %       DEFINICJA AKTORÓW
 %--------------------------------------------------------------------------------------------------
+
+		\newpage		
 		
-		\subsubsection{Definicja aktorów}
+		\textbf{Definicje scenariuszy przypadków użycia} (PU - przypadek użycia, WS - warunki wstępne, WK - warunki końcowe)\\
 		
 		\quad		
 		
@@ -158,26 +163,15 @@
 		
 		\textbf{Opis:} Gość może się zalogować lub zarejestrować do systemu.\\
 		
-		\textbf{Przypadki użycia:}
-		
-		\begin{itemize}
-			\item PU Logowanie
-			\item PU Rejestracja
-		\end{itemize}
+		\textbf{Przypadki użycia:} PU Logowanie, PU Rejestracja.
 		
 		\vspace{1cm}
 		
 		\textbf{Aktor:} Użytkownik\\
 		
-		\textbf{Opis:} Użytkownik oprócz funkcjonalności gości może przeglądać listę badań, opisy badań oraz historie swoich badań. Użytkownik może również zacząć dowolne badanie dostępne z listy.\\
+		\textbf{Opis:} Użytkownik oprócz funkcjonalności gości może przeglądać listę badań, opisy badań oraz historie swoich badań. Użytkownik może również zacząć dowolne badanie dostępne z~listy.\\
 		
-		\textbf{Przypadki użycia:}
-		
-		\begin{itemize}
-			\item PU Opis badań
-			\item PU Historia badań
-			\item PU Lista badań powiązane przez << extend >> z PU Opis badania oraz powiązane przez\\ << extend >> z PU Badanie
-		\end{itemize}
+		\textbf{Przypadki użycia:} PU Lista badań, PU Zarządzanie kontem, PU Edycja danych powiązane przez << extend >> z~PU Zarządzanie kontem, PU Historia badań powiązane przez << extend >>\\ z~PU Zarządzanie kontem, PU Opis badania powiązane przez << extend >> z~PU Lista badań,\\ PU Start powiązane przez << extend >> z~PU Lista badań. 
 		
 		\vspace{1cm}
 		
@@ -185,11 +179,7 @@
 		
 		\textbf{Opis:} Administrator zarządza systemem, bazą danych oraz analizuje wyniki badań użytkowników.\\
 		
-		\textbf{Przypadki użycia:}
-		
-		\begin{itemize}
-			\item PU Lista użytkowników powiązane przez << extend >> z PU Historia badań użytkownika
-		\end{itemize}		
+		\textbf{Przypadki użycia:} PU Baza danych, PU Zarządzanie systemem, PU Historia badań użytkownika powiązane przez << extend >> z~PU Zarządzanie systemem, PU Zarządzanie danymi użytkownika powiązane przez << extend >> z~PU Zarządzanie systemem.	
 		
 		\newpage
 		
@@ -197,18 +187,18 @@
 %       PU BAZA DANYCH
 %-------------------------------------------	
 		
-		\subsubsection{PU Baza danych}
+		\textbf{PU Baza danych}
 		
 		\quad
 		
 		\textbf{Cel: Zarządzanie danymi}\\
 		
-		WS: Rest API\\
+		WS: Rest API.\\
 		
-		WK: Możliwość zarządzania danymi\\
+		WK: Możliwość zarządzania danymi.\\
 		
 		\textbf{Przebieg: }\\
-		Baza danych będzie wykorzystywana do możliwości logowania oraz rejestracji. Ponadto będą się w niej znajdować wyniki badań użytkowników.
+		Baza danych będzie wykorzystywana do możliwości logowania oraz rejestracji. Ponadto będą się w~niej znajdować wyniki badań użytkowników. Baza danych będzie się składać z~tabeli przechowujących dane użytkowników takie jak adres e-mail, imię, nazwisko, hasło, numer telefonu oraz datę urodzenia. Ponadto baza danych będzie posiadać tabelę z~badaniami, w~której będą zamieszczone wszystkie niezbędne dane dotyczące badań takie jak czas wykonania badania, datę przeprowadzenia badania, pliki zebrane podczas badania np. ścieżka eye-trackera oraz informację, który użytkownik przeprowadził konkretne badanie.
 		 \\
 		
 		
@@ -216,212 +206,200 @@
 %       PU LOGOWANIE
 %-------------------------------------------	
 		
-		\subsubsection{PU Logowanie}
+		\textbf{PU Logowanie}
 		
 		\quad
 		
 		\textbf{Cel: Zalogowanie do systemu}\\
 		
-		WS: może być wywołany z PU Logowanie\\
+		WS: może być wywołany z PU Logowanie.\\
 		
-		WK: podanie niezbędnych danych do zalogowania tj. adres e-mail i hasło\\
+		WK: podanie niezbędnych danych do zalogowania tj. adres e-mail i hasło.\\
 		
 		\textbf{Przebieg:}\\
-		Logowanie dostępne jest poprzez zakładkę "Logowanie". Podczas logowania należy podać adres e-mail oraz hasło. W przypadku podania błędnych danych pojawi się informacja o niepowodzeniu logowania w postaci komunikatu "Podano błędne dane". Użytkownik może ponownie podać dane lub wyjść z aplikacji. W przypadku 5 błędnych logowań system zablokuje konto i wyświetli komunikat "Prosimy o kontakt w celu odblokowania konta". Jeśli użytkownik wprowadzi poprawne dane to użytkownik zostanie zalogowany do systemu i przeniesie się automatycznie do panelu głównego aplikacji.\\
+		Logowanie dostępne jest poprzez zakładkę "Logowanie". Podczas logowania należy podać adres e-mail oraz hasło. W~przypadku podania błędnych danych pojawi się informacja o~niepowodzeniu logowania w~postaci komunikatu "Podano błędne dane". Użytkownik może ponownie podać dane lub wyjść z~aplikacji. W~przypadku 5 błędnych logowań system zablokuje konto i~wyświetli komunikat "Prosimy o~kontakt w~celu odblokowania konta". Jeśli użytkownik wprowadzi poprawne dane to użytkownik zostanie zalogowany do systemu i~przeniesie się automatycznie do panelu głównego aplikacji.\\
 		
 %-------------------------------------------
 %       PU REJESTRACJA
 %-------------------------------------------	
 		
-		\subsubsection{PU Rejestracja}
+		\newpage		
+		
+		\textbf{PU Rejestracja}
 		
 		\quad
 		
 		\textbf{Cel: Rejestracja do systemu}\\
 		
-		WS: może być wywołany z PU Rejestracja\\
+		WS: może być wywołany z PU Rejestracja.\\
 		
-		WK: podanie niezbędnych danych do zalogowania tj. imię, nazwisko, adres e-mail, hasło, numer telefonu, data urodzenia\\
+		WK: podanie niezbędnych danych do zalogowania tj. imię, nazwisko, adres e-mail, hasło, numer telefonu, data urodzenia.\\
 		
 		\textbf{Przebieg:}\\
-		Rejestracja jest dostępna przez zakładkę "Rejestracja". Podczas rejestracji należy podać imię, nazwisko, datę urodzenia, numer telefonu, unikalny adres e-mail oraz hasło. W przypadku podania niewłaściwych danych np. numeru telefonu o długości 10 cyfr lub adresu e-mail bez znaku "@" wyskoczy komunikat "Wprowadzono nieprawidłowe dane". W przypadku podania adresu e-mail, który już jest przypisany do innego konta wyskoczy komunikat "Konto z podanym adresem e-mail już istnieje". Użytkownik może ponownie podać dane lub wyjść z aplikacji. Jeśli użytkownik wprowadzi poprawne dane to zostanie przekierowany do panelu logowania, gdzie będzie mógł się zalogować odpowiednimi danymi. \\
+		Rejestracja jest dostępna przez zakładkę "Rejestracja". Podczas rejestracji należy podać imię, nazwisko, datę urodzenia, numer telefonu, unikalny adres e-mail oraz hasło. W~przypadku podania niewłaściwych danych np. numeru telefonu o~długości 10 cyfr lub adresu e-mail bez znaku "@" wyskoczy komunikat "Wprowadzono nieprawidłowe dane". W przypadku podania adresu e-mail, który już jest przypisany do innego konta wyskoczy komunikat "Konto z~podanym adresem e-mail już istnieje". Użytkownik może ponownie podać dane lub wyjść z aplikacji. Jeśli użytkownik wprowadzi poprawne dane to zostanie przekierowany do panelu logowania, gdzie będzie mógł się zalogować odpowiednimi danymi. \\
 		
 %-------------------------------------------
 %       PU LISTA BADAŃ
 %-------------------------------------------	
 		
-		\subsubsection{PU Lista badań}
+		\textbf{PU Lista badań}
 		
 		\quad
 		
 		\textbf{Cel: Wybór badania z listy}\\
 		
-		WS: może być wywołany z PU Lista badań\\
+		WS: może być wywołany z PU Lista badań.\\
 		
-		WK: wybór oraz wykonanie badania z listy\\
+		WK: wybór badania z listy\\
 		
 		\textbf{Przebieg:}\\
-		Lista badań jest dostępna przez zakładkę "Lista badań". Użytkownik może przeglądać dostępne badania, które są zaprezentowane w postaci listy za pomocą nazw badań oraz miniaturki zrzutu ekranu z przebiegu badania. Po kliknięciu w wybrane badanie użytkownik zostanie przekierowany do panelu badania. W panelu będzie mógł przeczytać szczegółowy opis badania przez wybranie zakładki "Opis badania", kryteria jakie będą brane pod uwagę, czas trwania badania oraz zacząć badanie. \\
+		Lista badań jest dostępna przez zakładkę "Lista badań". Użytkownik może przeglądać dostępne badania, które są zaprezentowane w~postaci listy za pomocą nazw badań oraz dwóch przycisków "Start oraz "Opis". Po kliknięciu przycisku "Opis" użytkownik zostanie wyświetlony opis badania. Po kliknięciu w przycisk "Start" użytkownik zacznie wybrane badanie. \\
 		
 %-------------------------------------------
-%       PU BADANIE
+%       PU START
 %-------------------------------------------	
 		
-		\subsubsection{PU Badanie}
+		\textbf{PU Start}
 		
 		\quad
 		
 		\textbf{Cel: Zaznajomienie się z badaniem}\\
 		
-		WS: może być wywołany z PU Badanie\\
+		WS: może być wywołany z PU Start.\\
 		
-		WK: Zaznajomienie się z badaniem\\
+		WK: wykonanie badania.\\
 		
 		\textbf{Przebieg: }\\
-		Badanie możemy wywołać po wybraniu odpowiedniego badania z listy. Użytkownik będzie mógł sprawdzić konkretne dane związane z badaniem takie jak czas trwania badania, rzeczy które będą brane pod uwagę podczas badania, średnie wyniki badań oraz opis przebiegu badania. Po kliknięciu w przycisk "Zacznij badanie" użytkownik zacznie badanie. Po kliknięciu w przycisk "Opis" użytkownikowi wyświetli się opis badania.
+		Badanie możemy wywołać po wybraniu odpowiedniego badania z listy. Podczas badania będą zbierane dane z przeprowadzanego badania takie jak czas, wynik lub ścieżka wzroku, liczba popełnionych błędów. Po zakończeniu badania, wszystkie dane są zapisywane w~bazie danych zgodnie z~metodologią zapisu plików.
 		 \\
 		 
 %-------------------------------------------
 %       PU OPIS BADANIA
 %-------------------------------------------	
 		
-		\subsubsection{PU Opis badania}
+		\textbf{PU Opis Badania}
 		
 		\quad
 		
 		\textbf{Cel: Zaznajomienie się z przebiegiem badania}\\
 		
-		WS: może być wywołany z PU badania\\
+		WS: może być wywołany z PU badania.\\
 		
-		WK: Zaznajomienie się z przebiegiem badania\\
-		
-		\textbf{Przebieg: }\\
-		Użytkownik będzie mógł przeczytać szczegółowy opis na temat konkretnego badania oraz przeczytać szczegółowy przebieg badania.
-		 \\
-		 
-%-------------------------------------------
-%       PU ZBIERANIE DANYCH
-%-------------------------------------------	
-		
-		\subsubsection{PU Zbieranie danych}
-		
-		\quad
-		
-		\textbf{Cel: Przebieg badania}\\
-		
-		WS: może być wywołany z PU Zbieranie danych\\
-		
-		WK: Przebieg badania\\
+		WK: zaznajomienie się z przebiegiem badania.\\
 		
 		\textbf{Przebieg: }\\
-		Przebieg badania będzie się różnić w zależności od badania. Użytkownik będzie przechodzić przez testy podczas badania związane z receptorami wzroku. Podczas badania będzie śledzona trasa wzroku za pomocą technologi eye-trackingowej. Ponadto podczas badania nieustannie będą zbierane dane, które odpowiednio przeliczone będą reprezentowane dla użytkownika po zakończeniu badania oraz wysłane do bazy danych.
+		Użytkownik będzie mógł przeczytać szczegółowy opis na temat konkretnego badania oraz przeczytać szczegółowy przebieg badania. Dostępne będą również przykładowe zrzuty ekranu z~przebiegu badania.
 		 \\
 		 
 %-------------------------------------------
 %       PU ZARZĄDZANIE KONTEM
 %-------------------------------------------	
 		
-		\subsubsection{PU Zarządzanie kontem}
+		\textbf{PU Zarządzanie kontem}
 		
 		\quad
 		
 		\textbf{Cel: Zarządzanie danymi}\\
 		
-		WS: może być wywołany z PU Zarządzanie kontem\\
+		WS: może być wywołany z PU Zarządzanie kontem.\\
 		
-		WK: Zarządzanie danymi\\
+		WK: zarządzanie danymi.\\
 		
 		\textbf{Przebieg:}\\
 		Użytkownik może wybrać zakładkę "Historia badań" lub zakładkę "Zmiana danych" za pomocą, których będzie mógł zarządzać swoimi danymi lub historią swoich badań.
 		 \\
 		 
 %-------------------------------------------
-%       PU HISOTRIA BADAŃ
+%       PU HISTORIA BADAŃ
 %-------------------------------------------	
 		
-		\subsubsection{PU Historia badań}
+		\textbf{PU Historia badań}
 		
 		\quad
 		
 		\textbf{Cel: Przeglądanie historii badań}\\
 		
-		WS: może być wywołany z PU Historia badań\\
+		WS: może być wywołany z PU Historia badań.\\
 		
-		WK: Przeglądanie historii badań\\
+		WK: przeglądanie historii badań.\\
 		
 		\textbf{Przebieg:}\\
-		Użytkownik może przeglądać listę z historią swoich badań reprezentowaną nazwą badania oraz datą. Po kliknięciu w badanie rozwinie się zakładka z szczegółowymi danymi dotyczącymi konkretnego badania.
+		Użytkownik może przeglądać listę z~historią swoich badań reprezentowaną nazwą badania oraz datą. Po kliknięciu w~badanie rozwinie się zakładka z~szczegółowymi danymi dotyczącymi konkretnego badania.
 		 \\
 		 
 %-------------------------------------------
 %       PU ZMIANA DANYCH
 %-------------------------------------------	
 		
-		\subsubsection{PU Zmiana danych}
+		\newpage		
+		
+		\textbf{PU Zmiana danych}
 		
 		\quad
 		
 		\textbf{Cel: Możliwość zmiany danych personalnych}\\
 		
-		WS: może być wywołany z PU Zmiana danych\\
+		WS: może być wywołany z PU Zmiana danych.\\
 		
-		WK: Możliwość zmiany danych personalnych\\
+		WK: możliwość zmiany danych personalnych.\\
 		
 		\textbf{Przebieg:}\\
-		Użytkownik może zarządzać wszystkimi swoimi danymi, które podał podczas rejestracji. Po kliknięciu w odpowiedni przycisk tj. "Zmień imię", "Zmień nazwisko", "Zmień adres e-mail", "Zmień datę urodzenia", "Zmień numer telefonu", "Zmień hasło" użytkownik będzie miał możliwość zmiany konkretnych danych swojego konta za pośrednictwem wpisania starych danych oraz wpisania nowych.
+		Użytkownik może zarządzać wszystkimi swoimi danymi, które podał podczas rejestracji. Po kliknięciu w~odpowiedni przycisk tj. "Zmień imię", "Zmień nazwisko", "Zmień adres e-mail", "Zmień datę urodzenia", "Zmień numer telefonu", "Zmień hasło" użytkownik będzie miał możliwość zmiany konkretnych danych swojego konta za pośrednictwem wpisania starych danych oraz wpisania nowych.
 		 \\
 			
 		
 %-------------------------------------------
-%       PU LISTA UŻYTKOWNIKÓW
+%       PU  ZARZĄDZANIE SYSTEMEM
 %-------------------------------------------	
 		
-		\subsubsection{PU Lista użytkowników}
+		\textbf{PU Zarządzanie systemem}
 		
 		\quad
 		
-		\textbf{Cel: Przeglądanie listy użytkowników}\\
+		\textbf{Cel: Zarządzanie bazą danych}\\
 		
-		WS: może być wywołany z PU Lista użytkowników\\
+		WS: może być wywołany z PU Zarządzanie systemem.\\
 		
-		WK: Przeglądanie danych użytkowników \\
+		WK: zarządzanie bazą danych. \\
 		
 		\textbf{Przebieg:}\\
-		Jeśli administrator prawidłowo zaloguje się do systemu to zostaje wyświetlona w panelu głównym lista użytkowników zarejestrowanych do systemu w postaci listy. Lista jest reprezentowana za pomocą imienia, nazwiska oraz adresu e-mail użytkownika. Klikając w użytkownika z listy możemy przejść do szczegółów jego konta.\\	
+		Jeśli administrator prawidłowo zaloguje się do systemu to zostaje wyświetlona w~panelu głównym lista użytkowników zarejestrowanych do systemu w~postaci listy. Lista jest reprezentowana za pomocą imienia, nazwiska oraz adresu e-mail użytkownika. Klikając w użytkownika z~listy możemy przejść do szczegółów jego konta.\\	
 		
 %-------------------------------------------
 %       PU HISTORIA BADAŃ UŻYTKOWNIKA
 %-------------------------------------------	
 		
-		\subsubsection{PU Historia badań użytkownika}
+		\textbf{PU Historia badań użytkownika}
 		
 		\quad
 		
 		\textbf{Cel: Przeglądanie historii badań użytkownika}\\
 		
-		WS: może być wywołany z PU Historia badań użytkownika\\
+		WS: może być wywołany z PU Historia badań użytkownika.\\
 		
-		WK: Przeglądanie historii badań użytkownika \\
+		WK: przeglądanie historii badań użytkownika. \\
 		
 		\textbf{Przebieg:}\\
-		Po wybraniu użytkownika z list administrator zobaczy listę badań konkretnego użytkownika. Wyświetlane będą takie informacje jak: data badania, rodzaj badania oraz wyniki badań, dodatkowo powinny być pokazane pliki do pobrania, które stworzyły się podczas badania jak np. ścieżka śledzenia wzroku lub wykresy danych dostarczonych podczas badania. W przypadku stwierdzenia podejrzenia choroby poprzez nieprawidłowości związane z badaniem administrator przez zakładkę "Kontakt" powinien mieć bezpośrednią możliwość wysłania na adres e-mail użytkownika informacji na temat wyników badania wraz z udostępnieniem wszelkich danych oraz plików.
+		Po wybraniu użytkownika z~listy administrator zobaczy listę badań konkretnego użytkownika. Wyświetlane będą takie informacje jak: data badania, rodzaj badania oraz wyniki badań, dodatkowo powinny być pokazane pliki do pobrania, które stworzyły się podczas badania jak np. ścieżka śledzenia wzroku lub wykresy danych dostarczonych podczas badania. W~przypadku stwierdzenia podejrzenia schorzenia poprzez nieprawidłowości związane z~badaniem administrator przez zakładkę "Kontakt" powinien mieć bezpośrednią możliwość wysłania na adres e-mail użytkownika informacji na temat wyników badania wraz z~udostępnieniem wszelkich danych oraz plików.
 		
 %-------------------------------------------
 %       PU ZARZĄDZANIE DANYMI UŻYTKOWNIKA
 %-------------------------------------------	
 		
-		\subsubsection{PU Zarządzanie danymi użytkownika}
+		\newpage		
+		
+		\textbf{PU Zarządzanie danymi użytkownika}
 		
 		\quad
 		
 		\textbf{Cel: Zmiana danych personalnych}\\
 		
-		WS: może być wywołany z PU Zarządzanie danymi użytkownika\\
+		WS: może być wywołany z PU Zarządzanie danymi użytkownika.\\
 		
-		WK: Zmiana danych personalnych\\
+		WK: zmiana danych personalnych.\\
 		
 		\textbf{Przebieg:}\\
-		Administrator ma możliwość odblokowania konta użytkownika oraz ewentualną zmianę danych użytkownika. Ponadto administrator ma dostęp do wszystkich szczegółowych danych związanych z badaniami użytkownika.
+		Administrator ma możliwość odblokowania konta użytkownika oraz ewentualną zmianę danych użytkownika. Ponadto administrator ma dostęp do wszystkich szczegółowych danych związanych z~badaniami użytkownika.
 		 \\
 		
 
@@ -432,14 +410,14 @@
 %--------------------------------------------------------------------------------------------------
 		\subsection{Diagram aktywności}
 		
-		\subsubsection{Diagram aktywności - Logowanie}
+		W oparciu o~diagram przypadków użycia oraz przebiegu PU Logowanie i~PU Rejestracja na Rys.3 oraz Rys.4 przedstawiono kolejno diagram aktywności logowania i~diagram aktywności rejestracji dla opisywanego oprogramowania.
+		
 		
 		\begin{center}
 			\includegraphics[scale=0.5]{aclogowanie}\\
 			\caption{Rys.3 Diagram aktywności - Logowanie}
 		\end{center}	
 		
-		\subsubsection{Diagram aktywności - Rejestracja}
 		
 		\begin{center}
 			\includegraphics[scale=0.5]{acrejestracja}\\
@@ -451,64 +429,24 @@
 %--------------------------------------------------------------------------------------------------
 		\subsection{Diagram klas}
 		
+		Na podstawie diagramu przypadków użycia na Rys.5 przedstawiono diagram klas dla opisywanego oprogramowania.\\	
+		
+		Klasa {\fontfamily{qcr}\selectfont BazaDanych} odpowiedzialna jest za połączenie z~bazą danych. Główna klasa {\fontfamily{qcr}\selectfont Start}, będzie wywoływana podczas uruchamiania aplikacji. Klasa będzie tworzyć instancje klas Logowanie lub Rejestracja w~zależności od wyboru użytkownika. Klasa {\fontfamily{qcr}\selectfont Logowanie} będzie odpowiedzialna za system logowania do aplikacji. Klasa będzie korzystać z~klasy BazaDanych. Klasa będzie się znajdować w~klasie Start oraz tworzyć instancję klasy Uzytkownik, jeśli nastąpi poprawne logowanie do systemu. Klasa {\fontfamily{qcr}\selectfont Rejestracja} odpowiedzialna będzie za rejestrowanie użytkownika do systemu oraz walidacji danych podczas rejestracji. Klasa będzie korzystać z~klasy BazaDanych oraz będzie znajdować się w~klasie Start. Klasa {\fontfamily{qcr}\selectfont Osoba} będzie klasą abstrakcyjną, po której będzie dziedziczyć klasa reprezentująca użytkowników. Klasa {\fontfamily{qcr}\selectfont Uzytkownik} dziedziczy po klasie Osoba oraz zawiera składowe takie jak numer pacjenta oraz imię. Klasa zawiera metody, które będą wykorzystane do reprezentowania danych użytkownika oraz przekazywania numeru pacjenta do innych klas. Klasa {\fontfamily{qcr}\selectfont Dashboard} będzie odpowiedzialna za obsługę menu głównego użytkownika. Klasa ta będzie tworzyć instancje klas ListaBadan lub Konto. Klasa {\fontfamily{qcr}\selectfont Konto} odpowiedzialna będzie za zarządzanie przez użytkownika swoimi danymi. Klasa będzie połączona z~klasą BazaDanych oraz będzie się znajdować w~klasie Dashboard. Klasa {\fontfamily{qcr}\selectfont Badanie} to klasa, która zawiera wszystkie składowe danego badania oraz metody sterujące badaniem. Ponadto klasa zawiera główną metodę start(), która rozpoczyna badanie oraz metodę opis(), która wyświetli szczegółowy opis badania. Klasa ta będzie wywoływana w klasie ListaBadan. Klasa {\fontfamily{qcr}\selectfont ListaBadan} będzie tworzyć posortowaną listę klas z~dostępnymi badaniami. Klasa będzie również umożliwiać otworzenie opisu danego badania lub jego rozpoczęcie za pomocą metod start() oraz opis() z klasy Badanie.\\
+		
 		\begin{center}
 			\includegraphics[scale=0.5]{classDiagram}\\
 			\caption{Rys.5 Diagram klas}
 		\end{center}
 		
-		\subsubsection{Baza Danych}	
-		
-		Klasa odpowiedzialna za połączenie z bazą danych.
-		
-		\subsubsection{Start}
-		
-		Główna klasa, która będzie wywoływana podczas uruchamiania aplikacji. Klasa będzie tworzyć instancje klas Logowanie lub Rejestracja w zależności od wyboru użytkownika.
-		
-		\subsubsection{Logowanie}
-		
-		Klasa odpowiedzialna za system logowania do aplikacji. Klasa będzie korzystać z klasy BazaDanych. Klasa będzie się znajdować w klasie Start oraz tworzyć instancję klasy Uzytkownik, jeśli nastąpi poprawne logowanie do systemu.
-		
-		\subsubsection{Rejestracja}
-		
-		Klasa odpowiedzialna za rejestrowanie użytkownika do systemu oraz walidacji danych podczas rejestracji. Klasa będzie korzystać z klasy BazaDanych oraz będzie znajdować się w klasie Start. 
-		
-		\subsubsection{Osoba}
-		
-		Klasa abstrakcyjna, po której będzie dziedziczyć klasa reprezentująca użytkowników.
-		
-		\subsubsection{Uzytkownik}
-		
-		Klasa dziedzicząca po klasie Osoba. Zawiera składowe takie jak nr pacjenta oraz imię. Klasa zawiera metody, które będą wykorzystane do reprezentowania danych użytkownika oraz przekazywania numeru pacjenta do innych klas.
-		
-		\subsubsection{Dashboard}
-		
-		Klasa będzie odpowiedzialna za obsługę menu głównego użytkownika. W klasie będzie tworzyć instancje klas ListaBadan lub Konto w zależności od wyboru użytkownika.
-		
-		\subsubsection{Konto}
-		
-		Klasa odpowiedzialna za zarządzanie przez użytkownika swoimi danymi. Klasa będzie połączona z klasą BazaDanych oraz będzie się znajdować w klasie Dashboard.
-		
-		\subsubsection{ListaBadan}
-		
-		Klasa, która będzie tworzyć posortowaną listę klas z badaniami.
-		
-		\subsubsection{Badanie}
-		
-		Klasa abstrakcyjna, po której będą dziedziczyć klasy związane z konkretnymi badaniami. Klasa będzie zawierać metody do obsługi badania tj. np. zacznijBadanie(), wyswietlOpis() itp.
-		
-		\subsubsection{PrzebiegBadania}
-		
-		Interface, który będzie zawierać metody niezbędne podczas badania tj. np. wyślijDane(), pobierzDaneUzytkownika() itp.
-		
-		\subsubsection{<nazwa\_badania>}
-		
-		Klasa, której nazwą będzie konkretne badanie. Zakładamy, że w aplikacji będzie się znajdować więcej niż jedno badanie do wyboru. Klasa będzie odpowiedzialna za mechanizm całego badania, jego przebieg oraz dostarczenie wyników do bazy danych. Klasa korzysta z klasy BazaDanych oraz znajduje się w klasie ListaBadan.
-		
 		
 %--------------------------------------------------------------------------------------------------
 %       DIAGRAM SEKWENCJI
 %--------------------------------------------------------------------------------------------------
+		\newpage
+
 		\subsection{Diagram sekwencji}
+		
+		Na podstawie diagramów aktywności logowania oraz rejestracji na Rys.6 oraz Rys.7 przedstawiono kolejno diagram sekwencji logowania oraz diagram sekwencji rejestracji dla opisywanego oprogramowania.
 		
 		\begin{center}
 			\includegraphics[scale=0.6]{seqDiagram}\\
