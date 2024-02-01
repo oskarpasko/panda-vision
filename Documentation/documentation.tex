@@ -453,10 +453,26 @@
 			\caption{Rys.6 Diagram sekwencji (Logowanie)}
 		\end{center}
 		
+		\begin{center}
+			\includegraphics[scale=0.6]{seqDiagramRejestracja}\\
+			\caption{Rys.7 Diagram sekwencji (Rejestracja)}
+		\end{center}
+		
 %--------------------------------------------------------------------------------------------------
-%       DIAGRAM CZYNNOŚCI
+%       DIAGRAM AKTYWNOŚCI
 %--------------------------------------------------------------------------------------------------
-		\subsection{Diagram czynności}
+		\newpage		
+		
+		\subsection{Diagram stanów}
+		
+		Na podstawie diagramów aktywności logowania oraz rejestracji na Rys.8 przedstawiono diagram stanów z~cyklu życia obiektu Uzytkownik w~aplikacji.\\
+		
+		Nowy użytkownik może się zarejestrować, a~następnie staje się Zarejestrowany. Po zarejestrowaniu się, użytkownik może przystąpić do próby logowania do systemu. Jeśli użytkownik wpisze poprawne dane zostanie zalogowany i~stanie się Zalogowany. Zalogowany użytkownik może się w~dowolnym momencie wylogować z~systemu i~stanie się znowu Zarejestrowany. Jeśli podczas próby logowania użytkownik poda 5 razy złe dane konto zostanie zablokowane i~stanie się Zablokowany. Użytkownik może poprosić administratora o~odblokowanie konta. Po odblokowaniu konta użytkownik stanie się znowu Zarejestrowany.
+		
+		\begin{center}
+			\includegraphics[scale=0.6]{activeDiagramUser}\\
+			\caption{Rys.8 Diagram stanów użytkownika}
+		\end{center}
 
 
  
