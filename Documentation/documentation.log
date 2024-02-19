@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.10.4)  1 FEB 2024 21:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.10.4)  4 FEB 2024 15:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -866,17 +866,169 @@ l.474 			\caption
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[15 <./activeDiagramUser.png>] (documentation.aux)
+[15 <./activeDiagramUser.png>]
+<wykres_gantta.png, id=79, 566.86781pt x 417.81094pt>
+File: wykres_gantta.png Graphic file (type png)
+<use wykres_gantta.png>
+Package pdftex.def Info: wykres_gantta.png  used on input line 487.
+(pdftex.def)             Requested size: 396.80476pt x 292.46567pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.488 			\caption
+                 {Rys.9 Wykres Gantta}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[16 <./wykres_gantta.png>]
+<GUI_logowanie.png, id=84, 599.99156pt x 419.31656pt>
+File: GUI_logowanie.png Graphic file (type png)
+<use GUI_logowanie.png>
+Package pdftex.def Info: GUI_logowanie.png  used on input line 517.
+(pdftex.def)             Requested size: 299.99504pt x 209.65776pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.518 			\caption
+                 {Rys.10 Formularz logowania do aplikacji}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<GUI_rejestracja.png, id=85, 388.45125pt x 548.80031pt>
+File: GUI_rejestracja.png Graphic file (type png)
+<use GUI_rejestracja.png>
+Package pdftex.def Info: GUI_rejestracja.png  used on input line 525.
+(pdftex.def)             Requested size: 194.22514pt x 274.39948pt.
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.526 			\caption
+                 {Rys.11 Formularz rejestracji do aplikacji}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[17 <./GUI_logowanie.png> <./GUI_rejestracja.png>]
+<GUI_lista_badan.png, id=91, 770.12718pt x 441.90094pt>
+File: GUI_lista_badan.png Graphic file (type png)
+<use GUI_lista_badan.png>
+Package pdftex.def Info: GUI_lista_badan.png  used on input line 538.
+(pdftex.def)             Requested size: 385.06264pt x 220.94992pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.539 			\caption
+                 {Rys.12 Tablica z listÄ… badaÅ„}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (13.5916pt too wide) in paragraph at lines 542--543
+\T1/ppl/m/n/12 mógª prze-czy-ta¢ szcze-gó-ªowy opis ba-da-nia oraz prze-gl¡d-n¡
+¢ przy-kªa-dowe zrzuty ekranu
+ []
+
+<GUI_opis_badania.png, id=92, 755.82375pt x 437.38406pt>
+File: GUI_opis_badania.png Graphic file (type png)
+<use GUI_opis_badania.png>
+Package pdftex.def Info: GUI_opis_badania.png  used on input line 545.
+(pdftex.def)             Requested size: 377.91095pt x 218.69148pt.
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.546 			\caption
+                 {Rys.13 Tablica z opisem badania}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[18 <./GUI_lista_badan.png> <./GUI_opis_badania.png>]
+<GUI_zarzadzanie_kontem.png, id=99, 763.35187pt x 441.14813pt>
+File: GUI_zarzadzanie_kontem.png Graphic file (type png)
+<use GUI_zarzadzanie_kontem.png>
+Package pdftex.def Info: GUI_zarzadzanie_kontem.png  used on input line 557.
+(pdftex.def)             Requested size: 381.675pt x 220.57352pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.558 			\caption
+                 {Rys.14 Tablica z zarzÄ…dzanie kontem}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<GUI_historia_badan.png, id=100, 591.71063pt x 440.39531pt>
+File: GUI_historia_badan.png Graphic file (type png)
+<use GUI_historia_badan.png>
+Package pdftex.def Info: GUI_historia_badan.png  used on input line 564.
+(pdftex.def)             Requested size: 355.02911pt x 264.23921pt.
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.565 			\caption
+                 {Rys.15 Tablica z historiÄ… badaÅ„}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[19 <./GUI_zarzadzanie_kontem.png> <./GUI_historia_badan.png>]
+<GUI_zmiana_danych.png, id=106, 547.2947pt x 599.99156pt>
+File: GUI_zmiana_danych.png Graphic file (type png)
+<use GUI_zmiana_danych.png>
+Package pdftex.def Info: GUI_zmiana_danych.png  used on input line 571.
+(pdftex.def)             Requested size: 273.64667pt x 299.99504pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.572 			\caption
+                 {Rys.16 Formularz aktualizujÄ…cy dane}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[20 <./GUI_zmiana_danych.png>] (documentation.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3670 strings out of 475247
- 58847 string characters out of 5774207
+ 3762 strings out of 475247
+ 61193 string characters out of 5774207
  1924801 words of memory out of 5000000
- 25147 multiletter control sequences out of 15000+600000
+ 25239 multiletter control sequences out of 15000+600000
  577865 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,6n,65p,2332b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -888,9 +1040,9 @@ pen/ec/dpi600\eccc1728.pk> <C:\Users\oskar\AppData\Local\MiKTeX\fonts/pk/ljfour
 /jknappen/ec/dpi600\ecrb2488.pk><F:/MiKTeX/fonts/type1/public/tex-gyre/qcrr.pfb
 ><F:/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><F:/MiKTeX/fonts/type1/urw/pala
 tino/uplr8a.pfb>
-Output written on documentation.pdf (16 pages, 711221 bytes).
+Output written on documentation.pdf (21 pages, 1928861 bytes).
 PDF statistics:
- 191 PDF objects out of 1000 (max. 8388607)
+ 223 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

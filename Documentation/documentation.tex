@@ -344,7 +344,7 @@
 		WK: możliwość zmiany danych personalnych.\\
 		
 		\textbf{Przebieg:}\\
-		Użytkownik może zarządzać wszystkimi swoimi danymi, które podał podczas rejestracji. Po kliknięciu w~odpowiedni przycisk tj. "Zmień imię", "Zmień nazwisko", "Zmień adres e-mail", "Zmień datę urodzenia", "Zmień numer telefonu", "Zmień hasło" użytkownik będzie miał możliwość zmiany konkretnych danych swojego konta za pośrednictwem wpisania starych danych oraz wpisania nowych.
+		Użytkownik będzie mógł zmienić dane. Aktualne dane zostaną wpisane w~wierze. Użytkownik będzie mógł zmienić dowolne dane oraz zaakceptować zmiany przez wciśnięcie przycisku "Aktualizuj". Po wciśnięciu przycisku nastąpi walidacja nowych danych oraz zapis do bazy danych.
 		 \\
 			
 		
@@ -473,7 +473,111 @@
 			\includegraphics[scale=0.6]{activeDiagramUser}\\
 			\caption{Rys.8 Diagram stanów użytkownika}
 		\end{center}
+		
+		
+%--------------------------------------------------------------------------------------------------
+%       HARMONOGRAM REALIZACJI PROJEKTU
+%--------------------------------------------------------------------------------------------------
+		\newpage
+		\section{Harmonogram realizacji projektu}
+		
+		Poniżej zamieszczono harmonogram realizacji projektu. Diagram Gantta prezentuje ilość dni jakie będą poświęcone poszczególnym pracom oraz suma dni spędzonych podczas pracy nad projektem.
+		
+		\begin{center}
+			\includegraphics[scale=0.7]{wykres_gantta}\\
+			\caption{Rys.9 Wykres Gantta}
+		\end{center}
+		
+		
+%--------------------------------------------------------------------------------------------------
+%       OPIS TECHNICZNY PROJEKTU
+%--------------------------------------------------------------------------------------------------
+		\section{Opis techniczny projektu}
+		
+		\begin{itemize}
+				\item Środowisko programistyczne VR: Unity 2023.2.51
+				\item Środowisko programistyczne Flask: PyCharm 2023.3
+				\item Aplikacja jest projektowana na urządzenia wirtualnej rzeczywistości takie jak - Oculus Quest 2, HTC Vive
+		\end{itemize}
+			
+%--------------------------------------------------------------------------------------------------
+%       INTERFEJS UŻYTKOWNIKA
+%--------------------------------------------------------------------------------------------------
+		\newpage
+		\section{Interfejs użytkownika}
+		
+		Na Rys.10 przedstawiono koncepcję tablicy jaką zobaczy użytkownik po wejściu do aplikacji. Użytkownik będzie mógł:
+		\begin{itemize}
+				\item Zalogować się wciskając przycisk "Zaloguj" po wprowadzeniu poprawnych danych;
+				\item Przejść do formularza rejestracji wciskając przycisk "Zarejestruj"
+				\item Przypomnieć hasło poprzez wciśnięcie przycisku "Kliknij tutaj"
+		\end{itemize}
+		
+		\begin{center}
+			\includegraphics[scale=0.5]{GUI_logowanie}\\
+			\caption{Rys.10 Formularz logowania do aplikacji}
+		\end{center}
+	
+		
+		Na Rys.11 przestawiono koncepcję tablicy jaką zobaczy użytkownik po wejściu do możliwości rejestracji. Użytkownik będzie mógł się zarejestrować do systemu wprowadzając poprawne dane oraz wciskając przycisk "Zarejestruj".
+		
+		\begin{center}
+			\includegraphics[scale=0.5]{GUI_rejestracja}\\
+			\caption{Rys.11 Formularz rejestracji do aplikacji}
+		\end{center}
+		
+		Na Rys.12 przedstawiono koncepcję tablicy z~listą badań jaką użytkownik zobaczy wchodząc w~scenę z~listą badań. Użytkownik będzie mógł:
+		
+		\begin{itemize}
+			\item Przeglądać dostępne badania;
+			\item Zacząć badanie po wciśnięciu przycisku "Start";
+			\item Przeczytać opis wchodząc do oddzielnej sceny poprzez przycisk "Opis"
+		\end{itemize}
+		
+		\begin{center}
+			\includegraphics[scale=0.5]{GUI_lista_badan}\\
+			\caption{Rys.12 Tablica z listą badań}
+		\end{center}
+		
+		Na Rys.13 przedstawiono koncepcję tablicy z~opisem badania, którą użytkownik zobaczy po wciśnięciu przycisku "Opis" w~scenie z~listą badań. Użytkownik będzie mógł przeczytać szczegółowy opis badania oraz przeglądnąć przykładowe zrzuty ekranu z przebiegu badania, które będą umieszczone pod opisem słownym.
+		
+		\begin{center}
+			\includegraphics[scale=0.5]{GUI_opis_badania}\\
+			\caption{Rys.13 Tablica z opisem badania}
+		\end{center}
+		
+		Na Rys.14 przedstawiono koncepcję tablicy z~dwoma kafelkami do zarządzania kontem. Użytkownik będzie mógł:
+		
+		\begin{itemize}
+			\item Przejść do historii swoich badań za pomocą przycisku "Historia badań"
+			\item Przejść do zarządzania swoimi danymi za pomocą przycisku "Zarządzaj kontem"
+		\end{itemize}
+		
+		\begin{center}
+			\includegraphics[scale=0.5]{GUI_zarzadzanie_kontem}\\
+			\caption{Rys.14 Tablica z zarządzanie kontem}
+		\end{center}
+		
+		Na Rys.15 przedstawiono koncepcję tablicy z historią badań. Użytkownik będzie mógł przeglądać  swoją historię badań. Badania są wyświetlane za pomocą nazwy danego badania oraz daty jego wykonania. Po wciśnięciu dowolnego badania rozwinie się okienko ze szczegółowymi danymi.
+		
+		\begin{center}
+			\includegraphics[scale=0.6]{GUI_historia_badan}\\
+			\caption{Rys.15 Tablica z historią badań}
+		\end{center}
+		
+		Na Rys.16 przedstawiono formularz dzięki któremu użytkownik może zmienić swoje dane. Użytkownik może wprowadzić na miejsce starych danych nowe dane. Po wciśnięciu przycisku "Aktualizuj" następuje walidacja danych oraz zapis nowych wartości do bazy danych.
+		
+		\begin{center}
+			\includegraphics[scale=0.5]{GUI_zmiana_danych}\\
+			\caption{Rys.16 Formularz aktualizujący dane}
+		\end{center}
+		
+%--------------------------------------------------------------------------------------------------
+%       PODSUMOWANIE
+%--------------------------------------------------------------------------------------------------
 
-
+		\section{Podsumowanie}
+		
+		Aplikacja jest projektowania z~myślą o~osobach zmagającymi się ze schorzeniami daltonizmu. Oprogramowanie będzie miało za zadanie ułatwienie rozpoznawania schorzeń dotyczących daltonizmu u~dzieci przez zabawę oraz gry w~aplikacji. Chcemy połączyć gry i~zabawy razem z~badaniami wzroku. Chcemy żeby dzieci podczas badania czuły się jakby grały lub rywalizowały z~wynikami poprzedników. Nie chcemy żeby skupiały się na myśli, że są badane aby oszczędzić im niepotrzebnego stresu oraz zdenerwowania wynikami.
  
 \end{document}
