@@ -1,0 +1,35 @@
+Gauss
+
+1. Wprowadzenie
+
+Aplikacja z gaussem powinna być uniwersalna tak aby dodać plik z klasą do dowolnego programu.
+Cały mechanizm powinnien się znajdować w jednym pliku gauss.py
+
+Aplikacja polega na narysowaniu rozkładu gaussa dla nowolnych danych oraz narzuceniu punktów z dostarczonych danych z pliku excel
+
+2. Co ma robić dokładnie program?
+
+- pobrać dane z pliku excel
+- policzyć średnią z danych (potrzebną do wzoru gaussa)
+- policzyć odchylenie standardowe ( potrzebne do wzoru gaussa)
+- policzyć wzór gaussa ( o kroku 0.01 dla wszystkich danych [x, y])
+- policzenie rozkładu dla każdej mozliwości w danych (np przy ocenach uczniów dla wartości od 1 do 6)
+- wypisanie danych (dane, ilość danych, średnia, odchylenie)
+- narysowanie wykresu rozkładu gaussa oraz narzuconych punktów do porównania
+
+3. Opis klasy
+
+składowe:
+    - data
+    - avg
+    - odch
+    - minimum
+    - maximum
+
+metody:
+    - pobranie danych i przypisanie do zmiennej 'data'
+    - liczenie sredniej i przypisanie do zmiennej 'avg'
+    - liczenie odchylenie i przypisanie do zmiennej 'odch'
+    - liczenie rozkładu o dowolnym kroku oraz odkąd dokąd [x, y]
+    - wypis danych
+    - rysowanie wykresu
