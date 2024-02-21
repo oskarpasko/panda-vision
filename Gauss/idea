@@ -16,20 +16,33 @@ Aplikacja polega na narysowaniu rozkładu gaussa dla nowolnych danych oraz narzu
 - policzenie rozkładu dla każdej mozliwości w danych (np przy ocenach uczniów dla wartości od 1 do 6)
 - wypisanie danych (dane, ilość danych, średnia, odchylenie)
 - narysowanie wykresu rozkładu gaussa oraz narzuconych punktów do porównania
+- !! wypis wykresu oraz wypis danych można wrzucić od razu do pliku pdf
 
 3. Opis klasy
 
 składowe:
     - data
     - avg
-    - odch
-    - minimum
-    - maximum
+    - deviation
+    - minimum - konstruktor
+    - maximum - konstruktor
+    - step - konstruktor
+    - path - konstruktor
 
 metody:
-    - pobranie danych i przypisanie do zmiennej 'data'
-    - liczenie sredniej i przypisanie do zmiennej 'avg'
-    - liczenie odchylenie i przypisanie do zmiennej 'odch'
-    - liczenie rozkładu o dowolnym kroku oraz odkąd dokąd [x, y]
-    - wypis danych
-    - rysowanie wykresu
+    - get_data() -> pobranie danych i przypisanie do zmiennej 'data'
+    - average() -> liczenie sredniej i przypisanie do zmiennej 'avg'
+    - standard_deviation() -> liczenie odchylenie i przypisanie do zmiennej 'deviation'
+    - gauss(x) -> liczenie rozkładu o dowolnym kroku oraz odkąd dokąd [minimum, maximum] (funkcja pomocnicza z parametrem 'x')
+    - point_projection() -> funkcja rzucająca punkty oraz ich rozkład do tablicy 'points'
+    - result_write() -> wypis danych
+    - plot_write() -> rysowanie wykresu
+    - run() -> metoda uruchamiająca cały algorytm
+
+4. Metoda run()
+
+- Metoda run() na początku wywołuje metode get_data() do pobrania danych z Excela.
+- Następnie za pomocą metod average() oraz standard_deviation() oblicza średnią i odchylenie.
+- Następnie za pomocą metody point_projection(), która w sobie wywoła metode gauss(x) zrzutujemy punkty do tablicy.
+- Następnie zostanie wywołana metoda plot_write(), która narysuje wykres za pomocą danych z wcześniejszych metod
+- Na końcu za pomocą metody result_write() nastąpi wypisanie szczegółowych danych z algorytmu.
