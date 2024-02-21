@@ -56,6 +56,8 @@ class Gauss:
             print(i)
             plt.scatter(i+1, self.points[i], color="red")
 
+        plt.savefig("plot.png")
+
         plt.show()
     def run(self):
         self.get_data()
