@@ -44,17 +44,22 @@ class Gauss:
     def gauss(self, x):
         return (1 / (self.dev * math.sqrt(2*math.pi))) * math.exp(((-1)*pow((x - self.avg), 2))/(2 * pow(self.dev, 2)))
     def point_projection(self):
+        suma = 0
         for i in range(self.minimum, self.maximum+1):
-            self.points.append(self.gauss(i))
+            suma += self.data.count(i)
+            print(self.data.count(i))
+            self.points.append(self.data.count(i)/self.n)
+        print(suma)
+
+        print(np.sum(self.points))
     def plot_write(self):
         # rysowanie krzywej gaussa
         x_axis = np.arange(self.minimum, self.maximum, 0.01)
-        plt.plot(x_axis, norm.pdf(x_axis, statistics.mean(x_axis), statistics.stdev(x_axis)))
+        plt.plot(x_axis, norm.pdf(x_axis, self.avg, self.dev))
 
         # rzutowanie punktów na wykres
         for i in range(0, len(self.points), self.step):
-            print(i)
-            plt.scatter(i+1, self.points[i], color="red")
+            plt.scatter(self.minimum+i, self.points[i], color="red")
 
         plt.savefig("plot.png")
 
