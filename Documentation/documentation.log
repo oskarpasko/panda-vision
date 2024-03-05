@@ -1,15 +1,15 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.10.4)  4 FEB 2024 15:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.24)  5 MAR 2024 21:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./documentation.tex
-(documentation.tex
-LaTeX2e <2023-06-01> patch level 1
-L3 programming layer <2023-08-29>
-(F:\MiKTeX\tex/latex/base\article.cls
-Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
-(F:\MiKTeX\tex/latex/base\size12.clo
-File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+**documentation.tex
+(./documentation.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24>
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count185
 \c@section=\count186
@@ -19,69 +19,60 @@ File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \c@subparagraph=\count190
 \c@figure=\count191
 \c@table=\count192
-\abovecaptionskip=\skip48
-\belowcaptionskip=\skip49
-\bibindent=\dimen140
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
 )
-(F:\MiKTeX\tex/latex/graphics\graphicx.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
-(F:\MiKTeX\tex/latex/graphics\keyval.sty
-Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
 )
-(F:\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
 
-(F:\MiKTeX\tex/latex/graphics\trig.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
-(F:\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
 
-(F:\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen141
-\Gin@req@width=\dimen142
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
 )
-(F:\MiKTeX\tex/latex/base\fontenc.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-) (F:\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2023/08/29 v3.93 The Babel package
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2022/02/26 3.73 The Babel package
 \babel@savecnt=\count193
-\U@D=\dimen143
-\l@unhyphenated=\language79
+\U@D=\dimen141
+\l@unhyphenated=\language87
 
-(F:\MiKTeX\tex/generic/babel\txtbabel.def)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count194
 
-*************************************
-* Local config file bblopts.cfg used
-*
-(F:\MiKTeX\tex/latex/arabi\bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-(F:\MiKTeX\tex/latex/babel-polish\polish.ldf
+(/usr/local/texlive/2022/texmf-dist/tex/generic/babel-polish/polish.ldf
 Language: polish 2022/03/12 1.3 Babel support for Polish
 Package babel Info: Making " an active character on input line 101.
 ))
-(F:\MiKTeX\tex/generic/babel/locale/pl\babel-polish.tex
-Package babel Info: Importing font and identification data for polish
-(babel)             from babel-pl.ini. Reported on input line 11.
-)
-(F:\MiKTeX\tex/latex/base\inputenc.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks18
-\inpenc@posthook=\toks19
-) (F:\MiKTeX\tex/latex/psnfss\times.sty
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
 )
-(F:\MiKTeX\tex/latex/psnfss\mathpazo.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/mathpazo.sty
 Package: mathpazo 2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS) 
 \symupright=\mathgroup4
 )
@@ -97,10 +88,10 @@ l.17 \begin{center}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<ur_inf_logo.png, id=1, 1674.255pt x 461.725pt>
-File: ur_inf_logo.png Graphic file (type png)
-<use ur_inf_logo.png>
-Package pdftex.def Info: ur_inf_logo.png  used on input line 18.
+<images//ur_inf_logo.png, id=1, 1674.255pt x 461.725pt>
+File: images//ur_inf_logo.png Graphic file (type png)
+<use images//ur_inf_logo.png>
+Package pdftex.def Info: images//ur_inf_logo.png  used on input line 18.
 (pdftex.def)             Requested size: 334.84506pt x 92.34335pt.
 
 ! LaTeX Error: There's no line here to end.
@@ -234,33 +225,34 @@ or  <return>  to continue without it.
 
 LaTeX Font Info:    Trying to load font information for T1+ppl on input line 47
 .
-(F:\MiKTeX\tex/latex/psnfss\t1ppl.fd
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 ) [1
 
-{C:/Users/oskar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./ur_inf_log
-o.png>]
-(F:\MiKTeX\tex/latex/geometry\geometry.sty
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./image
+s//ur_inf_logo.png>] (/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geo
+metry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(F:\MiKTeX\tex/generic/iftex\ifvtex.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- (F:\MiKTeX\tex/generic/iftex\iftex.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
 \Gm@cnth=\count195
 \Gm@cntv=\count196
 \c@Gm@tempcnt=\count197
-\Gm@bindingoffset=\dimen144
-\Gm@wd@mp=\dimen145
-\Gm@odd@mp=\dimen146
-\Gm@even@mp=\dimen147
-\Gm@layoutwidth=\dimen148
-\Gm@layoutheight=\dimen149
-\Gm@layouthoffset=\dimen150
-\Gm@layoutvoffset=\dimen151
-\Gm@dimlist=\toks20
- (F:\MiKTeX\tex/latex/geometry\geometry.cfg))
+\Gm@bindingoffset=\dimen142
+\Gm@wd@mp=\dimen143
+\Gm@odd@mp=\dimen144
+\Gm@even@mp=\dimen145
+\Gm@layoutwidth=\dimen146
+\Gm@layoutheight=\dimen147
+\Gm@layouthoffset=\dimen148
+\Gm@layoutvoffset=\dimen149
+\Gm@dimlist=\toks19
+)
 
 Package geometry Warning: Over-specification in `h'-direction.
     `width' (483.69684pt) is ignored.
@@ -269,11 +261,12 @@ Package geometry Warning: Over-specification in `h'-direction.
 Package geometry Warning: Over-specification in `v'-direction.
     `height' (731.23582pt) is ignored.
 
-(F:\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count198
-\l__pdf_internal_box=\box51
-) (documentation.aux)
+\l__pdf_internal_box=\box50
+)
+(./documentation.aux)
 \openout1 = `documentation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
@@ -291,28 +284,29 @@ LaTeX Font Info:    ... okay on input line 63.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
 LaTeX Font Info:    ... okay on input line 63.
 
-(F:\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+(/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count199
-\scratchdimen=\dimen152
-\scratchbox=\box52
+\scratchdimen=\dimen150
+\scratchbox=\box51
 \nofMPsegments=\count266
 \nofMParguments=\count267
-\everyMPshowfont=\toks21
+\everyMPshowfont=\toks20
 \MPscratchCnt=\count268
-\MPscratchDim=\dimen153
+\MPscratchDim=\dimen151
 \MPnumerator=\count269
 \makeMPintoPDFobject=\count270
-\everyMPtoPDFconversion=\toks22
-) (F:\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+\everyMPtoPDFconversion=\toks21
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(F:\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+(/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
-\big@size=\dimen154
+\big@size=\dimen152
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -348,47 +342,51 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(documentation.toc
+(./documentation.toc
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 3
 .
- (F:\MiKTeX\tex/latex/psnfss\ot1ppl.fd
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
 3.
 
-(F:\MiKTeX\tex/latex/psnfss\omlzplm.fd
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
 3.
- (F:\MiKTeX\tex/latex/psnfss\omszplm.fd
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
 3.
-(F:\MiKTeX\tex/latex/psnfss\omxzplm.fd
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
 3.
- (F:\MiKTeX\tex/latex/psnfss\ot1zplm.fd
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 ))
 \tf@toc=\write3
 \openout3 = `documentation.toc'.
 
- [1{F:/MiKTeX/fonts/enc/dvips/base/8r.enc}] [2]
+ [1] [2]
 LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 1
 03.
 
-(F:\MiKTeX\tex/latex/psnfss\ts1ppl.fd
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
-<reqDiagram.png, id=21, 1160.83687pt x 720.44156pt>
-File: reqDiagram.png Graphic file (type png)
-<use reqDiagram.png>
-Package pdftex.def Info: reqDiagram.png  used on input line 130.
+<images//reqDiagram.png, id=22, 1160.83687pt x 720.44156pt>
+File: images//reqDiagram.png Graphic file (type png)
+<use images//reqDiagram.png>
+Package pdftex.def Info: images//reqDiagram.png  used on input line 130.
 (pdftex.def)             Requested size: 464.32652pt x 288.17151pt.
 
 Overfull \hbox (9.08241pt too wide) in paragraph at lines 130--130
@@ -407,11 +405,11 @@ l.131 			\caption
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[3 <./reqDiagram.png>]
-<useCaseDiagram.png, id=26, 718.93594pt x 670.75594pt>
-File: useCaseDiagram.png Graphic file (type png)
-<use useCaseDiagram.png>
-Package pdftex.def Info: useCaseDiagram.png  used on input line 147.
+[3 <./images//reqDiagram.png>]
+<images//useCaseDiagram.png, id=27, 718.93594pt x 670.75594pt>
+File: images//useCaseDiagram.png Graphic file (type png)
+<use images//useCaseDiagram.png>
+Package pdftex.def Info: images//useCaseDiagram.png  used on input line 147.
 (pdftex.def)             Requested size: 359.46709pt x 335.37714pt.
 
 
@@ -426,7 +424,7 @@ l.148 			\caption
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[4 <./useCaseDiagram.png>]
+[4 <./images//useCaseDiagram.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
@@ -720,10 +718,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 401--404
 
  []
 
-<aclogowanie.png, id=47, 942.52126pt x 655.69969pt>
-File: aclogowanie.png Graphic file (type png)
-<use aclogowanie.png>
-Package pdftex.def Info: aclogowanie.png  used on input line 417.
+<images//aclogowanie.png, id=48, 942.52126pt x 655.69969pt>
+File: images//aclogowanie.png Graphic file (type png)
+<use images//aclogowanie.png>
+Package pdftex.def Info: images//aclogowanie.png  used on input line 417.
 (pdftex.def)             Requested size: 471.25948pt x 327.84904pt.
 
 Overfull \hbox (16.01537pt too wide) in paragraph at lines 417--417
@@ -742,10 +740,10 @@ l.418 			\caption
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<acrejestracja.png, id=48, 928.97063pt x 770.12718pt>
-File: acrejestracja.png Graphic file (type png)
-<use acrejestracja.png>
-Package pdftex.def Info: acrejestracja.png  used on input line 423.
+<images//acrejestracja.png, id=49, 928.97063pt x 770.12718pt>
+File: images//acrejestracja.png Graphic file (type png)
+<use images//acrejestracja.png>
+Package pdftex.def Info: images//acrejestracja.png  used on input line 423.
 (pdftex.def)             Requested size: 464.48418pt x 385.06264pt.
 
 Overfull \hbox (9.24007pt too wide) in paragraph at lines 423--423
@@ -764,14 +762,14 @@ l.424 			\caption
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[10 <./aclogowanie.png>]
+[10 <./images//aclogowanie.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 432--433
 
  []
 
 LaTeX Font Info:    Trying to load font information for T1+qcr on input line 43
 4.
-(F:\MiKTeX\tex/latex/tex-gyre\t1qcr.fd
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tex-gyre/t1qcr.fd
 File: t1qcr.fd 2009/09/25 v1.2 font definition file for T1/qcr
 )
 Overfull \hbox (1.15776pt too wide) in paragraph at lines 434--435
@@ -784,11 +782,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 434--435
 
  []
 
-[11{F:/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec.enc} <./acrejestracja.png>]
-<classDiagram.png, id=58, 900.36375pt x 684.30656pt>
-File: classDiagram.png Graphic file (type png)
-<use classDiagram.png>
-Package pdftex.def Info: classDiagram.png  used on input line 437.
+[11 <./images//acrejestracja.png>]
+<images//classDiagram.png, id=59, 900.36375pt x 684.30656pt>
+File: images//classDiagram.png Graphic file (type png)
+<use images//classDiagram.png>
+Package pdftex.def Info: images//classDiagram.png  used on input line 437.
 (pdftex.def)             Requested size: 450.18077pt x 342.15244pt.
 
 
@@ -803,11 +801,11 @@ l.438 			\caption
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[12 <./classDiagram.png>]
-<seqDiagram.png, id=64, 714.41907pt x 534.49687pt>
-File: seqDiagram.png Graphic file (type png)
-<use seqDiagram.png>
-Package pdftex.def Info: seqDiagram.png  used on input line 452.
+[12 <./images//classDiagram.png>]
+<images//seqDiagram.png, id=65, 714.41907pt x 534.49687pt>
+File: images//seqDiagram.png Graphic file (type png)
+<use images//seqDiagram.png>
+Package pdftex.def Info: images//seqDiagram.png  used on input line 452.
 (pdftex.def)             Requested size: 428.65475pt x 320.70059pt.
 
 
@@ -822,10 +820,11 @@ l.453 			\caption
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<seqDiagramRejestracja.png, id=65, 762.59906pt x 542.025pt>
-File: seqDiagramRejestracja.png Graphic file (type png)
-<use seqDiagramRejestracja.png>
-Package pdftex.def Info: seqDiagramRejestracja.png  used on input line 457.
+<images//seqDiagramRejestracja.png, id=66, 762.59906pt x 542.025pt>
+File: images//seqDiagramRejestracja.png Graphic file (type png)
+<use images//seqDiagramRejestracja.png>
+Package pdftex.def Info: images//seqDiagramRejestracja.png  used on input line 
+457.
 (pdftex.def)             Requested size: 457.56297pt x 325.2175pt.
 
 Overfull \hbox (2.31886pt too wide) in paragraph at lines 457--457
@@ -844,15 +843,16 @@ l.458 			\caption
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[13 <./seqDiagram.png>] [14 <./seqDiagramRejestracja.png>]
+[13 <./images//seqDiagram.png>] [14 <./images//seqDiagramRejestracja.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 468--469
 
  []
 
-<activeDiagramUser.png, id=74, 553.31718pt x 331.99031pt>
-File: activeDiagramUser.png Graphic file (type png)
-<use activeDiagramUser.png>
-Package pdftex.def Info: activeDiagramUser.png  used on input line 473.
+<images//activeDiagramUser.png, id=75, 553.31718pt x 331.99031pt>
+File: images//activeDiagramUser.png Graphic file (type png)
+<use images//activeDiagramUser.png>
+Package pdftex.def Info: images//activeDiagramUser.png  used on input line 473.
+
 (pdftex.def)             Requested size: 331.99286pt x 199.19571pt.
 
 ! LaTeX Error: \caption outside float.
@@ -866,11 +866,11 @@ l.474 			\caption
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[15 <./activeDiagramUser.png>]
-<wykres_gantta.png, id=79, 566.86781pt x 417.81094pt>
-File: wykres_gantta.png Graphic file (type png)
-<use wykres_gantta.png>
-Package pdftex.def Info: wykres_gantta.png  used on input line 487.
+[15 <./images//activeDiagramUser.png>]
+<images//wykres_gantta.png, id=80, 566.86781pt x 417.81094pt>
+File: images//wykres_gantta.png Graphic file (type png)
+<use images//wykres_gantta.png>
+Package pdftex.def Info: images//wykres_gantta.png  used on input line 487.
 (pdftex.def)             Requested size: 396.80476pt x 292.46567pt.
 
 
@@ -885,11 +885,11 @@ l.488 			\caption
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[16 <./wykres_gantta.png>]
-<GUI_logowanie.png, id=84, 599.99156pt x 419.31656pt>
-File: GUI_logowanie.png Graphic file (type png)
-<use GUI_logowanie.png>
-Package pdftex.def Info: GUI_logowanie.png  used on input line 517.
+[16 <./images//wykres_gantta.png>]
+<images//GUI_logowanie.png, id=85, 599.99156pt x 419.31656pt>
+File: images//GUI_logowanie.png Graphic file (type png)
+<use images//GUI_logowanie.png>
+Package pdftex.def Info: images//GUI_logowanie.png  used on input line 517.
 (pdftex.def)             Requested size: 299.99504pt x 209.65776pt.
 
 
@@ -904,10 +904,10 @@ l.518 			\caption
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<GUI_rejestracja.png, id=85, 388.45125pt x 548.80031pt>
-File: GUI_rejestracja.png Graphic file (type png)
-<use GUI_rejestracja.png>
-Package pdftex.def Info: GUI_rejestracja.png  used on input line 525.
+<images//GUI_rejestracja.png, id=86, 388.45125pt x 548.80031pt>
+File: images//GUI_rejestracja.png Graphic file (type png)
+<use images//GUI_rejestracja.png>
+Package pdftex.def Info: images//GUI_rejestracja.png  used on input line 525.
 (pdftex.def)             Requested size: 194.22514pt x 274.39948pt.
 
 ! LaTeX Error: \caption outside float.
@@ -921,11 +921,11 @@ l.526 			\caption
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[17 <./GUI_logowanie.png> <./GUI_rejestracja.png>]
-<GUI_lista_badan.png, id=91, 770.12718pt x 441.90094pt>
-File: GUI_lista_badan.png Graphic file (type png)
-<use GUI_lista_badan.png>
-Package pdftex.def Info: GUI_lista_badan.png  used on input line 538.
+[17 <./images//GUI_logowanie.png> <./images//GUI_rejestracja.png>]
+<images//GUI_lista_badan.png, id=92, 770.12718pt x 441.90094pt>
+File: images//GUI_lista_badan.png Graphic file (type png)
+<use images//GUI_lista_badan.png>
+Package pdftex.def Info: images//GUI_lista_badan.png  used on input line 538.
 (pdftex.def)             Requested size: 385.06264pt x 220.94992pt.
 
 
@@ -946,10 +946,10 @@ Overfull \hbox (13.5916pt too wide) in paragraph at lines 542--543
 ¢ przy-kªa-dowe zrzuty ekranu
  []
 
-<GUI_opis_badania.png, id=92, 755.82375pt x 437.38406pt>
-File: GUI_opis_badania.png Graphic file (type png)
-<use GUI_opis_badania.png>
-Package pdftex.def Info: GUI_opis_badania.png  used on input line 545.
+<images//GUI_opis_badania.png, id=93, 755.82375pt x 437.38406pt>
+File: images//GUI_opis_badania.png Graphic file (type png)
+<use images//GUI_opis_badania.png>
+Package pdftex.def Info: images//GUI_opis_badania.png  used on input line 545.
 (pdftex.def)             Requested size: 377.91095pt x 218.69148pt.
 
 ! LaTeX Error: \caption outside float.
@@ -963,11 +963,12 @@ l.546 			\caption
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[18 <./GUI_lista_badan.png> <./GUI_opis_badania.png>]
-<GUI_zarzadzanie_kontem.png, id=99, 763.35187pt x 441.14813pt>
-File: GUI_zarzadzanie_kontem.png Graphic file (type png)
-<use GUI_zarzadzanie_kontem.png>
-Package pdftex.def Info: GUI_zarzadzanie_kontem.png  used on input line 557.
+[18 <./images//GUI_lista_badan.png> <./images//GUI_opis_badania.png>]
+<images//GUI_zarzadzanie_kontem.png, id=100, 763.35187pt x 441.14813pt>
+File: images//GUI_zarzadzanie_kontem.png Graphic file (type png)
+<use images//GUI_zarzadzanie_kontem.png>
+Package pdftex.def Info: images//GUI_zarzadzanie_kontem.png  used on input line
+ 557.
 (pdftex.def)             Requested size: 381.675pt x 220.57352pt.
 
 
@@ -982,10 +983,11 @@ l.558 			\caption
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<GUI_historia_badan.png, id=100, 591.71063pt x 440.39531pt>
-File: GUI_historia_badan.png Graphic file (type png)
-<use GUI_historia_badan.png>
-Package pdftex.def Info: GUI_historia_badan.png  used on input line 564.
+<images//GUI_historia_badan.png, id=101, 591.71063pt x 440.39531pt>
+File: images//GUI_historia_badan.png Graphic file (type png)
+<use images//GUI_historia_badan.png>
+Package pdftex.def Info: images//GUI_historia_badan.png  used on input line 564
+.
 (pdftex.def)             Requested size: 355.02911pt x 264.23921pt.
 
 ! LaTeX Error: \caption outside float.
@@ -999,11 +1001,12 @@ l.565 			\caption
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[19 <./GUI_zarzadzanie_kontem.png> <./GUI_historia_badan.png>]
-<GUI_zmiana_danych.png, id=106, 547.2947pt x 599.99156pt>
-File: GUI_zmiana_danych.png Graphic file (type png)
-<use GUI_zmiana_danych.png>
-Package pdftex.def Info: GUI_zmiana_danych.png  used on input line 571.
+[19 <./images//GUI_zarzadzanie_kontem.png> <./images//GUI_historia_badan.png>]
+<images//GUI_zmiana_danych.png, id=107, 547.2947pt x 599.99156pt>
+File: images//GUI_zmiana_danych.png Graphic file (type png)
+<use images//GUI_zmiana_danych.png>
+Package pdftex.def Info: images//GUI_zmiana_danych.png  used on input line 571.
+
 (pdftex.def)             Requested size: 273.64667pt x 299.99504pt.
 
 
@@ -1018,31 +1021,31 @@ l.572 			\caption
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[20 <./GUI_zmiana_danych.png>] (documentation.aux)
- ***********
-LaTeX2e <2023-06-01> patch level 1
-L3 programming layer <2023-08-29>
- ***********
- ) 
+[20 <./images//GUI_zmiana_danych.png>] (./documentation.aux) ) 
 Here is how much of TeX's memory you used:
- 3762 strings out of 475247
- 61193 string characters out of 5774207
- 1924801 words of memory out of 5000000
- 25239 multiletter control sequences out of 15000+600000
- 577865 words of font info for 72 fonts, out of 8000000 for 9000
+ 3641 strings out of 478268
+ 60966 string characters out of 5846346
+ 364059 words of memory out of 5000000
+ 21809 multiletter control sequences out of 15000+600000
+ 489055 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,65p,2332b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\oskar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
-1200.pk> <C:\Users\oskar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ecrb1200.pk> <C:\Users\oskar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecti1200.pk> <C:\Users\oskar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\eccc1728.pk> <C:\Users\oskar\AppData\Local\MiKTeX\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecrb2488.pk><F:/MiKTeX/fonts/type1/public/tex-gyre/qcrr.pfb
-><F:/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><F:/MiKTeX/fonts/type1/urw/pala
-tino/uplr8a.pfb>
-Output written on documentation.pdf (21 pages, 1928861 bytes).
+ 55i,6n,62p,2330b,353s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texli
+ve/2022/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}{/usr/local/texlive/2022/t
+exmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2022/texmf-dist/fonts
+/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/t
+ype1/public/tex-gyre/qcrr.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/p
+ublic/cm-super/sfcc1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pub
+lic/cm-super/sfrb1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publi
+c/cm-super/sfrb2488.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/
+cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm
+-super/sfti1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatin
+o/uplb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplr8
+a.pfb>
+Output written on documentation.pdf (21 pages, 1964376 bytes).
 PDF statistics:
- 223 PDF objects out of 1000 (max. 8388607)
+ 150 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
