@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.24)  5 MAR 2024 21:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.24)  5 MAR 2024 22:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -132,98 +132,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 	\textsc{\Large PandaVision}\\[0.5cm] \\
-                                              \\ \\ \\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 	\textsc{\Large PandaVision}\\[0.5cm] \\ \\
-                                                 \\ \\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 ...xtsc{\Large PandaVision}\\[0.5cm] \\ \\ \\
-                                                   \\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 ...c{\Large PandaVision}\\[0.5cm] \\ \\ \\ \\
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.41 	mgr inÅ¼. Ewa Å»esÅ‚awska\\ \\
-                                     \\ \\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.41 	mgr inÅ¼. Ewa Å»esÅ‚awska\\ \\ \\
-                                        \\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.41 	mgr inÅ¼. Ewa Å»esÅ‚awska\\ \\ \\ \\
-                                          
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-LaTeX Font Info:    Trying to load font information for T1+ppl on input line 47
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 53
 .
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
@@ -269,20 +178,20 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 (./documentation.aux)
 \openout1 = `documentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
 
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -378,18 +287,18 @@ File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 
  [1] [2]
 LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 1
-03.
+09.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
-<images//reqDiagram.png, id=22, 1160.83687pt x 720.44156pt>
+<images//reqDiagram.png, id=19, 1160.83687pt x 720.44156pt>
 File: images//reqDiagram.png Graphic file (type png)
 <use images//reqDiagram.png>
-Package pdftex.def Info: images//reqDiagram.png  used on input line 130.
+Package pdftex.def Info: images//reqDiagram.png  used on input line 136.
 (pdftex.def)             Requested size: 464.32652pt x 288.17151pt.
 
-Overfull \hbox (9.08241pt too wide) in paragraph at lines 130--130
+Overfull \hbox (9.08241pt too wide) in paragraph at lines 136--136
  [] 
  []
 
@@ -400,16 +309,16 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.131 			\caption
+l.137 			\caption
                  {Rys.1 Diagram wymagaÅ„}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [3 <./images//reqDiagram.png>]
-<images//useCaseDiagram.png, id=27, 718.93594pt x 670.75594pt>
+<images//useCaseDiagram.png, id=24, 718.93594pt x 670.75594pt>
 File: images//useCaseDiagram.png Graphic file (type png)
 <use images//useCaseDiagram.png>
-Package pdftex.def Info: images//useCaseDiagram.png  used on input line 147.
+Package pdftex.def Info: images//useCaseDiagram.png  used on input line 153.
 (pdftex.def)             Requested size: 359.46709pt x 335.37714pt.
 
 
@@ -419,23 +328,18 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.148 			\caption
+l.154 			\caption
                  {Rys.2 Diagram przypadkÃ³w uÅ¼ycia}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [4 <./images//useCaseDiagram.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 164--165
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
 
  []
 
@@ -445,7 +349,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 170--171
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
  []
 
@@ -455,298 +359,281 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--179
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--181
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 194--195
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--197
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--199
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--203
+Underfull \hbox (badness 10000) in paragraph at lines 206--209
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--214
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--218
+Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
 
-Overfull \hbox (4.47095pt too wide) in paragraph at lines 219--221
+Overfull \hbox (4.47095pt too wide) in paragraph at lines 225--227
 \T1/ppl/m/n/12 nych lo-go-wa« sys-tem za-blo-kuje konto i wy-±wie-tli ko-mu-ni-
 kat "Pro-simy o kon-takt w celu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 219--221
+Underfull \hbox (badness 10000) in paragraph at lines 225--227
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 232--233
+Underfull \hbox (badness 10000) in paragraph at lines 238--239
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--237
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--240
+Underfull \hbox (badness 10000) in paragraph at lines 244--246
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--252
+Underfull \hbox (badness 10000) in paragraph at lines 257--258
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--257
+Underfull \hbox (badness 10000) in paragraph at lines 261--263
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--269
+Underfull \hbox (badness 10000) in paragraph at lines 274--275
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--271
+Underfull \hbox (badness 10000) in paragraph at lines 276--277
 
  []
 
 
-Overfull \hbox (7.01616pt too wide) in paragraph at lines 272--275
+Overfull \hbox (7.01616pt too wide) in paragraph at lines 278--281
 \T1/ppl/m/n/12 da-nia b¦d¡ zbie-rane dane z prze-pro-wa-dza-nego ba-da-nia ta-k
 ie jak czas, wy-nik lub ±cie»ka
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--275
+Underfull \hbox (badness 10000) in paragraph at lines 278--281
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 284--285
+Underfull \hbox (badness 10000) in paragraph at lines 290--291
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--287
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--289
+Underfull \hbox (badness 10000) in paragraph at lines 294--295
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--293
+Underfull \hbox (badness 10000) in paragraph at lines 296--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
+Underfull \hbox (badness 10000) in paragraph at lines 308--309
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--305
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--307
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--311
+Underfull \hbox (badness 10000) in paragraph at lines 314--317
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--321
+Underfull \hbox (badness 10000) in paragraph at lines 326--327
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--323
+Underfull \hbox (badness 10000) in paragraph at lines 328--329
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--325
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--329
+Underfull \hbox (badness 10000) in paragraph at lines 332--335
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 340--341
+Underfull \hbox (badness 10000) in paragraph at lines 346--347
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 342--343
+Underfull \hbox (badness 10000) in paragraph at lines 348--349
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--345
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--349
+Underfull \hbox (badness 10000) in paragraph at lines 352--355
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
+Underfull \hbox (badness 10000) in paragraph at lines 365--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--362
+Underfull \hbox (badness 10000) in paragraph at lines 367--368
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 363--364
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--367
+Underfull \hbox (badness 10000) in paragraph at lines 371--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--377
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--379
+Underfull \hbox (badness 10000) in paragraph at lines 384--385
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 380--381
+Underfull \hbox (badness 10000) in paragraph at lines 386--387
 
  []
 
 
-Overfull \hbox (17.82721pt too wide) in paragraph at lines 382--384
+Overfull \hbox (17.82721pt too wide) in paragraph at lines 388--390
 \T1/ppl/m/n/12 nie-pra-wi-dªo-wo-±ci zwi¡-zane z ba-da-niem ad-mi-ni-stra-tor p
 rzez za-kªadk¦ "Kon-takt"powinien
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 395--396
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--398
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--400
+Underfull \hbox (badness 10000) in paragraph at lines 405--406
 
  []
 
 
-Overfull \hbox (13.68745pt too wide) in paragraph at lines 401--404
+Overfull \hbox (13.68745pt too wide) in paragraph at lines 407--410
 \T1/ppl/m/n/12 Administrator ma mo»-li-wo±¢ od-blo-ko-wa-nia konta u»yt-kow-nik
 a oraz ewen-tu-aln¡ zmian¦
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--404
+Underfull \hbox (badness 10000) in paragraph at lines 407--410
 
  []
 
-<images//aclogowanie.png, id=48, 942.52126pt x 655.69969pt>
+<images//aclogowanie.png, id=45, 942.52126pt x 655.69969pt>
 File: images//aclogowanie.png Graphic file (type png)
 <use images//aclogowanie.png>
-Package pdftex.def Info: images//aclogowanie.png  used on input line 417.
+Package pdftex.def Info: images//aclogowanie.png  used on input line 423.
 (pdftex.def)             Requested size: 471.25948pt x 327.84904pt.
 
-Overfull \hbox (16.01537pt too wide) in paragraph at lines 417--417
- [] 
- []
-
-
-! LaTeX Error: \caption outside float.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.418 			\caption
-                 {Rys.3 Diagram aktywnoÅ›ci - Logowanie}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<images//acrejestracja.png, id=49, 928.97063pt x 770.12718pt>
-File: images//acrejestracja.png Graphic file (type png)
-<use images//acrejestracja.png>
-Package pdftex.def Info: images//acrejestracja.png  used on input line 423.
-(pdftex.def)             Requested size: 464.48418pt x 385.06264pt.
-
-Overfull \hbox (9.24007pt too wide) in paragraph at lines 423--423
+Overfull \hbox (16.01537pt too wide) in paragraph at lines 423--423
  [] 
  []
 
@@ -758,76 +645,17 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.424 			\caption
-                 {Rys.4 Diagram aktywnoÅ›ci - Rejestracja}
+                 {Rys.3 Diagram aktywnoÅ›ci - Logowanie}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[10 <./images//aclogowanie.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 432--433
+<images//acrejestracja.png, id=46, 928.97063pt x 770.12718pt>
+File: images//acrejestracja.png Graphic file (type png)
+<use images//acrejestracja.png>
+Package pdftex.def Info: images//acrejestracja.png  used on input line 429.
+(pdftex.def)             Requested size: 464.48418pt x 385.06264pt.
 
- []
-
-LaTeX Font Info:    Trying to load font information for T1+qcr on input line 43
-4.
-(/usr/local/texlive/2022/texmf-dist/tex/latex/tex-gyre/t1qcr.fd
-File: t1qcr.fd 2009/09/25 v1.2 font definition file for T1/qcr
-)
-Overfull \hbox (1.15776pt too wide) in paragraph at lines 434--435
-[]\T1/ppl/m/n/12 Klasa \T1/qcr/m/n/12 Ba-za-Da-nych \T1/ppl/m/n/12 od-po-wie-dz
-ialna jest za po-ª¡-cze-nie z baz¡ da-nych. Gªówna klasa
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 434--435
-
- []
-
-[11 <./images//acrejestracja.png>]
-<images//classDiagram.png, id=59, 900.36375pt x 684.30656pt>
-File: images//classDiagram.png Graphic file (type png)
-<use images//classDiagram.png>
-Package pdftex.def Info: images//classDiagram.png  used on input line 437.
-(pdftex.def)             Requested size: 450.18077pt x 342.15244pt.
-
-
-! LaTeX Error: \caption outside float.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.438 			\caption
-                 {Rys.5 Diagram klas}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[12 <./images//classDiagram.png>]
-<images//seqDiagram.png, id=65, 714.41907pt x 534.49687pt>
-File: images//seqDiagram.png Graphic file (type png)
-<use images//seqDiagram.png>
-Package pdftex.def Info: images//seqDiagram.png  used on input line 452.
-(pdftex.def)             Requested size: 428.65475pt x 320.70059pt.
-
-
-! LaTeX Error: \caption outside float.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.453 			\caption
-                 {Rys.6 Diagram sekwencji (Logowanie)}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<images//seqDiagramRejestracja.png, id=66, 762.59906pt x 542.025pt>
-File: images//seqDiagramRejestracja.png Graphic file (type png)
-<use images//seqDiagramRejestracja.png>
-Package pdftex.def Info: images//seqDiagramRejestracja.png  used on input line 
-457.
-(pdftex.def)             Requested size: 457.56297pt x 325.2175pt.
-
-Overfull \hbox (2.31886pt too wide) in paragraph at lines 457--457
+Overfull \hbox (9.24007pt too wide) in paragraph at lines 429--429
  [] 
  []
 
@@ -838,20 +666,101 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.458 			\caption
+l.430 			\caption
+                 {Rys.4 Diagram aktywnoÅ›ci - Rejestracja}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[10 <./images//aclogowanie.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 438--439
+
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+qcr on input line 44
+0.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tex-gyre/t1qcr.fd
+File: t1qcr.fd 2009/09/25 v1.2 font definition file for T1/qcr
+)
+Overfull \hbox (1.15776pt too wide) in paragraph at lines 440--441
+[]\T1/ppl/m/n/12 Klasa \T1/qcr/m/n/12 Ba-za-Da-nych \T1/ppl/m/n/12 od-po-wie-dz
+ialna jest za po-ª¡-cze-nie z baz¡ da-nych. Gªówna klasa
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--441
+
+ []
+
+[11 <./images//acrejestracja.png>]
+<images//classDiagram.png, id=56, 900.36375pt x 684.30656pt>
+File: images//classDiagram.png Graphic file (type png)
+<use images//classDiagram.png>
+Package pdftex.def Info: images//classDiagram.png  used on input line 443.
+(pdftex.def)             Requested size: 450.18077pt x 342.15244pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.444 			\caption
+                 {Rys.5 Diagram klas}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[12 <./images//classDiagram.png>]
+<images//seqDiagram.png, id=62, 714.41907pt x 534.49687pt>
+File: images//seqDiagram.png Graphic file (type png)
+<use images//seqDiagram.png>
+Package pdftex.def Info: images//seqDiagram.png  used on input line 458.
+(pdftex.def)             Requested size: 428.65475pt x 320.70059pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.459 			\caption
+                 {Rys.6 Diagram sekwencji (Logowanie)}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<images//seqDiagramRejestracja.png, id=63, 762.59906pt x 542.025pt>
+File: images//seqDiagramRejestracja.png Graphic file (type png)
+<use images//seqDiagramRejestracja.png>
+Package pdftex.def Info: images//seqDiagramRejestracja.png  used on input line 
+463.
+(pdftex.def)             Requested size: 457.56297pt x 325.2175pt.
+
+Overfull \hbox (2.31886pt too wide) in paragraph at lines 463--463
+ [] 
+ []
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.464 			\caption
                  {Rys.7 Diagram sekwencji (Rejestracja)}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [13 <./images//seqDiagram.png>] [14 <./images//seqDiagramRejestracja.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 468--469
+Underfull \hbox (badness 10000) in paragraph at lines 474--475
 
  []
 
-<images//activeDiagramUser.png, id=75, 553.31718pt x 331.99031pt>
+<images//activeDiagramUser.png, id=72, 553.31718pt x 331.99031pt>
 File: images//activeDiagramUser.png Graphic file (type png)
 <use images//activeDiagramUser.png>
-Package pdftex.def Info: images//activeDiagramUser.png  used on input line 473.
+Package pdftex.def Info: images//activeDiagramUser.png  used on input line 479.
 
 (pdftex.def)             Requested size: 331.99286pt x 199.19571pt.
 
@@ -861,16 +770,16 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.474 			\caption
+l.480 			\caption
                  {Rys.8 Diagram stanÃ³w uÅ¼ytkownika}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [15 <./images//activeDiagramUser.png>]
-<images//wykres_gantta.png, id=80, 566.86781pt x 417.81094pt>
+<images//wykres_gantta.png, id=77, 566.86781pt x 417.81094pt>
 File: images//wykres_gantta.png Graphic file (type png)
 <use images//wykres_gantta.png>
-Package pdftex.def Info: images//wykres_gantta.png  used on input line 487.
+Package pdftex.def Info: images//wykres_gantta.png  used on input line 493.
 (pdftex.def)             Requested size: 396.80476pt x 292.46567pt.
 
 
@@ -880,16 +789,16 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.488 			\caption
+l.494 			\caption
                  {Rys.9 Wykres Gantta}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [16 <./images//wykres_gantta.png>]
-<images//GUI_logowanie.png, id=85, 599.99156pt x 419.31656pt>
+<images//GUI_logowanie.png, id=82, 599.99156pt x 419.31656pt>
 File: images//GUI_logowanie.png Graphic file (type png)
 <use images//GUI_logowanie.png>
-Package pdftex.def Info: images//GUI_logowanie.png  used on input line 517.
+Package pdftex.def Info: images//GUI_logowanie.png  used on input line 523.
 (pdftex.def)             Requested size: 299.99504pt x 209.65776pt.
 
 
@@ -899,15 +808,15 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.518 			\caption
+l.524 			\caption
                  {Rys.10 Formularz logowania do aplikacji}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<images//GUI_rejestracja.png, id=86, 388.45125pt x 548.80031pt>
+<images//GUI_rejestracja.png, id=83, 388.45125pt x 548.80031pt>
 File: images//GUI_rejestracja.png Graphic file (type png)
 <use images//GUI_rejestracja.png>
-Package pdftex.def Info: images//GUI_rejestracja.png  used on input line 525.
+Package pdftex.def Info: images//GUI_rejestracja.png  used on input line 531.
 (pdftex.def)             Requested size: 194.22514pt x 274.39948pt.
 
 ! LaTeX Error: \caption outside float.
@@ -916,16 +825,16 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.526 			\caption
+l.532 			\caption
                  {Rys.11 Formularz rejestracji do aplikacji}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [17 <./images//GUI_logowanie.png> <./images//GUI_rejestracja.png>]
-<images//GUI_lista_badan.png, id=92, 770.12718pt x 441.90094pt>
+<images//GUI_lista_badan.png, id=89, 770.12718pt x 441.90094pt>
 File: images//GUI_lista_badan.png Graphic file (type png)
 <use images//GUI_lista_badan.png>
-Package pdftex.def Info: images//GUI_lista_badan.png  used on input line 538.
+Package pdftex.def Info: images//GUI_lista_badan.png  used on input line 544.
 (pdftex.def)             Requested size: 385.06264pt x 220.94992pt.
 
 
@@ -935,21 +844,21 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.539 			\caption
+l.545 			\caption
                  {Rys.12 Tablica z listÄ… badaÅ„}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (13.5916pt too wide) in paragraph at lines 542--543
+Overfull \hbox (13.5916pt too wide) in paragraph at lines 548--549
 \T1/ppl/m/n/12 mógª prze-czy-ta¢ szcze-gó-ªowy opis ba-da-nia oraz prze-gl¡d-n¡
 ¢ przy-kªa-dowe zrzuty ekranu
  []
 
-<images//GUI_opis_badania.png, id=93, 755.82375pt x 437.38406pt>
+<images//GUI_opis_badania.png, id=90, 755.82375pt x 437.38406pt>
 File: images//GUI_opis_badania.png Graphic file (type png)
 <use images//GUI_opis_badania.png>
-Package pdftex.def Info: images//GUI_opis_badania.png  used on input line 545.
+Package pdftex.def Info: images//GUI_opis_badania.png  used on input line 551.
 (pdftex.def)             Requested size: 377.91095pt x 218.69148pt.
 
 ! LaTeX Error: \caption outside float.
@@ -958,17 +867,17 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.546 			\caption
+l.552 			\caption
                  {Rys.13 Tablica z opisem badania}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [18 <./images//GUI_lista_badan.png> <./images//GUI_opis_badania.png>]
-<images//GUI_zarzadzanie_kontem.png, id=100, 763.35187pt x 441.14813pt>
+<images//GUI_zarzadzanie_kontem.png, id=97, 763.35187pt x 441.14813pt>
 File: images//GUI_zarzadzanie_kontem.png Graphic file (type png)
 <use images//GUI_zarzadzanie_kontem.png>
 Package pdftex.def Info: images//GUI_zarzadzanie_kontem.png  used on input line
- 557.
+ 563.
 (pdftex.def)             Requested size: 381.675pt x 220.57352pt.
 
 
@@ -978,15 +887,15 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.558 			\caption
+l.564 			\caption
                  {Rys.14 Tablica z zarzÄ…dzanie kontem}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<images//GUI_historia_badan.png, id=101, 591.71063pt x 440.39531pt>
+<images//GUI_historia_badan.png, id=98, 591.71063pt x 440.39531pt>
 File: images//GUI_historia_badan.png Graphic file (type png)
 <use images//GUI_historia_badan.png>
-Package pdftex.def Info: images//GUI_historia_badan.png  used on input line 564
+Package pdftex.def Info: images//GUI_historia_badan.png  used on input line 570
 .
 (pdftex.def)             Requested size: 355.02911pt x 264.23921pt.
 
@@ -996,16 +905,16 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.565 			\caption
+l.571 			\caption
                  {Rys.15 Tablica z historiÄ… badaÅ„}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [19 <./images//GUI_zarzadzanie_kontem.png> <./images//GUI_historia_badan.png>]
-<images//GUI_zmiana_danych.png, id=107, 547.2947pt x 599.99156pt>
+<images//GUI_zmiana_danych.png, id=104, 547.2947pt x 599.99156pt>
 File: images//GUI_zmiana_danych.png Graphic file (type png)
 <use images//GUI_zmiana_danych.png>
-Package pdftex.def Info: images//GUI_zmiana_danych.png  used on input line 571.
+Package pdftex.def Info: images//GUI_zmiana_danych.png  used on input line 577.
 
 (pdftex.def)             Requested size: 273.64667pt x 299.99504pt.
 
@@ -1016,18 +925,18 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.572 			\caption
+l.578 			\caption
                  {Rys.16 Formularz aktualizujÄ…cy dane}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [20 <./images//GUI_zmiana_danych.png>] (./documentation.aux) ) 
 Here is how much of TeX's memory you used:
- 3641 strings out of 478268
- 60966 string characters out of 5846346
+ 3630 strings out of 478268
+ 60839 string characters out of 5846346
  364059 words of memory out of 5000000
- 21809 multiletter control sequences out of 15000+600000
- 489055 words of font info for 64 fonts, out of 8000000 for 9000
+ 21803 multiletter control sequences out of 15000+600000
+ 485470 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,6n,62p,2330b,353s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texli
@@ -1035,17 +944,14 @@ ve/2022/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}{/usr/local/texlive/2022/t
 exmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2022/texmf-dist/fonts
 /enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/t
 ype1/public/tex-gyre/qcrr.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/p
-ublic/cm-super/sfcc1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pub
-lic/cm-super/sfrb1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publi
-c/cm-super/sfrb2488.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/
-cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm
--super/sfti1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatin
-o/uplb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplr8
-a.pfb>
-Output written on documentation.pdf (21 pages, 1964376 bytes).
+ublic/cm-super/sfrb1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pub
+lic/cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/p
+alatino/uplb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino
+/uplr8a.pfb>
+Output written on documentation.pdf (21 pages, 1919425 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 135 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
