@@ -1,11 +1,9 @@
 \documentclass[12pt, letterpaper]{article}
 \usepackage{graphicx}
-\usepackage[T1]{fontenc}
 \usepackage[polish]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage{times}
+\usepackage[T1]{fontenc}
 \usepackage{mathpazo}
-
 
 \graphicspath{{images/}}
 
@@ -67,6 +65,7 @@
 %--------------------------------------------------------------------------------------------------
 
 \begin{document}
+\setlength{\parindent}{1cm}
 \newpage
 
 %--------------------------------------------------------------------------------------------------
@@ -85,14 +84,48 @@
 %--------------------------------------------------------------------------------------------------
 %       WPROWADZENIE
 %--------------------------------------------------------------------------------------------------
-
 \section{Wstęp}
 
+
+\newpage
 %--------------------------------------------------------------------------------------------------
 %       ANALIZA AKTUALNEGO STANU WIEDZY O ZAGADNIENIU, KTÓREGO DOTYCZY PRACA
 %--------------------------------------------------------------------------------------------------
-
 \section{Analiza aktualnego stanu wiedzy o zagadnieniu, którego dotyczy praca}
+
+\subsection{Daltonizm, czyli na czym polega zabuzenie rozpoznawania barw}
+
+\paragraph{}
+Daltonizm to zwyczajowa nazwa używana dla określenia dziedzicznego zaburzenia rozróżniania barw. Powodem, dla którego daltonista zmaga się z~nieprawidłowym widzeniem barw, jest brak lub osłabienie działania fotoreceptorów położonych na siatkówce oka, przede wszystkim w~obrębie plamki żółtej. Przyczyną dziedzicznego upośledzenia widzenia barwnego jest uszkodzenie genów kodujących odpowiednie barwniki wzrokowe.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Jak widzi daltonista?}
+
+\paragraph{}
+Daltonizm jest rodzajem wady wzroku i~nie jest tożsamy z~całkowitą ślepotą na barwy. Osoby z~tym schorzeniem zachowują widzenie barwy niebieskiej i~czerwonej. Nie rozpoznają koloru zielonego lub mylą go z~czerwonym. Czasami daltonista rozpoznaje barwę zieloną, ale bez postrzegania jej odcieni. Takie dyskretne zaburzenie widzenia określane jest mianem deuteranomalii.
+
+\paragraph{}
+Całkowita ślepota na barwy, czyli monochromatyzm to zdolność rozpoznawania tylko jednej barwy. Osoby z nieprawidłowością postrzegania barw mogą dostrzegać różnice w~kontraście, jaskrawości lub nasyceniu i~łączyć te cechy z~nazwami kolorów. W~rezultacie choroba ta może być zdiagnozowana dopiero w~życiu dorosłym. 
+
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.6\textwidth]{daltonizm_rodzaje}
+  \caption{Rodzaje zaburzeń widzenia barw}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Testy na daltonizm}
+\paragraph{}
+Najpopularniejszym testem na daltonizm jest badanie z~wykorzystaniem pseudoizochromatycznych tablic Ishihary. Tablice te postać okrągłych plam złożonych z~kolorowych kropek, w~których ukryte są liczby lub określone kształty. Tablice te pozwalają na ocenę zaburzeń widzenia barwnego w~zakresie kolorów czerwonego i~zielonego. Badanie nie wymaga specjalnego przygotowania. Przeprowadza się je przy dobrym oświetleniu z~odległości umożliwiającej czytanie tekstu. Jeśli to konieczne osoba badana może założyć okulary.
+
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.7\textwidth]{ishihara}
+  \caption{Tablice Ishihary}
+\end{figure}
+
+\paragraph{}
+Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzenia barwy czerwonej, zielonej i~niebieskiej. Polega na ułożeniu w~odpowiedniej kolejności 15 barwnych pionków tak, aby ich kolory płynnie przechodziły jeden w~drugi. W~przypadkach wątpliwych wykorzystuje się anomaloskop, czyli aparat służący do ilościowego określania zaburzenia widzenia barw w~osi czerwono-zielonej. Badanie ma przebieg dwufazowy. Najpierw zadaniem osoby badanej jest dobranie mieszaniny czystego światła czerwonego i~zielonego w~taki sposób, aby dopasować ją do czystego światła żółtego.
 
 %--------------------------------------------------------------------------------------------------
 %       SFORMUŁOWANIE ZAŁOŻEŃ I/LUB HIPOTEZ ORAZ NAKREŚLENIE CELU PRACY
@@ -164,11 +197,14 @@
 		
 		W~oparciu o~opis świata rzeczywistego oraz zdefiniowane wymagania funkcjonalne i~niefunkcjonalne na Rys.1 przedstawiono diagram wymagań dla opisywanego oprogramowania.
 		
-		\begin{center}
-			\includegraphics[scale=0.4]{reqDiagram}\\
-			\caption{Rys.1 Diagram wymagań}
-		\end{center}
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.8\textwidth]{reqDiagram}
+  \caption{Diagram wymagań}
+\end{figure}
 		
+		
+\newpage
 %--------------------------------------------------------------------------------------------------
 %       DIAGRAMY UML
 %--------------------------------------------------------------------------------------------------
@@ -180,11 +216,12 @@
 		\subsection{Diagram przypadków użycia}
 		
 		W~oparciu o~opis świata rzeczywistego oraz zdefiniowane wymagania funkcjonalne i~niefunkcjonalne na Rys.2 przedstawiono diagram przypadków użycia dla opisywanego oprogramowania.
-		
-		\begin{center}
-			\includegraphics[scale=0.5]{useCaseDiagram}\\
-			\caption{Rys.2 Diagram przypadków użycia}
-		\end{center}		
+
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.8\textwidth]{useCaseDiagram}
+  \caption{Diagram przypadków użycia}
+\end{figure}			
 		
 		
 %--------------------------------------------------------------------------------------------------
@@ -218,8 +255,7 @@
 		\textbf{Opis:} Administrator zarządza systemem, bazą danych oraz analizuje wyniki badań użytkowników.\\
 		
 		\textbf{Przypadki użycia:} PU Baza danych, PU Zarządzanie systemem, PU Historia badań użytkownika powiązane przez << extend >> z~PU Zarządzanie systemem, PU Zarządzanie danymi użytkownika powiązane przez << extend >> z~PU Zarządzanie systemem.	
-		
-		\newpage
+
 		
 %-------------------------------------------
 %       PU BAZA DANYCH
@@ -450,18 +486,20 @@
 		
 		W oparciu o~diagram przypadków użycia oraz przebiegu PU Logowanie i~PU Rejestracja na Rys.3 oraz Rys.4 przedstawiono kolejno diagram aktywności logowania i~diagram aktywności rejestracji dla opisywanego oprogramowania.
 		
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.8\textwidth]{aclogowanie}
+  \caption{Diagram aktywności - Logowanie}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.8\textwidth]{acrejestracja}
+  \caption{Diagram aktywności - Rejestracja}
+\end{figure}
 		
-		\begin{center}
-			\includegraphics[scale=0.5]{aclogowanie}\\
-			\caption{Rys.3 Diagram aktywności - Logowanie}
-		\end{center}	
 		
-		
-		\begin{center}
-			\includegraphics[scale=0.5]{acrejestracja}\\
-			\caption{Rys.4 Diagram aktywności - Rejestracja}
-		\end{center}
-		
+\newpage
 %--------------------------------------------------------------------------------------------------
 %       DIAGRAM KLAS
 %--------------------------------------------------------------------------------------------------
@@ -471,10 +509,11 @@
 		
 		Klasa {\fontfamily{qcr}\selectfont BazaDanych} odpowiedzialna jest za połączenie z~bazą danych. Główna klasa {\fontfamily{qcr}\selectfont Start}, będzie wywoływana podczas uruchamiania aplikacji. Klasa będzie tworzyć instancje klas Logowanie lub Rejestracja w~zależności od wyboru użytkownika. Klasa {\fontfamily{qcr}\selectfont Logowanie} będzie odpowiedzialna za system logowania do aplikacji. Klasa będzie korzystać z~klasy BazaDanych. Klasa będzie się znajdować w~klasie Start oraz tworzyć instancję klasy Uzytkownik, jeśli nastąpi poprawne logowanie do systemu. Klasa {\fontfamily{qcr}\selectfont Rejestracja} odpowiedzialna będzie za rejestrowanie użytkownika do systemu oraz walidacji danych podczas rejestracji. Klasa będzie korzystać z~klasy BazaDanych oraz będzie znajdować się w~klasie Start. Klasa {\fontfamily{qcr}\selectfont Osoba} będzie klasą abstrakcyjną, po której będzie dziedziczyć klasa reprezentująca użytkowników. Klasa {\fontfamily{qcr}\selectfont Uzytkownik} dziedziczy po klasie Osoba oraz zawiera składowe takie jak numer pacjenta oraz imię. Klasa zawiera metody, które będą wykorzystane do reprezentowania danych użytkownika oraz przekazywania numeru pacjenta do innych klas. Klasa {\fontfamily{qcr}\selectfont Dashboard} będzie odpowiedzialna za obsługę menu głównego użytkownika. Klasa ta będzie tworzyć instancje klas ListaBadan lub Konto. Klasa {\fontfamily{qcr}\selectfont Konto} odpowiedzialna będzie za zarządzanie przez użytkownika swoimi danymi. Klasa będzie połączona z~klasą BazaDanych oraz będzie się znajdować w~klasie Dashboard. Klasa {\fontfamily{qcr}\selectfont Badanie} to klasa, która zawiera wszystkie składowe danego badania oraz metody sterujące badaniem. Ponadto klasa zawiera główną metodę start(), która rozpoczyna badanie oraz metodę opis(), która wyświetli szczegółowy opis badania. Klasa ta będzie wywoływana w klasie ListaBadan. Klasa {\fontfamily{qcr}\selectfont ListaBadan} będzie tworzyć posortowaną listę klas z~dostępnymi badaniami. Klasa będzie również umożliwiać otworzenie opisu danego badania lub jego rozpoczęcie za pomocą metod start() oraz opis() z klasy Badanie.\\
 		
-		\begin{center}
-			\includegraphics[scale=0.5]{classDiagram}\\
-			\caption{Rys.5 Diagram klas}
-		\end{center}
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.8\textwidth]{classDiagram}
+  \caption{Diagram klas}
+\end{figure}
 		
 		
 %--------------------------------------------------------------------------------------------------
@@ -486,15 +525,17 @@
 		
 		Na podstawie diagramów aktywności logowania oraz rejestracji na Rys.6 oraz Rys.7 przedstawiono kolejno diagram sekwencji logowania oraz diagram sekwencji rejestracji dla opisywanego oprogramowania.
 		
-		\begin{center}
-			\includegraphics[scale=0.6]{seqDiagram}\\
-			\caption{Rys.6 Diagram sekwencji (Logowanie)}
-		\end{center}
-		
-		\begin{center}
-			\includegraphics[scale=0.6]{seqDiagramRejestracja}\\
-			\caption{Rys.7 Diagram sekwencji (Rejestracja)}
-		\end{center}
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.8\textwidth]{seqDiagram}
+  \caption{Diagram sekwencji - Logowanie}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.8\textwidth]{seqDiagramRejestracja}
+  \caption{Diagram sekwencji - rejestracja}
+\end{figure}
 		
 %--------------------------------------------------------------------------------------------------
 %       DIAGRAM AKTYWNOŚCI
@@ -507,10 +548,11 @@
 		
 		Nowy użytkownik może się zarejestrować, a~następnie staje się Zarejestrowany. Po zarejestrowaniu się, użytkownik może przystąpić do próby logowania do systemu. Jeśli użytkownik wpisze poprawne dane zostanie zalogowany i~stanie się Zalogowany. Zalogowany użytkownik może się w~dowolnym momencie wylogować z~systemu i~stanie się znowu Zarejestrowany. Jeśli podczas próby logowania użytkownik poda 5 razy złe dane konto zostanie zablokowane i~stanie się Zablokowany. Użytkownik może poprosić administratora o~odblokowanie konta. Po odblokowaniu konta użytkownik stanie się znowu Zarejestrowany.
 		
-		\begin{center}
-			\includegraphics[scale=0.6]{activeDiagramUser}\\
-			\caption{Rys.8 Diagram stanów użytkownika}
-		\end{center}
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.8\textwidth]{activeDiagramUser}
+  \caption{Diagram stanów użytkownika}
+\end{figure}
 		
 		
 %--------------------------------------------------------------------------------------------------
@@ -521,10 +563,11 @@
 		
 		Poniżej zamieszczono harmonogram realizacji projektu. Diagram Gantta prezentuje ilość dni jakie będą poświęcone poszczególnym pracom oraz suma dni spędzonych podczas pracy nad projektem.
 		
-		\begin{center}
-			\includegraphics[scale=0.7]{wykres_gantta}\\
-			\caption{Rys.9 Wykres Gantta}
-		\end{center}
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.6\textwidth]{wykres_gantta}
+  \caption{Wykres Gantta}
+\end{figure}
 		
 		
 %--------------------------------------------------------------------------------------------------
@@ -551,18 +594,20 @@
 				\item Przypomnieć hasło poprzez wciśnięcie przycisku "Kliknij tutaj"
 		\end{itemize}
 		
-		\begin{center}
-			\includegraphics[scale=0.5]{GUI_logowanie}\\
-			\caption{Rys.10 Formularz logowania do aplikacji}
-		\end{center}
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.5\textwidth]{GUI_logowanie}
+  \caption{Formularz logowania do aplikacji}
+\end{figure}
 	
 		
 		Na Rys.11 przestawiono koncepcję tablicy jaką zobaczy użytkownik po wejściu do możliwości rejestracji. Użytkownik będzie mógł się zarejestrować do systemu wprowadzając poprawne dane oraz wciskając przycisk "Zarejestruj".
 		
-		\begin{center}
-			\includegraphics[scale=0.5]{GUI_rejestracja}\\
-			\caption{Rys.11 Formularz rejestracji do aplikacji}
-		\end{center}
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.5\textwidth]{GUI_rejestracja}
+  \caption{Formularz rejestracji do aplikacji}
+\end{figure}
 		
 		Na Rys.12 przedstawiono koncepcję tablicy z~listą badań jaką użytkownik zobaczy wchodząc w~scenę z~listą badań. Użytkownik będzie mógł:
 		
@@ -572,17 +617,19 @@
 			\item Przeczytać opis wchodząc do oddzielnej sceny poprzez przycisk "Opis"
 		\end{itemize}
 		
-		\begin{center}
-			\includegraphics[scale=0.5]{GUI_lista_badan}\\
-			\caption{Rys.12 Tablica z listą badań}
-		\end{center}
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.5\textwidth]{GUI_lista_badan}
+  \caption{Tablica z listą badań}
+\end{figure}
 		
 		Na Rys.13 przedstawiono koncepcję tablicy z~opisem badania, którą użytkownik zobaczy po wciśnięciu przycisku "Opis" w~scenie z~listą badań. Użytkownik będzie mógł przeczytać szczegółowy opis badania oraz przeglądnąć przykładowe zrzuty ekranu z przebiegu badania, które będą umieszczone pod opisem słownym.
 		
-		\begin{center}
-			\includegraphics[scale=0.5]{GUI_opis_badania}\\
-			\caption{Rys.13 Tablica z opisem badania}
-		\end{center}
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.5\textwidth]{GUI_opis_badania}
+  \caption{Tablica z opisem badania}
+\end{figure}
 		
 		Na Rys.14 przedstawiono koncepcję tablicy z~dwoma kafelkami do zarządzania kontem. Użytkownik będzie mógł:
 		
@@ -590,25 +637,29 @@
 			\item Przejść do historii swoich badań za pomocą przycisku "Historia badań"
 			\item Przejść do zarządzania swoimi danymi za pomocą przycisku "Zarządzaj kontem"
 		\end{itemize}
+
 		
-		\begin{center}
-			\includegraphics[scale=0.5]{GUI_zarzadzanie_kontem}\\
-			\caption{Rys.14 Tablica z zarządzanie kontem}
-		\end{center}
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.5\textwidth]{GUI_zarzadzanie_kontem}
+  \caption{Tablica z zarządzaniem kontem}
+\end{figure}
 		
 		Na Rys.15 przedstawiono koncepcję tablicy z historią badań. Użytkownik będzie mógł przeglądać  swoją historię badań. Badania są wyświetlane za pomocą nazwy danego badania oraz daty jego wykonania. Po wciśnięciu dowolnego badania rozwinie się okienko ze szczegółowymi danymi.
 		
-		\begin{center}
-			\includegraphics[scale=0.6]{GUI_historia_badan}\\
-			\caption{Rys.15 Tablica z historią badań}
-		\end{center}
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.5\textwidth]{GUI_istoroa_badan}
+  \caption{Tablica z historią badań}
+\end{figure}
 		
 		Na Rys.16 przedstawiono formularz dzięki któremu użytkownik może zmienić swoje dane. Użytkownik może wprowadzić na miejsce starych danych nowe dane. Po wciśnięciu przycisku "Aktualizuj" następuje walidacja danych oraz zapis nowych wartości do bazy danych.
 		
-		\begin{center}
-			\includegraphics[scale=0.5]{GUI_zmiana_danych}\\
-			\caption{Rys.16 Formularz aktualizujący dane}
-		\end{center}
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.5\textwidth]{GUI_zmiana_danych}
+  \caption{Formularz aktualizujący dane}
+\end{figure}
 		
 %--------------------------------------------------------------------------------------------------
 %       PODSUMOWANIE
