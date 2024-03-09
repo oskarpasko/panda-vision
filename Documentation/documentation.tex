@@ -71,7 +71,6 @@
 %--------------------------------------------------------------------------------------------------
 %       Streszczenie pracy (j.polskim) i tytuł pracy w języku angielskim
 %--------------------------------------------------------------------------------------------------
-
 \section{Streszczenie pracy}
 
 %--------------------------------------------------------------------------------------------------
@@ -92,9 +91,7 @@
 %       ANALIZA AKTUALNEGO STANU WIEDZY O ZAGADNIENIU, KTÓREGO DOTYCZY PRACA
 %--------------------------------------------------------------------------------------------------
 \section{Analiza aktualnego stanu wiedzy o zagadnieniu, którego dotyczy praca}
-
-\subsection{Daltonizm, czyli na czym polega zabuzenie rozpoznawania barw}
-
+\subsection{Daltonizm, czyli na czym polega zabużenie rozpoznawania barw}
 \paragraph{}
 Daltonizm to zwyczajowa nazwa używana dla określenia dziedzicznego zaburzenia rozróżniania barw. Powodem, dla którego daltonista zmaga się z~nieprawidłowym widzeniem barw, jest brak lub osłabienie działania fotoreceptorów położonych na siatkówce oka, przede wszystkim w~obrębie plamki żółtej. Przyczyną dziedzicznego upośledzenia widzenia barwnego jest uszkodzenie genów kodujących odpowiednie barwniki wzrokowe.
 
@@ -130,44 +127,45 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 %--------------------------------------------------------------------------------------------------
 %       SFORMUŁOWANIE ZAŁOŻEŃ I/LUB HIPOTEZ ORAZ NAKREŚLENIE CELU PRACY
 %--------------------------------------------------------------------------------------------------
-
 \section{Sformułowanie założeń i/lub hipotez oraz nakreślenie celu pracy}
+\paragraph{}
+Założeniem pracy jest stworzenie aplikacji na urządzenia wirtualnej rzeczywistości w~celu umożliwienia przeprowadzania badań wykrywających daltonizm w~odmienny sposób. Dzięki urządzeniom VR możemy przeprowadzić badania bez ingernecji zewnętrznych bodźców działających na układ wzroku. Ponadto możemy za pomoca jednej aplikacji przeprowadzić nie jedno, lecz szereg różnych badań związanych z~badaniem różnych odmian daltonizmu oraz testowaniu rpozpoznawania dowolnych barw. Wykorzystanie bazy danych umożliwia nie tylko przechowywanie danych o~badaniach, które możemy przeprowadzić. W~bazie są przechowywane historie badań użytkowników. Dodatkowym założeniem jest tworzenie histogramów oraz porównań statystycznych wykonanych badań. 
 
 %--------------------------------------------------------------------------------------------------
-%       OMÓWIENIE METODYKI ORACY ORAZ UŻYTYCH URZĄDZEŃ I OPROGRAMOWANIE
+%       OMÓWIENIE METODYKI PRACY ORAZ UŻYTYCH URZĄDZEŃ I OPROGRAMOWANIE
 %--------------------------------------------------------------------------------------------------
+\section{Omówienie metodyki pracy oraz użytych urządzeń i oprogramowania}
+\paragraph{}
+Praca składa się z~trzech kluczowych elementów: aplikacja, Rest API oraz baza danych. Baza danych napisana w~języku MySQL przechowuje dane użytkowników, dane badań oraz historię badań uzytkowników razem z~ich wynikami. Rest API napisane we frameworku Flask jest odpowiedzialne za komunikację między bazą danych i~aplikacją, obsługą żądań oraz zapytań. Aplikacja jest napisana w~języku C# w~środowisku Unity. Aplikacja działa na urządzeniach wirtualnej rzeczywistości takich jak np. Oculus Quest 2. Histogramy oraz porównania statystyczne są pisane za pomocą języka Python.
 
-\section{Omówienie metodyki pracy oraz użytych urządzeń i oprgramowania}
+\paragraph{}
+Do tworzenia oprogramowania są wykorzystywane środowiska Unity, PyCharm, Visual Studio Code, Visual Studio, DBeaver.
 
 \newpage
 
 %--------------------------------------------------------------------------------------------------
 %       OPIS ŚWIATA RZECZYWISTEGO
 %--------------------------------------------------------------------------------------------------
-
 \section{Opis świata rzeczywistego}
-
-	\subsection{Opis zasobów ludzkich}
-
-	Gra na urządzenia wirtualnej rzeczywistości takich jak Oculus Quest 2 polegająca na zabawie kolorami z~użyciem sześcianów lub innych obiektów na różnych planszach. Gra ma pomagać nad diagnozowaniem ewentualnych schorzeń daltonizmu lub jemu podobnych. Aplikacja może być również używana do zabawy rywalizacyjnej. Gra powinna być przystosowana dla użytkownika w~dowolnym wieku. Gra pozwala na zapisywanie za pomocą eye-trackera ścieżki wzroku z~jaką badany podążał podczas rozgrywki. Podczas rozgrywki mierzymy również czas wykonania zadania. Dzięki wynikom czasu, poprawności oraz ścieżkom eye-trackera jesteśmy w~stanie bardzo dobrze przeanalizować zachowanie gracza oraz stwierdzić podejrzenie schorzenia. Wszystkie wyniki oraz przebieg badań jest zapisywany w~postaci danych w~bazie danych, do której dostęp ma administrator.
+\subsection{Opis zasobów ludzkich}
+\paragraph{}
+Gra na urządzenia wirtualnej rzeczywistości takich jak Oculus Quest 2 polegająca na zabawie kolorami z~użyciem sześcianów lub innych obiektów na różnych planszach. Gra ma pomagać nad diagnozowaniem ewentualnych schorzeń daltonizmu lub jemu podobnych. Aplikacja może być również używana do zabawy rywalizacyjnej. Gra powinna być przystosowana dla użytkownika w~dowolnym wieku. Gra pozwala na zapisywanie za pomocą eye-trackera ścieżki wzroku z~jaką badany podążał podczas rozgrywki. Podczas rozgrywki mierzymy również czas wykonania zadania. Dzięki wynikom czasu, poprawności oraz ścieżkom eye-trackera jesteśmy w~stanie bardzo dobrze przeanalizować zachowanie gracza oraz stwierdzić podejrzenie schorzenia. Wszystkie wyniki oraz przebieg badań jest zapisywany w~postaci danych w~bazie danych, do której dostęp ma administrator.
 	
 
-	\subsection{Przepisy i strategia firmy}
-	
-	Strategią firmy jest pomoc dzieciom oraz osobom dorosłym w~diagnozowaniu schorzeń takich jak daltonizm itp. Dążymy do jak najlepszego kontaktu z~naszymi użytkownikami. Chcemy żeby nasi użytkownicy mieli jak największy wpływ na rozwój oprogramowania, które jest tworzone bezpośrednio dla nich. Przewidywane są częste aktualizacje oprogramowania w~celu poprawy działania aplikacji oraz dodawanie nowych funkcjonalności i~badań w~przyszłości. Aplikacja dodatkowo będzie wysyłać w~przeciągu tygodnia wyniki z~najnowszych badań razem z~ich interpretacją i~ewentualnymi zaleceniami. Dodatkowo priorytetem firmy będzie zadbanie o~bezpieczeństwo wrażliwych danych osobowych oraz danych konta naszych użytkowników.
+\subsection{Przepisy i strategia firmy}
+\paragraph{}	
+Strategią firmy jest pomoc dzieciom oraz osobom dorosłym w~diagnozowaniu schorzeń takich jak daltonizm itp. Dążymy do jak najlepszego kontaktu z~naszymi użytkownikami. Chcemy żeby nasi użytkownicy mieli jak największy wpływ na rozwój oprogramowania, które jest tworzone bezpośrednio dla nich. Przewidywane są częste aktualizacje oprogramowania w~celu poprawy działania aplikacji oraz dodawanie nowych funkcjonalności i~badań w~przyszłości. Aplikacja dodatkowo będzie wysyłać w~przeciągu tygodnia wyniki z~najnowszych badań razem z~ich interpretacją i~ewentualnymi zaleceniami. Dodatkowo priorytetem firmy będzie zadbanie o~bezpieczeństwo wrażliwych danych osobowych oraz danych konta naszych użytkowników.
 	
 
-	\subsection{Dane techniczne}
-	
-	Użytkownicy mogą korzystać z~aplikacji tylko na urządzeniach wirtualnej rzeczywistości. Użytkownicy mogą się zalogować do aplikacji tylko wtedy gdy mają połączenie z internetem. Jeśli użytkownik nie posiada konta może je darmowo utworzyć. Zarejestrowany użytkownik może się zalogować za pomocą unikatowego numeru telefonu oraz hasła. Aplikacja umożliwia kontakt z~administratorem w~celu weryfikacji oraz konsultacji przeprowadzonych badań.
+\subsection{Dane techniczne}
+\paragraph{}	
+Użytkownicy mogą korzystać z~aplikacji tylko na urządzeniach wirtualnej rzeczywistości. Użytkownicy mogą się zalogować do aplikacji tylko wtedy gdy mają połączenie z internetem. Jeśli użytkownik nie posiada konta może je darmowo utworzyć. Zarejestrowany użytkownik może się zalogować za pomocą unikatowego numeru telefonu oraz hasła. Aplikacja umożliwia kontakt z~administratorem w~celu weryfikacji oraz konsultacji przeprowadzonych badań.
 	
 %--------------------------------------------------------------------------------------------------
 %       WYMAGANIA FUNKCJONALNE I NIEFUNKCJONALNE
 %--------------------------------------------------------------------------------------------------
-
-	\newpage	
-	
-	\subsection{Wymagania funkcjonalne i niefunkcjonalne}
+\newpage		
+\subsection{Wymagania funkcjonalne i niefunkcjonalne}
 
 		
 			\begin{itemize}
@@ -192,10 +190,9 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 %--------------------------------------------------------------------------------------------------
 %      	REQUREMENT DIAGRAM
 %--------------------------------------------------------------------------------------------------
-			
-		\subsection{Requirement Diagram}
-		
-		W~oparciu o~opis świata rzeczywistego oraz zdefiniowane wymagania funkcjonalne i~niefunkcjonalne na Rys.1 przedstawiono diagram wymagań dla opisywanego oprogramowania.
+\subsection{Requirement Diagram}
+\paragraph{}		
+W~oparciu o~opis świata rzeczywistego oraz zdefiniowane wymagania funkcjonalne i~niefunkcjonalne na Rys.1 przedstawiono diagram wymagań dla opisywanego oprogramowania.
 		
 \begin{figure}[h]
   \centering
@@ -208,14 +205,13 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 %--------------------------------------------------------------------------------------------------
 %       DIAGRAMY UML
 %--------------------------------------------------------------------------------------------------
-		
-		\section{Diagramy UML}
-
-		W~tym rozdziale przedstawiona zostanie koncepcja projektowanego systemu za pomocą języka UML.		
+\section{Diagramy UML}
+\paragraph{}
+W~tym rozdziale przedstawiona zostanie koncepcja projektowanego systemu za pomocą języka UML.		
 		
 		\subsection{Diagram przypadków użycia}
-		
-		W~oparciu o~opis świata rzeczywistego oraz zdefiniowane wymagania funkcjonalne i~niefunkcjonalne na Rys.2 przedstawiono diagram przypadków użycia dla opisywanego oprogramowania.
+\paragraph{}		
+W~oparciu o~opis świata rzeczywistego oraz zdefiniowane wymagania funkcjonalne i~niefunkcjonalne na Rys.2 przedstawiono diagram przypadków użycia dla opisywanego oprogramowania.
 
 \begin{figure}[h]
   \centering
@@ -254,8 +250,7 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 		
 		\textbf{Opis:} Administrator zarządza systemem, bazą danych oraz analizuje wyniki badań użytkowników.\\
 		
-		\textbf{Przypadki użycia:} PU Baza danych, PU Zarządzanie systemem, PU Historia badań użytkownika powiązane przez << extend >> z~PU Zarządzanie systemem, PU Zarządzanie danymi użytkownika powiązane przez << extend >> z~PU Zarządzanie systemem.	
-
+		\textbf{Przypadki użycia:} PU Baza danych, PU Zarządzanie systemem, PU Historia badań użytkownika powiązane przez << extend >> z~PU Zarządzanie systemem, PU Zarządzanie danymi użytkownika powiązane przez << extend >> z~PU Zarządzanie systemem.\\
 		
 %-------------------------------------------
 %       PU BAZA DANYCH
@@ -271,10 +266,8 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 		
 		WK: Możliwość zarządzania danymi.\\
 		
-		\textbf{Przebieg: }\\
-		Baza danych będzie wykorzystywana do możliwości logowania oraz rejestracji. Ponadto będą się w~niej znajdować wyniki badań użytkowników. Baza danych będzie się składać z~tabeli przechowujących dane użytkowników takie jak adres e-mail, imię, nazwisko, hasło, numer telefonu oraz datę urodzenia. Ponadto baza danych będzie posiadać tabelę z~badaniami, w~której będą zamieszczone wszystkie niezbędne dane dotyczące badań takie jak czas wykonania badania, datę przeprowadzenia badania, pliki zebrane podczas badania np. ścieżka eye-trackera oraz informację, który użytkownik przeprowadził konkretne badanie.
-		 \\
-		
+		\textbf{Przebieg: }
+\paragraph{}Baza danych będzie wykorzystywana do możliwości logowania oraz rejestracji. Ponadto będą się w~niej znajdować wyniki badań użytkowników. Baza danych będzie się składać z~tabeli przechowujących dane użytkowników takie jak adres e-mail, imię, nazwisko, hasło, numer telefonu oraz datę urodzenia. Ponadto baza danych będzie posiadać tabelę z~badaniami, w~której będą zamieszczone wszystkie niezbędne dane dotyczące badań takie jak czas wykonania badania, datę przeprowadzenia badania, pliki zebrane podczas badania np. ścieżka eye-trackera oraz informację, który użytkownik przeprowadził konkretne badanie.\\
 		
 %-------------------------------------------
 %       PU LOGOWANIE
@@ -290,14 +283,12 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 		
 		WK: podanie niezbędnych danych do zalogowania tj. adres e-mail i hasło.\\
 		
-		\textbf{Przebieg:}\\
-		Logowanie dostępne jest poprzez zakładkę "Logowanie". Podczas logowania należy podać adres e-mail oraz hasło. W~przypadku podania błędnych danych pojawi się informacja o~niepowodzeniu logowania w~postaci komunikatu "Podano błędne dane". Użytkownik może ponownie podać dane lub wyjść z~aplikacji. W~przypadku 5 błędnych logowań system zablokuje konto i~wyświetli komunikat "Prosimy o~kontakt w~celu odblokowania konta". Jeśli użytkownik wprowadzi poprawne dane to użytkownik zostanie zalogowany do systemu i~przeniesie się automatycznie do panelu głównego aplikacji.\\
+		\textbf{Przebieg:}
+\paragraph{}Logowanie dostępne jest poprzez zakładkę "Logowanie". Podczas logowania należy podać adres e-mail oraz hasło. W~przypadku podania błędnych danych pojawi się informacja o~niepowodzeniu logowania w~postaci komunikatu "Podano błędne dane". Użytkownik może ponownie podać dane lub wyjść z~aplikacji. W~przypadku 5 błędnych logowań system zablokuje konto i~wyświetli komunikat "Prosimy o~kontakt w~celu odblokowania konta". Jeśli użytkownik wprowadzi poprawne dane to użytkownik zostanie zalogowany do systemu i~przeniesie się automatycznie do panelu głównego aplikacji.\\
 		
 %-------------------------------------------
 %       PU REJESTRACJA
-%-------------------------------------------	
-		
-		\newpage		
+%-------------------------------------------		
 		
 		\textbf{PU Rejestracja}
 		
@@ -309,8 +300,8 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 		
 		WK: podanie niezbędnych danych do zalogowania tj. imię, nazwisko, adres e-mail, hasło, numer telefonu, data urodzenia.\\
 		
-		\textbf{Przebieg:}\\
-		Rejestracja jest dostępna przez zakładkę "Rejestracja". Podczas rejestracji należy podać imię, nazwisko, datę urodzenia, numer telefonu, unikalny adres e-mail oraz hasło. W~przypadku podania niewłaściwych danych np. numeru telefonu o~długości 10 cyfr lub adresu e-mail bez znaku "@" wyskoczy komunikat "Wprowadzono nieprawidłowe dane". W przypadku podania adresu e-mail, który już jest przypisany do innego konta wyskoczy komunikat "Konto z~podanym adresem e-mail już istnieje". Użytkownik może ponownie podać dane lub wyjść z aplikacji. Jeśli użytkownik wprowadzi poprawne dane to zostanie przekierowany do panelu logowania, gdzie będzie mógł się zalogować odpowiednimi danymi. \\
+		\textbf{Przebieg:}
+\paragraph{}Rejestracja jest dostępna przez zakładkę "Rejestracja". Podczas rejestracji należy podać imię, nazwisko, datę urodzenia, numer telefonu, unikalny adres e-mail oraz hasło. W~przypadku podania niewłaściwych danych np. numeru telefonu o~długości 10 cyfr lub adresu e-mail bez znaku "@" wyskoczy komunikat "Wprowadzono nieprawidłowe dane". W przypadku podania adresu e-mail, który już jest przypisany do innego konta wyskoczy komunikat "Konto z~podanym adresem e-mail już istnieje". Użytkownik może ponownie podać dane lub wyjść z aplikacji. Jeśli użytkownik wprowadzi poprawne dane to zostanie przekierowany do panelu logowania, gdzie będzie mógł się zalogować odpowiednimi danymi.\\
 		
 %-------------------------------------------
 %       PU LISTA BADAŃ
@@ -326,8 +317,8 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 		
 		WK: wybór badania z listy\\
 		
-		\textbf{Przebieg:}\\
-		Lista badań jest dostępna przez zakładkę "Lista badań". Użytkownik może przeglądać dostępne badania, które są zaprezentowane w~postaci listy za pomocą nazw badań oraz dwóch przycisków "Start oraz "Opis". Po kliknięciu przycisku "Opis" użytkownik zostanie wyświetlony opis badania. Po kliknięciu w przycisk "Start" użytkownik zacznie wybrane badanie. \\
+		\textbf{Przebieg:}
+\paragraph{}Lista badań jest dostępna przez zakładkę "Lista badań". Użytkownik może przeglądać dostępne badania, które są zaprezentowane w~postaci listy za pomocą nazw badań oraz dwóch przycisków "Start oraz "Opis". Po kliknięciu przycisku "Opis" użytkownik zostanie wyświetlony opis badania. Po kliknięciu w przycisk "Start" użytkownik zacznie wybrane badanie.\\
 		
 %-------------------------------------------
 %       PU START
@@ -343,9 +334,8 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 		
 		WK: wykonanie badania.\\
 		
-		\textbf{Przebieg: }\\
-		Badanie możemy wywołać po wybraniu odpowiedniego badania z listy. Podczas badania będą zbierane dane z przeprowadzanego badania takie jak czas, wynik lub ścieżka wzroku, liczba popełnionych błędów. Po zakończeniu badania, wszystkie dane są zapisywane w~bazie danych zgodnie z~metodologią zapisu plików.
-		 \\
+		\textbf{Przebieg: }
+\paragraph{}Badanie możemy wywołać po wybraniu odpowiedniego badania z listy. Podczas badania będą zbierane dane z przeprowadzanego badania takie jak czas, wynik lub ścieżka wzroku, liczba popełnionych błędów. Po zakończeniu badania, wszystkie dane są zapisywane w~bazie danych zgodnie z~metodologią zapisu plików.\\
 		 
 %-------------------------------------------
 %       PU OPIS BADANIA
@@ -361,9 +351,8 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 		
 		WK: zaznajomienie się z przebiegiem badania.\\
 		
-		\textbf{Przebieg: }\\
-		Użytkownik będzie mógł przeczytać szczegółowy opis na temat konkretnego badania oraz przeczytać szczegółowy przebieg badania. Dostępne będą również przykładowe zrzuty ekranu z~przebiegu badania.
-		 \\
+		\textbf{Przebieg: }
+\paragraph{}Użytkownik będzie mógł przeczytać szczegółowy opis na temat konkretnego badania oraz przeczytać szczegółowy przebieg badania. Dostępne będą również przykładowe zrzuty ekranu z~przebiegu badania.\\
 		 
 %-------------------------------------------
 %       PU ZARZĄDZANIE KONTEM
@@ -379,9 +368,8 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 		
 		WK: zarządzanie danymi.\\
 		
-		\textbf{Przebieg:}\\
-		Użytkownik może wybrać zakładkę "Historia badań" lub zakładkę "Zmiana danych" za pomocą, których będzie mógł zarządzać swoimi danymi lub historią swoich badań.
-		 \\
+		\textbf{Przebieg:}
+\paragraph{}Użytkownik może wybrać zakładkę "Historia badań" lub zakładkę "Zmiana danych" za pomocą, których będzie mógł zarządzać swoimi danymi lub historią swoich badań.\\
 		 
 %-------------------------------------------
 %       PU HISTORIA BADAŃ
@@ -397,15 +385,12 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 		
 		WK: przeglądanie historii badań.\\
 		
-		\textbf{Przebieg:}\\
-		Użytkownik może przeglądać listę z~historią swoich badań reprezentowaną nazwą badania oraz datą. Po kliknięciu w~badanie rozwinie się zakładka z~szczegółowymi danymi dotyczącymi konkretnego badania.
-		 \\
+		\textbf{Przebieg:}
+\paragraph{}Użytkownik może przeglądać listę z~historią swoich badań reprezentowaną nazwą badania oraz datą. Po kliknięciu w~badanie rozwinie się zakładka z~szczegółowymi danymi dotyczącymi konkretnego badania.\\
 		 
 %-------------------------------------------
 %       PU ZMIANA DANYCH
-%-------------------------------------------	
-		
-		\newpage		
+%-------------------------------------------		
 		
 		\textbf{PU Zmiana danych}
 		
@@ -417,10 +402,8 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 		
 		WK: możliwość zmiany danych personalnych.\\
 		
-		\textbf{Przebieg:}\\
-		Użytkownik będzie mógł zmienić dane. Aktualne dane zostaną wpisane w~wierze. Użytkownik będzie mógł zmienić dowolne dane oraz zaakceptować zmiany przez wciśnięcie przycisku "Aktualizuj". Po wciśnięciu przycisku nastąpi walidacja nowych danych oraz zapis do bazy danych.
-		 \\
-			
+		\textbf{Przebieg:}
+\paragraph{}Użytkownik będzie mógł zmienić dane. Aktualne dane zostaną wpisane w~wierze. Użytkownik będzie mógł zmienić dowolne dane oraz zaakceptować zmiany przez wciśnięcie przycisku "Aktualizuj". Po wciśnięciu przycisku nastąpi walidacja nowych danych oraz zapis do bazy danych.\\
 		
 %-------------------------------------------
 %       PU  ZARZĄDZANIE SYSTEMEM
@@ -436,8 +419,8 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 		
 		WK: zarządzanie bazą danych. \\
 		
-		\textbf{Przebieg:}\\
-		Jeśli administrator prawidłowo zaloguje się do systemu to zostaje wyświetlona w~panelu głównym lista użytkowników zarejestrowanych do systemu w~postaci listy. Lista jest reprezentowana za pomocą imienia, nazwiska oraz adresu e-mail użytkownika. Klikając w użytkownika z~listy możemy przejść do szczegółów jego konta.\\	
+		\textbf{Przebieg:}
+\paragraph{}Jeśli administrator prawidłowo zaloguje się do systemu to zostaje wyświetlona w~panelu głównym lista użytkowników zarejestrowanych do systemu w~postaci listy. Lista jest reprezentowana za pomocą imienia, nazwiska oraz adresu e-mail użytkownika. Klikając w użytkownika z~listy możemy przejść do szczegółów jego konta.\\	
 		
 %-------------------------------------------
 %       PU HISTORIA BADAŃ UŻYTKOWNIKA
@@ -453,14 +436,12 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 		
 		WK: przeglądanie historii badań użytkownika. \\
 		
-		\textbf{Przebieg:}\\
-		Po wybraniu użytkownika z~listy administrator zobaczy listę badań konkretnego użytkownika. Wyświetlane będą takie informacje jak: data badania, rodzaj badania oraz wyniki badań, dodatkowo powinny być pokazane pliki do pobrania, które stworzyły się podczas badania jak np. ścieżka śledzenia wzroku lub wykresy danych dostarczonych podczas badania. W~przypadku stwierdzenia podejrzenia schorzenia poprzez nieprawidłowości związane z~badaniem administrator przez zakładkę "Kontakt" powinien mieć bezpośrednią możliwość wysłania na adres e-mail użytkownika informacji na temat wyników badania wraz z~udostępnieniem wszelkich danych oraz plików.
+		\textbf{Przebieg:}
+\paragraph{}Po wybraniu użytkownika z~listy administrator zobaczy listę badań konkretnego użytkownika. Wyświetlane będą takie informacje jak: data badania, rodzaj badania oraz wyniki badań, dodatkowo powinny być pokazane pliki do pobrania, które stworzyły się podczas badania jak np. ścieżka śledzenia wzroku lub wykresy danych dostarczonych podczas badania. W~przypadku stwierdzenia podejrzenia schorzenia poprzez nieprawidłowości związane z~badaniem administrator przez zakładkę "Kontakt" powinien mieć bezpośrednią możliwość wysłania na adres e-mail użytkownika informacji na temat wyników badania wraz z~udostępnieniem wszelkich danych oraz plików.\\
 		
 %-------------------------------------------
 %       PU ZARZĄDZANIE DANYMI UŻYTKOWNIKA
 %-------------------------------------------	
-		
-		\newpage		
 		
 		\textbf{PU Zarządzanie danymi użytkownika}
 		
@@ -472,29 +453,26 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 		
 		WK: zmiana danych personalnych.\\
 		
-		\textbf{Przebieg:}\\
-		Administrator ma możliwość odblokowania konta użytkownika oraz ewentualną zmianę danych użytkownika. Ponadto administrator ma dostęp do wszystkich szczegółowych danych związanych z~badaniami użytkownika.
-		 \\
-		
+		\textbf{Przebieg:}
+\paragraph{}Administrator ma możliwość odblokowania konta użytkownika oraz ewentualną zmianę danych użytkownika. Ponadto administrator ma dostęp do wszystkich szczegółowych danych związanych z~badaniami użytkownika.\\
 
-		
-
+\newpage
 %--------------------------------------------------------------------------------------------------
 %       DIAGRAM AKTYWNOŚCI
 %--------------------------------------------------------------------------------------------------
-		\subsection{Diagram aktywności}
-		
-		W oparciu o~diagram przypadków użycia oraz przebiegu PU Logowanie i~PU Rejestracja na Rys.3 oraz Rys.4 przedstawiono kolejno diagram aktywności logowania i~diagram aktywności rejestracji dla opisywanego oprogramowania.
+\subsection{Diagram aktywności}
+\paragraph{}		
+W oparciu o~diagram przypadków użycia oraz przebiegu PU Logowanie i~PU Rejestracja na Rys.3 oraz Rys.4 przedstawiono kolejno diagram aktywności logowania i~diagram aktywności rejestracji dla opisywanego oprogramowania.
 		
 \begin{figure}[h]
   \centering
-      \includegraphics[width=0.8\textwidth]{aclogowanie}
+      \includegraphics[width=0.7\textwidth]{aclogowanie}
   \caption{Diagram aktywności - Logowanie}
 \end{figure}
 
 \begin{figure}[h]
   \centering
-      \includegraphics[width=0.8\textwidth]{acrejestracja}
+      \includegraphics[width=0.7\textwidth]{acrejestracja}
   \caption{Diagram aktywności - Rejestracja}
 \end{figure}
 		
@@ -503,11 +481,12 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 %--------------------------------------------------------------------------------------------------
 %       DIAGRAM KLAS
 %--------------------------------------------------------------------------------------------------
-		\subsection{Diagram klas}
+\subsection{Diagram klas}	
+\paragraph{}		
+Na podstawie diagramu przypadków użycia na Rys.5 przedstawiono diagram klas dla opisywanego oprogramowania.\\	
 		
-		Na podstawie diagramu przypadków użycia na Rys.5 przedstawiono diagram klas dla opisywanego oprogramowania.\\	
-		
-		Klasa {\fontfamily{qcr}\selectfont BazaDanych} odpowiedzialna jest za połączenie z~bazą danych. Główna klasa {\fontfamily{qcr}\selectfont Start}, będzie wywoływana podczas uruchamiania aplikacji. Klasa będzie tworzyć instancje klas Logowanie lub Rejestracja w~zależności od wyboru użytkownika. Klasa {\fontfamily{qcr}\selectfont Logowanie} będzie odpowiedzialna za system logowania do aplikacji. Klasa będzie korzystać z~klasy BazaDanych. Klasa będzie się znajdować w~klasie Start oraz tworzyć instancję klasy Uzytkownik, jeśli nastąpi poprawne logowanie do systemu. Klasa {\fontfamily{qcr}\selectfont Rejestracja} odpowiedzialna będzie za rejestrowanie użytkownika do systemu oraz walidacji danych podczas rejestracji. Klasa będzie korzystać z~klasy BazaDanych oraz będzie znajdować się w~klasie Start. Klasa {\fontfamily{qcr}\selectfont Osoba} będzie klasą abstrakcyjną, po której będzie dziedziczyć klasa reprezentująca użytkowników. Klasa {\fontfamily{qcr}\selectfont Uzytkownik} dziedziczy po klasie Osoba oraz zawiera składowe takie jak numer pacjenta oraz imię. Klasa zawiera metody, które będą wykorzystane do reprezentowania danych użytkownika oraz przekazywania numeru pacjenta do innych klas. Klasa {\fontfamily{qcr}\selectfont Dashboard} będzie odpowiedzialna za obsługę menu głównego użytkownika. Klasa ta będzie tworzyć instancje klas ListaBadan lub Konto. Klasa {\fontfamily{qcr}\selectfont Konto} odpowiedzialna będzie za zarządzanie przez użytkownika swoimi danymi. Klasa będzie połączona z~klasą BazaDanych oraz będzie się znajdować w~klasie Dashboard. Klasa {\fontfamily{qcr}\selectfont Badanie} to klasa, która zawiera wszystkie składowe danego badania oraz metody sterujące badaniem. Ponadto klasa zawiera główną metodę start(), która rozpoczyna badanie oraz metodę opis(), która wyświetli szczegółowy opis badania. Klasa ta będzie wywoływana w klasie ListaBadan. Klasa {\fontfamily{qcr}\selectfont ListaBadan} będzie tworzyć posortowaną listę klas z~dostępnymi badaniami. Klasa będzie również umożliwiać otworzenie opisu danego badania lub jego rozpoczęcie za pomocą metod start() oraz opis() z klasy Badanie.\\
+\paragraph{}
+Klasa {\fontfamily{qcr}\selectfont BazaDanych} odpowiedzialna jest za połączenie z~bazą danych. Główna klasa {\fontfamily{qcr}\selectfont Start}, będzie wywoływana podczas uruchamiania aplikacji. Klasa będzie tworzyć instancje klas Logowanie lub Rejestracja w~zależności od wyboru użytkownika. Klasa {\fontfamily{qcr}\selectfont Logowanie} będzie odpowiedzialna za system logowania do aplikacji. Klasa będzie korzystać z~klasy BazaDanych. Klasa będzie się znajdować w~klasie Start oraz tworzyć instancję klasy Uzytkownik, jeśli nastąpi poprawne logowanie do systemu. Klasa {\fontfamily{qcr}\selectfont Rejestracja} odpowiedzialna będzie za rejestrowanie użytkownika do systemu oraz walidacji danych podczas rejestracji. Klasa będzie korzystać z~klasy BazaDanych oraz będzie znajdować się w~klasie Start. Klasa {\fontfamily{qcr}\selectfont Osoba} będzie klasą abstrakcyjną, po której będzie dziedziczyć klasa reprezentująca użytkowników. Klasa {\fontfamily{qcr}\selectfont Uzytkownik} dziedziczy po klasie Osoba oraz zawiera składowe takie jak numer pacjenta oraz imię. Klasa zawiera metody, które będą wykorzystane do reprezentowania danych użytkownika oraz przekazywania numeru pacjenta do innych klas. Klasa {\fontfamily{qcr}\selectfont Dashboard} będzie odpowiedzialna za obsługę menu głównego użytkownika. Klasa ta będzie tworzyć instancje klas ListaBadan lub Konto. Klasa {\fontfamily{qcr}\selectfont Konto} odpowiedzialna będzie za zarządzanie przez użytkownika swoimi danymi. Klasa będzie połączona z~klasą BazaDanych oraz będzie się znajdować w~klasie Dashboard. Klasa {\fontfamily{qcr}\selectfont Badanie} to klasa, która zawiera wszystkie składowe danego badania oraz metody sterujące badaniem. Ponadto klasa zawiera główną metodę start(), która rozpoczyna badanie oraz metodę opis(), która wyświetli szczegółowy opis badania. Klasa ta będzie wywoływana w klasie ListaBadan. Klasa {\fontfamily{qcr}\selectfont ListaBadan} będzie tworzyć posortowaną listę klas z~dostępnymi badaniami. Klasa będzie również umożliwiać otworzenie opisu danego badania lub jego rozpoczęcie za pomocą metod start() oraz opis() z klasy Badanie.\\
 		
 \begin{figure}[h]
   \centering
@@ -515,15 +494,14 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
   \caption{Diagram klas}
 \end{figure}
 		
-		
+\newpage		
 %--------------------------------------------------------------------------------------------------
 %       DIAGRAM SEKWENCJI
 %--------------------------------------------------------------------------------------------------
-		\newpage
-
-		\subsection{Diagram sekwencji}
-		
-		Na podstawie diagramów aktywności logowania oraz rejestracji na Rys.6 oraz Rys.7 przedstawiono kolejno diagram sekwencji logowania oraz diagram sekwencji rejestracji dla opisywanego oprogramowania.
+\newpage
+\subsection{Diagram sekwencji}
+\paragraph{}
+Na podstawie diagramów aktywności logowania oraz rejestracji na Rys.6 oraz Rys.7 przedstawiono kolejno diagram sekwencji logowania oraz diagram sekwencji rejestracji dla opisywanego oprogramowania.
 		
 \begin{figure}[h]
   \centering
@@ -540,13 +518,13 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 %--------------------------------------------------------------------------------------------------
 %       DIAGRAM AKTYWNOŚCI
 %--------------------------------------------------------------------------------------------------
-		\newpage		
+\newpage		
+\subsection{Diagram stanów}
+\paragraph{}
+Na podstawie diagramów aktywności logowania oraz rejestracji na Rys.8 przedstawiono diagram stanów z~cyklu życia obiektu Uzytkownik w~aplikacji.\\
 		
-		\subsection{Diagram stanów}
-		
-		Na podstawie diagramów aktywności logowania oraz rejestracji na Rys.8 przedstawiono diagram stanów z~cyklu życia obiektu Uzytkownik w~aplikacji.\\
-		
-		Nowy użytkownik może się zarejestrować, a~następnie staje się Zarejestrowany. Po zarejestrowaniu się, użytkownik może przystąpić do próby logowania do systemu. Jeśli użytkownik wpisze poprawne dane zostanie zalogowany i~stanie się Zalogowany. Zalogowany użytkownik może się w~dowolnym momencie wylogować z~systemu i~stanie się znowu Zarejestrowany. Jeśli podczas próby logowania użytkownik poda 5 razy złe dane konto zostanie zablokowane i~stanie się Zablokowany. Użytkownik może poprosić administratora o~odblokowanie konta. Po odblokowaniu konta użytkownik stanie się znowu Zarejestrowany.
+\paragraph{}
+Nowy użytkownik może się zarejestrować, a~następnie staje się Zarejestrowany. Po zarejestrowaniu się, użytkownik może przystąpić do próby logowania do systemu. Jeśli użytkownik wpisze poprawne dane zostanie zalogowany i~stanie się Zalogowany. Zalogowany użytkownik może się w~dowolnym momencie wylogować z~systemu i~stanie się znowu Zarejestrowany. Jeśli podczas próby logowania użytkownik poda 5 razy złe dane konto zostanie zablokowane i~stanie się Zablokowany. Użytkownik może poprosić administratora o~odblokowanie konta. Po odblokowaniu konta użytkownik stanie się znowu Zarejestrowany.
 		
 \begin{figure}[h]
   \centering
@@ -558,10 +536,10 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 %--------------------------------------------------------------------------------------------------
 %       HARMONOGRAM REALIZACJI PROJEKTU
 %--------------------------------------------------------------------------------------------------
-		\newpage
-		\section{Harmonogram realizacji projektu}
-		
-		Poniżej zamieszczono harmonogram realizacji projektu. Diagram Gantta prezentuje ilość dni jakie będą poświęcone poszczególnym pracom oraz suma dni spędzonych podczas pracy nad projektem.
+\newpage
+\section{Harmonogram realizacji projektu}
+\paragraph{}
+Poniżej zamieszczono harmonogram realizacji projektu. Diagram Gantta prezentuje ilość dni jakie będą poświęcone poszczególnym pracom oraz suma dni spędzonych podczas pracy nad projektem.
 		
 \begin{figure}[h]
   \centering
@@ -573,7 +551,7 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 %--------------------------------------------------------------------------------------------------
 %       OPIS TECHNICZNY PROJEKTU
 %--------------------------------------------------------------------------------------------------
-		\section{Opis techniczny projektu}
+\section{Opis techniczny projektu}
 		
 		\begin{itemize}
 				\item Środowisko programistyczne VR: Unity 2023.2.51
@@ -584,10 +562,11 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 %--------------------------------------------------------------------------------------------------
 %       INTERFEJS UŻYTKOWNIKA
 %--------------------------------------------------------------------------------------------------
-		\newpage
-		\section{Interfejs użytkownika}
+\newpage
+\section{Interfejs użytkownika}
 		
-		Na Rys.10 przedstawiono koncepcję tablicy jaką zobaczy użytkownik po wejściu do aplikacji. Użytkownik będzie mógł:
+\paragraph{}
+Na Rys.10 przedstawiono koncepcję tablicy jaką zobaczy użytkownik po wejściu do aplikacji. Użytkownik będzie mógł:
 		\begin{itemize}
 				\item Zalogować się wciskając przycisk "Zaloguj" po wprowadzeniu poprawnych danych;
 				\item Przejść do formularza rejestracji wciskając przycisk "Zarejestruj"
@@ -599,17 +578,22 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
       \includegraphics[width=0.5\textwidth]{GUI_logowanie}
   \caption{Formularz logowania do aplikacji}
 \end{figure}
+
+\newpage
 	
-		
-		Na Rys.11 przestawiono koncepcję tablicy jaką zobaczy użytkownik po wejściu do możliwości rejestracji. Użytkownik będzie mógł się zarejestrować do systemu wprowadzając poprawne dane oraz wciskając przycisk "Zarejestruj".
+\paragraph{}		
+Na Rys.11 przestawiono koncepcję tablicy jaką zobaczy użytkownik po wejściu do możliwości rejestracji. Użytkownik będzie mógł się zarejestrować do systemu wprowadzając poprawne dane oraz wciskając przycisk "Zarejestruj".
 		
 \begin{figure}[h]
   \centering
       \includegraphics[width=0.5\textwidth]{GUI_rejestracja}
   \caption{Formularz rejestracji do aplikacji}
 \end{figure}
+
+\newpage
 		
-		Na Rys.12 przedstawiono koncepcję tablicy z~listą badań jaką użytkownik zobaczy wchodząc w~scenę z~listą badań. Użytkownik będzie mógł:
+\paragraph{}
+Na Rys.12 przedstawiono koncepcję tablicy z~listą badań jaką użytkownik zobaczy wchodząc w~scenę z~listą badań. Użytkownik będzie mógł:
 		
 		\begin{itemize}
 			\item Przeglądać dostępne badania;
@@ -622,16 +606,22 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
       \includegraphics[width=0.5\textwidth]{GUI_lista_badan}
   \caption{Tablica z listą badań}
 \end{figure}
+
+\newapge
 		
-		Na Rys.13 przedstawiono koncepcję tablicy z~opisem badania, którą użytkownik zobaczy po wciśnięciu przycisku "Opis" w~scenie z~listą badań. Użytkownik będzie mógł przeczytać szczegółowy opis badania oraz przeglądnąć przykładowe zrzuty ekranu z przebiegu badania, które będą umieszczone pod opisem słownym.
+\paragraph{}
+Na Rys.13 przedstawiono koncepcję tablicy z~opisem badania, którą użytkownik zobaczy po wciśnięciu przycisku "Opis" w~scenie z~listą badań. Użytkownik będzie mógł przeczytać szczegółowy opis badania oraz przeglądnąć przykładowe zrzuty ekranu z przebiegu badania, które będą umieszczone pod opisem słownym.
 		
 \begin{figure}[h]
   \centering
       \includegraphics[width=0.5\textwidth]{GUI_opis_badania}
   \caption{Tablica z opisem badania}
 \end{figure}
+
+\newapge
 		
-		Na Rys.14 przedstawiono koncepcję tablicy z~dwoma kafelkami do zarządzania kontem. Użytkownik będzie mógł:
+\paragraph{}
+Na Rys.14 przedstawiono koncepcję tablicy z~dwoma kafelkami do zarządzania kontem. Użytkownik będzie mógł:
 		
 		\begin{itemize}
 			\item Przejść do historii swoich badań za pomocą przycisku "Historia badań"
@@ -644,29 +634,35 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
       \includegraphics[width=0.5\textwidth]{GUI_zarzadzanie_kontem}
   \caption{Tablica z zarządzaniem kontem}
 \end{figure}
+
+\newapge
 		
-		Na Rys.15 przedstawiono koncepcję tablicy z historią badań. Użytkownik będzie mógł przeglądać  swoją historię badań. Badania są wyświetlane za pomocą nazwy danego badania oraz daty jego wykonania. Po wciśnięciu dowolnego badania rozwinie się okienko ze szczegółowymi danymi.
+\paragraph{}
+Na Rys.15 przedstawiono koncepcję tablicy z historią badań. Użytkownik będzie mógł przeglądać  swoją historię badań. Badania są wyświetlane za pomocą nazwy danego badania oraz daty jego wykonania. Po wciśnięciu dowolnego badania rozwinie się okienko ze szczegółowymi danymi.
 		
 \begin{figure}[h]
   \centering
       \includegraphics[width=0.5\textwidth]{GUI_istoroa_badan}
   \caption{Tablica z historią badań}
 \end{figure}
+
+\newapage
 		
-		Na Rys.16 przedstawiono formularz dzięki któremu użytkownik może zmienić swoje dane. Użytkownik może wprowadzić na miejsce starych danych nowe dane. Po wciśnięciu przycisku "Aktualizuj" następuje walidacja danych oraz zapis nowych wartości do bazy danych.
+
+\paragraph{}Na Rys.16 przedstawiono formularz dzięki któremu użytkownik może zmienić swoje dane. Użytkownik może wprowadzić na miejsce starych danych nowe dane. Po wciśnięciu przycisku "Aktualizuj" następuje walidacja danych oraz zapis nowych wartości do bazy danych.
 		
 \begin{figure}[h]
   \centering
       \includegraphics[width=0.5\textwidth]{GUI_zmiana_danych}
   \caption{Formularz aktualizujący dane}
 \end{figure}
-		
+
+\newpage		
 %--------------------------------------------------------------------------------------------------
 %       PODSUMOWANIE
 %--------------------------------------------------------------------------------------------------
-
-		\section{Podsumowanie}
-		
-		Aplikacja jest projektowania z~myślą o~osobach zmagającymi się ze schorzeniami daltonizmu. Oprogramowanie będzie miało za zadanie ułatwienie rozpoznawania schorzeń dotyczących daltonizmu u~dzieci przez zabawę oraz gry w~aplikacji. Chcemy połączyć gry i~zabawy razem z~badaniami wzroku. Chcemy żeby dzieci podczas badania czuły się jakby grały lub rywalizowały z~wynikami poprzedników. Nie chcemy żeby skupiały się na myśli, że są badane aby oszczędzić im niepotrzebnego stresu oraz zdenerwowania wynikami.
+\section{Podsumowanie}
+\paragraph{}
+Aplikacja jest projektowania z~myślą o~osobach zmagającymi się ze schorzeniami daltonizmu. Oprogramowanie będzie miało za zadanie ułatwienie rozpoznawania schorzeń dotyczących daltonizmu u~dzieci przez zabawę oraz gry w~aplikacji. Chcemy połączyć gry i~zabawy razem z~badaniami wzroku. Chcemy żeby dzieci podczas badania czuły się jakby grały lub rywalizowały z~wynikami poprzedników. Nie chcemy żeby skupiały się na myśli, że są badane aby oszczędzić im niepotrzebnego stresu oraz zdenerwowania wynikami.
  
 \end{document}

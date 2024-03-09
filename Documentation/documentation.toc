@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {1}Streszczenie pracy}{1}{}%
 \contentsline {section}{\numberline {2}Wstęp}{2}{}%
 \contentsline {section}{\numberline {3}Analiza aktualnego stanu wiedzy o zagadnieniu, którego dotyczy praca}{3}{}%
-\contentsline {subsection}{\numberline {3.1}Daltonizm, czyli na czym polega zabuzenie rozpoznawania barw}{3}{}%
+\contentsline {subsection}{\numberline {3.1}Daltonizm, czyli na czym polega zabużenie rozpoznawania barw}{3}{}%
 \contentsline {paragraph}{}{3}{}%
 \contentsline {subsection}{\numberline {3.2}Jak widzi daltonista?}{3}{}%
 \contentsline {paragraph}{}{3}{}%
@@ -11,20 +11,56 @@
 \contentsline {paragraph}{}{4}{}%
 \contentsline {paragraph}{}{4}{}%
 \contentsline {section}{\numberline {4}Sformułowanie założeń i/lub hipotez oraz nakreślenie celu pracy}{5}{}%
-\contentsline {section}{\numberline {5}Omówienie metodyki pracy oraz użytych urządzeń i oprgramowania}{5}{}%
+\contentsline {paragraph}{}{5}{}%
+\contentsline {section}{\numberline {5}Omówienie metodyki pracy oraz użytych urządzeń i oprogramowania}{5}{}%
+\contentsline {paragraph}{}{5}{}%
+\contentsline {paragraph}{}{5}{}%
 \contentsline {section}{\numberline {6}Opis świata rzeczywistego}{6}{}%
 \contentsline {subsection}{\numberline {6.1}Opis zasobów ludzkich}{6}{}%
+\contentsline {paragraph}{}{6}{}%
 \contentsline {subsection}{\numberline {6.2}Przepisy i strategia firmy}{6}{}%
+\contentsline {paragraph}{}{6}{}%
 \contentsline {subsection}{\numberline {6.3}Dane techniczne}{6}{}%
+\contentsline {paragraph}{}{6}{}%
 \contentsline {subsection}{\numberline {6.4}Wymagania funkcjonalne i niefunkcjonalne}{7}{}%
 \contentsline {subsection}{\numberline {6.5}Requirement Diagram}{7}{}%
+\contentsline {paragraph}{}{7}{}%
 \contentsline {section}{\numberline {7}Diagramy UML}{8}{}%
+\contentsline {paragraph}{}{8}{}%
 \contentsline {subsection}{\numberline {7.1}Diagram przypadków użycia}{8}{}%
+\contentsline {paragraph}{}{8}{}%
+\contentsline {paragraph}{}{9}{}%
+\contentsline {paragraph}{}{10}{}%
+\contentsline {paragraph}{}{10}{}%
+\contentsline {paragraph}{}{11}{}%
+\contentsline {paragraph}{}{11}{}%
+\contentsline {paragraph}{}{11}{}%
+\contentsline {paragraph}{}{12}{}%
+\contentsline {paragraph}{}{12}{}%
+\contentsline {paragraph}{}{12}{}%
+\contentsline {paragraph}{}{13}{}%
+\contentsline {paragraph}{}{13}{}%
+\contentsline {paragraph}{}{13}{}%
 \contentsline {subsection}{\numberline {7.2}Diagram aktywności}{14}{}%
+\contentsline {paragraph}{}{14}{}%
 \contentsline {subsection}{\numberline {7.3}Diagram klas}{15}{}%
+\contentsline {paragraph}{}{15}{}%
+\contentsline {paragraph}{}{15}{}%
 \contentsline {subsection}{\numberline {7.4}Diagram sekwencji}{17}{}%
+\contentsline {paragraph}{}{17}{}%
 \contentsline {subsection}{\numberline {7.5}Diagram stanów}{18}{}%
+\contentsline {paragraph}{}{18}{}%
+\contentsline {paragraph}{}{18}{}%
 \contentsline {section}{\numberline {8}Harmonogram realizacji projektu}{19}{}%
+\contentsline {paragraph}{}{19}{}%
 \contentsline {section}{\numberline {9}Opis techniczny projektu}{19}{}%
 \contentsline {section}{\numberline {10}Interfejs użytkownika}{21}{}%
-\contentsline {section}{\numberline {11}Podsumowanie}{22}{}%
+\contentsline {paragraph}{}{21}{}%
+\contentsline {paragraph}{}{22}{}%
+\contentsline {paragraph}{}{23}{}%
+\contentsline {paragraph}{}{23}{}%
+\contentsline {paragraph}{}{23}{}%
+\contentsline {paragraph}{}{24}{}%
+\contentsline {paragraph}{}{24}{}%
+\contentsline {section}{\numberline {11}Podsumowanie}{25}{}%
+\contentsline {paragraph}{}{25}{}%
