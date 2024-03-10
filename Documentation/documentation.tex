@@ -3,6 +3,7 @@
 \usepackage[polish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{epigraph} 
 \usepackage{mathpazo}
 \usepackage[sfdefault]{carlito}
 \usepackage{setspace}
@@ -36,7 +37,7 @@
 	
 	\vspace{2cm}	
 	
-	{\textbf{Wykrywanie schorzeń daltonizmu za poomoca aplikacji na urządzenia wirtualnej rzeczywistości}}
+	{\textbf{Wykrywanie schorzeń daltonizmu za pomocą aplikacji na urządzenia wirtualnej rzeczywistości}}
 	
 	\vspace{2cm}
 	
@@ -81,6 +82,9 @@
 %--------------------------------------------------------------------------------------------------
 \section{Streszczenie pracy}
 \paragraph{}
+\textbf{Detecting color blindness conditions using application for virtual reality devices.}
+
+\paragraph{}
 Aplikacja jest projektowania z~myślą o~osobach zmagającymi się ze schorzeniami daltonizmu. Oprogramowanie będzie miało za zadanie ułatwienie rozpoznawania schorzeń dotyczących daltonizmu u~dzieci przez zabawę oraz gry w~aplikacji. Chcemy połączyć gry i~zabawy razem z~badaniami wzroku. Chcemy żeby dzieci podczas badania czuły się jakby grały lub rywalizowały z~wynikami poprzedników. Nie chcemy żeby skupiały się na myśli, że są badane aby oszczędzić im niepotrzebnego stresu oraz zdenerwowania wynikami.
 
 \newpage
@@ -95,8 +99,17 @@ Aplikacja jest projektowania z~myślą o~osobach zmagającymi się ze schorzenia
 %       WPROWADZENIE
 %--------------------------------------------------------------------------------------------------
 \section{Wstęp}
+
+\epigraph{“It is the time you have wasted for your rose that makes your rose so important.”}{\textit{Antoine de Saint-Exupéry}}
+
 \paragraph{}
 Daltonizm, znany także jako zaburzenie percepcji barw, dotyka znaczącej części populacji na całym świecie. Osoby cierpiące na tę dolegliwość doświadczają trudności w~rozróżnianiu lub identyfikowaniu określonych kolorów, co może wpływać negatywnie na ich codzienne funkcjonowanie. Rozwój technologii VR stwarza nowe możliwości w~zakresie szybkiej i~skutecznej diagnozy schorzeń wzroku, w~tym daltonizmu. 
+
+\paragraph{}
+Tradycyjne testy diagnostyczne, do których zaliczamy tablice pseudoizochromatyczne (Ishihara, Dvorin, Velhagen, itp.), testy sortowania kolorów, testy świateł (Franswortha), itd. wykrywają jedynie problem z~rozróżnianiem barw czerwonej i~zielonej. Rodzaj, typ czy wielkość niedoboru widzenia barw mogą być rozpoznane z~użyciem dokładniejszego aparatu nazywanego anomaloskopem. Testy widzenia barwnego opracowane przez firmę Colorlite podobnie, jak anomaloskop dają nie tylko informacje o~tym z~jakim typem niedoboru mamy do czynienia ale również jak duży jest zakres niedoboru. Testy te są cały czas udoskonalane tak, by były zarówno łatwe w~zrozumieniu dla pacjenta i~dokładne. Pociąga to za sobą lepszą możliwość dopasowania odpowiedniego filtra.
+
+\paragraph{}
+W Rozdziale 3 omówione zostały teoretyczne zagadnienia związane z~problemem zaburzenia rozróżniania barw. W~Rozdziale 4~zostały sformułowane podstawowe założenia dotyczące pracy. Ponadto zostały nakreslone cele do jakich dąży niniejsza praca. W~Rozdziale 5~została omówiona metodyka pracy, urządzenia oraz oprogramowanie używane podczas tworzenia aplikacji opisanej w~pracy. Rozdziały 6-10 są poświęcone szczegółowemu opisowi całej aplikacji.
 
 \newpage
 %--------------------------------------------------------------------------------------------------
@@ -106,6 +119,13 @@ Daltonizm, znany także jako zaburzenie percepcji barw, dotyka znaczącej częś
 \subsection{Daltonizm, czyli na czym polega zabużenie rozpoznawania barw}
 \paragraph{}
 Daltonizm to zwyczajowa nazwa używana dla określenia dziedzicznego zaburzenia rozróżniania barw. Powodem, dla którego daltonista zmaga się z~nieprawidłowym widzeniem barw, jest brak lub osłabienie działania fotoreceptorów położonych na siatkówce oka, przede wszystkim w~obrębie plamki żółtej. Przyczyną dziedzicznego upośledzenia widzenia barwnego jest uszkodzenie genów kodujących odpowiednie barwniki wzrokowe.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Czym spowodowany jest daltonizm?}
+\paragraph{}
+Daltonizm to wada wrodzona i~przeważnie uwarunkowana genetycznie. Dziedziczona jest recesywnie jako cecha sprzężona z~chromosomem X, ponieważ geny odpowiedzialne za rozróżnianie barw są właśnie zlokalizowane na chromosomie X. Często w~żartach mówimy że „panowie nie znają się na kolorach” i~chociaż może wydać się to dziwne, to w~stwierdzeniu tym jest ziarenko prawdy. Szacuje się, że daltonizm występuje u~mężczyzn aż 16 razy częściej niż u~kobiet.
+\paragraph{}
+Mężczyźni posiadają tylko jeden chromosom X, natomiast kobiety posiadają dwa takie chromosomy. Jeśli zatem na jedynym chromosomie X~jaki posiada mężczyzna jest mutacja powodująca zaburzenia widzenia barw, to u~takiego męższczyzny wystapi daltonizm. Kobieta natomiast, która ma mutację tylko w~jednym chromosomie X, a~w~drugim chromosomie X~nie posiada wady, zazwyczaj widzi barwy prawidłowo. Szacuje się, że u~około 8 \% mężczyzn występuje ślepota barw.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Jak widzi daltonista?}
@@ -122,6 +142,8 @@ Całkowita ślepota na barwy, czyli monochromatyzm to zdolność rozpoznawania t
   \caption{Rodzaje zaburzeń widzenia barw}
 \end{figure}
 
+\newpage
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Testy na daltonizm}
 \paragraph{}
@@ -133,16 +155,20 @@ Najpopularniejszym testem na daltonizm jest badanie z~wykorzystaniem pseudoizoch
   \caption{Tablice Ishihary}
 \end{figure}
 
+\newpage	
+
 \paragraph{}
 Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzenia barwy czerwonej, zielonej i~niebieskiej. Polega na ułożeniu w~odpowiedniej kolejności 15 barwnych pionków tak, aby ich kolory płynnie przechodziły jeden w~drugi. W~przypadkach wątpliwych wykorzystuje się anomaloskop, czyli aparat służący do ilościowego określania zaburzenia widzenia barw w~osi czerwono-zielonej. Badanie ma przebieg dwufazowy. Najpierw zadaniem osoby badanej jest dobranie mieszaniny czystego światła czerwonego i~zielonego w~taki sposób, aby dopasować ją do czystego światła żółtego.
 
+\newpage
 %--------------------------------------------------------------------------------------------------
 %       SFORMUŁOWANIE ZAŁOŻEŃ I/LUB HIPOTEZ ORAZ NAKREŚLENIE CELU PRACY
 %--------------------------------------------------------------------------------------------------
-\section{Sformułowanie założeń i/lub hipotez oraz nakreślenie celu pracy}
+\section{Sformułowanie założeń oraz nakreślenie celu pracy}
 \paragraph{}
 Założeniem pracy jest stworzenie aplikacji na urządzenia wirtualnej rzeczywistości w~celu umożliwienia przeprowadzania badań wykrywających daltonizm w~odmienny sposób. Dzięki urządzeniom VR możemy przeprowadzić badania bez ingernecji zewnętrznych bodźców działających na układ wzroku. Ponadto możemy za pomoca jednej aplikacji przeprowadzić nie jedno, lecz szereg różnych badań związanych z~badaniem różnych odmian daltonizmu oraz testowaniu rpozpoznawania dowolnych barw. Wykorzystanie bazy danych umożliwia nie tylko przechowywanie danych o~badaniach, które możemy przeprowadzić. W~bazie są przechowywane historie badań użytkowników. Dodatkowym założeniem jest tworzenie histogramów oraz porównań statystycznych wykonanych badań. 
 
+\newpage
 %--------------------------------------------------------------------------------------------------
 %       OMÓWIENIE METODYKI PRACY ORAZ UŻYTYCH URZĄDZEŃ I OPROGRAMOWANIE
 %--------------------------------------------------------------------------------------------------
@@ -154,7 +180,6 @@ Praca składa się z~trzech kluczowych elementów: aplikacja, Rest API oraz baza
 Do tworzenia oprogramowania są wykorzystywane środowiska Unity, PyCharm, Visual Studio Code, Visual Studio, DBeaver.
 
 \newpage
-
 %--------------------------------------------------------------------------------------------------
 %       OPIS ŚWIATA RZECZYWISTEGO
 %--------------------------------------------------------------------------------------------------
@@ -175,8 +200,7 @@ Użytkownicy mogą korzystać z~aplikacji tylko na urządzeniach wirtualnej rzec
 	
 %--------------------------------------------------------------------------------------------------
 %       WYMAGANIA FUNKCJONALNE I NIEFUNKCJONALNE
-%--------------------------------------------------------------------------------------------------
-\newpage		
+%--------------------------------------------------------------------------------------------------	
 \subsection{Wymagania funkcjonalne i niefunkcjonalne}
 
 		
@@ -510,7 +534,6 @@ Klasa {\fontfamily{qcr}\selectfont BazaDanych} odpowiedzialna jest za połączen
 %--------------------------------------------------------------------------------------------------
 %       DIAGRAM SEKWENCJI
 %--------------------------------------------------------------------------------------------------
-\newpage
 \subsection{Diagram sekwencji}
 \paragraph{}
 Na podstawie diagramów aktywności logowania oraz rejestracji na Rys.6 oraz Rys.7 przedstawiono kolejno diagram sekwencji logowania oraz diagram sekwencji rejestracji dla opisywanego oprogramowania.
@@ -559,7 +582,7 @@ Poniżej zamieszczono harmonogram realizacji projektu. Diagram Gantta prezentuje
   \caption{Wykres Gantta}
 \end{figure}
 		
-		
+\newpage
 %--------------------------------------------------------------------------------------------------
 %       OPIS TECHNICZNY PROJEKTU
 %--------------------------------------------------------------------------------------------------
@@ -570,7 +593,8 @@ Poniżej zamieszczono harmonogram realizacji projektu. Diagram Gantta prezentuje
 				\item Środowisko programistyczne Flask: PyCharm 2023.3
 				\item Aplikacja jest projektowana na urządzenia wirtualnej rzeczywistości takie jak - Oculus Quest 2, HTC Vive
 		\end{itemize}
-			
+		
+\newpage	
 %--------------------------------------------------------------------------------------------------
 %       INTERFEJS UŻYTKOWNIKA
 %--------------------------------------------------------------------------------------------------

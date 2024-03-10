@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.24)  10 MAR 2024 13:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.24)  10 MAR 2024 15:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -69,6 +69,17 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
+(/usr/local/texlive/2022/texmf-dist/tex/latex/epigraph/epigraph.sty
+Package: epigraph 2020/01/02 v1.5e typesetting epigraphs
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/nextpage/nextpage.sty
+Package: nextpage 2009/09/03 v1.1a additional page commands
+)
+\beforeepigraphskip=\skip49
+\afterepigraphskip=\skip50
+\epigraphwidth=\skip51
+\epigraphrule=\skip52
+)
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/mathpazo.sty
 Package: mathpazo 2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS) 
 \symupright=\mathgroup4
@@ -127,19 +138,19 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 (/usr/local/texlive/2022/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
 rs
-\f@nch@headwidth=\skip49
-\f@nch@O@elh=\skip50
-\f@nch@O@erh=\skip51
-\f@nch@O@olh=\skip52
-\f@nch@O@orh=\skip53
-\f@nch@O@elf=\skip54
-\f@nch@O@erf=\skip55
-\f@nch@O@olf=\skip56
-\f@nch@O@orf=\skip57
+\f@nch@headwidth=\skip53
+\f@nch@O@elh=\skip54
+\f@nch@O@erh=\skip55
+\f@nch@O@olh=\skip56
+\f@nch@O@orh=\skip57
+\f@nch@O@elf=\skip58
+\f@nch@O@erf=\skip59
+\f@nch@O@olf=\skip60
+\f@nch@O@orf=\skip61
 )
 
 Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 14.
+less on input line 15.
 
 
 ! LaTeX Error: Missing \begin{document}.
@@ -148,7 +159,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.23 \begin{center}
+l.24 \begin{center}
                    
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -156,7 +167,7 @@ If that doesn't work, type  X <return>  to quit.
 <images//ur_inf_logo.png, id=1, 1674.255pt x 461.725pt>
 File: images//ur_inf_logo.png Graphic file (type png)
 <use images//ur_inf_logo.png>
-Package pdftex.def Info: images//ur_inf_logo.png  used on input line 24.
+Package pdftex.def Info: images//ur_inf_logo.png  used on input line 25.
 (pdftex.def)             Requested size: 334.84506pt x 92.34335pt.
 
 ! LaTeX Error: There's no line here to end.
@@ -165,7 +176,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.24 ...cludegraphics[scale=0.2]{ur_inf_logo}\\ \\
+l.25 ...cludegraphics[scale=0.2]{ur_inf_logo}\\ \\
                                                    \\ \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -178,7 +189,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.24 ...degraphics[scale=0.2]{ur_inf_logo}\\ \\ \\
+l.25 ...degraphics[scale=0.2]{ur_inf_logo}\\ \\ \\
                                                    \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -191,22 +202,22 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.24 ...raphics[scale=0.2]{ur_inf_logo}\\ \\ \\ \\
+l.25 ...raphics[scale=0.2]{ur_inf_logo}\\ \\ \\ \\
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 39.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 40.
 LaTeX Font Info:    Trying to load font information for T1+Carlito-OsF on input
- line 59.
+ line 60.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/carlito/T1Carlito-OsF.fd
 File: T1Carlito-OsF.fd 2014/08/20 (autoinst) Font definitions for T1/Carlito-Os
 F.
 )
 LaTeX Font Info:    Font shape `T1/Carlito-OsF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 59.
+(Font)              scaled to size 12.0pt on input line 60.
 
 [1
 
@@ -247,20 +258,20 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 (./documentation.aux)
 \openout1 = `documentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
 
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -323,38 +334,38 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Font shape `T1/Carlito-OsF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 82.
+(Font)              scaled to size 17.28pt on input line 83.
 LaTeX Font Info:    Font shape `T1/Carlito-OsF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 82.
+(Font)              scaled to size 17.28pt on input line 83.
 LaTeX Font Info:    Font shape `T1/Carlito-OsF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 84.
+(Font)              scaled to size 12.0pt on input line 85.
 [1] (./documentation.toc
-LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 7
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 9
 .
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-7.
+9.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-7.
+9.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-7.
+9.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-7.
+9.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
@@ -362,109 +373,79 @@ File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 \tf@toc=\write3
 \openout3 = `documentation.toc'.
 
- [2] [3]
+ [2]
 LaTeX Font Info:    Font shape `T1/Carlito-OsF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 106.
+(Font)              scaled to size 10.95pt on input line 103.
+LaTeX Font Info:    Font shape `T1/Carlito-OsF/m/it' will be
+(Font)              scaled to size 10.95pt on input line 103.
+ [3]
+LaTeX Font Info:    Font shape `T1/Carlito-OsF/m/n' will be
+(Font)              scaled to size 14.4pt on input line 119.
 LaTeX Font Info:    Font shape `T1/Carlito-OsF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 106.
-<images//daltonizm_rodzaje.png, id=22, 423.08063pt x 451.6875pt>
+(Font)              scaled to size 14.4pt on input line 119.
+<images//daltonizm_rodzaje.png, id=23, 423.08063pt x 451.6875pt>
 File: images//daltonizm_rodzaje.png Graphic file (type png)
 <use images//daltonizm_rodzaje.png>
-Package pdftex.def Info: images//daltonizm_rodzaje.png  used on input line 121.
+Package pdftex.def Info: images//daltonizm_rodzaje.png  used on input line 141.
 
 (pdftex.def)             Requested size: 273.14923pt x 291.62912pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images//ishihara.png, id=23, 454.69875pt x 484.81125pt>
+[4]
+<images//ishihara.png, id=27, 454.69875pt x 484.81125pt>
 File: images//ishihara.png Graphic file (type png)
 <use images//ishihara.png>
-Package pdftex.def Info: images//ishihara.png  used on input line 132.
+Package pdftex.def Info: images//ishihara.png  used on input line 154.
 (pdftex.def)             Requested size: 318.66948pt x 339.77982pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4]
+[5 <./images//daltonizm_rodzaje.png>] [6 <./images//ishihara.png>] [7]
 ! You can't use `macro parameter character #' in horizontal mode.
-l.151 ...aÅ„. Aplikacja jest napisana w~jÄ™zyku C#
+l.177 ...aÅ„. Aplikacja jest napisana w~jÄ™zyku C#
                                                    w~Å›rodowisku Unity. Apli...
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-[5 <./images//daltonizm_rodzaje.png>] [6 <./images//ishihara.png>] [7]
+[8]
 LaTeX Font Info:    Trying to load font information for TS1+Carlito-OsF on inpu
-t line 184.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/carlito/TS1Carlito-OsF.fd
+t line 208.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/carlito/TS1Carlito-OsF.fd
 File: TS1Carlito-OsF.fd 2014/08/20 (autoinst) Font definitions for TS1/Carlito-
 OsF.
 )
 LaTeX Font Info:    Font shape `TS1/Carlito-OsF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 184.
-<images//reqDiagram.png, id=39, 1160.83687pt x 720.44156pt>
+(Font)              scaled to size 12.0pt on input line 208.
+
+[9]
+<images//reqDiagram.png, id=47, 1160.83687pt x 720.44156pt>
 File: images//reqDiagram.png Graphic file (type png)
 <use images//reqDiagram.png>
-Package pdftex.def Info: images//reqDiagram.png  used on input line 211.
+Package pdftex.def Info: images//reqDiagram.png  used on input line 235.
 (pdftex.def)             Requested size: 364.19667pt x 226.02786pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[8]
-<images//useCaseDiagram.png, id=44, 718.93594pt x 670.75594pt>
+ [10 <./images//reqDiagram.png>]
+<images//useCaseDiagram.png, id=52, 718.93594pt x 670.75594pt>
 File: images//useCaseDiagram.png Graphic file (type png)
 <use images//useCaseDiagram.png>
-Package pdftex.def Info: images//useCaseDiagram.png  used on input line 230.
+Package pdftex.def Info: images//useCaseDiagram.png  used on input line 254.
 (pdftex.def)             Requested size: 364.19667pt x 339.79861pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[9 <./images//reqDiagram.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 241--242
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
-
- []
-
-[10 <./images//useCaseDiagram.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 261--262
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 263--264
-
- []
-
-
+ [11 <./images//useCaseDiagram.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 265--266
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 275--276
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
 
  []
 
@@ -479,62 +460,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 279--280
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 282--283
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 294--295
+Underfull \hbox (badness 10000) in paragraph at lines 289--290
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
-
- []
-
-[11]
 Underfull \hbox (badness 10000) in paragraph at lines 299--300
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--314
+Underfull \hbox (badness 10000) in paragraph at lines 306--307
 
  []
 
-
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 316--317
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--327
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
+Underfull \hbox (badness 10000) in paragraph at lines 323--324
 
  []
 
@@ -543,38 +519,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 333--334
 
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 343--344
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 345--346
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
 
  []
 
-
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 350--351
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--361
+Underfull \hbox (badness 10000) in paragraph at lines 352--353
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--363
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--365
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
 
  []
 
@@ -584,24 +560,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 367--368
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--378
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--380
-
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 381--382
+Underfull \hbox (badness 10000) in paragraph at lines 371--372
 
  []
 
 
-Overfull \hbox (0.17952pt too wide) in paragraph at lines 384--385
- [] \T1/Carlito-OsF/m/n/12 U»yt-kow-nik mo»e wy-bra¢ za-kªadk¦ "Hi-sto-ria ba-d
-a«"lub za-kªadk¦ "Zmiana da-nych"za po-moc¡,
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
+
  []
 
 
@@ -609,18 +579,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 384--385
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 394--395
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 396--397
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 386--387
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--399
+Underfull \hbox (badness 10000) in paragraph at lines 388--389
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--392
 
  []
 
@@ -630,17 +600,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 401--402
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--412
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
+Underfull \hbox (badness 10000) in paragraph at lines 405--406
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 415--416
+Overfull \hbox (0.17952pt too wide) in paragraph at lines 408--409
+ [] \T1/Carlito-OsF/m/n/12 U»yt-kow-nik mo»e wy-bra¢ za-kªadk¦ "Hi-sto-ria ba-d
+a«"lub za-kªadk¦ "Zmiana da-nych"za po-moc¡,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 408--409
 
  []
 
@@ -649,38 +625,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 418--419
 
  []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 428--429
+
+Underfull \hbox (badness 10000) in paragraph at lines 420--421
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--431
+Underfull \hbox (badness 10000) in paragraph at lines 422--423
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 432--433
+Underfull \hbox (badness 10000) in paragraph at lines 425--426
 
  []
 
-
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 435--436
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 445--446
+Underfull \hbox (badness 10000) in paragraph at lines 437--438
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 447--448
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 449--450
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
 
  []
 
@@ -690,118 +666,153 @@ Underfull \hbox (badness 10000) in paragraph at lines 452--453
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 462--463
+Underfull \hbox (badness 10000) in paragraph at lines 454--455
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 464--465
+Underfull \hbox (badness 10000) in paragraph at lines 456--457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 466--467
+Underfull \hbox (badness 10000) in paragraph at lines 459--460
 
  []
 
-[15]
+
 Underfull \hbox (badness 10000) in paragraph at lines 469--470
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 471--472
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 473--474
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 476--477
+
+ []
+
 [16]
-<images//aclogowanie.png, id=72, 942.52126pt x 655.69969pt>
+Underfull \hbox (badness 10000) in paragraph at lines 486--487
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 488--489
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 490--491
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--494
+
+ []
+
+[17]
+<images//aclogowanie.png, id=76, 942.52126pt x 655.69969pt>
 File: images//aclogowanie.png Graphic file (type png)
 <use images//aclogowanie.png>
-Package pdftex.def Info: images//aclogowanie.png  used on input line 481.
+Package pdftex.def Info: images//aclogowanie.png  used on input line 505.
 (pdftex.def)             Requested size: 318.66948pt x 221.6943pt.
-<images//acrejestracja.png, id=73, 928.97063pt x 770.12718pt>
+<images//acrejestracja.png, id=77, 928.97063pt x 770.12718pt>
 File: images//acrejestracja.png Graphic file (type png)
 <use images//acrejestracja.png>
-Package pdftex.def Info: images//acrejestracja.png  used on input line 487.
+Package pdftex.def Info: images//acrejestracja.png  used on input line 511.
 (pdftex.def)             Requested size: 318.66948pt x 264.17825pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[17 <./images//aclogowanie.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 498--499
+[18 <./images//aclogowanie.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 522--523
 
  []
 
-LaTeX Font Info:    Trying to load font information for T1+qcr on input line 50
-1.
+LaTeX Font Info:    Trying to load font information for T1+qcr on input line 52
+5.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/tex-gyre/t1qcr.fd
 File: t1qcr.fd 2009/09/25 v1.2 font definition file for T1/qcr
 )
-Underfull \hbox (badness 10000) in paragraph at lines 501--502
+Underfull \hbox (badness 10000) in paragraph at lines 525--526
 
  []
 
-[18 <./images//acrejestracja.png>]
-<images//classDiagram.png, id=84, 900.36375pt x 684.30656pt>
+[19 <./images//acrejestracja.png>]
+<images//classDiagram.png, id=88, 900.36375pt x 684.30656pt>
 File: images//classDiagram.png Graphic file (type png)
 <use images//classDiagram.png>
-Package pdftex.def Info: images//classDiagram.png  used on input line 505.
+Package pdftex.def Info: images//classDiagram.png  used on input line 529.
 (pdftex.def)             Requested size: 364.19667pt x 276.79807pt.
- [19 <./images//classDiagram.png>]
-<images//seqDiagram.png, id=89, 714.41907pt x 534.49687pt>
+ [20 <./images//classDiagram.png>]
+<images//seqDiagram.png, id=93, 714.41907pt x 534.49687pt>
 File: images//seqDiagram.png Graphic file (type png)
 <use images//seqDiagram.png>
-Package pdftex.def Info: images//seqDiagram.png  used on input line 520.
+Package pdftex.def Info: images//seqDiagram.png  used on input line 543.
 (pdftex.def)             Requested size: 364.19667pt x 272.47562pt.
-<images//seqDiagramRejestracja.png, id=90, 762.59906pt x 542.025pt>
+<images//seqDiagramRejestracja.png, id=94, 762.59906pt x 542.025pt>
 File: images//seqDiagramRejestracja.png Graphic file (type png)
 <use images//seqDiagramRejestracja.png>
 Package pdftex.def Info: images//seqDiagramRejestracja.png  used on input line 
-526.
+549.
 (pdftex.def)             Requested size: 364.19667pt x 258.854pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20 <./images//seqDiagram.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 536--537
+[21 <./images//seqDiagram.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 559--560
 
  []
 
-<images//activeDiagramUser.png, id=95, 553.31718pt x 331.99031pt>
+<images//activeDiagramUser.png, id=99, 553.31718pt x 331.99031pt>
 File: images//activeDiagramUser.png Graphic file (type png)
 <use images//activeDiagramUser.png>
-Package pdftex.def Info: images//activeDiagramUser.png  used on input line 543.
+Package pdftex.def Info: images//activeDiagramUser.png  used on input line 566.
 
 (pdftex.def)             Requested size: 364.19667pt x 218.51651pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[21 <./images//seqDiagramRejestracja.png>]
-<images//wykres_gantta.png, id=100, 566.86781pt x 417.81094pt>
+[22 <./images//seqDiagramRejestracja.png>]
+<images//wykres_gantta.png, id=104, 566.86781pt x 417.81094pt>
 File: images//wykres_gantta.png Graphic file (type png)
 <use images//wykres_gantta.png>
-Package pdftex.def Info: images//wykres_gantta.png  used on input line 558.
+Package pdftex.def Info: images//wykres_gantta.png  used on input line 581.
 (pdftex.def)             Requested size: 273.14923pt x 201.33113pt.
- [22 <./images//activeDiagramUser.png> <./images//wykres_gantta.png>] [23]
-<images//GUI_logowanie.png, id=109, 599.99156pt x 419.31656pt>
+ [23 <./images//activeDiagramUser.png> <./images//wykres_gantta.png>] [24]
+<images//GUI_logowanie.png, id=114, 599.99156pt x 419.31656pt>
 File: images//GUI_logowanie.png Graphic file (type png)
 <use images//GUI_logowanie.png>
-Package pdftex.def Info: images//GUI_logowanie.png  used on input line 590.
+Package pdftex.def Info: images//GUI_logowanie.png  used on input line 614.
 (pdftex.def)             Requested size: 227.62206pt x 159.0796pt.
- [24 <./images//GUI_logowanie.png>]
-<images//GUI_rejestracja.png, id=115, 388.45125pt x 548.80031pt>
+ [25 <./images//GUI_logowanie.png>]
+<images//GUI_rejestracja.png, id=119, 388.45125pt x 548.80031pt>
 File: images//GUI_rejestracja.png Graphic file (type png)
 <use images//GUI_rejestracja.png>
-Package pdftex.def Info: images//GUI_rejestracja.png  used on input line 601.
+Package pdftex.def Info: images//GUI_rejestracja.png  used on input line 625.
 (pdftex.def)             Requested size: 227.62206pt x 321.587pt.
 
-[25 <./images//GUI_rejestracja.png>]
-<images//GUI_lista_badan.png, id=120, 770.12718pt x 441.90094pt>
+[26 <./images//GUI_rejestracja.png>]
+<images//GUI_lista_badan.png, id=124, 770.12718pt x 441.90094pt>
 File: images//GUI_lista_badan.png Graphic file (type png)
 <use images//GUI_lista_badan.png>
-Package pdftex.def Info: images//GUI_lista_badan.png  used on input line 618.
+Package pdftex.def Info: images//GUI_lista_badan.png  used on input line 642.
 (pdftex.def)             Requested size: 227.62206pt x 130.60913pt.
 
 ! Undefined control sequence.
-l.622 \newapge
+l.646 \newapge
               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -809,13 +820,13 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<images//GUI_opis_badania.png, id=121, 755.82375pt x 437.38406pt>
+<images//GUI_opis_badania.png, id=125, 755.82375pt x 437.38406pt>
 File: images//GUI_opis_badania.png Graphic file (type png)
 <use images//GUI_opis_badania.png>
-Package pdftex.def Info: images//GUI_opis_badania.png  used on input line 629.
+Package pdftex.def Info: images//GUI_opis_badania.png  used on input line 653.
 (pdftex.def)             Requested size: 227.62206pt x 131.71677pt.
 ! Undefined control sequence.
-l.633 \newapge
+l.657 \newapge
               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -823,17 +834,17 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<images//GUI_zarzadzanie_kontem.png, id=122, 763.35187pt x 441.14813pt>
+<images//GUI_zarzadzanie_kontem.png, id=126, 763.35187pt x 441.14813pt>
 File: images//GUI_zarzadzanie_kontem.png Graphic file (type png)
 <use images//GUI_zarzadzanie_kontem.png>
 Package pdftex.def Info: images//GUI_zarzadzanie_kontem.png  used on input line
- 646.
+ 670.
 (pdftex.def)             Requested size: 227.62206pt x 131.54442pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 ! Undefined control sequence.
-l.650 \newapge
+l.674 \newapge
               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -841,7 +852,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[26 <./images//GUI_lista_badan.png> <./images//GUI_opis_badania.png>]
+[27 <./images//GUI_lista_badan.png> <./images//GUI_opis_badania.png>]
 
 ! LaTeX Error: File `GUI_istoroa_badan' not found.
 
@@ -849,7 +860,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.657 ...s[width=0.5\textwidth]{GUI_istoroa_badan}
+l.681 ...s[width=0.5\textwidth]{GUI_istoroa_badan}
                                                   
 I could not locate the file with any of these extensions:
 .pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
@@ -857,7 +868,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-l.661 \newapage
+l.685 \newapage
                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -865,20 +876,20 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<images//GUI_zmiana_danych.png, id=128, 547.2947pt x 599.99156pt>
+<images//GUI_zmiana_danych.png, id=132, 547.2947pt x 599.99156pt>
 File: images//GUI_zmiana_danych.png Graphic file (type png)
 <use images//GUI_zmiana_danych.png>
-Package pdftex.def Info: images//GUI_zmiana_danych.png  used on input line 668.
+Package pdftex.def Info: images//GUI_zmiana_danych.png  used on input line 692.
 
 (pdftex.def)             Requested size: 227.62206pt x 249.54117pt.
-[27 <./images//GUI_zarzadzanie_kontem.png> <./images//GUI_zmiana_danych.png>]
-[28] (./documentation.aux) ) 
+[28 <./images//GUI_zarzadzanie_kontem.png> <./images//GUI_zmiana_danych.png>]
+[29] (./documentation.aux) ) 
 Here is how much of TeX's memory you used:
- 4463 strings out of 478268
- 77531 string characters out of 5846346
- 382190 words of memory out of 5000000
- 22583 multiletter control sequences out of 15000+600000
- 525201 words of font info for 62 fonts, out of 8000000 for 9000
+ 4576 strings out of 478268
+ 79949 string characters out of 5846346
+ 381730 words of memory out of 5000000
+ 22685 multiletter control sequences out of 15000+600000
+ 545827 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,64p,2328b,353s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips
@@ -886,14 +897,15 @@ Here is how much of TeX's memory you used:
 crlt_llspvt.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/carlito/crl
 t_ynpzot.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</
 usr/local/texlive/2022/texmf-dist/fonts/type1/typoland/carlito/Carlito-Bold.pfb
-></usr/local/texlive/2022/texmf-dist/fonts/type1/typoland/carlito/Carlito.pfb><
-/usr/local/texlive/2022/texmf-dist/fonts/type1/public/tex-gyre/qcrr.pfb></usr/l
-ocal/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/te
-xlive/2022/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on documentation.pdf (29 pages, 2461860 bytes).
+></usr/local/texlive/2022/texmf-dist/fonts/type1/typoland/carlito/Carlito-Itali
+c.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/typoland/carlito/Carlito.
+pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/tex-gyre/qcrr.pfb></
+usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/loc
+al/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on documentation.pdf (30 pages, 2479397 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
+ 174 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
