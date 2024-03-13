@@ -19,7 +19,7 @@ CREATE TABLE user_test(
 	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	date_of_test TIMESTAMP NOT NULL,
 	points INT NOT NULL,
-	time_of_test TIMESTAMP NOT NULL,
+	time_of_test INT NOT NULL,
 	mistake INT NOT NULL,
 	tracker BLOB,
 	user VARCHAR(100) NOT NULL,
