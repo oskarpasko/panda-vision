@@ -3,5 +3,5 @@ Engineering Thesis. A VR game involving playing with colors using cubes or other
 
 ## Przydatne linki
 
-[Testy na Daltonizm](https://www.pl.colorlitelens.com/test-na-daltonizm.html)
-[Strona tworzaca paletę kolorów](https://coolors.co/5c0029-61304b-857c8d-94bfbe-acf7c1)
+- [Testy na Daltonizm](https://www.pl.colorlitelens.com/test-na-daltonizm.html)
+- [Strona tworzaca paletę kolorów](https://coolors.co/5c0029-61304b-857c8d-94bfbe-acf7c1)
