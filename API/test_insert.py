@@ -2,7 +2,7 @@ import pymysql
 
 time = input("podaj czas w sekundach")
 mistake = input("podaj ilosc bledow")
-points = 
+points = 0
 
 hostname = 'localhost'
 user = 'root'
