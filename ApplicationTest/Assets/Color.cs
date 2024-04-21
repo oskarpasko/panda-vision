@@ -21,11 +21,11 @@ public class Color : MonoBehaviour
 
         // Renderowanie koloru
         objectRenderer = GetComponent<Renderer>();
+
         // Losowy kolor
         //objectRenderer.material.color = new Color32((byte)red, (byte)green, (byte)blue, 255);
 
         //Losowy kolor czerwonej barwy
-
         int color = Random.Range(0, 151);
         objectRenderer.material.color = new Color32(255, (byte)color, (byte)color, 255);
     }
@@ -33,6 +33,6 @@ public class Color : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
