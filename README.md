@@ -8,7 +8,6 @@
 ## Napotkane problemy i rozwiązania
 
   ### Niepojawiające się kontrolery
-  **Rozwiązanie**
   - click "XR Origin"
   - Add the component "Input Action Manager"
   - Set Action Assets to 1
