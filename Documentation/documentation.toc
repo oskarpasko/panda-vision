@@ -23,6 +23,7 @@
 \contentsline {section}{\numberline {5}Omówienie metodyki pracy oraz użytych urządzeń i oprogramowania}{8}{}%
 \contentsline {paragraph}{}{8}{}%
 \contentsline {paragraph}{}{8}{}%
+\contentsline {paragraph}{}{8}{}%
 \contentsline {section}{\numberline {6}Opis świata rzeczywistego}{9}{}%
 \contentsline {subsection}{\numberline {6.1}Opis zasobów ludzkich}{9}{}%
 \contentsline {paragraph}{}{9}{}%
@@ -62,13 +63,16 @@
 \contentsline {section}{\numberline {8}Harmonogram realizacji projektu}{23}{}%
 \contentsline {paragraph}{}{23}{}%
 \contentsline {section}{\numberline {9}Opis techniczny projektu}{24}{}%
-\contentsline {section}{\numberline {10}Interfejs użytkownika}{25}{}%
+\contentsline {section}{\numberline {10}Ryzyka i strategie zarządzania ryzykiem}{25}{}%
 \contentsline {paragraph}{}{25}{}%
+\contentsline {paragraph}{}{25}{}%
+\contentsline {section}{\numberline {11}Interfejs użytkownika}{26}{}%
 \contentsline {paragraph}{}{26}{}%
 \contentsline {paragraph}{}{27}{}%
-\contentsline {paragraph}{}{27}{}%
-\contentsline {paragraph}{}{27}{}%
 \contentsline {paragraph}{}{28}{}%
 \contentsline {paragraph}{}{28}{}%
-\contentsline {section}{\numberline {11}Podsumowanie}{29}{}%
+\contentsline {paragraph}{}{28}{}%
 \contentsline {paragraph}{}{29}{}%
+\contentsline {paragraph}{}{29}{}%
+\contentsline {section}{\numberline {12}Podsumowanie}{30}{}%
+\contentsline {paragraph}{}{30}{}%

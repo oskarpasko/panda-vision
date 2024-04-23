@@ -37,7 +37,7 @@
 	
 	\vspace{2cm}	
 	
-	{\textbf{Wykrywanie schorzeń daltonizmu za pomocą aplikacji na urządzenia wirtualnej rzeczywistości}}
+	{\textbf{Wykorzystanie urządzeń wirtualnej rzeczywistości do diagnozowania schorzeń związanych z daltonizmem}}
 	
 	\vspace{2cm}
 	
@@ -82,7 +82,7 @@
 %--------------------------------------------------------------------------------------------------
 \section{Streszczenie pracy}
 \paragraph{}
-\textbf{Detecting color blindness conditions using application for virtual reality devices.}
+\textbf{The use of virtual reality devices to diagnose diseases related to colorblindness.}
 
 \paragraph{}
 Aplikacja projektowana jest z~myślą o~osobach dotkniętych zmagającymi się ze schorzeniami daltonizmu, a~w~szczególności adresowana jest do dzieci. Oprogramowanie ma za zadanie ułatwienie rozpoznawania tych schorzeń związanych z~daltonizmem poprzez zabawę oraz gry w nim zawarte. 
@@ -116,7 +116,7 @@ W Rozdziale 3 omówione zostały teoretyczne zagadnienia związane z~problemem z
 %       ANALIZA AKTUALNEGO STANU WIEDZY O ZAGADNIENIU, KTÓREGO DOTYCZY PRACA
 %--------------------------------------------------------------------------------------------------
 \section{Analiza aktualnego stanu wiedzy o zagadnieniu, którego dotyczy praca}
-\subsection{Daltonizm, czyli na czym polega zabużenie rozpoznawania barw}
+\subsection{Daltonizm, czyli na czym polega zaburzenie rozpoznawania barw}
 \paragraph{}
 Daltonizm to zwyczajowa nazwa używana dla określenia dziedzicznego zaburzenia rozróżniania barw. Powodem, dla którego daltonista zmaga się z~nieprawidłowym widzeniem barw, jest brak lub osłabienie działania fotoreceptorów położonych na siatkówce oka, przede wszystkim w~obrębie plamki żółtej. Przyczyną dziedzicznego upośledzenia widzenia barwnego jest uszkodzenie genów kodujących odpowiednie barwniki wzrokowe.
 
@@ -125,7 +125,7 @@ Daltonizm to zwyczajowa nazwa używana dla określenia dziedzicznego zaburzenia 
 \paragraph{}
 Daltonizm to wada wrodzona i~przeważnie uwarunkowana genetycznie. Dziedziczona jest recesywnie jako cecha sprzężona z~chromosomem X, ponieważ geny odpowiedzialne za rozróżnianie barw są właśnie zlokalizowane na tym chromosomie. Często w~żartach mówimy że „panowie nie znają się na kolorach” i~chociaż może wydać się to dziwne, to w~stwierdzeniu tym jest ziarenko prawdy. Szacuje się, że daltonizm występuje u~mężczyzn aż 16 razy częściej niż u~kobiet.
 \paragraph{}
-Mężczyźni posiadają tylko jeden chromosom X, natomiast kobiety posiadają dwa takie chromosomy. Jeśli zatem na jedynym chromosomie X~jaki posiada mężczyzna jest mutacja powodująca zaburzenia widzenia barw, to u~takiego mężczyzny wystapi daltonizm. Kobieta natomiast, która ma mutację tylko w~jednym chromosomie X, a~w~drugim chromosomie X~nie posiada wady, zazwyczaj widzi barwy prawidłowo. Szacuje się, że u~około 8 \% mężczyzn występuje ślepota barw.
+Mężczyźni posiadają tylko jeden chromosom X, natomiast kobiety posiadają dwa takie chromosomy. Jeśli zatem na jedynym chromosomie X~jaki posiada mężczyzna jest mutacja powodująca zaburzenia widzenia barw, to u~takiego mężczyzny wystąpi daltonizm. Kobieta natomiast, która ma mutację tylko w~jednym chromosomie X, a~w~drugim chromosomie X~nie posiada wady, zazwyczaj widzi barwy prawidłowo. Szacuje się, że u~około 8 \% mężczyzn występuje ślepota barw.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Jak widzi daltonista?}
@@ -166,7 +166,7 @@ Odmiennym badaniem jest test Farnswortha D-15. Pozwala ocenić zdolność widzen
 %--------------------------------------------------------------------------------------------------
 \section{Sformułowanie założeń oraz nakreślenie celu pracy}
 \paragraph{}
-Założeniem pracy jest stworzenie aplikacji na urządzenia wirtualnej rzeczywistości w~celu umożliwienia przeprowadzania badań wykrywających daltonizm różniący się od już istniejących metod. Dzięki urządzeniom VR możemy przeprowadzić badania bez ingernecji zewnętrznych bodźców działających na układ wzroku. Ponadto, za pomoca jednej aplikacji możemy przeprowadzić nie jedno, lecz szereg różnych badań wykrywających różne odmiany daltonizmu oraz przetestować rozpoznawalność dowolnych barw. Wykorzystanie bazy danych umożliwia nie tylko przechowywanie danych o~badaniach orqz historię badań użytkowników. Dodatkowym założeniem jest tworzenie histogramów oraz porównań statystycznych wykonanych badań.
+Założeniem pracy jest stworzenie aplikacji na urządzenia wirtualnej rzeczywistości w~celu umożliwienia przeprowadzania badań wykrywających daltonizm różniący się od już istniejących metod. Dzięki urządzeniom VR możemy przeprowadzić badania bez ingerencji zewnętrznych bodźców działających na układ wzroku. Ponadto, za pomocą jednej aplikacji możemy przeprowadzić nie jedno, lecz szereg różnych badań wykrywających różne odmiany daltonizmu oraz przetestować rozpoznawalność dowolnych barw. Wykorzystanie bazy danych umożliwia nie tylko przechowywanie danych o~badaniach oraz historię badań użytkowników. Dodatkowym założeniem jest tworzenie histogramów oraz porównań statystycznych wykonanych badań.
 
 \newpage
 %--------------------------------------------------------------------------------------------------
@@ -178,6 +178,9 @@ Praca składa się z~trzech kluczowych elementów: aplikacji, Rest API oraz bazy
 
 \paragraph{}
 Do tworzenia oprogramowania są wykorzystywane środowiska Unity, PyCharm, Visual Studio Code, Visual Studio, DBeaver.
+
+\paragraph{}
+Do dokumentowania zmian w~kodzie zostanie użyty język git oraz witryna GitHub. Do śledzenia postępów zadań zostanie wykorzystane narzędzie Jira.
 
 \newpage
 %--------------------------------------------------------------------------------------------------
@@ -205,7 +208,7 @@ Użytkownicy mogą korzystać z~aplikacji tylko na urządzeniach wirtualnej rzec
 
 		
 			\begin{itemize}
-				\item Logowanie do systemu za pomocą adresu email i hasła
+				\item Logowanie do systemu za pomocą adresu e-mail i hasła
 				\item Możliwość zarejestrowania się do systemu
 				\item Możliwość przeglądania historii badań
 				\item Możliwość przeczytania opisów poszczególnych badań,
@@ -592,6 +595,29 @@ Poniżej zamieszczono harmonogram realizacji projektu. Diagram Gantta prezentuje
 				\item Środowisko programistyczne VR: Unity 2023.2.51
 				\item Środowisko programistyczne Flask: PyCharm 2023.3
 				\item Aplikacja jest projektowana na urządzenia wirtualnej rzeczywistości takie jak - Oculus Quest 2, HTC Vive
+		\end{itemize}
+		
+\newpage		
+%--------------------------------------------------------------------------------------------------
+%       RYZYKA I STRATEGIE ZARZĄDZANIA RYZYKIEM
+%--------------------------------------------------------------------------------------------------
+\section{Ryzyka i strategie zarządzania ryzykiem}
+
+\paragraph{}
+
+\textbf{Ryzyka}
+		\begin{itemize}
+			\item Nowa technologia oraz oprogramowanie;
+			\item Kompetencje medyczne w sprawie daltonizmu;
+			\item Zebranie danych do analizy;
+		\end{itemize}
+		
+\paragraph{}
+\textbf{Strategie minimalizujące ryzyka}
+		\begin{itemize}
+			\item Zapoznanie się z nową technologią;
+			\item Zapoznanie się z informacjami dotyczącymi daltonizmu;
+			\item Zebranie danych podczas badania od wolontariuszy;
 		\end{itemize}
 		
 \newpage	
