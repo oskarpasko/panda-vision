@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestScene.unity
     guid: cb1ed5007181cd049a0536ea7c6a177e
+  - enabled: 1
+    path: Assets/Samples/Meta XR Interaction SDK OVR Samples/64.0.0/Example Scenes/ComprehensiveRigExample.unity
+    guid: 2efe93cb8972cae439bfba2dcd4165f0
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: d73c80a4c7877c146977f17abc100155, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: d0e8c665343e8114e9e18b0c7408eade, type: 2}
