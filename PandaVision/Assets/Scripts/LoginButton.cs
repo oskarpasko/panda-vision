@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class LoginButton : MonoBehaviour {
-	public Button yourButton;
-
+	
+	/// <param name="loginButton"> Przechowujemy obiekt naszego przycisku </param>
+	public Button loginButton;
 	void Start () {
-		Button btn = yourButton.GetComponent<Button>();
-		btn.onClick.AddListener(TaskOnClick);
+		loginButton.onClick.AddListener(LoginButtonClicked);
 	}
 
-	void TaskOnClick(){
-		Debug.Log ("Zalogowano!");
+	void LoginButtonClicked (){
+
+		//przejście do nastepnej sceny
+		SceneManager.LoadScene("TestScene");
 	}
 }
