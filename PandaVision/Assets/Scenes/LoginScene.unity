@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 111449971}
   - component: {fileID: 111449970}
   m_Layer: 5
-  m_Name: InputField (TMP)
+  m_Name: passwordField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1769,7 +1769,7 @@ GameObject:
   - component: {fileID: 709132219}
   - component: {fileID: 709132218}
   m_Layer: 5
-  m_Name: emailInput
+  m_Name: emailField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2201,7 +2201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: "Has\u0142o"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
