@@ -13,7 +13,7 @@ public class Color : MonoBehaviour
         ///
         /// <param name="red"> Przechowuje dane o nasyceniu czerwnoej barwy </param>
         /// <param name="green"> Przechowuje dane o nasyceniu zielonej barwy </param>
-        ///  <param name="blue"> Przechowuje dane o nasyceniu niebieskiej barwy </param>
+        /// <param name="blue"> Przechowuje dane o nasyceniu niebieskiej barwy </param>
         ///
         int red = Random.Range(0, 256);
         int green = Random.Range(0, 256);
