@@ -72,3 +72,4 @@ crashlytics-build.properties
 
 # Samples from XR Interaction
 /[Aa]ssets/[Ss]amples/*
+/[Aa]ssets/[Ee]nvironment/*
