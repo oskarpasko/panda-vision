@@ -11,15 +11,19 @@ db = pymysql.connections.Connection(
     password=password
 )
 
+email = 'oskarpasko@gmail.com'
+password = 'oskarpasko2000'
+
 # Creating cursor object
 cursor = db.cursor()
 
 # Executing SQL query
-cursor.execute("SELECT * FROM pandavision.users;")
+query = cursor.execute(f"SELECT email FROM pandavision.users WHERE email='{email}' AND passwd=SHA2('{password}', 256);")
 
-# Displaying databases
-for data in cursor:
-    print(data)
+if query == 1:
+    print("Zalogowano!")
+else:
+    print("Złe dane!")
 
 # Closing the cursor and connection to the database
 cursor.close()
