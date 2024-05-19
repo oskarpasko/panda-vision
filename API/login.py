@@ -1,10 +1,44 @@
 from flask import Flask, request, jsonify
+import pymysql
 
 app = Flask(__name__)
 
-@app.route("/")
-def index():
-    return jsonify(f"{200} - You've connected to the API!")
+@app.route("/", methods=['POST'])
+def login():
+    #data to connection with db
+    hostname = 'localhost'
+    user = 'root'
+    password = 'oskarpasko'
+
+    # Initializing connection
+    db = pymysql.connections.Connection(
+        host=hostname,
+        user=user,
+        password=password
+    )
+
+    # data from InputField from Unity getting thru POST method
+    email = request.form['email']
+    password = request.form['password']
+
+    # Creating cursor object
+    cursor = db.cursor()
+
+    print(email)
+    print(password)
+
+    # Executing SQL query
+    query = cursor.execute(f"SELECT email FROM pandavision.users WHERE email='{email}' AND passwd=SHA2('{password}', 256);")
+
+    # checking if data are valid
+    if query == 1:
+        return jsonify(), 200 # if user exists in db
+    else:
+        return jsonify(), 401 # if user doesn't exist
+
+    # Closing the cursor and connection to the database
+    cursor.close()
+    db.close()
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
