@@ -4,17 +4,13 @@
 
 ### **Najnowsza wersja** PandaVision(19.05.2024)
 - dodano logowanie do aplikacji z użyciem bazy danych
-- 
 ### PandaVision(17.05.2024)_ver2
 - zmieniono koncepcje wyglądu sceny LoginScene
 - dodano elementy otoczenia w LoginScene
-- 
 ### PandaVision(17.05.2024)
 - dodano Canvas z elementami do logowania do sceny LoginScene
-- 
 ### PandaVision(11.05.2024)
 - testowa scena TestScene z działającymi interakcajmi na szcześcianie
-
 
 # The use of virtual reality devices to diagnose diseases related to colorblindness
 Engineering Thesis. A VR game involving playing with colors using cubes or other objects on various boards. The game is intended to help diagnose possible color blindness or similar conditions and provide good fun while testing or using the software, whether it's pure competition or just good fun.
@@ -24,14 +20,11 @@ Engineering Thesis. A VR game involving playing with colors using cubes or other
 
 ### **Najnowsza wersja** PandaVision(19.05.2024)
 - added logging into the application using the database
-- 
 ### PandaVision(17.05.2024)_ver2
 - the concept of the LoginScene scene appearance has been changed
 - added environmental elements in LoginScene
-
 ### PandaVision(17.05.2024)
 - added Canvas with elements for logging into the LoginScene
-  
 ### PandaVision(11.05.2024)
 - TestScene, test scene with working interactions on the cube
 
