@@ -25,3 +25,13 @@ CREATE TABLE user_test(
 	user VARCHAR(100) NOT NULL,
 	FOREIGN KEY (user) REFERENCES users(email)
 );
+
+/* Table zapisująca wyniki badania rozpoznawania koloru z Canvasu */
+CREATE TABLE color_test(
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	date_of_test TIMESTAMP NOT NULL,
+	time_of_test VARCHAR(10) NOT NULL,
+	error_colors VARCHAR(255),
+	user VARCHAR(100) NOT NULL,
+	FOREIGN KEY (user) REFERENCES users(email)
+)
