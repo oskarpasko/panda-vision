@@ -2,7 +2,7 @@
 ## Historia zmian
 [PandaVision - link do hisotrii zmian pełnego projektu](https://urstudrzeszow-my.sharepoint.com/:f:/g/personal/op117987_stud_ur_edu_pl/ErKOaEbjQppOsu3n0woqZ-UBQxYMwYwrn2oQvW06TFP1-A?e=ROyC1G)
 
-### **Najnowsza wersja** PandaVision(19.05.2024)
+### PandaVision(19.05.2024) - Najnowsza wersja
 - dodano logowanie do aplikacji z użyciem bazy danych
 ### PandaVision(17.05.2024)_ver2
 - zmieniono koncepcje wyglądu sceny LoginScene
@@ -18,7 +18,7 @@ Engineering Thesis. A VR game involving playing with colors using cubes or other
 ## Update history
 [PandaVision - link to the change history of the full project](https://urstudrzeszow-my.sharepoint.com/:f:/g/personal/op117987_stud_ur_edu_pl/ErKOaEbjQppOsu3n0woqZ-UBQxYMwYwrn2oQvW06TFP1-A?e=ROyC1G)
 
-### **Najnowsza wersja** PandaVision(19.05.2024)
+### PandaVision(19.05.2024) - Newest version
 - added logging into the application using the database
 ### PandaVision(17.05.2024)_ver2
 - the concept of the LoginScene scene appearance has been changed
