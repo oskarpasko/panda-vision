@@ -28,7 +28,6 @@ def color_test():
 
     # Adding data from DB to the array
     for data in cursor:
-        print(data[4])
         colors.append({
             "id": data[0],
             "red": data[1],

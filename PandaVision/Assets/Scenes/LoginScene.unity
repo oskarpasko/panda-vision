@@ -267,6 +267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 128491234}
   - component: {fileID: 128491235}
+  - component: {fileID: 128491236}
   m_Layer: 5
   m_Name: GameObject
   m_TagString: Untagged
@@ -309,6 +310,18 @@ MonoBehaviour:
   emailField: {fileID: 790309141}
   passwordField: {fileID: 381718096}
   loginError: {fileID: 1512743462}
+--- !u!114 &128491236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128491233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec47c1a43eb75394ba2a9ac0e8e697d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &186445629
 GameObject:
   m_ObjectHideFlags: 0
