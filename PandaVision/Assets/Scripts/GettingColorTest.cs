@@ -19,8 +19,6 @@ public class GettingColorTest : MonoBehaviour
         public string incrorrectAnswerC;
     }
 
-    Dictionary<string, int> test = new Dictionary<string, int>();
-
     [System.Serializable]
     public class ColorList
     {
@@ -45,15 +43,11 @@ public class GettingColorTest : MonoBehaviour
         {
             string json = www.downloadHandler.text;
             List<Color> data = JsonConvert.DeserializeObject<List<Color>>(json);
-            ProcessColor(data);
-        }
-    }
-
-    void ProcessColor(List<Color> data)
-    {
-        foreach (var item in data)
-        {
-            Debug.Log($"ID: {item.id}, Red: {item.red}, Green: {item.green}, Blue: {item.blue}, Poprawna: {item.correctAnswer}, A: {item.incrorrectAnswerA}, B: {item.incrorrectAnswerB}, C: {item.incrorrectAnswerC}");
+            
+            foreach (var item in data)
+            {
+                Debug.Log($"ID: {item.id}, Red: {item.red}, Green: {item.green}, Blue: {item.blue}, Poprawna: {item.correctAnswer}, A: {item.incrorrectAnswerA}, B: {item.incrorrectAnswerB}, C: {item.incrorrectAnswerC}");
+            }
         }
     }
 }
