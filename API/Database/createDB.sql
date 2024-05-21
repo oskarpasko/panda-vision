@@ -27,11 +27,23 @@ CREATE TABLE user_test(
 );
 
 /* Table zapisująca wyniki badania rozpoznawania koloru z Canvasu */
-CREATE TABLE color_test(
+CREATE TABLE color_test_user_results(
 	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	date_of_test TIMESTAMP NOT NULL,
 	time_of_test VARCHAR(10) NOT NULL,
 	error_colors VARCHAR(255),
 	user VARCHAR(100) NOT NULL,
 	FOREIGN KEY (user) REFERENCES users(email)
-)
+);
+
+/* Tabela zawierająca dane kolorów użytych do testu ColorTest */
+CREATE TABLE color_test(
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	red INT(3) NOT NULL,
+	green INT(3) NOT NULL,
+	blue INT(3) NOT NULL,
+	correct_answer VARCHAR(50) NOT NULL,
+	incorrect_answer_A VARCHAR(50) NOT NULL,
+	incorrect_answer_B VARCHAR(50) NOT NULL,
+	incorrect_answer_C VARCHAR(50) NOT NULL
+);
