@@ -267,7 +267,6 @@ GameObject:
   m_Component:
   - component: {fileID: 128491234}
   - component: {fileID: 128491235}
-  - component: {fileID: 128491236}
   m_Layer: 5
   m_Name: GameObject
   m_TagString: Untagged
@@ -306,24 +305,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df942d5a1488d1e42beeb81a7cf68e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loginCanvas: {fileID: 469900960}
-  menuCanvas: {fileID: 0}
+  loginCanvas: {fileID: 469900957}
+  menuCanvas: {fileID: 653104764}
   loginButton: {fileID: 1972154122}
   emailField: {fileID: 790309141}
   passwordField: {fileID: 381718096}
   loginError: {fileID: 1512743462}
---- !u!114 &128491236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 128491233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec47c1a43eb75394ba2a9ac0e8e697d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &173156673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1559,7 +1546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &469900958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1841,7 +1828,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &653104765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3148,8 +3135,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1086717954}
-  - component: {fileID: 1086717956}
-  - component: {fileID: 1086717955}
   m_Layer: 5
   m_Name: GameObject
   m_TagString: Untagged
@@ -3176,36 +3161,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1086717955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1086717953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec47c1a43eb75394ba2a9ac0e8e697d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1086717956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1086717953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df942d5a1488d1e42beeb81a7cf68e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loginCanvas: {fileID: 653104769}
-  menuCanvas: {fileID: 0}
-  loginButton: {fileID: 0}
-  emailField: {fileID: 0}
-  passwordField: {fileID: 0}
-  loginError: {fileID: 173156673}
 --- !u!1 &1165165949
 GameObject:
   m_ObjectHideFlags: 0
