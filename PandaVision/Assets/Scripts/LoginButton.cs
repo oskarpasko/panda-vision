@@ -6,16 +6,20 @@ using UnityEngine.Networking;
 
 public class LoginButton : MonoBehaviour {
 	
+	/// <param name="loginCanvas"> Przechowujemy obiekt Canvasa logowania </param>
+	/// <param name="menuCanvas"> Przechowujemy obiekt Canvasa menu głównego </param>
 	/// <param name="loginButton"> Przechowujemy obiekt naszego przycisku </param>
 	/// <param name="emailField"> Field przechowujący wpisany email </param>
 	/// <param name="passwordField"> Field przechpwujący wpisane hasło </param>
 	/// <param name="url"> URL do serwera Flask </param>
+	public GameObject loginCanvas;
+	public GameObject menuCanvas;
 	public Button loginButton;
 	public InputField emailField;
 	public InputField passwordField;
 	public GameObject loginError;
 	private string url = "http://192.168.0.165:5000/";
-	void Start() { loginButton.onClick.AddListener(LoginButtonClicked); }
+	void Start() { loginButton.onClick.AddListener(LoginButtonClicked);}
 
 	void LoginButtonClicked(){ StartCoroutine(LoginRequest(emailField.text, passwordField.text)); }
 	IEnumerator LoginRequest(string email, string password) {
@@ -31,10 +35,11 @@ public class LoginButton : MonoBehaviour {
 			if(webRequest.isNetworkError){
 				Debug.Log("ERROR: " + webRequest.error);
 			} else {
+				// if email and password are correct
 				if(webRequest.responseCode == 200){
-					SceneManager.LoadScene("TestScene");
-				} else {
-					// OBSŁUŻYĆ JEŚLI SĄ NIEPORPAWNE DANE
+					loginCanvas.SetActive(false);
+					menuCanvas.SetActive(true);
+				} else {// if email and password are incorrect
 					loginError.SetActive(true);
 					Debug.Log("Niepoprawne dane");
 				} 
