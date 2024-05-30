@@ -1,20 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public List<Test> tests = new List<Test>();
-
-    // Start is called before the first frame update
     void Start()
     {
-        tests.Add(new ColorTest());
-        tests.Add(new ColorCubeTest());
 
-        foreach(Test test in tests)
-        {
-            test.description();
-        }
+    }
+
+    void Update()
+    {
+
+    }
+
+    public void ColorTestDescription()
+    {
+        Debug.Log("INFO - Opis testu kolorów");
+    }
+
+    public void ColorTestStart()
+    {
+        Debug.Log("INFO - Przejście do sceny z testem kolorów");
+    }
+
+    public void ColorCubeTestDescription()
+    {
+        Debug.Log("INFO - Opis testu kolorów");
+    }
+
+    public void ColorCubeTestStart()
+    {
+        SceneManager.LoadScene("TestScene");
     }
 }
