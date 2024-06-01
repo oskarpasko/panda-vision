@@ -12,12 +12,12 @@ public class LoginButton : MonoBehaviour {
 	/// <param name="emailField"> Field przechowujący wpisany email </param>
 	/// <param name="passwordField"> Field przechpwujący wpisane hasło </param>
 	/// <param name="url"> URL do serwera Flask </param>
-	public GameObject loginCanvas;
-	public GameObject menuCanvas;
-	public Button loginButton;
-	public InputField emailField;
-	public InputField passwordField;
-	public GameObject loginError;
+	[SerializeField] private GameObject loginCanvas;
+	[SerializeField] private GameObject menuCanvas;
+	[SerializeField] private Button loginButton;
+	[SerializeField] private InputField emailField;
+	[SerializeField] private InputField passwordField;
+	[SerializeField] private GameObject loginError;
 	private string url = "http://192.168.0.165:5000/";
 	void Start() { loginButton.onClick.AddListener(LoginButtonClicked);}
 
