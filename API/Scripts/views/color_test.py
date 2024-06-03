@@ -1,9 +1,9 @@
-from flask import Flask, request, jsonify
+from flask import Flask, Blueprint
 import pymysql
 
-app = Flask(__name__)
+color_test_blueprint = Blueprint('color_test', __name__)
 
-@app.route("/color_test",)
+@color_test_blueprint.route("/color_test",)
 def color_test():
     # array to store all data from DB
     colors = []
