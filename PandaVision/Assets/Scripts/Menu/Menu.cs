@@ -19,7 +19,7 @@ public class Menu : MonoBehaviour
     // method which starts Color Test Scene
     public void ColorTestStart()
     {
-        Debug.Log("INFO - Przejście do sceny z testem kolorów");
+        SceneManager.LoadScene("ColorTestScene");
     }
 
     // method which shows description ob Color Cube Test
@@ -32,6 +32,6 @@ public class Menu : MonoBehaviour
     // method which starts Color Cube Test Scene
     public void ColorCubeTestStart()
     {
-        SceneManager.LoadScene("TestScene");
+        SceneManager.LoadScene("ColorCubeTestScene");
     }
 }
