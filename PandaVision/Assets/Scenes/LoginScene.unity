@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.35184932, g: 0.72326684, b: 0.95735294, a: 1}
+  m_IndirectSpecularColor: {r: 0.35190332, g: 0.72356087, b: 0.9581293, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6420,7 +6420,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f16f39bd1be9d4140ad0cd32366b3c89, type: 3}
 --- !u!4 &550209547 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 98303990304373466, guid: f16f39bd1be9d4140ad0cd32366b3c89, type: 3}
+  m_CorrespondingSourceObject: {fileID: 529876361894922179, guid: f16f39bd1be9d4140ad0cd32366b3c89, type: 3}
   m_PrefabInstance: {fileID: 550209546}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &568604289
@@ -16359,7 +16359,6 @@ GameObject:
   - component: {fileID: 1972154124}
   - component: {fileID: 1972154123}
   - component: {fileID: 1972154122}
-  - component: {fileID: 1972154125}
   m_Layer: 5
   m_Name: loginButton
   m_TagString: Untagged
@@ -16469,24 +16468,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972154120}
   m_CullTransparentMesh: 1
---- !u!114 &1972154125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1972154120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df942d5a1488d1e42beeb81a7cf68e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loginCanvas: {fileID: 0}
-  menuCanvas: {fileID: 0}
-  loginButton: {fileID: 0}
-  emailField: {fileID: 0}
-  passwordField: {fileID: 0}
-  loginError: {fileID: 0}
 --- !u!1 &1979226783
 GameObject:
   m_ObjectHideFlags: 0
