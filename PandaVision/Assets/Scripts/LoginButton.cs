@@ -18,7 +18,7 @@ public class LoginButton : MonoBehaviour {
 	[SerializeField] private InputField emailField;
 	[SerializeField] private InputField passwordField;
 	[SerializeField] private GameObject loginError;
-	private string url = "http://192.168.0.165:5000/";
+	private string url = "http://192.168.0.166:5000/";
 	void Start() { 
 
 		// we are checking if user was logged or not
