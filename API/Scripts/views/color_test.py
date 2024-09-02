@@ -7,7 +7,7 @@ color_test_blueprint = Blueprint('color_test', __name__)
 @color_test_blueprint.route("/color_test",)
 def color_test():
     # array to store all data from DB
-    rows, cols = (1, 8)
+    rows, cols = (1, 7)
     colors = [[0]*cols]*rows
 
     #data to connection with db
@@ -30,7 +30,7 @@ def color_test():
 
     # Adding data from DB to the 2D array
     for data in cursor:
-        new_row = [data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]]
+        new_row = [data[1], data[2], data[3], data[4], data[5], data[6], data[7]]
         colors.append(new_row)
 
     # Deleting startup row aka first row (first row -> 0,0,0,0,0,0,0,0)
