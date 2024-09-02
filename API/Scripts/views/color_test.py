@@ -11,7 +11,7 @@ def color_test():
     #data to connection with db
     hostname = 'localhost'
     user = 'root'
-    password = 'oskarpasko'
+    password = 'admin'
 
     # Initializing connection
     db = pymysql.connections.Connection(
@@ -38,6 +38,8 @@ def color_test():
             "incrorrectAnswerB": data[6],
             "incrorrectAnswerC": data[7]
         })
+
+    print(colors)
 
     # Closing the cursor and connection to the database
     cursor.close()

@@ -11,7 +11,7 @@ def login():
     #data to connection with db
     hostname = 'localhost'
     user = 'root'
-    password = 'oskarpasko'
+    password = 'admin'
 
     # Initializing connection
     db = pymysql.connections.Connection(
