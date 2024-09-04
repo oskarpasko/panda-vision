@@ -39,7 +39,7 @@ def color_test():
     # Shuffle the 2D array
     np.random.shuffle(colors)
 
-    print(colors)
+    #print(colors)
 
     # Closing the cursor and connection to the database
     cursor.close()
