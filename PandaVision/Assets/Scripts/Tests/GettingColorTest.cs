@@ -3,13 +3,17 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Collections;
 using System.Collections.Generic;
-using System.Text.Json;
 using Newtonsoft.Json;
 using System;
 
 public class GettingColorTest : MonoBehaviour
 {
+    /// <param name="colorCanvas"> Canvas which is displaying colors for test </param>
+    /// /// <param name="buttons"> list of buttons with answers </param>
+    /// /// <param name="proceed"> variable to work with waiting for click button </param>
     [SerializeField] private Image colorCanvas;
+    [SerializeField] private Button[] buttons;
+    private bool proceed;
 
     // Mehtod to get colors from db
     IEnumerator GetColor()
@@ -24,7 +28,7 @@ public class GettingColorTest : MonoBehaviour
         else
         {
             string json = www.downloadHandler.text; // downloanding whole json file from API
-
+            
             // deserialize JSON to List of Lists of objects
             List<List<object>> colors = JsonConvert.DeserializeObject<List<List<object>>>(json);
 
@@ -33,6 +37,7 @@ public class GettingColorTest : MonoBehaviour
             int cols = colors[0].Count;
             object[,] colorsArray2D = new object[rows, cols];
 
+            // converting json file to the 2d array
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < cols; j++)
@@ -40,46 +45,50 @@ public class GettingColorTest : MonoBehaviour
                     colorsArray2D[i, j] = colors[i][j];
                 }
             }
-            
-            // setting color from DB
-            Color32 colorToCavas = new Color32(Convert.ToByte(colorsArray2D[0, 0]),        // Red
-                                               Convert.ToByte(colorsArray2D[0, 1]),        // Green
-                                               Convert.ToByte(colorsArray2D[0, 2]),        // Blue
-                                               255                         // Alpha
-            );
 
-            colorCanvas.color = colorToCavas;
-
-            // Output in Console
-            // DebugLog2DArray(colorsArray2D);
-        }
-    }
-
-    // Method to output array in console
-    void DebugLog2DArray(object[,] array2D)
-    {
-        int rows = array2D.GetLength(0);
-        int cols = array2D.GetLength(1);
-
-        for (int i = 0; i < rows; i++)
-        {
-            string row = "";
-            for (int j = 0; j < cols; j++)
+            // main test's loop
+            for (int i = 0; i < rows; i++)
             {
-                row += array2D[i, j] + ", ";
+                Debug.Log("+++++++++++++++++ ITERACJA: " + i);
+                // setting color from DB
+                Color32 colorToCavas = new Color32(Convert.ToByte(colorsArray2D[i, 0]),     // Red
+                                                Convert.ToByte(colorsArray2D[i, 1]),        // Green
+                                                Convert.ToByte(colorsArray2D[i, 2]),        // Blue
+                                                255                                         // Alpha
+                );
+                colorCanvas.color = colorToCavas;
+
+                // adding answers for color to the simple array
+                string[] answers = new string[4];
+                for(int a = 3; a < 7; a++) { answers[a-3] = Convert.ToString(colorsArray2D[i, a]); }
+            
+                // loop to set answers to all buttons where will be answers
+                // adding listeners to all buttons as well
+                for (int t = 0; t < buttons.Length; t++)
+                {
+                    buttons[t].GetComponentInChildren<Text>().text = answers[t];
+                    buttons[t].onClick.AddListener(OnButtonClick);
+                }
+
+                // Waiting for user click an some answer button
+                while(!proceed)
+                {
+                    yield return null;
+                }
+
+                proceed = false;
             }
-            Debug.Log(row);
         }
     }
+
+    // method to change proceed value
+    void OnButtonClick(){ proceed = true; }
 
     // Main method
     IEnumerator Start()
     {
-        yield return StartCoroutine(GetColor());
+        proceed = false; 
 
-        // foreach (var item in colors)
-        // {
-        //     Debug.Log($"ID: {item.id}, Red: {item.red}, Green: {item.green}, Blue: {item.blue}, Poprawna: {item.correctAnswer}, A: {item.incrorrectAnswerA}, B: {item.incrorrectAnswerB}, C: {item.incrorrectAnswerC}");
-        // }
+        yield return StartCoroutine(GetColor());
     }
 }
