@@ -61,6 +61,9 @@ public class GettingColorTest : MonoBehaviour
                 // adding answers for color to the simple array
                 string[] answers = new string[4];
                 for(int a = 3; a < 7; a++) { answers[a-3] = Convert.ToString(colorsArray2D[i, a]); }
+
+                // shuffle array with answers
+                ShuffleAnswers(answers);
             
                 // loop to set answers to all buttons where will be answers
                 // adding listeners to all buttons as well
@@ -78,6 +81,18 @@ public class GettingColorTest : MonoBehaviour
 
                 proceed = false;
             }
+        }
+    }
+
+    // method to shuffle answers
+    void ShuffleAnswers(string[] array)
+    {
+        for (int i = array.Length - 1; i > 0; i--)
+        {
+            int rnd = UnityEngine.Random.Range(0, i + 1);
+            string temp = array[i];
+            array[i] = array[rnd];
+            array[rnd] = temp;
         }
     }
 
