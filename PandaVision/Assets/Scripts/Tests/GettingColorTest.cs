@@ -11,6 +11,9 @@ public class GettingColorTest : MonoBehaviour
 {
     /// <param name="testPanel"> Canvas which is displaying colors for test </param>
     /// <param name="buttons"> list of buttons with answers </param>
+    /// <param name="startButton"> button to start the test </param>
+    /// <param name="tryAgainButton"> button to start once again the test </param>
+    /// <param name="buttons"> list of buttons with answers </param>
     /// <param name="startCanvas"> Canvas with start button </param>
     /// <param name="colorCanvas"> Canvas with test's colors </param>
     /// <param name="answerCanvas"> Canvas with answers </param>
@@ -25,6 +28,7 @@ public class GettingColorTest : MonoBehaviour
     [SerializeField] private Image testPanel;
     [SerializeField] private Button[] buttons;
     [SerializeField] private Button startButton;
+    [SerializeField] private Button tryAgainButton;
     [SerializeField] private GameObject startCanvas;
     [SerializeField] private GameObject colorCanvas;
     [SerializeField] private GameObject answerCanvas;
@@ -118,7 +122,7 @@ public class GettingColorTest : MonoBehaviour
             colorCanvas.SetActive(false);
             answerCanvas.SetActive(false);
 			resultCanvas.SetActive(true);
-            timeResult.text = time.ToString();              // print test's time
+            timeResult.text = FormatTime(time).ToString();              // print test's time
             correctResult.text = (rows - error).ToString(); // print correct score
             errorsResult.text = error.ToString();           // print errors score
         }
@@ -135,7 +139,27 @@ public class GettingColorTest : MonoBehaviour
             array[rnd] = temp;
         }
     }
+    // method to format time
+    private string FormatTime(float time)
+    {
+        // get seconds 
+        int seconds = Mathf.FloorToInt(time);
+        // get milliseconds 
+        int milliseconds = Mathf.FloorToInt((time - seconds) * 100);
+        // return formatted string with seconds and milliseconds
+        return string.Format("{0}.{1:00}", seconds, milliseconds);
+    }
+    // method which starts test after clicking button
     void startTest()
+        {
+            resultCanvas.SetActive(false);
+            colorCanvas.SetActive(true);
+            answerCanvas.SetActive(true);
+            time = 0f; //reset the time
+            isRunning = true; // start counting time
+        }
+        // method which starts test after clicking button
+    void tryAgainTest()
         {
             startCanvas.SetActive(false);
             colorCanvas.SetActive(true);
@@ -149,10 +173,6 @@ public class GettingColorTest : MonoBehaviour
         // if guess is wrong add +1 to the error variable
         if(correctAnswer.Equals(guessAnswer) == false) { error++; }
     }
-
-    // method which starts test after clicking button
-    
-
     // Main method
     IEnumerator Start()
     {
