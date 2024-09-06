@@ -910,7 +910,7 @@ GameObject:
   - component: {fileID: 360559312}
   - component: {fileID: 360559311}
   m_Layer: 5
-  m_Name: Value
+  m_Name: timeValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1948,7 +1948,7 @@ GameObject:
   - component: {fileID: 909833415}
   - component: {fileID: 909833414}
   m_Layer: 5
-  m_Name: Value
+  m_Name: errorValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3447,7 +3447,7 @@ GameObject:
   - component: {fileID: 1487809063}
   - component: {fileID: 1487809062}
   m_Layer: 5
-  m_Name: Value
+  m_Name: correctValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3938,6 +3938,7 @@ MonoBehaviour:
   colorCanvas: {fileID: 1999437907}
   answerCanvas: {fileID: 1448822831}
   resultCanvas: {fileID: 1710003111}
+  timeResult: {fileID: 360559311}
   correctResult: {fileID: 1487809062}
   errorsResult: {fileID: 909833414}
 --- !u!1 &1696589706

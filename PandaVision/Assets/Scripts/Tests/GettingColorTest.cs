@@ -15,8 +15,13 @@ public class GettingColorTest : MonoBehaviour
     /// <param name="colorCanvas"> Canvas with test's colors </param>
     /// <param name="answerCanvas"> Canvas with answers </param>
     /// <param name="resultCanvas"> Canvas with results </param>
+    /// <param name="timeResult"> Text_TMP to write time from test </param>
+    /// <param name="correctResult"> Text_TMP to write count of correct answers from test </param>
+    /// <param name="errorsResult"> Text_TMP to write count of error answer score from test </param>
     /// <param name="proceed"> variable to work with waiting for click button </param>
     /// <param name="error"> variable to count errors in test, start with 0 </param>
+    /// <param name="time"> variable to count time in seconds </param>
+    /// <param name="isRunning"> variable to check if time is running </param>
     [SerializeField] private Image testPanel;
     [SerializeField] private Button[] buttons;
     [SerializeField] private Button startButton;
@@ -24,10 +29,13 @@ public class GettingColorTest : MonoBehaviour
     [SerializeField] private GameObject colorCanvas;
     [SerializeField] private GameObject answerCanvas;
     [SerializeField] private GameObject resultCanvas;
+    [SerializeField] private TMP_Text timeResult;
     [SerializeField] private TMP_Text correctResult;
     [SerializeField] private TMP_Text errorsResult;
     private bool proceed;
     private int error = 0;
+    private float time = 0f;
+    private bool isRunning = false;
 
     // Mehtod to get colors from db
     IEnumerator GetColor()
@@ -102,6 +110,7 @@ public class GettingColorTest : MonoBehaviour
 
                 proceed = false;
             }
+            isRunning = false; // stop counting time
 
             // hide canvas with colors
             // hide canvas with answers
@@ -109,6 +118,7 @@ public class GettingColorTest : MonoBehaviour
             colorCanvas.SetActive(false);
             answerCanvas.SetActive(false);
 			resultCanvas.SetActive(true);
+            timeResult.text = time.ToString();              // print test's time
             correctResult.text = (rows - error).ToString(); // print correct score
             errorsResult.text = error.ToString();           // print errors score
         }
@@ -130,6 +140,7 @@ public class GettingColorTest : MonoBehaviour
             startCanvas.SetActive(false);
             colorCanvas.SetActive(true);
             answerCanvas.SetActive(true);
+            isRunning = true; // start counting time
         }
     // method to change proceed value
     void OnButtonClick(string correctAnswer, string guessAnswer)
@@ -147,5 +158,11 @@ public class GettingColorTest : MonoBehaviour
     {
         proceed = false; 
         yield return StartCoroutine(GetColor());
+    }
+
+    void Update()
+    {
+        // if isRunning is true, keep adding time
+        if (isRunning) { time += Time.deltaTime; }
     }
 }
