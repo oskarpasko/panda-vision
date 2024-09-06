@@ -6,18 +6,20 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using System;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GettingColorTest : MonoBehaviour
 {
     /// <param name="testPanel"> Canvas which is displaying colors for test </param>
     /// <param name="buttons"> list of buttons with answers </param>
     /// <param name="startButton"> button to start the test </param>
-    /// <param name="tryAgainButton"> button to start once again the test </param>
+    /// <param name="backToMenuButton"> button to back to the menu </param>
     /// <param name="buttons"> list of buttons with answers </param>
     /// <param name="startCanvas"> Canvas with start button </param>
     /// <param name="colorCanvas"> Canvas with test's colors </param>
     /// <param name="answerCanvas"> Canvas with answers </param>
     /// <param name="resultCanvas"> Canvas with results </param>
+    /// <param name="backToMenuCanvas"> Canvas with button to back to the manu </param>
     /// <param name="timeResult"> Text_TMP to write time from test </param>
     /// <param name="correctResult"> Text_TMP to write count of correct answers from test </param>
     /// <param name="errorsResult"> Text_TMP to write count of error answer score from test </param>
@@ -28,11 +30,12 @@ public class GettingColorTest : MonoBehaviour
     [SerializeField] private Image testPanel;
     [SerializeField] private Button[] buttons;
     [SerializeField] private Button startButton;
-    [SerializeField] private Button tryAgainButton;
+    [SerializeField] private Button backToMenuButton;
     [SerializeField] private GameObject startCanvas;
     [SerializeField] private GameObject colorCanvas;
     [SerializeField] private GameObject answerCanvas;
     [SerializeField] private GameObject resultCanvas;
+    [SerializeField] private GameObject backToMenuCanvas;
     [SerializeField] private TMP_Text timeResult;
     [SerializeField] private TMP_Text correctResult;
     [SerializeField] private TMP_Text errorsResult;
@@ -54,6 +57,7 @@ public class GettingColorTest : MonoBehaviour
         else
         {
             startButton.onClick.AddListener(startTest); //listener to start button
+            backToMenuButton.onClick.AddListener(backToMenu); //listener to try again button
 
             string json = www.downloadHandler.text; // downloanding whole json file from API
             
@@ -119,12 +123,14 @@ public class GettingColorTest : MonoBehaviour
             // hide canvas with colors
             // hide canvas with answers
             // show canvas with results
+            // show canvas with button to try again
             colorCanvas.SetActive(false);
             answerCanvas.SetActive(false);
 			resultCanvas.SetActive(true);
+            backToMenuCanvas.SetActive(true);
             timeResult.text = FormatTime(time).ToString();              // print test's time
-            correctResult.text = (rows - error).ToString(); // print correct score
-            errorsResult.text = error.ToString();           // print errors score
+            correctResult.text = (rows - error).ToString();             // print correct score
+            errorsResult.text = error.ToString();                       // print errors score
         }
     }
 
@@ -152,19 +158,19 @@ public class GettingColorTest : MonoBehaviour
     // method which starts test after clicking button
     void startTest()
         {
-            resultCanvas.SetActive(false);
-            colorCanvas.SetActive(true);
-            answerCanvas.SetActive(true);
-            time = 0f; //reset the time
-            isRunning = true; // start counting time
-        }
-        // method which starts test after clicking button
-    void tryAgainTest()
-        {
             startCanvas.SetActive(false);
             colorCanvas.SetActive(true);
             answerCanvas.SetActive(true);
             isRunning = true; // start counting time
+        }
+        // method which starts test after clicking button
+    void backToMenu()
+        {
+            resultCanvas.SetActive(false);
+            backToMenuCanvas.SetActive(false);
+            startCanvas.SetActive(true);
+            time = 0f; //reset the time
+            SceneManager.LoadScene("LoginScene");
         }
     // method to change proceed value
     void OnButtonClick(string correctAnswer, string guessAnswer)
