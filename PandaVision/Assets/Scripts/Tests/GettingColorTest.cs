@@ -5,15 +5,29 @@ using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using System;
+using TMPro;
 
 public class GettingColorTest : MonoBehaviour
 {
-    /// <param name="colorCanvas"> Canvas which is displaying colors for test </param>
-    /// /// <param name="buttons"> list of buttons with answers </param>
-    /// /// <param name="proceed"> variable to work with waiting for click button </param>
-    [SerializeField] private Image colorCanvas;
+    /// <param name="testPanel"> Canvas which is displaying colors for test </param>
+    /// <param name="buttons"> list of buttons with answers </param>
+    /// <param name="startCanvas"> Canvas with start button </param>
+    /// <param name="colorCanvas"> Canvas with test's colors </param>
+    /// <param name="answerCanvas"> Canvas with answers </param>
+    /// <param name="resultCanvas"> Canvas with results </param>
+    /// <param name="proceed"> variable to work with waiting for click button </param>
+    /// <param name="error"> variable to count errors in test, start with 0 </param>
+    [SerializeField] private Image testPanel;
     [SerializeField] private Button[] buttons;
+    [SerializeField] private Button startButton;
+    [SerializeField] private GameObject startCanvas;
+    [SerializeField] private GameObject colorCanvas;
+    [SerializeField] private GameObject answerCanvas;
+    [SerializeField] private GameObject resultCanvas;
+    [SerializeField] private TMP_Text correctResult;
+    [SerializeField] private TMP_Text errorsResult;
     private bool proceed;
+    private int error = 0;
 
     // Mehtod to get colors from db
     IEnumerator GetColor()
@@ -27,6 +41,8 @@ public class GettingColorTest : MonoBehaviour
         }
         else
         {
+            startButton.onClick.AddListener(startTest); //listener to start button
+
             string json = www.downloadHandler.text; // downloanding whole json file from API
             
             // deserialize JSON to List of Lists of objects
@@ -56,11 +72,14 @@ public class GettingColorTest : MonoBehaviour
                                                 Convert.ToByte(colorsArray2D[i, 2]),        // Blue
                                                 255                                         // Alpha
                 );
-                colorCanvas.color = colorToCavas;
+                testPanel.color = colorToCavas;
 
                 // adding answers for color to the simple array
                 string[] answers = new string[4];
                 for(int a = 3; a < 7; a++) { answers[a-3] = Convert.ToString(colorsArray2D[i, a]); }
+
+                // get correct answer
+                string correctAns = answers[0];
 
                 // shuffle array with answers
                 ShuffleAnswers(answers);
@@ -69,8 +88,10 @@ public class GettingColorTest : MonoBehaviour
                 // adding listeners to all buttons as well
                 for (int t = 0; t < buttons.Length; t++)
                 {
+                    buttons[t].onClick.RemoveAllListeners();
                     buttons[t].GetComponentInChildren<Text>().text = answers[t];
-                    buttons[t].onClick.AddListener(OnButtonClick);
+                    string guessAns = answers[t].ToString();
+                    buttons[t].onClick.AddListener(() => OnButtonClick(correctAns, guessAns));
                 }
 
                 // Waiting for user click an some answer button
@@ -81,6 +102,15 @@ public class GettingColorTest : MonoBehaviour
 
                 proceed = false;
             }
+
+            // hide canvas with colors
+            // hide canvas with answers
+            // show canvas with results
+            colorCanvas.SetActive(false);
+            answerCanvas.SetActive(false);
+			resultCanvas.SetActive(true);
+            correctResult.text = (rows - error).ToString(); // print correct score
+            errorsResult.text = error.ToString();           // print errors score
         }
     }
 
@@ -95,15 +125,27 @@ public class GettingColorTest : MonoBehaviour
             array[rnd] = temp;
         }
     }
-
+    void startTest()
+        {
+            startCanvas.SetActive(false);
+            colorCanvas.SetActive(true);
+            answerCanvas.SetActive(true);
+        }
     // method to change proceed value
-    void OnButtonClick(){ proceed = true; }
+    void OnButtonClick(string correctAnswer, string guessAnswer)
+    { 
+        proceed = true; 
+        // if guess is wrong add +1 to the error variable
+        if(correctAnswer.Equals(guessAnswer) == false) { error++; }
+    }
+
+    // method which starts test after clicking button
+    
 
     // Main method
     IEnumerator Start()
     {
         proceed = false; 
-
         yield return StartCoroutine(GetColor());
     }
 }
