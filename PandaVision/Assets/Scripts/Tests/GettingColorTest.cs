@@ -5,15 +5,44 @@ using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using System;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GettingColorTest : MonoBehaviour
 {
-    /// <param name="colorCanvas"> Canvas which is displaying colors for test </param>
-    /// /// <param name="buttons"> list of buttons with answers </param>
-    /// /// <param name="proceed"> variable to work with waiting for click button </param>
-    [SerializeField] private Image colorCanvas;
+    /// <param name="testPanel"> Canvas which is displaying colors for test </param>
+    /// <param name="buttons"> list of buttons with answers </param>
+    /// <param name="startButton"> button to start the test </param>
+    /// <param name="backToMenuButton"> button to back to the menu </param>
+    /// <param name="buttons"> list of buttons with answers </param>
+    /// <param name="startCanvas"> Canvas with start button </param>
+    /// <param name="colorCanvas"> Canvas with test's colors </param>
+    /// <param name="answerCanvas"> Canvas with answers </param>
+    /// <param name="resultCanvas"> Canvas with results </param>
+    /// <param name="backToMenuCanvas"> Canvas with button to back to the manu </param>
+    /// <param name="timeResult"> Text_TMP to write time from test </param>
+    /// <param name="correctResult"> Text_TMP to write count of correct answers from test </param>
+    /// <param name="errorsResult"> Text_TMP to write count of error answer score from test </param>
+    /// <param name="proceed"> variable to work with waiting for click button </param>
+    /// <param name="error"> variable to count errors in test, start with 0 </param>
+    /// <param name="time"> variable to count time in seconds </param>
+    /// <param name="isRunning"> variable to check if time is running </param>
+    [SerializeField] private Image testPanel;
     [SerializeField] private Button[] buttons;
+    [SerializeField] private Button startButton;
+    [SerializeField] private Button backToMenuButton;
+    [SerializeField] private GameObject startCanvas;
+    [SerializeField] private GameObject colorCanvas;
+    [SerializeField] private GameObject answerCanvas;
+    [SerializeField] private GameObject resultCanvas;
+    [SerializeField] private GameObject backToMenuCanvas;
+    [SerializeField] private TMP_Text timeResult;
+    [SerializeField] private TMP_Text correctResult;
+    [SerializeField] private TMP_Text errorsResult;
     private bool proceed;
+    private int error = 0;
+    private float time = 0f;
+    private bool isRunning = false;
 
     // Mehtod to get colors from db
     IEnumerator GetColor()
@@ -27,6 +56,9 @@ public class GettingColorTest : MonoBehaviour
         }
         else
         {
+            startButton.onClick.AddListener(startTest); //listener to start button
+            backToMenuButton.onClick.AddListener(backToMenu); //listener to try again button
+
             string json = www.downloadHandler.text; // downloanding whole json file from API
             
             // deserialize JSON to List of Lists of objects
@@ -56,11 +88,14 @@ public class GettingColorTest : MonoBehaviour
                                                 Convert.ToByte(colorsArray2D[i, 2]),        // Blue
                                                 255                                         // Alpha
                 );
-                colorCanvas.color = colorToCavas;
+                testPanel.color = colorToCavas;
 
                 // adding answers for color to the simple array
                 string[] answers = new string[4];
                 for(int a = 3; a < 7; a++) { answers[a-3] = Convert.ToString(colorsArray2D[i, a]); }
+
+                // get correct answer
+                string correctAns = answers[0];
 
                 // shuffle array with answers
                 ShuffleAnswers(answers);
@@ -69,8 +104,10 @@ public class GettingColorTest : MonoBehaviour
                 // adding listeners to all buttons as well
                 for (int t = 0; t < buttons.Length; t++)
                 {
+                    buttons[t].onClick.RemoveAllListeners();
                     buttons[t].GetComponentInChildren<Text>().text = answers[t];
-                    buttons[t].onClick.AddListener(OnButtonClick);
+                    string guessAns = answers[t].ToString();
+                    buttons[t].onClick.AddListener(() => OnButtonClick(correctAns, guessAns));
                 }
 
                 // Waiting for user click an some answer button
@@ -81,6 +118,19 @@ public class GettingColorTest : MonoBehaviour
 
                 proceed = false;
             }
+            isRunning = false; // stop counting time
+
+            // hide canvas with colors
+            // hide canvas with answers
+            // show canvas with results
+            // show canvas with button to try again
+            colorCanvas.SetActive(false);
+            answerCanvas.SetActive(false);
+			resultCanvas.SetActive(true);
+            backToMenuCanvas.SetActive(true);
+            timeResult.text = FormatTime(time).ToString();              // print test's time
+            correctResult.text = (rows - error).ToString();             // print correct score
+            errorsResult.text = error.ToString();                       // print errors score
         }
     }
 
@@ -95,15 +145,49 @@ public class GettingColorTest : MonoBehaviour
             array[rnd] = temp;
         }
     }
-
+    // method to format time
+    private string FormatTime(float time)
+    {
+        // get seconds 
+        int seconds = Mathf.FloorToInt(time);
+        // get milliseconds 
+        int milliseconds = Mathf.FloorToInt((time - seconds) * 100);
+        // return formatted string with seconds and milliseconds
+        return string.Format("{0}.{1:00}", seconds, milliseconds);
+    }
+    // method which starts test after clicking button
+    void startTest()
+        {
+            startCanvas.SetActive(false);
+            colorCanvas.SetActive(true);
+            answerCanvas.SetActive(true);
+            time = 0f; // set time as 0s
+            isRunning = true; // start counting time
+        }
+        // method which starts test after clicking button
+    void backToMenu()
+        {
+            resultCanvas.SetActive(false);
+            backToMenuCanvas.SetActive(false);
+            startCanvas.SetActive(true);
+            SceneManager.LoadScene("LoginScene");
+        }
     // method to change proceed value
-    void OnButtonClick(){ proceed = true; }
-
+    void OnButtonClick(string correctAnswer, string guessAnswer)
+    { 
+        proceed = true; 
+        // if guess is wrong add +1 to the error variable
+        if(correctAnswer.Equals(guessAnswer) == false) { error++; }
+    }
     // Main method
     IEnumerator Start()
     {
         proceed = false; 
-
         yield return StartCoroutine(GetColor());
+    }
+    void Update()
+    {
+        // if isRunning is true, keep adding time
+        if (isRunning) { time += Time.deltaTime; }
     }
 }
