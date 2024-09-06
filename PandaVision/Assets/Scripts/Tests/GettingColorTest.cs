@@ -161,6 +161,7 @@ public class GettingColorTest : MonoBehaviour
             startCanvas.SetActive(false);
             colorCanvas.SetActive(true);
             answerCanvas.SetActive(true);
+            time = 0f; // set time as 0s
             isRunning = true; // start counting time
         }
         // method which starts test after clicking button
@@ -169,7 +170,6 @@ public class GettingColorTest : MonoBehaviour
             resultCanvas.SetActive(false);
             backToMenuCanvas.SetActive(false);
             startCanvas.SetActive(true);
-            time = 0f; //reset the time
             SceneManager.LoadScene("LoginScene");
         }
     // method to change proceed value
@@ -185,7 +185,6 @@ public class GettingColorTest : MonoBehaviour
         proceed = false; 
         yield return StartCoroutine(GetColor());
     }
-
     void Update()
     {
         // if isRunning is true, keep adding time
