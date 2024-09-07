@@ -5,9 +5,6 @@ login_blueprint = Blueprint('login', __name__)
 
 @login_blueprint.route("/", methods=['POST'])
 def login():
-
-    print("TEST - IT WORKS!!!")
-
     #data to connection with db
     hostname = 'localhost'
     user = 'root'
@@ -26,9 +23,6 @@ def login():
 
     # Creating cursor object
     cursor = db.cursor()
-
-    print(email)
-    print(password)
 
     # Executing SQL query
     query = cursor.execute(f"SELECT email FROM pandavision.users WHERE email='{email}' AND passwd=SHA2('{password}', 256);")
