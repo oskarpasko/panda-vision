@@ -1,10 +1,10 @@
-/* Tworzenie tabel do bazy danych */
+/* Script to create schema of DB */
 
 CREATE DATABASE pandavision;
 
 USE pandavision;
 
-/* Tabela z uytkownikami */
+/* Table with users */
 CREATE TABLE users(
 	email VARCHAR(100) PRIMARY KEY NOT NULL UNIQUE,
 	first_name VARCHAR(50) NOT NULL,
@@ -14,29 +14,18 @@ CREATE TABLE users(
 	passwd CHAR(64) NOT NULL
 );
 
-/* Tabela zapisująca badania uzytkownikow */
-CREATE TABLE user_test(
-	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-	date_of_test TIMESTAMP NOT NULL,
-	points INT NOT NULL,
-	time_of_test INT NOT NULL,
-	mistake INT NOT NULL,
-	tracker BLOB,
-	user VARCHAR(100) NOT NULL,
-	FOREIGN KEY (user) REFERENCES users(email)
-);
-
-/* Table zapisująca wyniki badania rozpoznawania koloru z Canvasu */
+/* Table with results of test ColorTest */
 CREATE TABLE color_test_user_results(
 	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	date_of_test TIMESTAMP NOT NULL,
 	time_of_test VARCHAR(10) NOT NULL,
+	correct_colors VARCHAR(255),
 	error_colors VARCHAR(255),
 	user VARCHAR(100) NOT NULL,
 	FOREIGN KEY (user) REFERENCES users(email)
 );
 
-/* Tabela zawierająca dane kolorów użytych do testu ColorTest */
+/* Table with colors to ColorTest */
 CREATE TABLE color_test(
 	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	red INT(3) NOT NULL,
