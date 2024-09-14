@@ -6,10 +6,7 @@ using UnityEngine.Events;
 
 public class TaintTest : MonoBehaviour
 {
-    public float deadTime = 1.0f;
-    private bool _deadTimeActive = false;
-    public UnityEvent onPressed, onRealsed;
-    [SerializeField] private GameObject button;
+    /// <param name="cubes"> Array with cubes for the test </param>
     [SerializeField] private GameObject[] cubes;
 
     private void Start() {
@@ -21,16 +18,18 @@ public class TaintTest : MonoBehaviour
     {
         ShuffleCubes(cubes);
 
-        for (int i = 0; i < cubes.Length; i++)
+        for (int i = 0; i < cubes.Length/3; i++)
         {
-            int x = 0 + (25 * i);
-            
-            cubes[i].GetComponent<Renderer>().material.color = new Color32(255,Convert.ToByte(x),Convert.ToByte(x),255);
-            cubes[i].name = x.ToString();
-            Debug.Log(!cubes[i].gameObject.name.Equals("0"));
+            int x = 0 + (45 * i);
 
-            if(i == (cubes.Length-2)) cubes[i].GetComponent<Renderer>().material.color = new Color32(100,255,100,255);
-            if(i == (cubes.Length-1)) cubes[i].GetComponent<Renderer>().material.color = new Color32(100,100,255,255);
+            cubes[i].GetComponent<Renderer>().material.color = new Color32(255,Convert.ToByte(x),Convert.ToByte(x),255);
+            cubes[i].name = $"255{x}{x}";
+
+            cubes[i+5].GetComponent<Renderer>().material.color = new Color32(Convert.ToByte(x),255,Convert.ToByte(x),255);
+            cubes[i+5].name = $"{x}255{x}";
+
+            cubes[i+10].GetComponent<Renderer>().material.color = new Color32(Convert.ToByte(x),Convert.ToByte(x),255,255);
+            cubes[i+10].name = $"{x}{x}255";
         }
     }
 
