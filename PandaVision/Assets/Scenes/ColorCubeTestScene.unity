@@ -1208,13 +1208,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 147633405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06923bec7358cf041941faa34468a2df, type: 3}
+  m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 147633405}
-  ButtonNumber: 4
-  endingButton: {fileID: 0}
-  errorsMessage: {fileID: 0}
+  correctCubeName: 135255135
 --- !u!1 &165879482
 GameObject:
   m_ObjectHideFlags: 0
@@ -2868,14 +2865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadTime: 1
-  onPressed:
-    m_PersistentCalls:
-      m_Calls: []
-  onRealsed:
-    m_PersistentCalls:
-      m_Calls: []
-  button: {fileID: 1177014979}
+  correctCubeName: 
 --- !u!65 &653237610
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4644,13 +4634,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1004097236}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06923bec7358cf041941faa34468a2df, type: 3}
+  m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 1004097236}
-  ButtonNumber: 5
-  endingButton: {fileID: 0}
-  errorsMessage: {fileID: 0}
+  correctCubeName: 180255180
 --- !u!1 &1038116192
 GameObject:
   m_ObjectHideFlags: 0
@@ -5066,15 +5053,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1099112730}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06923bec7358cf041941faa34468a2df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
-  ButtonNumber: 0
-  endingButton: {fileID: 0}
-  errorsMessage: {fileID: 0}
+  buttons:
+  - {fileID: 2061493438}
+  - {fileID: 1177014987}
+  - {fileID: 1376912430}
+  - {fileID: 147633413}
+  - {fileID: 1004097244}
+  endTestButton: {fileID: 1101816289}
+  resultText: {fileID: 659567538}
 --- !u!114 &1099112734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5087,7 +5078,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ed0aa556933605408601e30167558ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
   cubes:
   - {fileID: 931761365}
   - {fileID: 1542431714}
@@ -5890,13 +5880,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1177014979}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06923bec7358cf041941faa34468a2df, type: 3}
+  m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 1177014979}
-  ButtonNumber: 2
-  endingButton: {fileID: 0}
-  errorsMessage: {fileID: 0}
+  correctCubeName: 4525545
 --- !u!1 &1186830121
 GameObject:
   m_ObjectHideFlags: 0
@@ -6863,13 +6850,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1376912422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06923bec7358cf041941faa34468a2df, type: 3}
+  m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 1376912422}
-  ButtonNumber: 3
-  endingButton: {fileID: 0}
-  errorsMessage: {fileID: 0}
+  correctCubeName: 9025590
 --- !u!1 &1456976651
 GameObject:
   m_ObjectHideFlags: 0
@@ -7139,14 +7123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadTime: 1
-  onPressed:
-    m_PersistentCalls:
-      m_Calls: []
-  onRealsed:
-    m_PersistentCalls:
-      m_Calls: []
-  button: {fileID: 1968780876}
+  correctCubeName: 
 --- !u!65 &1513662822
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7534,14 +7511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadTime: 1
-  onPressed:
-    m_PersistentCalls:
-      m_Calls: []
-  onRealsed:
-    m_PersistentCalls:
-      m_Calls: []
-  button: {fileID: 147633405}
+  correctCubeName: 
 --- !u!65 &1559609266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7794,14 +7764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadTime: 1
-  onPressed:
-    m_PersistentCalls:
-      m_Calls: []
-  onRealsed:
-    m_PersistentCalls:
-      m_Calls: []
-  button: {fileID: 1376912422}
+  correctCubeName: 
 --- !u!65 &1596979078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8105,14 +8068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadTime: 1
-  onPressed:
-    m_PersistentCalls:
-      m_Calls: []
-  onRealsed:
-    m_PersistentCalls:
-      m_Calls: []
-  button: {fileID: 2061493431}
+  correctCubeName: 
 --- !u!1 &1805578710
 GameObject:
   m_ObjectHideFlags: 0
@@ -9645,13 +9601,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2061493431}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06923bec7358cf041941faa34468a2df, type: 3}
+  m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 2061493431}
-  ButtonNumber: 1
-  endingButton: {fileID: 1101816289}
-  errorsMessage: {fileID: 659567538}
+  correctCubeName: 02550
 --- !u!1 &2122369311
 GameObject:
   m_ObjectHideFlags: 0
@@ -9793,14 +9746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadTime: 1
-  onPressed:
-    m_PersistentCalls:
-      m_Calls: []
-  onRealsed:
-    m_PersistentCalls:
-      m_Calls: []
-  button: {fileID: 1004097236}
+  correctCubeName: 
 --- !u!65 &2135873520
 BoxCollider:
   m_ObjectHideFlags: 0

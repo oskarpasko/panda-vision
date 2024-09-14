@@ -6,9 +6,7 @@ using UnityEngine.Events;
 
 public class TaintTest : MonoBehaviour
 {
-    /// <param name="button"> Button which check if cube is correct </param>
     /// <param name="cubes"> Array with cubes for the test </param>
-    [SerializeField] private GameObject button;
     [SerializeField] private GameObject[] cubes;
 
     private void Start() {
