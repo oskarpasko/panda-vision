@@ -4,9 +4,12 @@ using UnityEngine.UI;
 
 public class CheckErrors : MonoBehaviour
 {
-    public TaintTestButton[] buttons;  // Array of all the buttons in the scene
-    public Button endTestButton;     // Reference to the UI "End Test" button
-    public TMP_Text resultText;          // Reference to the UI text to show the result
+    /// <param name="buttons"> Array of all the buttons in the scene </param>
+    /// <param name="endTestButton"> Reference to the UI "End Test" button </param>
+    /// <param name="resultText"> Reference to the UI text to show the result </param>
+    public TaintTestButton[] buttons;  
+    public Button endTestButton;     
+    public TMP_Text resultText;          
 
     void Start()
     {
@@ -14,7 +17,7 @@ public class CheckErrors : MonoBehaviour
         endTestButton.onClick.AddListener(EndTest);
     }
 
-    // This method will be called when the "End Test" button is pressed
+    // Method which will be called when the "Zakończ" button is pressed
     void EndTest()
     {
         int errors = CountErrors();
@@ -26,7 +29,7 @@ public class CheckErrors : MonoBehaviour
         }
     }
 
-    // Count how many buttons have the correct cubes on them
+    // Method to count how many buttons have the correct cubes on them
     private int CountErrors()
     {
         int errorCount = 0;
