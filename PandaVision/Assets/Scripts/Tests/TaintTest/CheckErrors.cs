@@ -7,9 +7,13 @@ public class CheckErrors : MonoBehaviour
     /// <param name="buttons"> Array of all the buttons in the scene </param>
     /// <param name="endTestButton"> Reference to the UI "End Test" button </param>
     /// <param name="resultText"> Reference to the UI text to show the result </param>
+    /// <param name="endCanvas"> Reference to canvas with ending test UI </param>
+    /// <param name="resultCanvas"> Reference to canvas with results </param>
+    [SerializeField] GameObject endcanvas;
+    [SerializeField] GameObject resultCanvas;
     public TaintTestButton[] buttons;  
     public Button endTestButton;     
-    public TMP_Text resultText;          
+    public TMP_Text resultErrors;          
 
     void Start()
     {
@@ -23,10 +27,13 @@ public class CheckErrors : MonoBehaviour
         int errors = CountErrors();
         
         // Show the result in the UI text
-        if (resultText != null)
+        if (resultErrors != null)
         {
-            resultText.text = "Błednie dopasowane sześciany: " + errors;
+            resultErrors.text = "" + errors;
         }
+
+        endcanvas.SetActive(false);
+        resultCanvas.SetActive(true);
     }
 
     // Method to count how many buttons have the correct cubes on them
@@ -35,7 +42,7 @@ public class CheckErrors : MonoBehaviour
         int errorCount = 0;
         foreach (TaintTestButton button in buttons)
         {
-            if (button.Error())
+            if (button.HasError())
             {
                 errorCount++;
             }

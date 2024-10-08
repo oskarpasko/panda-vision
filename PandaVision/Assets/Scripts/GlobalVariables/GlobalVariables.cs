@@ -7,3 +7,8 @@ public class LoggedEmail : MonoBehaviour
     public static string loggedUserEmail;
 }
 
+public class GlobalColor : MonoBehaviour
+{
+    public static int globalColor;
+}
+

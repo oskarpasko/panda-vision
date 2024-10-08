@@ -568,7 +568,6 @@ GameObject:
   - component: {fileID: 86069157}
   - component: {fileID: 86069156}
   - component: {fileID: 86069155}
-  - component: {fileID: 86069154}
   - component: {fileID: 86069153}
   - component: {fileID: 86069152}
   - component: {fileID: 86069151}
@@ -714,18 +713,6 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
---- !u!114 &86069154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 86069147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &86069155
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -970,7 +957,6 @@ GameObject:
   - component: {fileID: 137816585}
   - component: {fileID: 137816584}
   - component: {fileID: 137816583}
-  - component: {fileID: 137816582}
   - component: {fileID: 137816581}
   - component: {fileID: 137816580}
   - component: {fileID: 137816579}
@@ -1116,18 +1102,6 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
---- !u!114 &137816582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 137816575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &137816583
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1275,7 +1249,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.09459564, y: 0.5746002, z: 0}
+  m_ConnectedAnchor: {x: 0.052276533, y: 0.5746002, z: 0}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -1475,7 +1449,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctCubeName: 135255135
+  correctCubeName:
+  - 255135135
+  - 135255135
+  - 135135255
+  buttons: {fileID: 1255592023}
 --- !u!1 &165879482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,7 +1606,6 @@ GameObject:
   - component: {fileID: 294642557}
   - component: {fileID: 294642556}
   - component: {fileID: 294642555}
-  - component: {fileID: 294642554}
   - component: {fileID: 294642553}
   - component: {fileID: 294642552}
   - component: {fileID: 294642551}
@@ -1774,18 +1751,6 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
---- !u!114 &294642554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294642547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &294642555
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1897,7 +1862,6 @@ GameObject:
   - component: {fileID: 322920360}
   - component: {fileID: 322920359}
   - component: {fileID: 322920358}
-  - component: {fileID: 322920357}
   - component: {fileID: 322920356}
   - component: {fileID: 322920355}
   - component: {fileID: 322920354}
@@ -2043,18 +2007,6 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
---- !u!114 &322920357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 322920350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &322920358
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2453,7 +2405,6 @@ GameObject:
   - component: {fileID: 572009079}
   - component: {fileID: 572009078}
   - component: {fileID: 572009077}
-  - component: {fileID: 572009076}
   - component: {fileID: 572009075}
   - component: {fileID: 572009074}
   - component: {fileID: 572009073}
@@ -2599,18 +2550,6 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
---- !u!114 &572009076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572009069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &572009077
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2722,7 +2661,6 @@ GameObject:
   - component: {fileID: 581383866}
   - component: {fileID: 581383865}
   - component: {fileID: 581383864}
-  - component: {fileID: 581383863}
   - component: {fileID: 581383862}
   - component: {fileID: 581383861}
   - component: {fileID: 581383860}
@@ -2868,18 +2806,6 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
---- !u!114 &581383863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 581383856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &581383864
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3303,7 +3229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctCubeName: 
+  correctCubeName: []
+  buttons: {fileID: 0}
 --- !u!65 &653237610
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3890,7 +3817,6 @@ GameObject:
   - component: {fileID: 768271404}
   - component: {fileID: 768271403}
   - component: {fileID: 768271402}
-  - component: {fileID: 768271401}
   - component: {fileID: 768271400}
   - component: {fileID: 768271399}
   - component: {fileID: 768271398}
@@ -4036,18 +3962,6 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
---- !u!114 &768271401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 768271394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &768271402
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4447,7 +4361,6 @@ GameObject:
   - component: {fileID: 906417976}
   - component: {fileID: 906417975}
   - component: {fileID: 906417974}
-  - component: {fileID: 906417973}
   - component: {fileID: 906417972}
   - component: {fileID: 906417971}
   - component: {fileID: 906417970}
@@ -4593,18 +4506,6 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
---- !u!114 &906417973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 906417966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &906417974
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4860,7 +4761,6 @@ GameObject:
   - component: {fileID: 931761375}
   - component: {fileID: 931761374}
   - component: {fileID: 931761373}
-  - component: {fileID: 931761372}
   - component: {fileID: 931761371}
   - component: {fileID: 931761370}
   - component: {fileID: 931761369}
@@ -5006,18 +4906,6 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
---- !u!114 &931761372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 931761365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &931761373
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5405,7 +5293,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.052276533, y: 0.5746002, z: 0}
+  m_ConnectedAnchor: {x: 0.20661671, y: 0.5746002, z: 0}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -5620,7 +5508,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctCubeName: 180255180
+  correctCubeName:
+  - 255180180
+  - 180255180
+  - 180180255
+  buttons: {fileID: 1255592023}
 --- !u!1 &1038116192
 GameObject:
   m_ObjectHideFlags: 0
@@ -5634,7 +5526,6 @@ GameObject:
   - component: {fileID: 1038116202}
   - component: {fileID: 1038116201}
   - component: {fileID: 1038116200}
-  - component: {fileID: 1038116199}
   - component: {fileID: 1038116198}
   - component: {fileID: 1038116197}
   - component: {fileID: 1038116196}
@@ -5780,18 +5671,6 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
---- !u!114 &1038116199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1038116192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &1038116200
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6262,6 +6141,7 @@ GameObject:
   - component: {fileID: 1099112732}
   - component: {fileID: 1099112733}
   - component: {fileID: 1099112734}
+  - component: {fileID: 1099112735}
   m_Layer: 0
   m_Name: TestController
   m_TagString: Untagged
@@ -6296,6 +6176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06923bec7358cf041941faa34468a2df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endcanvas: {fileID: 642779849}
+  resultCanvas: {fileID: 37436725}
   buttons:
   - {fileID: 2061493438}
   - {fileID: 1177014987}
@@ -6303,7 +6185,7 @@ MonoBehaviour:
   - {fileID: 147633413}
   - {fileID: 1004097244}
   endTestButton: {fileID: 1101816289}
-  resultText: {fileID: 0}
+  resultErrors: {fileID: 1051625555}
 --- !u!114 &1099112734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6332,6 +6214,25 @@ MonoBehaviour:
   - {fileID: 86069147}
   - {fileID: 906417966}
   - {fileID: 1195052128}
+--- !u!114 &1099112735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099112730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b0f7d3da7b20643950005aebb952ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redButton: {fileID: 39544078}
+  greenButton: {fileID: 960139707}
+  blueButton: {fileID: 1079012227}
+  startCanvas: {fileID: 2140845141}
+  endCanvas: {fileID: 642779849}
+  buttons: {fileID: 1255592023}
+  Cubes: {fileID: 1900661933}
 --- !u!1 &1100219100
 GameObject:
   m_ObjectHideFlags: 0
@@ -7055,7 +6956,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.39331856, y: 0.5746002, z: 0}
+  m_ConnectedAnchor: {x: -0.2439571, y: 0.5746002, z: 0}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -7255,7 +7156,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctCubeName: 4525545
+  correctCubeName:
+  - 2554545
+  - 4525545
+  - 4545255
+  buttons: {fileID: 1255592023}
 --- !u!1 &1186830121
 GameObject:
   m_ObjectHideFlags: 0
@@ -7380,7 +7285,6 @@ GameObject:
   - component: {fileID: 1195052137}
   - component: {fileID: 1195052136}
   - component: {fileID: 1195052135}
-  - component: {fileID: 1195052134}
   - component: {fileID: 1195052133}
   - component: {fileID: 1195052132}
   - component: {fileID: 1195052131}
@@ -7511,18 +7415,6 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
---- !u!114 &1195052134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1195052128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &1195052135
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7649,7 +7541,6 @@ GameObject:
   - component: {fileID: 1197730467}
   - component: {fileID: 1197730466}
   - component: {fileID: 1197730465}
-  - component: {fileID: 1197730464}
   - component: {fileID: 1197730463}
   - component: {fileID: 1197730462}
   - component: {fileID: 1197730461}
@@ -7795,18 +7686,6 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
---- !u!114 &1197730464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1197730457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &1197730465
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7995,7 +7874,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1255592024
 Transform:
   m_ObjectHideFlags: 0
@@ -8100,7 +7979,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.2439571, y: 0.5746002, z: 0}
+  m_ConnectedAnchor: {x: -0.09459564, y: 0.5746002, z: 0}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -8300,7 +8179,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctCubeName: 9025590
+  correctCubeName:
+  - 2559090
+  - 9025590
+  - 9090255
+  buttons: {fileID: 1255592023}
 --- !u!1 &1456976651
 GameObject:
   m_ObjectHideFlags: 0
@@ -8570,7 +8453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctCubeName: 
+  correctCubeName: []
+  buttons: {fileID: 0}
 --- !u!65 &1513662822
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8736,7 +8620,6 @@ GameObject:
   - component: {fileID: 1542431724}
   - component: {fileID: 1542431723}
   - component: {fileID: 1542431722}
-  - component: {fileID: 1542431721}
   - component: {fileID: 1542431720}
   - component: {fileID: 1542431719}
   - component: {fileID: 1542431718}
@@ -8882,18 +8765,6 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
---- !u!114 &1542431721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1542431714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &1542431722
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9039,7 +8910,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctCubeName: 
+  correctCubeName: []
+  buttons: {fileID: 0}
 --- !u!65 &1559609266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9292,7 +9164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctCubeName: 
+  correctCubeName: []
+  buttons: {fileID: 0}
 --- !u!65 &1596979078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9998,7 +9871,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctCubeName: 
+  correctCubeName: []
+  buttons: {fileID: 0}
 --- !u!1 &1805578710
 GameObject:
   m_ObjectHideFlags: 0
@@ -10012,7 +9886,6 @@ GameObject:
   - component: {fileID: 1805578720}
   - component: {fileID: 1805578719}
   - component: {fileID: 1805578718}
-  - component: {fileID: 1805578717}
   - component: {fileID: 1805578716}
   - component: {fileID: 1805578715}
   - component: {fileID: 1805578714}
@@ -10158,18 +10031,6 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
---- !u!114 &1805578717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805578710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &1805578718
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10722,7 +10583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1900661934
 Transform:
   m_ObjectHideFlags: 0
@@ -11163,7 +11024,6 @@ GameObject:
   - component: {fileID: 2015731069}
   - component: {fileID: 2015731068}
   - component: {fileID: 2015731067}
-  - component: {fileID: 2015731066}
   - component: {fileID: 2015731065}
   - component: {fileID: 2015731064}
   - component: {fileID: 2015731063}
@@ -11309,18 +11169,6 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
---- !u!114 &2015731066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015731059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &2015731067
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11468,7 +11316,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0.5746002, z: 0}
+  m_ConnectedAnchor: {x: -0.39331856, y: 0.5746002, z: 0}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -11668,7 +11516,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctCubeName: 02550
+  correctCubeName:
+  - 25500
+  - 02550
+  - 00255
+  buttons: {fileID: 1255592023}
 --- !u!1 &2122369311
 GameObject:
   m_ObjectHideFlags: 0
@@ -11810,7 +11662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06629990d5d50246a79a949be3443b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctCubeName: 
+  correctCubeName: []
+  buttons: {fileID: 0}
 --- !u!65 &2135873520
 BoxCollider:
   m_ObjectHideFlags: 0
