@@ -25,6 +25,17 @@ CREATE TABLE color_test_user_results(
 	FOREIGN KEY (user) REFERENCES users(email)
 );
 
+/* Table with results of TaintTest */
+CREATE TABLE taint_test_user_results(
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	date_of_test TIMESTAMP NOT NULL,
+	time_of_test VARCHAR(10) NOT NULL,
+	correct_colors VARCHAR(255),
+	error_colors VARCHAR(255),
+	user VARCHAR(100) NOT NULL,
+	FOREIGN KEY (user) REFERENCES users(email)
+);
+
 /* Table with colors to ColorTest */
 CREATE TABLE color_test(
 	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
