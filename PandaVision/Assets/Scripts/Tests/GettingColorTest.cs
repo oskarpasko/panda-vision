@@ -62,8 +62,8 @@ public class GettingColorTest : MonoBehaviour
             }
             else
             {
-                startButton.onClick.AddListener(startTest); //listener to start button
-                backToMenuButton.onClick.AddListener(backToMenu); //listener to try again button
+                startButton.onClick.AddListener(StartTest); //listener to start button
+                backToMenuButton.onClick.AddListener(BackToMenu); //listener to try again button
 
                 string json = www.downloadHandler.text; // downloanding whole json file from API
                 
@@ -175,7 +175,7 @@ public class GettingColorTest : MonoBehaviour
         return string.Format("{0}.{1:00}", seconds, milliseconds);
     }
     // method which starts test after clicking button
-    void startTest()
+    void StartTest()
         {
             startCanvas.SetActive(false);
             colorCanvas.SetActive(true);
@@ -184,7 +184,7 @@ public class GettingColorTest : MonoBehaviour
             isRunning = true; // start counting time
         }
         // method which starts test after clicking button
-    void backToMenu()
+    void BackToMenu()
         {
             resultCanvas.SetActive(false);
             backToMenuCanvas.SetActive(false);
