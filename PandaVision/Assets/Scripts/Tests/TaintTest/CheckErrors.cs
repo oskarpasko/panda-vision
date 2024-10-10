@@ -111,6 +111,8 @@ public class CheckErrors : MonoBehaviour
     // Method to backing back to the menu
     public void BackToMenuButton()
     {
+        buttonsToShow.SetActive(false);
+        Cubes.SetActive(false);
         SceneManager.LoadScene("LoginScene");
     }
 
