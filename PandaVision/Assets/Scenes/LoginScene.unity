@@ -2657,7 +2657,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Test Kolorowych Sze\u015Bcian\xF3w"
+  m_text: Test Barw
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10877,7 +10877,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165165949}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 4, y: 4, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10885,8 +10885,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -449}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 2.7, y: -520}
+  m_SizeDelta: {x: 528.3, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1165165951
 MonoBehaviour:
@@ -10901,7 +10901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6320754, g: 0.28324133, b: 0.28324133, a: 1}
+  m_Color: {r: 1, g: 0.8915094, b: 0.8915094, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10910,11 +10910,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 300
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -11857,13 +11857,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Test Kolorowych Sze\u015Bcian\xF3w.\n\nPrzed nami pojawi si\u0119 p\xF3\u0142ka
-    z kolorowymi sze\u015Bcianami. Zadaniem jest po\u0142o\u017Cy\u0107 sze\u015Bciany
-    na kolorowych polach znajduj\u0105cych si\u0119 przed badanym. Badanie ko\u0144czy
-    si\u0119 kiedy po\u0142o\u017Cymy wszystkie sze\u015Bciany na odpowiednich polach
-    lub kiedy wci\u015Bniemy przycisk \"Zako\u0144cz\".\n\nJe\u015Bli podczas badania
-    nie widzisz \u017Cadnego koloru z wypisanych na przyciskach zg\u0142o\u015B to
-    osobie przeprowadzaj\u0105cej badanie!"
+  m_text: "Test Barw.\n\nPrzed nami pojawi si\u0119 p\xF3\u0142ka z kolorowymi sze\u015Bcianami.
+    Zadaniem jest po\u0142o\u017Cy\u0107 sze\u015Bciany na kolorowych polach znajduj\u0105cych
+    si\u0119 przed badanym. Badanie ko\u0144czy si\u0119 kiedy po\u0142o\u017Cymy
+    wszystkie sze\u015Bciany na odpowiednich polach lub kiedy wci\u015Bniemy przycisk
+    \"Zako\u0144cz\".\n\nJe\u015Bli podczas badania nie widzisz \u017Cadnego koloru
+    z wypisanych na przyciskach zg\u0142o\u015B to osobie przeprowadzaj\u0105cej
+    badanie!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14206,7 +14206,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Test Kolorowych Sze\u015Bcian\xF3w"
+  m_text: Test Barw
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
