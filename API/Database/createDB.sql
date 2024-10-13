@@ -47,3 +47,10 @@ CREATE TABLE color_test(
 	incorrect_answer_B VARCHAR(50) NOT NULL,
 	incorrect_answer_C VARCHAR(50) NOT NULL
 );
+
+/* Table with images to the Ishihara Test */
+CREATE TABLE ishihara_test(
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	name VARCHAR(100) NOT null,
+	correct_answer VARCHAR(50) NOT NULL
+);
