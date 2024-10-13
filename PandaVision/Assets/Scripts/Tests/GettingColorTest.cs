@@ -87,7 +87,6 @@ public class GettingColorTest : MonoBehaviour
                 // main test's loop
                 for (int i = 0; i < rows; i++)
                 {
-                    Debug.Log("+++++++++++++++++ ITERACJA: " + i);
                     // setting color from DB
                     Color32 colorToCavas = new Color32(Convert.ToByte(colorsArray2D[i, 0]),     // Red
                                                     Convert.ToByte(colorsArray2D[i, 1]),        // Green
