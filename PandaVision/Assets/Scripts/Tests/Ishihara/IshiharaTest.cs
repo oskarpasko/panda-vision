@@ -11,7 +11,6 @@ using UnityEngine.SceneManagement;
 public class IshiharaTest : MonoBehaviour
 {
     /// <param name="testPanel"> Canvas which is displaying colors for test </param>
-    /// <param name="startButton"> button to start the test </param>
     /// <param name="backToMenuButton"> button to back to the menu </param>
     /// <param name="buttons"> list of buttons with answers </param>
     /// <param name="startCanvas"> Canvas with start button </param>
@@ -32,7 +31,6 @@ public class IshiharaTest : MonoBehaviour
     [SerializeField] private Image testPanel;
     [SerializeField] private Texture2D[] images;
     [SerializeField] private String[] correctAnswers;
-    [SerializeField] private Button startButton;
     [SerializeField] private Button backToMenuButton;
     [SerializeField] private GameObject startCanvas;
     [SerializeField] private GameObject colorCanvas;
@@ -53,54 +51,71 @@ public class IshiharaTest : MonoBehaviour
     // Mehtod to controll the Ishihara test
     IEnumerator Ishihara()
     {
-        startButton.onClick.AddListener(StartTest);       //listener to start button
-        backToMenuButton.onClick.AddListener(BackToMenu); //listener to try again button
-
-        ShuffleImagesAndAnswers(images, correctAnswers);  // Shuffle the images and answers
-
-        // main loop for the test
-        for (int i = 0; i < images.Length; i++)
+        if(LoggedEmail.loggedUserEmail == null)
         {
-            // set text for the text field to none
-            answerField.text = ""; 
-            // prepare the new image
-            Sprite newSprite = Sprite.Create(images[i], new Rect(0, 0, 
-                                                                images[i].width, 
-                                                                images[i].height), 
-                                                                new Vector2(0.5f, 0.5f));
-            // diplay the new image
-            testPanel.sprite = newSprite;
+            SceneManager.LoadScene("LoginScene");
+        }
+        else
+        {
+            backToMenuButton.onClick.AddListener(BackToMenu); //listener to try again button
 
-            // add Listener to the button to get new image and check correct answer
-            nextButton.onClick.RemoveAllListeners();
-            nextButton.onClick.AddListener(() => OnButtonClick(answerField.text, correctAnswers[i], images[i].name.ToString()));
+            ShuffleImagesAndAnswers(images, correctAnswers);  // Shuffle the images and answers
 
-            // waiting for user click an some answer button
-            while(!proceed)
+            // main loop for the test
+            for (int i = 0; i < images.Length; i++)
             {
-                yield return null;
+                // set text for the text field to none
+                answerField.text = ""; 
+                // prepare the new image
+                Sprite newSprite = Sprite.Create(images[i], new Rect(0, 0, 
+                                                                    images[i].width, 
+                                                                    images[i].height), 
+                                                                    new Vector2(0.5f, 0.5f));
+                // diplay the new image
+                testPanel.sprite = newSprite;
+
+                // add Listener to the button to get new image and check correct answer
+                nextButton.onClick.RemoveAllListeners();
+                nextButton.onClick.AddListener(() => OnButtonClick(answerField.text, correctAnswers[i], images[i].name.ToString()));
+
+                // waiting for user click an some answer button
+                while(!proceed)
+                {
+                    yield return null;
+                }
+
+                proceed = false;
             }
 
-            proceed = false;
+            // hide canvas with colors
+            // hide canvas with answers
+            // show canvas with results
+            // show canvas with button to try again
+            colorCanvas.SetActive(false);
+            answerCanvas.SetActive(false);
+            resultCanvas.SetActive(true);
+            backToMenuCanvas.SetActive(true);
+
+            timeResult.text = FormatTime(time).ToString();                   // print test's time
+            correctResult.text = (correctAnswers.Length - error).ToString(); // print correct score
+            errorsResult.text = error.ToString();                            // print errors score
+
+            WWWForm form = new WWWForm();
+
+            form.AddField("time", time.ToString());
+            form.AddField("correct_colors", (correctAnswers.Length - error).ToString());
+            form.AddField("error_colors", error.ToString());
+            form.AddField("error_log", errorLog);
+            form.AddField("user", LoggedEmail.loggedUserEmail);
+
+            using (UnityWebRequest webRequest = UnityWebRequest.Post("http://192.168.0.166:5000/ishihara_test_result", form))
+            {
+                yield return webRequest.SendWebRequest();
+            }
         }
-
-        // hide canvas with colors
-        // hide canvas with answers
-        // show canvas with results
-        // show canvas with button to try again
-        colorCanvas.SetActive(false);
-        answerCanvas.SetActive(false);
-        resultCanvas.SetActive(true);
-        backToMenuCanvas.SetActive(true);
-
-        timeResult.text = FormatTime(time).ToString();                   // print test's time
-        correctResult.text = (correctAnswers.Length - error).ToString(); // print correct score
-        errorsResult.text = error.ToString();                            // print errors score
-
-        yield return new WaitForSeconds(0);
     }
 
-    // Method to shuffle answers
+    // Method to shuffle images and answers
     void ShuffleImagesAndAnswers(Texture2D[] img, string[] answers)
     {
         for (int i = img.Length - 1; i > 0; i--)
@@ -129,16 +144,6 @@ public class IshiharaTest : MonoBehaviour
         // return formatted string with seconds and milliseconds
         return string.Format("{0}.{1:00}", seconds, milliseconds);
     }
-    // Method which starts test after clicking button
-    void StartTest()
-    {
-        startCanvas.SetActive(false);
-        colorCanvas.SetActive(true);
-        answerCanvas.SetActive(true);
-        time = 0f; // set time as 0s
-        isRunning = true; // start counting time
-    }
-
     // Method to change proceed value
     void OnButtonClick(string correctAnswer, string guessAnswer, string image)
     { 
@@ -162,6 +167,8 @@ public class IshiharaTest : MonoBehaviour
     // Main method
     IEnumerator Start()
     {
+        time = 0f; // set time as 0s
+        isRunning = true; // start counting time
         proceed = false; 
         yield return StartCoroutine(Ishihara());
     }
