@@ -28,6 +28,7 @@ public class IshiharaTest : MonoBehaviour
     /// <param name="error"> variable to count errors in test, start with 0 </param>
     /// <param name="time"> variable to count time in seconds </param>
     /// <param name="isRunning"> variable to check if time is running </param>
+    /// <param name="errorLog"> variable to save the errors made by user </param>
     [SerializeField] private Image testPanel;
     [SerializeField] private Texture2D[] images;
     [SerializeField] private String[] correctAnswers;
@@ -47,25 +48,34 @@ public class IshiharaTest : MonoBehaviour
     private int error = 0;
     private float time = 0f;
     private bool isRunning = false;
+    private string errorLog = "";
 
-    // Mehtod to get colors from db
+    // Mehtod to controll the Ishihara test
     IEnumerator Ishihara()
     {
-        startButton.onClick.AddListener(StartTest); //listener to start button
+        startButton.onClick.AddListener(StartTest);       //listener to start button
         backToMenuButton.onClick.AddListener(BackToMenu); //listener to try again button
 
-        for (int i = 0; i<3; i++)
+        ShuffleImagesAndAnswers(images, correctAnswers);  // Shuffle the images and answers
+
+        // main loop for the test
+        for (int i = 0; i < images.Length; i++)
         {
+            // set text for the text field to none
+            answerField.text = ""; 
+            // prepare the new image
             Sprite newSprite = Sprite.Create(images[i], new Rect(0, 0, 
                                                                 images[i].width, 
                                                                 images[i].height), 
                                                                 new Vector2(0.5f, 0.5f));
+            // diplay the new image
             testPanel.sprite = newSprite;
 
+            // add Listener to the button to get new image and check correct answer
             nextButton.onClick.RemoveAllListeners();
-            nextButton.onClick.AddListener(() => OnButtonClick(answerField.text, correctAnswers[i]));
+            nextButton.onClick.AddListener(() => OnButtonClick(answerField.text, correctAnswers[i], images[i].name.ToString()));
 
-            // Waiting for user click an some answer button
+            // waiting for user click an some answer button
             while(!proceed)
             {
                 yield return null;
@@ -90,18 +100,26 @@ public class IshiharaTest : MonoBehaviour
         yield return new WaitForSeconds(0);
     }
 
-    // method to shuffle answers
-    void ShuffleAnswers(string[] array)
+    // Method to shuffle answers
+    void ShuffleImagesAndAnswers(Texture2D[] img, string[] answers)
     {
-        for (int i = array.Length - 1; i > 0; i--)
+        for (int i = img.Length - 1; i > 0; i--)
         {
+            // random number
             int rnd = UnityEngine.Random.Range(0, i + 1);
-            string temp = array[i];
-            array[i] = array[rnd];
-            array[rnd] = temp;
+
+            // shuffle images
+            Texture2D temp = img[i];
+            img[i] = img[rnd];
+            img[rnd] = temp;
+
+            // shuffle answers
+            string temp2 = answers[i];
+            answers[i] = answers[rnd];
+            answers[rnd] = temp2;
         }
     }
-    // method to format time
+    // Method to format time
     private string FormatTime(float time)
     {
         // get seconds 
@@ -111,7 +129,7 @@ public class IshiharaTest : MonoBehaviour
         // return formatted string with seconds and milliseconds
         return string.Format("{0}.{1:00}", seconds, milliseconds);
     }
-    // method which starts test after clicking button
+    // Method which starts test after clicking button
     void StartTest()
     {
         startCanvas.SetActive(false);
@@ -121,15 +139,18 @@ public class IshiharaTest : MonoBehaviour
         isRunning = true; // start counting time
     }
 
-    // method to change proceed value
-    void OnButtonClick(string correctAnswer, string guessAnswer)
+    // Method to change proceed value
+    void OnButtonClick(string correctAnswer, string guessAnswer, string image)
     { 
         proceed = true; 
         // if guess is wrong add +1 to the error variable
-        if(correctAnswer.Equals(guessAnswer) == false) { error++; }
+        if(correctAnswer.Equals(guessAnswer) == false) { 
+            error++;                                            // count the erros
+            errorLog += image + " - " + guessAnswer + "; ";     // make a log (plate and the wrong answer)
+        }
     }
 
-    // method which starts test after clicking button
+    // Method which starts test after clicking button
     void BackToMenu()
     {
         resultCanvas.SetActive(false);
