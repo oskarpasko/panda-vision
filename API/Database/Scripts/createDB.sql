@@ -48,9 +48,14 @@ CREATE TABLE color_test(
 	incorrect_answer_C VARCHAR(50) NOT NULL
 );
 
-/* Table with images to the Ishihara Test */
-CREATE TABLE ishihara_test(
+/* Table with results of Ishihara test */
+CREATE TABLE ishihara_test_results(
 	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-	name VARCHAR(100) NOT null,
-	correct_answer VARCHAR(50) NOT NULL
+	date_of_test TIMESTAMP NOT NULL,
+	time_of_test VARCHAR(10) NOT NULL,
+	correct_colors VARCHAR(255),
+	error_colors VARCHAR(255),
+	error_log TEXT,
+	user VARCHAR(100) NOT NULL,
+	FOREIGN KEY (user) REFERENCES users(email)
 );
