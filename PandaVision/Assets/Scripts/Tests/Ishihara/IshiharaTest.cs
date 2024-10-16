@@ -76,7 +76,7 @@ public class IshiharaTest : MonoBehaviour
 
                 // add Listener to the button to get new image and check correct answer
                 nextButton.onClick.RemoveAllListeners();
-                nextButton.onClick.AddListener(() => OnButtonClick(answerField.text, correctAnswers[i], images[i].name.ToString()));
+                nextButton.onClick.AddListener(() => OnButtonClick(correctAnswers[i], answerField.text, images[i].name.ToString()));
 
                 // waiting for user click an some answer button
                 while(!proceed)
