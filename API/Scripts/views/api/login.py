@@ -5,21 +5,20 @@ from flask_cors import cross_origin
 app = Flask(__name__)
 
 # Define the Blueprint
-test_blueprint = Blueprint('test', __name__)
+api_login_blueprint = Blueprint('/api/login', __name__)
 
 # MySQL connection configuration
 def get_db_connection():
     return pymysql.connect(
         host='localhost',        # Database host
         user='root',             # Database username
-        password='oskarpasko',     # Database password
+        password='admin',     # Database password
         db='pandavision', # Database name
         cursorclass=pymysql.cursors.DictCursor
     )
 
 # Route to check if the user is in the database
-@test_blueprint.route("/test", methods=["POST"])
-@cross_origin()
+@api_login_blueprint.route("/api/login", methods=["POST"])
 def check_user():
     data = request.get_json()  # Get the POSTed data
     email = data.get('email')
