@@ -27,7 +27,7 @@ const Login = () => {
     setErrorMessage(''); // Reset error message on new attempt
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/test', {
+      const response = await fetch('http://127.0.0.1:5000/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
@@ -37,7 +37,7 @@ const Login = () => {
       setIsLoading(false);
 
       if (response.ok && data.success) {
-        localStorage.setItem('user', JSON.stringify({ name: data.user.first_name }));
+        localStorage.setItem('user', JSON.stringify({ email: data.user.email }));
 
         window.location.href = '/main'; // Redirect to main page
       }
