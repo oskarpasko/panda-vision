@@ -13,7 +13,7 @@ def get_db_connection():
     return pymysql.connect(
         host='localhost',        # Database host
         user='root',             # Database username
-        password='admin',     # Database password
+        password='oskarpasko',     # Database password
         db='pandavision', # Database name
         cursorclass=DictCursor    # Use DictCursor to get results as dictionaries
     )

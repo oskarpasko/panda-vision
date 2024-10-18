@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import './../styles/MainPage.scss'; // Importujemy style SCSS
-import logo from '../images/logo.png'; // Upewnij się, że ścieżka do logo jest poprawna
+import './../styles/MainPage.scss'; // Import styles
+import logo from '../images/logo.png'; // Ensure the correct path to the logo
 
 const MainPage = () => {
   const [userName, setUserName] = useState('');
   const [tableData, setTableData] = useState([]); // State to hold table data
+  const [activeTable, setActiveTable] = useState('colors'); // State to track the active table
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
@@ -43,21 +44,24 @@ const MainPage = () => {
       })
       .catch((error) => console.error('Error fetching data:', error));
   };
-  
 
   const handleLogout = () => {
-    localStorage.removeItem('user'); // Usunięcie użytkownika z localStorage
-    window.location.href = "/login"; // Przeładowanie strony
+    localStorage.removeItem('user'); // Remove user from localStorage
+    window.location.href = "/login"; // Redirect to login page
   };
 
-  // Function to format date strings
   const formatDate = (dateString) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('pl-PL', {  // Format using 'pl-PL' for Polish locale
+    return date.toLocaleDateString('pl-PL', {
       year: 'numeric',
       month: 'numeric',
       day: 'numeric',
     });
+  };
+
+  // Function to switch between tables
+  const switchTable = (table) => {
+    setActiveTable(table); // Set the active table
   };
 
   return (
@@ -69,38 +73,99 @@ const MainPage = () => {
           Wyloguj się
         </button>
       </header>
-      {/* Table rendering */}
-      <div className="data-table">
-        <h3>Wyniki testów Kolorów</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Data Testu</th>
-              <th>Czas testu [ s ]</th>
-              <th>Poprawne odpowiedzi</th>
-              <th>Błędne odpowiedzi</th>
-              {/* Add more columns based on your MySQL table structure */}
-            </tr>
-          </thead>
-          <tbody>
-            {tableData.length > 0 ? (
-              tableData.map((row) => (
-                <tr key={row.id}>
-                  <td>{formatDate(row.date_of_test)}</td> {/* Format date here */}
-                  <td>{row.time_of_test}</td>
-                  <td>{row.correct_colors}</td>
-                  <td>{row.error_colors}</td>
-                  {/* Map other fields based on the structure of pandavision.color_test_user_results */}
-                </tr>
-              ))
-            ) : (
-              <tr>
-                <td colSpan="4">Brak wyników testów</td>
-              </tr>
-            )}
-          </tbody>
-        </table>
+
+      {/* Sidebar for selecting tables */}
+      <div className="side-panel">
+        <button onClick={() => switchTable('colors')}>Test Kolorów</button>
+        <button onClick={() => switchTable('taints')}>Test Barw</button>
+        <button onClick={() => switchTable('ishihara')}>Test Ishihary</button>
       </div>
+
+      {/* Conditional rendering based on active table */}
+      <div className="data-table">
+        {activeTable === 'colors' && (
+          <>
+            <h3>Wyniki testów Kolorów</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Data Testu</th>
+                  <th>Czas testu [ s ]</th>
+                  <th>Poprawne odpowiedzi</th>
+                  <th>Błędne odpowiedzi</th>
+                </tr>
+              </thead>
+              <tbody>
+                {tableData.length > 0 ? (
+                  tableData.map((row) => (
+                    <tr key={row.id}>
+                      <td>{formatDate(row.date_of_test)}</td>
+                      <td>{row.time_of_test}</td>
+                      <td>{row.correct_colors}</td>
+                      <td>{row.error_colors}</td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan="4">Brak wyników testów</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </>
+        )}
+
+        {activeTable === 'taints' && (
+          <>
+            <h3>Wyniki testów Kształtów</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Data Testu</th>
+                  <th>Czas testu [ s ]</th>
+                  <th>Poprawne odpowiedzi</th>
+                  <th>Błędne odpowiedzi</th>
+                </tr>
+              </thead>
+              <tbody>
+                {/* Example content - you'll need to adjust based on the actual data */}
+                <tr>
+                  <td>10/10/2023</td>
+                  <td>12</td>
+                  <td>10</td>
+                  <td>2</td>
+                </tr>
+              </tbody>
+            </table>
+          </>
+        )}
+
+        {activeTable === 'ishihara' && (
+          <>
+            <h3>Wyniki testów Liczb</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Data Testu</th>
+                  <th>Czas testu [ s ]</th>
+                  <th>Poprawne odpowiedzi</th>
+                  <th>Błędne odpowiedzi</th>
+                </tr>
+              </thead>
+              <tbody>
+                {/* Example content - you'll need to adjust based on the actual data */}
+                <tr>
+                  <td>05/10/2023</td>
+                  <td>9</td>
+                  <td>8</td>
+                  <td>1</td>
+                </tr>
+              </tbody>
+            </table>
+          </>
+        )}
+      </div>
+
       <footer className="footer">
         &copy; {new Date().getFullYear()} Oskar Paśko. Wszelkie prawa zastrzeżone.
       </footer>
