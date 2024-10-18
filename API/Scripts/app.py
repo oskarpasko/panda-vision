@@ -8,6 +8,7 @@ from views.taint_test_result import taint_test_result_blueprint
 from views.ishihara_test_result import ishihara_test_result_blueprint
 from views.api.login import api_login_blueprint
 from views.api.main import api_main_blueprint
+from views.api.register import api_register_blueprint
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -23,6 +24,7 @@ app.register_blueprint(taint_test_result_blueprint)
 app.register_blueprint(ishihara_test_result_blueprint)
 app.register_blueprint(api_login_blueprint)
 app.register_blueprint(api_main_blueprint)
+app.register_blueprint(api_register_blueprint)
 
 app.config['CORS_HEADERS'] = 'Content-Type'
 
