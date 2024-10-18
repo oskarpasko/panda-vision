@@ -1,5 +1,5 @@
 $primary-color: #7201dc;
-$secondary-color: #f8f9fa;
+$secondary-color: #f0f0f0;
 $footer-color: #343a40;
 
 $logo-image: url('path/to/your/logo.png');
@@ -11,6 +11,15 @@ $logo-image: url('path/to/your/logo.png');
   padding: 0;
   box-sizing: border-box;
   font-family: "Cabin", sans-serif;
+}
+
+html{
+  height: 100%;
+}
+
+body{
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
 .main-page {
@@ -73,6 +82,46 @@ h3 {
 
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
+
+.side-panel {
+  position: fixed;
+  margin-top: 0;
+  height: 70%;
+  left: 0;
+  top: 15%;
+  width: 200px;
+  background-color: $primary-color;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+
+  button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 0;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+    border-bottom: 2px solid $primary-color;
+
+    &:hover {
+      //background-color: lighten($primary-color, 10%);
+      border-bottom: 2px solid lighten($primary-color, 10%);
+    }
+
+    &:focus {
+      border-bottom: 2px solid  darken($primary-color, 10%);
+    }
+  }
+}
+
+.main-page {
+  padding-left: 220px; // To adjust for the sidebar space
+}
+
   
 table {
   width: 100%;
@@ -100,7 +149,7 @@ table {
       }
 
       &:hover {
-        background-color: #e4c7ff;
+        background-color: lighten($primary-color, 50%);
       }
 
       td {

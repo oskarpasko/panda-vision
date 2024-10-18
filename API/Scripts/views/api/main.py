@@ -13,15 +13,14 @@ def get_db_connection():
     return pymysql.connect(
         host='localhost',        # Database host
         user='root',             # Database username
-        password='admin',     # Database password
-        db='pandavision', # Database name
-        cursorclass=DictCursor    # Use DictCursor to get results as dictionaries
+        password='oskarpasko',   # Database password
+        db='pandavision',        # Database name
+        cursorclass=DictCursor   # Use DictCursor to get results as dictionaries
     )
 
 @api_main_blueprint.route('/api/main', methods=['POST'])
 @cross_origin()
 def get_data():
-    print("START")
     data = request.get_json()
     user_email = data.get('email')  # Get the email from the POST request
 
@@ -33,14 +32,32 @@ def get_data():
     connection = get_db_connection()
     cursor = connection.cursor()
 
-    query = "SELECT * FROM pandavision.color_test_user_results WHERE user = %s"
-    cursor.execute(query, (user_email,))  # Use parameterized query to prevent SQL injection
-    results = cursor.fetchall()
+    # Query for the color test results
+    query_colors = "SELECT * FROM pandavision.color_test_user_results WHERE user = %s"
+    cursor.execute(query_colors, (user_email,))
+    color_results = cursor.fetchall()
 
+    # Query for the taint test results
+    query_taints = "SELECT * FROM pandavision.taint_test_user_results WHERE user = %s"
+    cursor.execute(query_taints, (user_email,))
+    taint_results = cursor.fetchall()
+
+    # Query for the Ishihara test results
+    query_ishihara = "SELECT * FROM pandavision.ishihara_test_results WHERE user = %s"
+    cursor.execute(query_ishihara, (user_email,))
+    ishihara_results = cursor.fetchall()
+
+    # Close the connection with db
     cursor.close()
     connection.close()
 
-    return jsonify(results)  # Return the results as JSON
+    # Return all results in a single JSON response
+    return jsonify({
+        'colors': color_results,
+        'taints': taint_results,
+        'ishihara': ishihara_results
+    })
+
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -1,0 +1,84 @@
+$primary-color: #7201dc;
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+  font-family: "Cabin", sans-serif;
+}
+
+.registration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.registration-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+    color: #333;
+  }
+
+  .input-group {
+    margin-bottom: 1rem;
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      color: #333;
+
+      &:focus {
+        border-color: $primary-color;
+        outline: none;
+      }
+    }
+  }
+
+  .register-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+
+  .login-link {
+    margin-top: 1rem;
+    font-size: 14px;
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
