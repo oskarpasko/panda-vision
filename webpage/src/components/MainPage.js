@@ -103,7 +103,7 @@ const MainPage = () => {
               <tbody>
                 {colorTableData.length > 0 ? (
                   colorTableData.map((row) => (
-                    <tr key={row.id}>
+                    <tr key={row.id} className={row.error_colors > 0 ? 'error-row' : ''}>
                       <td>{formatDate(row.date_of_test)}</td>
                       <td>{row.time_of_test}</td>
                       <td>{row.correct_colors}</td>
@@ -135,7 +135,7 @@ const MainPage = () => {
               <tbody>
                 {taintTableData.length > 0 ? (
                   taintTableData.map((row) => (
-                    <tr key={row.id}>
+                    <tr key={row.id} className={row.error_colors > 0 ? 'error-row' : ''}>
                       <td>{formatDate(row.date_of_test)}</td>
                       <td>{row.time_of_test}</td>
                       <td>{row.correct_colors}</td>
@@ -167,7 +167,7 @@ const MainPage = () => {
               <tbody>
                 {ishiharaTableData.length > 0 ? (
                   ishiharaTableData.map((row) => (
-                    <tr key={row.id}>
+                    <tr key={row.id} className={row.error_colors > 0 ? 'error-row' : ''}>
                       <td>{formatDate(row.date_of_test)}</td>
                       <td>{row.time_of_test}</td>
                       <td>{row.correct_colors}</td>

@@ -2,29 +2,18 @@ from flask import Flask, request, jsonify, Blueprint
 import pymysql
 from flask_cors import cross_origin
 from pymysql.cursors import DictCursor  # Import DictCursor
+from .db_config import get_db_connection
 
 app = Flask(__name__)
 
 # Define the Blueprint
 api_main_blueprint = Blueprint('/api/main', __name__)
 
-# MySQL connection configuration
-def get_db_connection():
-    return pymysql.connect(
-        host='localhost',        # Database host
-        user='root',             # Database username
-        password='oskarpasko',   # Database password
-        db='pandavision',        # Database name
-        cursorclass=DictCursor   # Use DictCursor to get results as dictionaries
-    )
-
 @api_main_blueprint.route('/api/main', methods=['POST'])
 @cross_origin()
 def get_data():
     data = request.get_json()
     user_email = data.get('email')  # Get the email from the POST request
-
-    print(user_email)
 
     if not user_email:
         return jsonify({'error': 'Email not provided'}), 400
