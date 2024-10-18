@@ -1,5 +1,5 @@
 $primary-color: #7201dc;
-$secondary-color: #f8f9fa;
+$secondary-color: #f0f0f0;
 $footer-color: #343a40;
 
 $logo-image: url('path/to/your/logo.png');
@@ -11,6 +11,15 @@ $logo-image: url('path/to/your/logo.png');
   padding: 0;
   box-sizing: border-box;
   font-family: "Cabin", sans-serif;
+}
+
+html{
+  height: 100%;
+}
+
+body{
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
 .main-page {
@@ -79,12 +88,13 @@ h3 {
   margin-top: 0;
   height: 70%;
   left: 0;
-  top: 100px;
+  top: 15%;
   width: 200px;
   background-color: $primary-color;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  border-radius: 20px;
 
   button {
     background: none;
