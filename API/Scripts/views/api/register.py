@@ -1,22 +1,12 @@
 from flask import Flask, request, jsonify, Blueprint
 from flask_cors import cross_origin
 import pymysql
-from werkzeug.security import generate_password_hash
+from .db_config import get_db_connection
 
 app = Flask(__name__)
 
 # Define the Blueprint
 api_register_blueprint = Blueprint('/api/register', __name__)
-
-# Database configuration
-def get_db_connection():
-    return pymysql.connect(
-        host='localhost',        # Database host
-        user='root',             # Database username
-        password='oskarpasko',   # Database password
-        db='pandavision',        # Database name
-        cursorclass=pymysql.cursors.DictCursor
-    )
 
 # Registration endpoint
 @api_register_blueprint.route('/api/register', methods=['POST'])

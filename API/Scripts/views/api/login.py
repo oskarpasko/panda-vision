@@ -1,21 +1,12 @@
 from flask import Flask, request, jsonify, Blueprint
 import pymysql
 from flask_cors import cross_origin
+from .db_config import get_db_connection
 
 app = Flask(__name__)
 
 # Define the Blueprint
 api_login_blueprint = Blueprint('/api/login', __name__)
-
-# MySQL connection configuration
-def get_db_connection():
-    return pymysql.connect(
-        host='localhost',        # Database host
-        user='root',             # Database username
-        password='oskarpasko',   # Database password
-        db='pandavision',        # Database name
-        cursorclass=pymysql.cursors.DictCursor
-    )
 
 # Route to check if the user is in the database
 @api_login_blueprint.route("/api/login", methods=["POST"])
