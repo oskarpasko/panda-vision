@@ -4,7 +4,9 @@ import logo from '../images/logo.png'; // Ensure the correct path to the logo
 
 const MainPage = () => {
   const [userName, setUserName] = useState('');
-  const [tableData, setTableData] = useState([]); // State to hold table data
+  const [colorTableData, setColorTableData] = useState([]); // State for colors table initialized as empty array
+  const [taintTableData, setTaintTableData] = useState([]); // State for taints table initialized as empty array
+  const [ishiharaTableData, setIshiharaTableData] = useState([]); // State for Ishihara table initialized as empty array
   const [activeTable, setActiveTable] = useState('colors'); // State to track the active table
 
   useEffect(() => {
@@ -36,7 +38,10 @@ const MainPage = () => {
           if (typeof data === 'string') {
             console.error('Non-JSON response:', data);  // Log non-JSON response
           } else {
-            setTableData(data);  // Set the fetched data in the state
+            console.log(data);
+            setColorTableData(data.colors || []);  // Set the fetched color data or empty array in the state
+            setTaintTableData(data.taints || []);  // Set the fetched taints data or empty array in the state
+            setIshiharaTableData(data.ishihara || []);  // Set the fetched Ishihara data or empty array in the state
           }
         } catch (err) {
           console.error('Error parsing data:', err);
@@ -96,8 +101,8 @@ const MainPage = () => {
                 </tr>
               </thead>
               <tbody>
-                {tableData.length > 0 ? (
-                  tableData.map((row) => (
+                {colorTableData.length > 0 ? (
+                  colorTableData.map((row) => (
                     <tr key={row.id}>
                       <td>{formatDate(row.date_of_test)}</td>
                       <td>{row.time_of_test}</td>
@@ -117,7 +122,7 @@ const MainPage = () => {
 
         {activeTable === 'taints' && (
           <>
-            <h3>Wyniki testów Kształtów</h3>
+            <h3>Wyniki testów Barw</h3>
             <table>
               <thead>
                 <tr>
@@ -128,13 +133,20 @@ const MainPage = () => {
                 </tr>
               </thead>
               <tbody>
-                {/* Example content - you'll need to adjust based on the actual data */}
-                <tr>
-                  <td>10/10/2023</td>
-                  <td>12</td>
-                  <td>10</td>
-                  <td>2</td>
-                </tr>
+                {taintTableData.length > 0 ? (
+                  taintTableData.map((row) => (
+                    <tr key={row.id}>
+                      <td>{formatDate(row.date_of_test)}</td>
+                      <td>{row.time_of_test}</td>
+                      <td>{row.correct_colors}</td>
+                      <td>{row.error_colors}</td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan="4">Brak wyników testów</td>
+                  </tr>
+                )}
               </tbody>
             </table>
           </>
@@ -142,7 +154,7 @@ const MainPage = () => {
 
         {activeTable === 'ishihara' && (
           <>
-            <h3>Wyniki testów Liczb</h3>
+            <h3>Wyniki testów Ishihary</h3>
             <table>
               <thead>
                 <tr>
@@ -153,13 +165,20 @@ const MainPage = () => {
                 </tr>
               </thead>
               <tbody>
-                {/* Example content - you'll need to adjust based on the actual data */}
-                <tr>
-                  <td>05/10/2023</td>
-                  <td>9</td>
-                  <td>8</td>
-                  <td>1</td>
-                </tr>
+                {ishiharaTableData.length > 0 ? (
+                  ishiharaTableData.map((row) => (
+                    <tr key={row.id}>
+                      <td>{formatDate(row.date_of_test)}</td>
+                      <td>{row.time_of_test}</td>
+                      <td>{row.correct_colors}</td>
+                      <td>{row.error_colors}</td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan="4">Brak wyników testów</td>
+                  </tr>
+                )}
               </tbody>
             </table>
           </>

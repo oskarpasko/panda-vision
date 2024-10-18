@@ -12,8 +12,8 @@ def get_db_connection():
     return pymysql.connect(
         host='localhost',        # Database host
         user='root',             # Database username
-        password='oskarpasko',     # Database password
-        db='pandavision', # Database name
+        password='oskarpasko',   # Database password
+        db='pandavision',        # Database name
         cursorclass=pymysql.cursors.DictCursor
     )
 
