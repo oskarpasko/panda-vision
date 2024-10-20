@@ -44,20 +44,11 @@ const MainPage = () => {
           if (typeof data === 'string') {
             console.error('Non-JSON response:', data);  // Log non-JSON response
           } else {
-            console.log(data.tests[0].suma)
-            console.log(data.users[0].suma)
-            // fetch data
-            setcountOfUsers(data.users || []);      // TO DO: Ogarnąć o co chodzi z tym błedem że userów wyświetla a testy wywala błąd jakiś
-            setcountOfTests(data.tests || []);
-
-            // add data to the varables
-            const countOfUsers = data.users[0].suma;
-            const countOfTests = data.tests[0].suma;
-
-            console.log(countOfUsers);
-            console.log(countOfTests);
-            setcountOfUsers(countOfUsers);
-            setcountOfUsers(countOfTests);
+            // fetch data: 
+            // - count of users
+            // - count of all tests
+            setcountOfUsers(data.users[0].suma);
+            setcountOfTests(data.tests[0].suma);
           }
         } catch (err) {
           console.error('Error parsing data:', err);
@@ -135,7 +126,6 @@ const MainPage = () => {
           </div>
 
           <div className="main-dashboard">
-            <h2>Witaj, {userName}</h2>
             <div className="stats-grid">
               <div className="stat-card">
                 <h3>Użytkownicy</h3>
