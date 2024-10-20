@@ -21,7 +21,7 @@ const MainPage = () => {
   }, []);
 
   const fetchUserData = (email) => {
-    fetch('http://localhost:5000/api/main', {
+    fetch('http://192.168.0.166:5000/api/main', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

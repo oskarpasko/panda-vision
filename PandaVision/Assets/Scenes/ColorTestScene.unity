@@ -3932,8 +3932,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1448822831}
-  m_LocalRotation: {x: 0.10477522, y: -0.000000088914874, z: 0.000000009367636, w: 0.9944959}
-  m_LocalPosition: {x: 0, y: 0, z: 1.2719}
+  m_LocalRotation: {x: 0.10452846, y: 0, z: 0, w: 0.9945219}
+  m_LocalPosition: {x: 0, y: 0, z: 3.225}
   m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3944,10 +3944,10 @@ RectTransform:
   - {fileID: 574334869}
   - {fileID: 1982284457}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 12.028, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 12, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.012, y: 1.1161}
+  m_AnchoredPosition: {x: 0.012, y: 1.499}
   m_SizeDelta: {x: 1576.3845, y: 825.9552}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1473705527
@@ -4529,7 +4529,7 @@ MonoBehaviour:
   colorCanvas: {fileID: 1999437907}
   answerCanvas: {fileID: 1448822831}
   resultCanvas: {fileID: 1710003111}
-  backToMenuCanvas: {fileID: 1710003111}
+  backToMenuCanvas: {fileID: 1830314601}
   timeResult: {fileID: 360559311}
   correctResult: {fileID: 1487809062}
   errorsResult: {fileID: 909833414}
@@ -5899,7 +5899,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999437907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3.14}
+  m_LocalPosition: {x: 0, y: 0, z: 3.512}
   m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5909,7 +5909,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 2.562}
+  m_AnchoredPosition: {x: 0, y: 2.712}
   m_SizeDelta: {x: 2114.9001, y: 1249.1041}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2016766661

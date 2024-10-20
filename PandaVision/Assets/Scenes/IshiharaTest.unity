@@ -1455,7 +1455,6 @@ MonoBehaviour:
   - 35
   - 96
   backToMenuButton: {fileID: 1923593343}
-  startCanvas: {fileID: 0}
   colorCanvas: {fileID: 1768584315}
   answerCanvas: {fileID: 2019427871}
   answerField: {fileID: 1986623942}
