@@ -4,6 +4,7 @@ import logo from '../images/logo.png'; // Ensure the correct path to the logo
 
 const MainPage = () => {
   const [userName, setUserName] = useState('');
+  const [role, setRole] = useState('');
   const [colorTableData, setColorTableData] = useState([]); // State for colors table initialized as empty array
   const [taintTableData, setTaintTableData] = useState([]); // State for taints table initialized as empty array
   const [ishiharaTableData, setIshiharaTableData] = useState([]); // State for Ishihara table initialized as empty array
@@ -13,7 +14,8 @@ const MainPage = () => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
     
     if (storedUser) {
-      setUserName(storedUser);
+      setUserName(storedUser.email);
+      setRole(storedUser.role); // Set the role of the user
       fetchUserData(storedUser.email);  // Fetch user data with email
     }
   }, []);
@@ -69,6 +71,61 @@ const MainPage = () => {
     setActiveTable(table); // Set the active table
   };
 
+  if (role === 'admin') {
+    return (
+      <div className="admin-page">
+        <header className="header">
+          <img className="logo" src={logo} alt="Logo" />
+          <h1 className="app-name">Admin Panel - PandaVision</h1>
+          <button className="logout-button" onClick={handleLogout}>
+            Wyloguj się
+          </button>
+        </header>
+
+        <div className="admin-content">
+          <div className="side-panel">
+            <button>Wyniki Użytkowników</button>
+            <button>Wykresy</button>
+            <button>Raporty</button>
+          </div>
+
+          <div className="main-dashboard">
+            <h2>Witaj, {userName}</h2>
+            <div className="stats-grid">
+              <div className="stat-card">
+                <h3>Użytkownicy</h3>
+                <p>10 230</p>
+              </div>
+              <div className="stat-card">
+                <h3>Zarejestrowane testy</h3>
+                <p>15 894</p>
+              </div>
+              <div className="stat-card">
+                <h3>Poprawne odpowiedzi</h3>
+                <p>89%</p>
+              </div>
+              <div className="stat-card">
+                <h3>Błędne odpowiedzi</h3>
+                <p>11%</p>
+              </div>
+            </div>
+
+            <div className="chart-section">
+              <h3>Wykres Aktywności</h3>
+              {/* Można tutaj dodać komponenty do wykresów */}
+              <div className="chart-placeholder">[Wykres Aktywności]</div>
+            </div>
+          </div>
+        </div>
+
+        <footer className="footer">
+          &copy; {new Date().getFullYear()} Oskar Paśko. Wszelkie prawa zastrzeżone.
+        </footer>
+      </div>
+    );
+  }
+
+  // User page
   return (
     <div className="main-page">
       <header className="header">

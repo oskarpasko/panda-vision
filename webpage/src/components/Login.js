@@ -37,7 +37,7 @@ const Login = () => {
       setIsLoading(false);
 
       if (response.ok && data.success) {
-        localStorage.setItem('user', JSON.stringify({ email: data.user.email }));
+        localStorage.setItem('user', JSON.stringify({ email: data.user.email, role: data.user.role }));
 
         window.location.href = '/main'; // Redirect to main page
       }

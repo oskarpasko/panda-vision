@@ -32,7 +32,7 @@ def register():
     try:
         connection = get_db_connection()
         with connection.cursor() as cursor:
-            cursor.execute("INSERT INTO users VALUES (%s, %s, %s, %s, %s, SHA2(%s, 256))", 
+            cursor.execute("INSERT INTO users VALUES (%s, %s, %s, %s, %s, SHA2(%s, 256), 'user')", 
                            (data['email'], data['firstName'], data['lastName'], data['dateOfBirth'], data['phoneNumber'], data['password']))
 
             connection.commit()
