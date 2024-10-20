@@ -25,6 +25,21 @@ body{
 .main-page {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+
+  .main-dashboard {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    margin-left: 20px;
+    margin-top: 50px;
+  }
+  display: flex;
+  flex-direction: column;
   align-items: center;
   background-color: $secondary-color;
   min-height: 100vh;
@@ -95,6 +110,7 @@ h3 {
   display: flex;
   flex-direction: column;
   border-radius: 20px;
+  margin-left: 50px;
 
   button {
     background: none;
@@ -123,7 +139,9 @@ h3 {
 }
 
 table {
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
   border-collapse: collapse;
   text-align: left;
   overflow: hidden;
@@ -197,6 +215,12 @@ table {
   }
 }
 
+/*
+
+  ADMIN PANEL
+
+*/
+
 .admin-page {
   display: flex;
   flex-direction: column;
@@ -247,10 +271,11 @@ table {
 
     .side-panel {
       width: 200px;
-      background-color: #3949ab;
+      background-color: $primary-color;
       padding: 15px;
       display: flex;
       flex-direction: column;
+      border-radius: 8px;
 
       button {
         background: none;
@@ -274,6 +299,8 @@ table {
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+      margin-left: 20px;
 
       h2 {
         font-size: 24px;
