@@ -13,7 +13,6 @@ public class IshiharaTest : MonoBehaviour
     /// <param name="testPanel"> Canvas which is displaying colors for test </param>
     /// <param name="backToMenuButton"> button to back to the menu </param>
     /// <param name="buttons"> list of buttons with answers </param>
-    /// <param name="startCanvas"> Canvas with start button </param>
     /// <param name="colorCanvas"> Canvas with test's colors </param>
     /// <param name="answerCanvas"> Canvas with answers </param>
     /// <param name="answerField"> Field with the answer </param>
@@ -32,7 +31,6 @@ public class IshiharaTest : MonoBehaviour
     [SerializeField] private Texture2D[] images;
     [SerializeField] private String[] correctAnswers;
     [SerializeField] private Button backToMenuButton;
-    [SerializeField] private GameObject startCanvas;
     [SerializeField] private GameObject colorCanvas;
     [SerializeField] private GameObject answerCanvas;
     [SerializeField] private InputField answerField;
@@ -87,7 +85,7 @@ public class IshiharaTest : MonoBehaviour
                 proceed = false;
             }
 
-            // hide canvas with colors
+            // hide canvas with ishihara images
             // hide canvas with answers
             // show canvas with results
             // show canvas with button to try again
@@ -160,7 +158,8 @@ public class IshiharaTest : MonoBehaviour
     {
         resultCanvas.SetActive(false);
         backToMenuCanvas.SetActive(false);
-        startCanvas.SetActive(true);
+        colorCanvas.SetActive(true);
+        answerCanvas.SetActive(true);
         SceneManager.LoadScene("LoginScene");
     }
 
