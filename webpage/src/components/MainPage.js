@@ -12,6 +12,8 @@ const MainPage = () => {
 
   const [countOfUsers, setcountOfUsers] = useState(0); 
   const [countOfTests, setcountOfTests] = useState(0); 
+  const [countOfCorrectTests, setcountOfCorrectTests] = useState(0); 
+  const [countOfBadTests, setcountOfBadTests] = useState(0); 
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
@@ -44,11 +46,12 @@ const MainPage = () => {
           if (typeof data === 'string') {
             console.error('Non-JSON response:', data);  // Log non-JSON response
           } else {
+            console.log(data)
             // fetch data: 
-            // - count of users
-            // - count of all tests
-            setcountOfUsers(data.users[0].suma);
-            setcountOfTests(data.tests[0].suma);
+            setcountOfUsers(data.users);            // count of users
+            setcountOfTests(data.tests);            // count of all tests
+            setcountOfCorrectTests(data.correct_tests);  // count of % correct test
+            setcountOfBadTests(data.error_tests);          // count of % tests with at least 1 error
           }
         } catch (err) {
           console.error('Error parsing data:', err);
@@ -137,11 +140,11 @@ const MainPage = () => {
               </div>
               <div className="stat-card">
                 <h3>Poprawne odpowiedzi</h3>
-                <p>89%</p>
+                <p>{countOfCorrectTests}%</p>
               </div>
               <div className="stat-card">
                 <h3>Błędne odpowiedzi</h3>
-                <p>11%</p>
+                <p>{countOfBadTests}%</p>
               </div>
             </div>
 
