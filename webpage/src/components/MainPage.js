@@ -12,6 +12,7 @@ const MainPage = () => {
 
   const [countOfUsers, setcountOfUsers] = useState(0); 
   const [countOfTests, setcountOfTests] = useState(0); 
+  const [countOfTestsTime, setcountOfTestsTime] = useState(0); 
   const [countOfCorrectTests, setcountOfCorrectTests] = useState(0); 
   const [countOfBadTests, setcountOfBadTests] = useState(0); 
 
@@ -27,7 +28,7 @@ const MainPage = () => {
   }, []);
 
   const fetchAdminData = (email) => {
-    fetch('http://192.168.0.166:5000/api/admin', {
+    fetch('http://localhost:5000/api/admin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -48,10 +49,11 @@ const MainPage = () => {
           } else {
             console.log(data)
             // fetch data: 
-            setcountOfUsers(data.users);            // count of users
-            setcountOfTests(data.tests);            // count of all tests
+            setcountOfUsers(data.users);                 // count of users
+            setcountOfTests(data.tests);                 // count of all tests
+            setcountOfTestsTime(data.tests_time)         // time of all tests
             setcountOfCorrectTests(data.correct_tests);  // count of % correct test
-            setcountOfBadTests(data.error_tests);          // count of % tests with at least 1 error
+            setcountOfBadTests(data.error_tests);        // count of % tests with at least 1 error
           }
         } catch (err) {
           console.error('Error parsing data:', err);
@@ -137,6 +139,10 @@ const MainPage = () => {
               <div className="stat-card">
                 <h3>Zarejestrowane testy</h3>
                 <p>{countOfTests}</p>
+              </div>
+              <div className="stat-card">
+                <h3>Czas spędzony w testach</h3>
+                <p>{countOfTestsTime}min</p>
               </div>
               <div className="stat-card">
                 <h3>Poprawne odpowiedzi</h3>
