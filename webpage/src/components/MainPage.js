@@ -141,7 +141,7 @@ const MainPage = () => {
           {/* Sidebar for selecting tables */}
           <div className="side-panel">
             <button onClick={() => switchTable('dashboard')}>Dashboard</button>
-            <button onClick={() => switchTable('users_results')}>Wyniki Uzytkowników</button>
+            <button onClick={() => switchTable('users_results')}>Wyniki Uytkowników</button>
             <button onClick={() => switchTable('charts')}>Wykresy</button>
             <button onClick={() => switchTable('raports')}>Raporty</button>
           </div>
