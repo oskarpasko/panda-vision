@@ -8,26 +8,38 @@ const MainPage = () => {
   const [colorTableData, setColorTableData] = useState([]);         // State for colors table initialized as empty array
   const [taintTableData, setTaintTableData] = useState([]);         // State for taints table initialized as empty array
   const [ishiharaTableData, setIshiharaTableData] = useState([]);   // State for Ishihara table initialized as empty array
-  const [activeTable, setActiveTable] = useState('colors');         // State to track the active table
+  const [activeTable, setActiveTable] = useState(null);  // Initialize as null
 
   const [countOfUsers, setcountOfUsers] = useState(0); 
   const [countOfTests, setcountOfTests] = useState(0); 
+  const [countOfTestsTime, setcountOfTestsTime] = useState(0); 
   const [countOfCorrectTests, setcountOfCorrectTests] = useState(0); 
   const [countOfBadTests, setcountOfBadTests] = useState(0); 
+  const [colorTableDataAdmin, setColorTableDataAdmin] = useState([]);         // State for colors table initialized as empty array
+  const [taintTableDataAdmin, setTaintTableDataAdmin] = useState([]);         // State for taints table initialized as empty array
+  const [ishiharaTableDataAdmin, setIshiharaTableDataAdmin] = useState([]);   // State for Ishihara table initialized as empty array
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
-    
+  
     if (storedUser) {
       setUserName(storedUser.email);
       setRole(storedUser.role); // Set the role of the user
       fetchUserData(storedUser.email);  // Fetch user data with email
-      fetchAdminData(storedUser.email);  // Fetch user data with email
+      fetchAdminData(storedUser.email);  // Fetch admin data if applicable
+  
+      // Set activeTable based on the user's role after setting role
+      if (storedUser.role === 'admin') {
+        setActiveTable('dashboard');  // Set 'dashboard' for admin
+      } else {
+        setActiveTable('colors');  // Set 'colors' for regular users
+      }
     }
   }, []);
+  
 
   const fetchAdminData = (email) => {
-    fetch('http://192.168.0.166:5000/api/admin', {
+    fetch('http://localhost:5000/api/admin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -48,10 +60,14 @@ const MainPage = () => {
           } else {
             console.log(data)
             // fetch data: 
-            setcountOfUsers(data.users);            // count of users
-            setcountOfTests(data.tests);            // count of all tests
-            setcountOfCorrectTests(data.correct_tests);  // count of % correct test
-            setcountOfBadTests(data.error_tests);          // count of % tests with at least 1 error
+            setcountOfUsers(data.users);                          // count of users
+            setcountOfTests(data.tests);                          // count of all tests
+            setcountOfTestsTime(data.tests_time)                  // time of all tests
+            setcountOfCorrectTests(data.correct_tests);           // count of % correct test
+            setcountOfBadTests(data.error_tests);                 // count of % tests with at least 1 error
+            setColorTableDataAdmin(data.color_test || [])         // all color test results
+            setIshiharaTableDataAdmin(data.ishihara_test || [])   // all ishihara test results
+            setTaintTableDataAdmin(data.taint_test || [])         // all taint test results
           }
         } catch (err) {
           console.error('Error parsing data:', err);
@@ -122,13 +138,18 @@ const MainPage = () => {
         </header>
 
         <div className="admin-content">
+          {/* Sidebar for selecting tables */}
           <div className="side-panel">
-            <button>Wyniki Użytkowników</button>
-            <button>Wykresy</button>
-            <button>Raporty</button>
+            <button onClick={() => switchTable('dashboard')}>Dashboard</button>
+            <button onClick={() => switchTable('users_results')}>Wyniki Uytkowników</button>
+            <button onClick={() => switchTable('charts')}>Wykresy</button>
+            <button onClick={() => switchTable('raports')}>Raporty</button>
           </div>
 
           <div className="main-dashboard">
+
+          {activeTable === 'dashboard' && (
+            <>
             <div className="stats-grid">
               <div className="stat-card">
                 <h3>Użytkownicy</h3>
@@ -137,6 +158,10 @@ const MainPage = () => {
               <div className="stat-card">
                 <h3>Zarejestrowane testy</h3>
                 <p>{countOfTests}</p>
+              </div>
+              <div className="stat-card">
+                <h3>Czas spędzony w testach</h3>
+                <p>{countOfTestsTime}min</p>
               </div>
               <div className="stat-card">
                 <h3>Poprawne odpowiedzi</h3>
@@ -153,6 +178,101 @@ const MainPage = () => {
               {/* Można tutaj dodać komponenty do wykresów */}
               <div className="chart-placeholder">[Wykres Aktywności]</div>
             </div>
+            </>
+          )}
+
+            {activeTable === 'users_results' && (
+            <>
+              <h3>Wyniki testów Kolorów</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Data Testu</th>
+                    <th>Czas testu [ s ]</th>
+                    <th>Błędne odpowiedzi</th>
+                    <th>Uzytkownik</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {colorTableDataAdmin.length > 0 ? (
+                    colorTableDataAdmin.map((row) => (
+                      <tr key={row.id} className={row.error_colors > 0 ? 'error-row' : ''}>
+                        <td>{formatDate(row.date_of_test)}</td>
+                        <td>{row.time_of_test}</td>
+                        <td>{row.error_colors}</td>
+                        <td>{row.user}</td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan="4">Brak wyników testów</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+              
+              <h3>Wyniki testów Barw</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Data Testu</th>
+                    <th>Czas testu [ s ]</th>
+                    <th>Poprawne odpowiedzi</th>
+                    <th>Błędne odpowiedzi</th>
+                    <th>Uzytkownik</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {taintTableDataAdmin.length > 0 ? (
+                    taintTableDataAdmin.map((row) => (
+                      <tr key={row.id} className={row.error_colors > 0 ? 'error-row' : ''}>
+                        <td>{formatDate(row.date_of_test)}</td>
+                        <td>{row.time_of_test}</td>
+                        <td>{row.correct_colors}</td>
+                        <td>{row.error_colors}</td>
+                        <td>{row.user}</td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan="4">Brak wyników testów</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+
+              <h3>Wyniki testów Ishihary</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Data Testu</th>
+                    <th>Czas testu [ s ]</th>
+                    <th>Poprawne odpowiedzi</th>
+                    <th>Błędne odpowiedzi</th>
+                    <th>Uzytkownik</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {ishiharaTableDataAdmin.length > 0 ? (
+                    ishiharaTableDataAdmin.map((row) => (
+                      <tr key={row.id} className={row.error_colors > 0 ? 'error-row' : ''}>
+                        <td>{formatDate(row.date_of_test)}</td>
+                        <td>{row.time_of_test}</td>
+                        <td>{row.correct_colors}</td>
+                        <td>{row.error_colors}</td>
+                        <td>{row.user}</td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan="4">Brak wyników testów</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+
+            </>
+            )}
           </div>
         </div>
 

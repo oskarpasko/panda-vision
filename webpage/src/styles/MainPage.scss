@@ -306,6 +306,65 @@ table {
 
       margin-left: 20px;
 
+      table {
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        border-collapse: collapse;
+        text-align: left;
+        overflow: hidden;
+        border-radius: 10px;
+        text-align: center;
+        margin-bottom: 50px;
+      
+        thead {
+          background-color: $primary-color;
+          color: #fff;
+      
+          th {
+            padding: 15px;
+            font-size: 16px;
+          }
+        }
+      
+        tbody {
+          tr {
+            &:nth-child(even) {
+              background-color: #f2f2f2;
+            }
+      
+            &:hover {
+              background-color: lighten($primary-color, 50%);
+            }
+      
+            td {
+              padding: 12px;
+              font-size: 15px;
+              border-bottom: 1px solid #ddd;
+      
+              &:first-child {
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+              }
+      
+              &:last-child {
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+              }
+            }
+          }
+      
+          tr:last-child {
+            td {
+              border-bottom: none;
+            }
+          }
+          .error-row td {
+            color: red;
+          }
+        }
+      }
+
       h2 {
         font-size: 24px;
         margin-bottom: 20px;

@@ -23,6 +23,16 @@ def get_total_test_count(cursor):
     """
     cursor.execute(all_tests_query)
     return cursor.fetchone()['suma']
+# Get the time of all tests
+def get_total_test_time(cursor):
+    all_tests_time_query = """
+        SELECT 
+            (SELECT SUM(time_of_test) FROM pandavision.color_test_user_results) +
+            (SELECT SUM(time_of_test) FROM pandavision.ishihara_test_results) +
+            (SELECT SUM(time_of_test) FROM pandavision.taint_test_user_results) AS suma;
+    """
+    cursor.execute(all_tests_time_query)
+    return cursor.fetchone()['suma']
 # Get the amount of all correct tests
 def get_correct_test_count(cursor):
     correct_tests_query = """
@@ -43,6 +53,21 @@ def get_error_test_count(cursor):
     """
     cursor.execute(error_tests_query)
     return cursor.fetchone()['suma']
+# Get al resulrs of color test
+def get_color_test_user_results(cursor):
+    error_tests_query = "SELECT * FROM pandavision.color_test_user_results;"
+    cursor.execute(error_tests_query)
+    return cursor.fetchall()
+# Get all results of ishihara test
+def get_ishihara_test_results(cursor):
+    error_tests_query = "SELECT * FROM pandavision.ishihara_test_results;"
+    cursor.execute(error_tests_query)
+    return cursor.fetchall()
+# Get all results of taint test
+def get_taint_test_user_results(cursor):
+    error_tests_query = "SELECT * FROM pandavision.taint_test_user_results;"
+    cursor.execute(error_tests_query)
+    return cursor.fetchall()
 
 @api_admin_blueprint.route('/api/admin', methods=['POST'])
 @cross_origin()
@@ -62,8 +87,12 @@ def get_data():
         # Retrieve counts from the database using the helper functions
         users = get_user_count(cursor)
         tests = get_total_test_count(cursor)
+        tests_time = get_total_test_time(cursor)
         corrects = get_correct_test_count(cursor)
         bads = get_error_test_count(cursor)
+        color_test = get_color_test_user_results(cursor)
+        ishihara_test = get_ishihara_test_results(cursor)
+        taint_test = get_taint_test_user_results(cursor)
 
     # Close the database connection
     connection.close()
@@ -72,6 +101,10 @@ def get_data():
     return jsonify({
         'users': users,
         'tests': tests,
+        'tests_time': round(tests_time / 60, 2),
         'correct_tests': round((corrects / tests) * 100, 2),
         'error_tests': round((bads / tests) * 100, 2),
+        'color_test': color_test,
+        'ishihara_test': ishihara_test,
+        'taint_test': taint_test,
     }), 200
