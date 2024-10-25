@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import './../styles/Login.scss'; // Import SCSS file
 
 const Login = () => {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value);
   };
 
   const handlePasswordChange = (event) => {
@@ -18,8 +18,8 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (!email || !password) {
-      setErrorMessage('Please enter both email and password');
+    if (!username || !password) {
+      setErrorMessage('Please enter both username and password');
       return;
     }
 
@@ -27,21 +27,20 @@ const Login = () => {
     setErrorMessage(''); // Reset error message on new attempt
 
     try {
-      const response = await fetch('http://localhost:5000/api/login', {
+      const response = await fetch('http://192.168.0.166:5000/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ username, password }),
       });
 
       const data = await response.json();
       setIsLoading(false);
 
       if (response.ok && data.success) {
-        localStorage.setItem('user', JSON.stringify({ email: data.user.email, role: data.user.role }));
+        localStorage.setItem('user', JSON.stringify({ username: data.user.username, role: data.user.role }));
 
         window.location.href = '/main'; // Redirect to main page
-      }
-       else {
+      } else {
         setErrorMessage('Invalid credentials');
       }
     } catch (error) {
@@ -59,11 +58,11 @@ const Login = () => {
 
         <div className="input-group">
           <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={handleEmailChange}
-            placeholder="Email"
+            type="text"
+            id="username"
+            value={username}
+            onChange={handleUsernameChange}
+            placeholder="Nazwa użytkownika"
             required
           />
         </div>

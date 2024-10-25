@@ -23,10 +23,10 @@ const MainPage = () => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
   
     if (storedUser) {
-      setUserName(storedUser.email);
+      setUserName(storedUser.username);
       setRole(storedUser.role); // Set the role of the user
-      fetchUserData(storedUser.email);  // Fetch user data with email
-      fetchAdminData(storedUser.email);  // Fetch admin data if applicable
+      fetchUserData(storedUser.username);  // Fetch user data with username
+      fetchAdminData(storedUser.username);  // Fetch admin data if applicable
   
       // Set activeTable based on the user's role after setting role
       if (storedUser.role === 'admin') {
@@ -38,13 +38,13 @@ const MainPage = () => {
   }, []);
   
 
-  const fetchAdminData = (email) => {
-    fetch('http://localhost:5000/api/admin', {
+  const fetchAdminData = (username) => {
+    fetch('http://192.168.0.166:5000/api/admin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email: email }),  // Send email in the request body
+      body: JSON.stringify({ username: username }),  // Send username in the request body
     })
       .then((response) => {
         if (response.ok) {
@@ -76,13 +76,13 @@ const MainPage = () => {
       .catch((error) => console.error('Error fetching data:', error));
   };
 
-  const fetchUserData = (email) => {
+  const fetchUserData = (username) => {
     fetch('http://192.168.0.166:5000/api/main', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email: email }),  // Send email in the request body
+      body: JSON.stringify({ username: username }),  // Send username in the request body
     })
       .then((response) => {
         if (response.ok) {

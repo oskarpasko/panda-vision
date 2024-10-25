@@ -13,27 +13,27 @@ api_main_blueprint = Blueprint('/api/main', __name__)
 @cross_origin()
 def get_data():
     data = request.get_json()
-    user_email = data.get('email')  # Get the email from the POST request
+    user_username = data.get('username')  # Get the emusernameail from the POST request
 
-    if not user_email:
-        return jsonify({'error': 'Email not provided'}), 400
+    if not user_username:
+        return jsonify({'error': 'Ssername not provided'}), 400
 
     connection = get_db_connection()
     cursor = connection.cursor()
 
     # Query for the color test results
     query_colors = "SELECT * FROM pandavision.color_test_user_results WHERE user = %s"
-    cursor.execute(query_colors, (user_email,))
+    cursor.execute(query_colors, (user_username,))
     color_results = cursor.fetchall()
 
     # Query for the taint test results
     query_taints = "SELECT * FROM pandavision.taint_test_user_results WHERE user = %s"
-    cursor.execute(query_taints, (user_email,))
+    cursor.execute(query_taints, (user_username,))
     taint_results = cursor.fetchall()
 
     # Query for the Ishihara test results
     query_ishihara = "SELECT * FROM pandavision.ishihara_test_results WHERE user = %s"
-    cursor.execute(query_ishihara, (user_email,))
+    cursor.execute(query_ishihara, (user_username,))
     ishihara_results = cursor.fetchall()
 
     # Close the connection with db

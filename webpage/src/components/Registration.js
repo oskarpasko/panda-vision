@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import './../styles/Registration.scss'; // Import SCSS file
 
 const Registration = () => {
-  const [email, setEmail] = useState('');
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [username, setUsername] = useState(''); // Change to username
   const [dateOfBirth, setDateOfBirth] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
+  const [gender, setGender] = useState(''); // New gender state
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState(''); // New state for confirmation password
+  const [confirmPassword, setConfirmPassword] = useState(''); // Confirmation password state
   const [errorMessage, setErrorMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
@@ -19,7 +17,8 @@ const Registration = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (!email || !firstName || !lastName || !dateOfBirth || !phoneNumber || !password || !confirmPassword) {
+    // Validate inputs
+    if (!username || !dateOfBirth || !gender || !password || !confirmPassword) {
       setErrorMessage('Please fill in all fields');
       return;
     }
@@ -36,15 +35,14 @@ const Registration = () => {
       const response = await fetch('http://192.168.0.166:5000/api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, firstName, lastName, dateOfBirth, phoneNumber, password }),
+        body: JSON.stringify({ username, dateOfBirth, gender, password }),
       });
 
       const data = await response.json();
       setIsLoading(false);
 
       if (response.ok && data.success) {
-        // Handle successful registration (e.g., redirect to login)
-        window.location.href = '/login';
+        window.location.href = '/login'; // Redirect on success
       } else {
         setErrorMessage(data.message || 'Registration failed');
       }
@@ -64,21 +62,10 @@ const Registration = () => {
         <div className="input-group">
           <input
             type="text"
-            id="firstName"
-            value={firstName}
-            onChange={(e) => handleInputChange(e, setFirstName)}
-            placeholder="Imię"
-            required
-          />
-        </div>
-
-        <div className="input-group">
-          <input
-            type="text"
-            id="lastName"
-            value={lastName}
-            onChange={(e) => handleInputChange(e, setLastName)}
-            placeholder="Nazwisko"
+            id="username"
+            value={username}
+            onChange={(e) => handleInputChange(e, setUsername)}
+            placeholder="Nazwa użytkownika"
             required
           />
         </div>
@@ -94,25 +81,17 @@ const Registration = () => {
         </div>
 
         <div className="input-group">
-          <input
-            type="tel"
-            id="phoneNumber"
-            value={phoneNumber}
-            onChange={(e) => handleInputChange(e, setPhoneNumber)}
-            placeholder="Numer telefonu"
+          <select
+            id="gender"
+            value={gender}
+            onChange={(e) => handleInputChange(e, setGender)}
             required
-          />
-        </div>
-
-        <div className="input-group">
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => handleInputChange(e, setEmail)}
-            placeholder="Email"
-            required
-          />
+          >
+            <option value="">Wybierz płeć</option>
+            <option value="female">Kobieta</option>
+            <option value="male">Mężczyzna</option>
+            <option value="other">Inna</option>
+          </select>
         </div>
 
         <div className="input-group">

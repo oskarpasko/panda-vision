@@ -74,10 +74,10 @@ def get_taint_test_user_results(cursor):
 def get_data():
     # Get the incoming data from the POST request
     data = request.get_json()
-    user_email = data.get('email')  # Extract email from the request
+    user_username = data.get('username')  # Extract username from the request
 
-    if not user_email:
-        return jsonify({'error': 'Email not provided'}), 400
+    if not user_username:
+        return jsonify({'error': 'Username not provided'}), 400
 
     # Get the database connection
     connection = get_db_connection()
