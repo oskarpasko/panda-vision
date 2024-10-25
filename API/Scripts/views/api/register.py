@@ -14,14 +14,14 @@ def register():
     data = request.get_json()
 
     # Validate input
-    if not data or not all(key in data for key in ['email', 'firstName', 'lastName', 'dateOfBirth', 'phoneNumber', 'password']):
+    if not data or not all(key in data for key in ['username', 'dateOfBirth', 'gender', 'password']):
         return jsonify({'success': False, 'message': 'Missing fields'}), 400
 
     # Check if user already exists
     try:
         connection = get_db_connection()
         with connection.cursor() as cursor:
-            cursor.execute("SELECT * FROM pandavision.users WHERE email = %s", (data['email'],))
+            cursor.execute("SELECT * FROM pandavision.users WHERE username = %s", (data['username'],))
             existing_user = cursor.fetchone()
     finally:
         connection.close()
@@ -32,8 +32,8 @@ def register():
     try:
         connection = get_db_connection()
         with connection.cursor() as cursor:
-            cursor.execute("INSERT INTO users VALUES (%s, %s, %s, %s, %s, SHA2(%s, 256), 'user')", 
-                           (data['email'], data['firstName'], data['lastName'], data['dateOfBirth'], data['phoneNumber'], data['password']))
+            cursor.execute("INSERT INTO users VALUES (%s, SHA2(%s, 256), %s, %s, 'user')", 
+                           (data['username'], data['password'], data['dateOfBirth'], data['gender']))
 
             connection.commit()
         return jsonify({'success': True, 'message': 'User registered successfully'}), 201

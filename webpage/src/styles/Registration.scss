@@ -46,6 +46,46 @@ $primary-color: #7201dc;
     }
   }
 
+  /* Styling for the gender select box */
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  appearance: none; /* Remove default dropdown arrow */
+  padding-right: 35px; /* Space for custom arrow */
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+select:hover {
+  border-color: #007bff;
+}
+
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Custom arrow styling */
+select::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #333;
+  pointer-events: none;
+}
+
+
   .register-btn {
     width: 100%;
     padding: 0.75rem;
