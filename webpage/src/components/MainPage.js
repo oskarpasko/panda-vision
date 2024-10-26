@@ -39,7 +39,7 @@ const MainPage = () => {
   
 
   const fetchAdminData = (username) => {
-    fetch('http://192.168.0.166:5000/api/admin', {
+    fetch('http://localhost:5000/api/admin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -149,37 +149,133 @@ const MainPage = () => {
           <div className="main-dashboard">
 
           {activeTable === 'dashboard' && (
-            <>
-            <div className="stats-grid">
-              <div className="stat-card">
-                <h3>Użytkownicy</h3>
-                <p>{countOfUsers}</p>
-              </div>
-              <div className="stat-card">
-                <h3>Zarejestrowane testy</h3>
-                <p>{countOfTests}</p>
-              </div>
-              <div className="stat-card">
-                <h3>Czas spędzony w testach</h3>
-                <p>{countOfTestsTime}min</p>
-              </div>
-              <div className="stat-card">
-                <h3>Poprawne odpowiedzi</h3>
-                <p>{countOfCorrectTests}%</p>
-              </div>
-              <div className="stat-card">
-                <h3>Błędne odpowiedzi</h3>
-                <p>{countOfBadTests}%</p>
-              </div>
-            </div>
+  <>
+    <h1 className="section-title">Dashboard</h1>
+    <h2 className="section-title">Ogólne statystyki uzytkowników</h2>
+    <div className="stats-grid">
+      <div className="stat-card">
+        <h3>Użytkownicy</h3>
+        <p>{countOfUsers}</p>
+      </div>
+      <div className="stat-card">
+        <h3>Kobiety</h3>
+        <p> N/A </p>
+      </div>
+      <div className="stat-card">
+        <h3>Męzczyźni</h3>
+        <p> N/A </p>
+      </div>
+      <div className="stat-card">
+        <h3>Inne płci</h3>
+        <p> N/A </p>
+      </div>
+    </div>
 
-            <div className="chart-section">
-              <h3>Wykres Aktywności</h3>
-              {/* Można tutaj dodać komponenty do wykresów */}
-              <div className="chart-placeholder">[Wykres Aktywności]</div>
-            </div>
-            </>
-          )}
+    {/* Divider line */}
+    <div className="divider"></div>
+
+    <h2 className="section-title">Podział wiekowy użytkowników</h2>
+    <div className="stats-grid">
+      <div className="stat-card">
+        <h3>Osoby ponizej 18 lat</h3>
+        <p> N/A </p>
+      </div>
+      <div className="stat-card">
+        <h3>Osoby 18 - 35 lat</h3>
+        <p> N/A </p>
+      </div>
+      <div className="stat-card">
+        <h3>Osoby w przedziale 36 - 60 lat</h3>
+        <p> N/A </p>
+      </div>
+      <div className="stat-card">
+        <h3>Osoby powyzej 60 lat</h3>
+        <p> N/A </p>
+      </div>
+    </div>
+
+    {/* Divider line */}
+    <div className="divider"></div>
+
+    <h2 className="section-title">Ogólne statystyki testów</h2>
+    <div className="stats-grid">
+      <div className="stat-card">
+        <h3>Zarejestrowane testy</h3>
+        <p>{countOfTests}</p>
+      </div>
+      <div className="stat-card">
+        <h3>Czas spędzony w testach</h3>
+        <p>{countOfTestsTime}min</p>
+      </div>
+      <div className="stat-card">
+        <h3>Poprawne odpowiedzi</h3>
+        <p>{countOfCorrectTests}%</p>
+      </div>
+      <div className="stat-card">
+        <h3>Błędne odpowiedzi</h3>
+        <p>{countOfBadTests}%</p>
+      </div>
+    </div>
+
+    {/* Divider line */}
+    <div className="divider"></div>
+
+    <h2 className="section-title">Statystyki: Test kolorów</h2>
+    <div className="stats-grid">
+      <div className="stat-card">
+        <h3>Zarejestrowane testy</h3>
+        <p> N/A </p>
+      </div>
+      <div className="stat-card">
+        <h3>Czas spędzony podczas testu</h3>
+        <p> N/A </p>
+      </div>
+      <div className="stat-card">
+        <h3>Średnia ilość błędów</h3>
+        <p> N/A </p>
+      </div>
+    </div>
+
+    {/* Divider line */}
+    <div className="divider"></div>
+
+    <h2 className="section-title">Statystyki: Test barw</h2>
+    <div className="stats-grid">
+      <div className="stat-card">
+        <h3>Zarejestrowane testy</h3>
+        <p> N/A </p>
+      </div>
+      <div className="stat-card">
+        <h3>Czas spędzony podczas testu</h3>
+        <p> N/A </p>
+      </div>
+      <div className="stat-card">
+        <h3>Średnia ilość błędów</h3>
+        <p> N/A </p>
+      </div>
+    </div>
+
+    {/* Divider line */}
+    <div className="divider"></div>
+
+    <h2 className="section-title">Statystyki: Test Ishihary</h2>
+    <div className="stats-grid">
+      <div className="stat-card">
+        <h3>Zarejestrowane testy</h3>
+        <p> N/A </p>
+      </div>
+      <div className="stat-card">
+        <h3>Czas spędzony podczas testu</h3>
+        <p> N/A </p>
+      </div>
+      <div className="stat-card">
+        <h3>Średnia ilość błędów</h3>
+        <p> N/A </p>
+      </div>
+    </div>
+  </>
+)}
+
 
             {activeTable === 'users_results' && (
             <>
