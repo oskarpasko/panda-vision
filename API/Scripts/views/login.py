@@ -18,14 +18,14 @@ def login():
     )
 
     # data from InputField from Unity getting thru POST method
-    email = request.form['email']
+    username = request.form['username']
     password = request.form['password']
 
     # Creating cursor object
     cursor = db.cursor()
 
     # Executing SQL query
-    query = cursor.execute(f"SELECT email FROM pandavision.users WHERE email='{email}' AND passwd=SHA2('{password}', 256);")
+    query = cursor.execute(f"SELECT username FROM pandavision.users WHERE username='{username}' AND passwd=SHA2('{password}', 256);")
 
     # checking if data are valid
     if query == 1:
