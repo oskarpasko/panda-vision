@@ -21,13 +21,14 @@ def color_test_result():
     time = request.form['time']
     correct_colors = request.form['correct_colors']
     error_colors = request.form['error_colors']
+    error_log = request.form['error_log']
     user = request.form['user']
 
     # Creating cursor object
     cursor = db.cursor()
 
     # Executing SQL query
-    cursor.execute(f"INSERT INTO pandavision.color_test_user_results VALUES (null, CURDATE(), '{time}', '{correct_colors}', '{error_colors}', '{user}');")
+    cursor.execute(f"INSERT INTO pandavision.color_test_user_results VALUES (null, CURDATE(), '{time}', '{correct_colors}', '{error_colors}', '{error_log}', '{user}');")
 
     db.commit()
     return jsonify(), 200
