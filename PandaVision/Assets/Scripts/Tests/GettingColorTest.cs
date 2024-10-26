@@ -43,11 +43,12 @@ public class GettingColorTest : MonoBehaviour
     private int error = 0;
     private float time = 0f;
     private bool isRunning = false;
+    private string errorLog = "";
 
     // Mehtod to get colors from db
     IEnumerator GetColor()
     {
-        if(LoggedEmail.loggedUserEmail == null)
+        if(LoggedUsername.loggedUserName == null)
         {
             SceneManager.LoadScene("LoginScene");
         }
@@ -89,9 +90,9 @@ public class GettingColorTest : MonoBehaviour
                 {
                     // setting color from DB
                     Color32 colorToCavas = new Color32(Convert.ToByte(colorsArray2D[i, 0]),     // Red
-                                                    Convert.ToByte(colorsArray2D[i, 1]),        // Green
-                                                    Convert.ToByte(colorsArray2D[i, 2]),        // Blue
-                                                    255                                         // Alpha
+                                                       Convert.ToByte(colorsArray2D[i, 1]),        // Green
+                                                       Convert.ToByte(colorsArray2D[i, 2]),        // Blue
+                                                       255                                         // Alpha
                     );
                     testPanel.color = colorToCavas;
 
@@ -142,7 +143,7 @@ public class GettingColorTest : MonoBehaviour
                 form.AddField("time", time.ToString());
                 form.AddField("correct_colors", (rows - error).ToString());
                 form.AddField("error_colors", error.ToString());
-                form.AddField("user", LoggedEmail.loggedUserEmail);
+                form.AddField("user", LoggedUsername.loggedUserName);
 
                 using (UnityWebRequest webRequest = UnityWebRequest.Post("http://192.168.0.166:5000/color_test_result", form))
                 {

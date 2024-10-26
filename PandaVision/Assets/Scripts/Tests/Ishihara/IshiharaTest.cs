@@ -49,7 +49,7 @@ public class IshiharaTest : MonoBehaviour
     // Mehtod to controll the Ishihara test
     IEnumerator Ishihara()
     {
-        if(LoggedEmail.loggedUserEmail == null)
+        if(LoggedUsername.loggedUserName == null)
         {
             SceneManager.LoadScene("LoginScene");
         }
@@ -104,7 +104,7 @@ public class IshiharaTest : MonoBehaviour
             form.AddField("correct_colors", (correctAnswers.Length - error).ToString());
             form.AddField("error_colors", error.ToString());
             form.AddField("error_log", errorLog);
-            form.AddField("user", LoggedEmail.loggedUserEmail);
+            form.AddField("user", LoggedUsername.loggedUserName);
 
             using (UnityWebRequest webRequest = UnityWebRequest.Post("http://192.168.0.166:5000/ishihara_test_result", form))
             {

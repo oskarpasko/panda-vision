@@ -74,7 +74,7 @@ public class CheckErrors : MonoBehaviour
         form.AddField("time", time.ToString());
         form.AddField("correct_colors", (5 - errors).ToString());
         form.AddField("error_colors", errors.ToString());
-        form.AddField("user", LoggedEmail.loggedUserEmail);
+        form.AddField("user", LoggedUsername.loggedUserName);
 
         using (UnityWebRequest webRequest = UnityWebRequest.Post("http://192.168.0.166:5000/taint_test_result", form))
         {
