@@ -27,6 +27,7 @@ public class GettingColorTest : MonoBehaviour
     /// <param name="error"> variable to count errors in test, start with 0 </param>
     /// <param name="time"> variable to count time in seconds </param>
     /// <param name="isRunning"> variable to check if time is running </param>
+    /// <param name="errorLog"> variable to write what kind of error was </param>
     [SerializeField] private Image testPanel;
     [SerializeField] private Button[] buttons;
     [SerializeField] private Button startButton;
@@ -43,11 +44,12 @@ public class GettingColorTest : MonoBehaviour
     private int error = 0;
     private float time = 0f;
     private bool isRunning = false;
+    private string errorLog = "";
 
     // Mehtod to get colors from db
     IEnumerator GetColor()
     {
-        if(LoggedEmail.loggedUserEmail == null)
+        if(LoggedUsername.loggedUserName == null)
         {
             SceneManager.LoadScene("LoginScene");
         }
@@ -89,9 +91,9 @@ public class GettingColorTest : MonoBehaviour
                 {
                     // setting color from DB
                     Color32 colorToCavas = new Color32(Convert.ToByte(colorsArray2D[i, 0]),     // Red
-                                                    Convert.ToByte(colorsArray2D[i, 1]),        // Green
-                                                    Convert.ToByte(colorsArray2D[i, 2]),        // Blue
-                                                    255                                         // Alpha
+                                                       Convert.ToByte(colorsArray2D[i, 1]),        // Green
+                                                       Convert.ToByte(colorsArray2D[i, 2]),        // Blue
+                                                       255                                         // Alpha
                     );
                     testPanel.color = colorToCavas;
 
@@ -142,7 +144,8 @@ public class GettingColorTest : MonoBehaviour
                 form.AddField("time", time.ToString());
                 form.AddField("correct_colors", (rows - error).ToString());
                 form.AddField("error_colors", error.ToString());
-                form.AddField("user", LoggedEmail.loggedUserEmail);
+                form.AddField("error_log", errorLog);
+                form.AddField("user", LoggedUsername.loggedUserName);
 
                 using (UnityWebRequest webRequest = UnityWebRequest.Post("http://192.168.0.166:5000/color_test_result", form))
                 {
@@ -195,7 +198,11 @@ public class GettingColorTest : MonoBehaviour
     { 
         proceed = true; 
         // if guess is wrong add +1 to the error variable
-        if(correctAnswer.Equals(guessAnswer) == false) { error++; }
+        if(correctAnswer.Equals(guessAnswer) == false) 
+        { 
+            error++; 
+            errorLog += correctAnswer + " - " + guessAnswer + ";\n";
+        }
     }
     // Main method
     IEnumerator Start()

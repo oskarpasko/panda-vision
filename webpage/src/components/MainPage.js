@@ -11,13 +11,25 @@ const MainPage = () => {
   const [activeTable, setActiveTable] = useState(null);  // Initialize as null
 
   const [countOfUsers, setcountOfUsers] = useState(0); 
+  const [countOfFemales, setCountOfFemales] = useState(0);
+  const [countOfMales, setCountOfMales] = useState(0);
+  const [countOfOthers, setCountOfOthers] = useState(0);
   const [countOfTests, setcountOfTests] = useState(0); 
   const [countOfTestsTime, setcountOfTestsTime] = useState(0); 
   const [countOfCorrectTests, setcountOfCorrectTests] = useState(0); 
   const [countOfBadTests, setcountOfBadTests] = useState(0); 
   const [colorTableDataAdmin, setColorTableDataAdmin] = useState([]);         // State for colors table initialized as empty array
+  const [colorTestCount, setColorTestCount] = useState(0);
+  const [colorTestTime, setColorTestTime] = useState(0);
+  const [colorTestAvg, setColorTestAvg] = useState(0);
   const [taintTableDataAdmin, setTaintTableDataAdmin] = useState([]);         // State for taints table initialized as empty array
+  const [taintTestCount, setTaintTestCount] = useState(0);
+  const [taintTestTime, setTaintTestTime] = useState(0);
+  const [taintTestAvg, setTaintTestAvg] = useState(0);
   const [ishiharaTableDataAdmin, setIshiharaTableDataAdmin] = useState([]);   // State for Ishihara table initialized as empty array
+  const [ishiharaTestCount, setIshiharaTestCount] = useState(0);
+  const [ishiharaTestTime, setIshiharaTestTime] = useState(0);
+  const [ishiharaTestAvg, setIshiharaTestAvg] = useState(0);
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
@@ -39,7 +51,7 @@ const MainPage = () => {
   
 
   const fetchAdminData = (username) => {
-    fetch('http://192.168.0.166:5000/api/admin', {
+    fetch('http://localhost:5000/api/admin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -61,13 +73,25 @@ const MainPage = () => {
             console.log(data)
             // fetch data: 
             setcountOfUsers(data.users);                          // count of users
+            setCountOfFemales(data.females);
+            setCountOfMales(data.males);
+            setCountOfOthers(data.others);
             setcountOfTests(data.tests);                          // count of all tests
             setcountOfTestsTime(data.tests_time)                  // time of all tests
             setcountOfCorrectTests(data.correct_tests);           // count of % correct test
             setcountOfBadTests(data.error_tests);                 // count of % tests with at least 1 error
             setColorTableDataAdmin(data.color_test || [])         // all color test results
+            setColorTestCount(data.color_test_num);
+            setColorTestTime(data.color_test_time);
+            setColorTestAvg(data.color_test_avg);
             setIshiharaTableDataAdmin(data.ishihara_test || [])   // all ishihara test results
+            setIshiharaTestCount(data.ishihara_test_num);
+            setIshiharaTestTime(data.ishihara_test_time);
+            setIshiharaTestAvg(data.ishihara_test_avg);
             setTaintTableDataAdmin(data.taint_test || [])         // all taint test results
+            setTaintTestCount(data.taint_test_num);
+            setTaintTestTime(data.taint_test_time);
+            setTaintTestAvg(data.taint_test_avg);
           }
         } catch (err) {
           console.error('Error parsing data:', err);
@@ -149,37 +173,133 @@ const MainPage = () => {
           <div className="main-dashboard">
 
           {activeTable === 'dashboard' && (
-            <>
-            <div className="stats-grid">
-              <div className="stat-card">
-                <h3>Użytkownicy</h3>
-                <p>{countOfUsers}</p>
-              </div>
-              <div className="stat-card">
-                <h3>Zarejestrowane testy</h3>
-                <p>{countOfTests}</p>
-              </div>
-              <div className="stat-card">
-                <h3>Czas spędzony w testach</h3>
-                <p>{countOfTestsTime}min</p>
-              </div>
-              <div className="stat-card">
-                <h3>Poprawne odpowiedzi</h3>
-                <p>{countOfCorrectTests}%</p>
-              </div>
-              <div className="stat-card">
-                <h3>Błędne odpowiedzi</h3>
-                <p>{countOfBadTests}%</p>
-              </div>
-            </div>
+  <>
+    <h1 className="section-title">Dashboard</h1>
+    <h2 className="section-title">Ogólne statystyki uzytkowników</h2>
+    <div className="stats-grid">
+      <div className="stat-card">
+        <h3>Użytkownicy</h3>
+        <p>{countOfUsers}</p>
+      </div>
+      <div className="stat-card">
+        <h3>Kobiety</h3>
+        <p>{countOfFemales}</p>
+      </div>
+      <div className="stat-card">
+        <h3>Męzczyźni</h3>
+        <p>{countOfMales}</p>
+      </div>
+      <div className="stat-card">
+        <h3>Inne płci</h3>
+        <p>{countOfOthers}</p>
+      </div>
+    </div>
 
-            <div className="chart-section">
-              <h3>Wykres Aktywności</h3>
-              {/* Można tutaj dodać komponenty do wykresów */}
-              <div className="chart-placeholder">[Wykres Aktywności]</div>
-            </div>
-            </>
-          )}
+    {/* Divider line */}
+    <div className="divider"></div>
+
+    <h2 className="section-title">Podział wiekowy użytkowników</h2>
+    <div className="stats-grid">
+      <div className="stat-card">
+        <h3>Osoby ponizej 18 lat</h3>
+        <p> N/A </p>
+      </div>
+      <div className="stat-card">
+        <h3>Osoby 18 - 35 lat</h3>
+        <p> N/A </p>
+      </div>
+      <div className="stat-card">
+        <h3>Osoby w przedziale 36 - 60 lat</h3>
+        <p> N/A </p>
+      </div>
+      <div className="stat-card">
+        <h3>Osoby powyzej 60 lat</h3>
+        <p> N/A </p>
+      </div>
+    </div>
+
+    {/* Divider line */}
+    <div className="divider"></div>
+
+    <h2 className="section-title">Ogólne statystyki testów</h2>
+    <div className="stats-grid">
+      <div className="stat-card">
+        <h3>Zarejestrowane testy</h3>
+        <p>{countOfTests}</p>
+      </div>
+      <div className="stat-card">
+        <h3>Czas spędzony w testach</h3>
+        <p>{countOfTestsTime}min</p>
+      </div>
+      <div className="stat-card">
+        <h3>Poprawne odpowiedzi</h3>
+        <p>{countOfCorrectTests}%</p>
+      </div>
+      <div className="stat-card">
+        <h3>Błędne odpowiedzi</h3>
+        <p>{countOfBadTests}%</p>
+      </div>
+    </div>
+
+    {/* Divider line */}
+    <div className="divider"></div>
+
+    <h2 className="section-title">Statystyki: Test kolorów</h2>
+    <div className="stats-grid">
+      <div className="stat-card">
+        <h3>Zarejestrowane testy</h3>
+        <p>{colorTestCount}</p>
+      </div>
+      <div className="stat-card">
+        <h3>Czas spędzony podczas testu</h3>
+        <p>{colorTestTime} min</p>
+      </div>
+      <div className="stat-card">
+        <h3>Średnia ilość błędów</h3>
+        <p>{colorTestAvg}</p>
+      </div>
+    </div>
+
+    {/* Divider line */}
+    <div className="divider"></div>
+
+    <h2 className="section-title">Statystyki: Test barw</h2>
+    <div className="stats-grid">
+      <div className="stat-card">
+        <h3>Zarejestrowane testy</h3>
+        <p>{taintTestCount}</p>
+      </div>
+      <div className="stat-card">
+        <h3>Czas spędzony podczas testu</h3>
+        <p>{taintTestTime} min</p>
+      </div>
+      <div className="stat-card">
+        <h3>Średnia ilość błędów</h3>
+        <p>{taintTestAvg}</p>
+      </div>
+    </div>
+
+    {/* Divider line */}
+    <div className="divider"></div>
+
+    <h2 className="section-title">Statystyki: Test Ishihary</h2>
+    <div className="stats-grid">
+      <div className="stat-card">
+        <h3>Zarejestrowane testy</h3>
+        <p>{ishiharaTestCount}</p>
+      </div>
+      <div className="stat-card">
+        <h3>Czas spędzony podczas testu</h3>
+        <p>{ishiharaTestTime} min</p>
+      </div>
+      <div className="stat-card">
+        <h3>Średnia ilość błędów</h3>
+        <p>{ishiharaTestAvg}</p>
+      </div>
+    </div>
+  </>
+)}
+
 
             {activeTable === 'users_results' && (
             <>

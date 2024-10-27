@@ -11,7 +11,7 @@ public class LogOut : MonoBehaviour
 	[SerializeField] private GameObject menuCanvas;
     public void LogOutAction()
     {
-        LoggedEmail.loggedUserEmail = null;
+        LoggedUsername.loggedUserName = null;
         menuCanvas.SetActive(false);
         loginCanvas.SetActive(true);
     }
