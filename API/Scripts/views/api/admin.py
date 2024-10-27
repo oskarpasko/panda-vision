@@ -92,7 +92,7 @@ def get_color_test_details(cursor):
     time = result['suma'] if 'suma' in result else None
     srednia = result['srednia'] if 'srednia' in result else None
     return liczba, time, srednia
-#Get details data from taint test
+# Get details data from taint test
 def get_taint_test_details(cursor):
     color_test_details = "SELECT count(*) as liczba, sum(time_of_test) as suma, AVG(error_colors) as srednia FROM taint_test_user_results;"
     cursor.execute(color_test_details)
@@ -101,7 +101,7 @@ def get_taint_test_details(cursor):
     time = result['suma'] if 'suma' in result else None
     srednia = result['srednia'] if 'srednia' in result else None
     return liczba, time, srednia
-#Get details data from ishihara's test
+# Get details data from ishihara's test
 def get_ishihara_test_details(cursor):
     color_test_details = "SELECT count(*) as liczba, sum(time_of_test) as suma, AVG(error_colors) as srednia FROM ishihara_test_results;"
     cursor.execute(color_test_details)
@@ -110,6 +110,20 @@ def get_ishihara_test_details(cursor):
     time = result['suma'] if 'suma' in result else None
     srednia = result['srednia'] if 'srednia' in result else None
     return liczba, time, srednia
+# Get users age brackets
+def get_users_brackets(cursor):
+    queries = {
+        "users_18": "SELECT COUNT(*) as suma FROM pandavision.users WHERE TIMESTAMPDIFF(YEAR, date_of_birth, CURDATE()) < 18;",
+        "users_18_35": "SELECT COUNT(*) as suma FROM pandavision.users WHERE TIMESTAMPDIFF(YEAR, date_of_birth, CURDATE()) between 18 and 35;",
+        "users_36_60": "SELECT COUNT(*) as suma FROM pandavision.users WHERE TIMESTAMPDIFF(YEAR, date_of_birth, CURDATE()) between 36 and 60;",
+        "users_60": "SELECT COUNT(*) as suma FROM pandavision.users WHERE TIMESTAMPDIFF(YEAR, date_of_birth, CURDATE()) > 60;",
+    }
+    results = {}
+    for key, query in queries.items():
+        cursor.execute(query)
+        results[key] = cursor.fetchall()
+    return results
+
 
 @api_admin_blueprint.route('/api/admin', methods=['POST'])
 @cross_origin()
@@ -129,8 +143,14 @@ def get_data():
         color_num, color_time, color_avg = get_color_test_details(cursor)
         taint_num, taint_time, taint_avg = get_taint_test_details(cursor)
         ishihara_num, ishihara_time, ishiahara_avg = get_ishihara_test_details(cursor)
+        age_brackets = get_users_brackets(cursor)
         # Retrieve counts from the database using the helper functions
         users = get_user_count(cursor)
+        print(age_brackets)
+        users_18 = age_brackets['users_18']
+        users_18_35 = age_brackets['users_18_35']
+        users_36_60 = age_brackets['users_36_60']
+        users_60 = age_brackets['users_60']
         females = get_female_count(cursor)
         males = get_male_count(cursor)
         others = get_other_sex_count(cursor)
@@ -154,9 +174,15 @@ def get_data():
     # Close the database connection
     connection.close()
 
+    print(users_18[0]['suma'])
+
     # Return the result as JSON
     return jsonify({
         'users': users,
+        'users_18': users_18[0]['suma'],
+        'users_18_35': users_18_35[0]['suma'],
+        'users_36_60': users_36_60[0]['suma'],
+        'users_60': users_60[0]['suma'],
         'females': females,
         'males': males,
         'others': others,

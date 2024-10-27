@@ -14,6 +14,10 @@ const MainPage = () => {
   const [countOfFemales, setCountOfFemales] = useState(0);
   const [countOfMales, setCountOfMales] = useState(0);
   const [countOfOthers, setCountOfOthers] = useState(0);
+  const [usersUnder18, setUsersUnder18] = useState(0);
+  const [usersBetween1835, setUsersBetween1835] = useState(0);
+  const [usersBetween3660, setUsersBetween3660] = useState(0);
+  const [usersUp60, setusersUp60] = useState(0);
   const [countOfTests, setcountOfTests] = useState(0); 
   const [countOfTestsTime, setcountOfTestsTime] = useState(0); 
   const [countOfCorrectTests, setcountOfCorrectTests] = useState(0); 
@@ -51,7 +55,7 @@ const MainPage = () => {
   
 
   const fetchAdminData = (username) => {
-    fetch('http://localhost:5000/api/admin', {
+    fetch('http://192.168.0.166:5000/api/admin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -76,6 +80,10 @@ const MainPage = () => {
             setCountOfFemales(data.females);
             setCountOfMales(data.males);
             setCountOfOthers(data.others);
+            setUsersUnder18(data.users_18);
+            setUsersBetween1835(data.users_18_35);
+            setUsersBetween3660(data.users_36_60);
+            setusersUp60(data.users_60);
             setcountOfTests(data.tests);                          // count of all tests
             setcountOfTestsTime(data.tests_time)                  // time of all tests
             setcountOfCorrectTests(data.correct_tests);           // count of % correct test
@@ -202,19 +210,19 @@ const MainPage = () => {
     <div className="stats-grid">
       <div className="stat-card">
         <h3>Osoby ponizej 18 lat</h3>
-        <p> N/A </p>
+        <p>{usersUnder18}</p>
       </div>
       <div className="stat-card">
         <h3>Osoby 18 - 35 lat</h3>
-        <p> N/A </p>
+        <p>{usersBetween1835}</p>
       </div>
       <div className="stat-card">
-        <h3>Osoby w przedziale 36 - 60 lat</h3>
-        <p> N/A </p>
+        <h3>Osoby 36 - 60 lat</h3>
+        <p>{usersBetween3660}</p>
       </div>
       <div className="stat-card">
         <h3>Osoby powyzej 60 lat</h3>
-        <p> N/A </p>
+        <p>{usersUp60}</p>
       </div>
     </div>
 
