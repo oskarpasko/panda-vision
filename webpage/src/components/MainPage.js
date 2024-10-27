@@ -3,34 +3,44 @@ import './../styles/MainPage.scss'; // Import styles
 import logo from '../images/logo.png'; // Ensure the correct path to the logo
 
 const MainPage = () => {
+  /* GENERAL */
   const [userName, setUserName] = useState('');
   const [role, setRole] = useState('');
-  const [colorTableData, setColorTableData] = useState([]);         // State for colors table initialized as empty array
-  const [taintTableData, setTaintTableData] = useState([]);         // State for taints table initialized as empty array
-  const [ishiharaTableData, setIshiharaTableData] = useState([]);   // State for Ishihara table initialized as empty array
   const [activeTable, setActiveTable] = useState(null);  // Initialize as null
-
+  /* ===== DATAS FOR USERS ===== */
+  const [colorTableData, setColorTableData] = useState([]);        
+  const [taintTableData, setTaintTableData] = useState([]);        
+  const [ishiharaTableData, setIshiharaTableData] = useState([]);   
+  /* ===== DATAS FOR ADMIN ===== */
+  /* USERS */
   const [countOfUsers, setcountOfUsers] = useState(0); 
+  /* USERS SEX */
   const [countOfFemales, setCountOfFemales] = useState(0);
   const [countOfMales, setCountOfMales] = useState(0);
   const [countOfOthers, setCountOfOthers] = useState(0);
+  /* AGE BRACKETS */
   const [usersUnder18, setUsersUnder18] = useState(0);
   const [usersBetween1835, setUsersBetween1835] = useState(0);
   const [usersBetween3660, setUsersBetween3660] = useState(0);
   const [usersUp60, setusersUp60] = useState(0);
+  /* GENERAL TEST STATS */
   const [countOfTests, setcountOfTests] = useState(0); 
   const [countOfTestsTime, setcountOfTestsTime] = useState(0); 
   const [countOfCorrectTests, setcountOfCorrectTests] = useState(0); 
   const [countOfBadTests, setcountOfBadTests] = useState(0); 
-  const [colorTableDataAdmin, setColorTableDataAdmin] = useState([]);         // State for colors table initialized as empty array
+  /* DATA FROM ALL TESTS TO THE TABLES */
+  const [colorTableDataAdmin, setColorTableDataAdmin] = useState([]);   
+  const [taintTableDataAdmin, setTaintTableDataAdmin] = useState([]);  
+  const [ishiharaTableDataAdmin, setIshiharaTableDataAdmin] = useState([]);     
+  /* COLOR TEST STATS */   
   const [colorTestCount, setColorTestCount] = useState(0);
   const [colorTestTime, setColorTestTime] = useState(0);
   const [colorTestAvg, setColorTestAvg] = useState(0);
-  const [taintTableDataAdmin, setTaintTableDataAdmin] = useState([]);         // State for taints table initialized as empty array
+  /* TAINT TEST STATS */
   const [taintTestCount, setTaintTestCount] = useState(0);
   const [taintTestTime, setTaintTestTime] = useState(0);
   const [taintTestAvg, setTaintTestAvg] = useState(0);
-  const [ishiharaTableDataAdmin, setIshiharaTableDataAdmin] = useState([]);   // State for Ishihara table initialized as empty array
+  /* ISHIHARA TEST STATS */
   const [ishiharaTestCount, setIshiharaTestCount] = useState(0);
   const [ishiharaTestTime, setIshiharaTestTime] = useState(0);
   const [ishiharaTestAvg, setIshiharaTestAvg] = useState(0);
@@ -53,7 +63,7 @@ const MainPage = () => {
     }
   }, []);
   
-
+  /* ===== FETCHING FOR ADMIN ===== */
   const fetchAdminData = (username) => {
     fetch('http://192.168.0.166:5000/api/admin', {
       method: 'POST',
@@ -75,31 +85,38 @@ const MainPage = () => {
             console.error('Non-JSON response:', data);  // Log non-JSON response
           } else {
             console.log(data)
-            // fetch data: 
+            /* ===== FECTH DATAS ===== */
             setcountOfUsers(data.users);                          // count of users
-            setCountOfFemales(data.females);
-            setCountOfMales(data.males);
-            setCountOfOthers(data.others);
-            setUsersUnder18(data.users_18);
-            setUsersBetween1835(data.users_18_35);
-            setUsersBetween3660(data.users_36_60);
-            setusersUp60(data.users_60);
+
+            setUsersUnder18(data.users_18);                       // amount of users under 18 yo
+            setUsersBetween1835(data.users_18_35);                // amount of users between 18 and 35 yo
+            setUsersBetween3660(data.users_36_60);                // amount of users between 36 and 60 yo
+            setusersUp60(data.users_60);                          // amount of users up to 60 yo
+
+            setCountOfFemales(data.females);                      // amount of females users
+            setCountOfMales(data.males);                          // amount of males users
+            setCountOfOthers(data.others);                        // amount of users with other sex
+
             setcountOfTests(data.tests);                          // count of all tests
             setcountOfTestsTime(data.tests_time)                  // time of all tests
             setcountOfCorrectTests(data.correct_tests);           // count of % correct test
             setcountOfBadTests(data.error_tests);                 // count of % tests with at least 1 error
+            
             setColorTableDataAdmin(data.color_test || [])         // all color test results
-            setColorTestCount(data.color_test_num);
-            setColorTestTime(data.color_test_time);
-            setColorTestAvg(data.color_test_avg);
             setIshiharaTableDataAdmin(data.ishihara_test || [])   // all ishihara test results
-            setIshiharaTestCount(data.ishihara_test_num);
-            setIshiharaTestTime(data.ishihara_test_time);
-            setIshiharaTestAvg(data.ishihara_test_avg);
             setTaintTableDataAdmin(data.taint_test || [])         // all taint test results
-            setTaintTestCount(data.taint_test_num);
-            setTaintTestTime(data.taint_test_time);
-            setTaintTestAvg(data.taint_test_avg);
+
+            setColorTestCount(data.color_test_num);               // amount of all done color tests
+            setColorTestTime(data.color_test_time);               // time spend during color test
+            setColorTestAvg(data.color_test_avg);                 // average errors in color test
+            
+            setIshiharaTestCount(data.ishihara_test_num);         // amount of all done taint tests
+            setIshiharaTestTime(data.ishihara_test_time);         // time spend during taint test
+            setIshiharaTestAvg(data.ishihara_test_avg);           // average errors in taint test
+            
+            setTaintTestCount(data.taint_test_num);               // amount of all done ishihara tests
+            setTaintTestTime(data.taint_test_time);               // time spend during ishihara test
+            setTaintTestAvg(data.taint_test_avg);                 // average errors in ishihara test
           }
         } catch (err) {
           console.error('Error parsing data:', err);
@@ -107,7 +124,7 @@ const MainPage = () => {
       })
       .catch((error) => console.error('Error fetching data:', error));
   };
-
+  /* ===== FETCHING FOR USER ===== */
   const fetchUserData = (username) => {
     fetch('http://192.168.0.166:5000/api/main', {
       method: 'POST',
@@ -128,8 +145,8 @@ const MainPage = () => {
           if (typeof data === 'string') {
             console.error('Non-JSON response:', data);  // Log non-JSON response
           } else {
-            setColorTableData(data.colors || []);  // Set the fetched color data or empty array in the state
-            setTaintTableData(data.taints || []);  // Set the fetched taints data or empty array in the state
+            setColorTableData(data.colors || []);       // Set the fetched color data or empty array in the state
+            setTaintTableData(data.taints || []);       // Set the fetched taints data or empty array in the state
             setIshiharaTableData(data.ishihara || []);  // Set the fetched Ishihara data or empty array in the state
           }
         } catch (err) {
@@ -138,12 +155,12 @@ const MainPage = () => {
       })
       .catch((error) => console.error('Error fetching data:', error));
   };
-
+  /* ===== LOGOUT ===== */
   const handleLogout = () => {
     localStorage.removeItem('user'); // Remove user from localStorage
     window.location.href = "/login"; // Redirect to login page
   };
-
+  /* ===== DATE FORMAT ===== */
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('pl-PL', {
@@ -153,11 +170,12 @@ const MainPage = () => {
     });
   };
 
-  // Function to switch between tables
+  /* ===== SWITCH TABLES ===== */
   const switchTable = (table) => {
     setActiveTable(table); // Set the active table
   };
 
+  /* ===== RETURN ADMIN HTML ===== */
   if (role === 'admin') {
     return (
       <div className="admin-page">
@@ -411,7 +429,7 @@ const MainPage = () => {
     );
   }
 
-  // User page
+  /* ===== RETURN USER HTML ===== */
   return (
     <div className="main-page">
       <header className="header">
