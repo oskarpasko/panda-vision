@@ -1,19 +1,10 @@
-Database (refactor)
-users:
-  - username (unique, not null,)
-  - password
-  - birthday
-  - sex (female, male, other) -> will not add 'other' to the all statistics
-  - role ENUM('admin', 'role') -> dont need have more than 2 roles so dont have to create extra table
-all other tables: 
-  have to change join from 'email' to username
+Wykresy:
+  - wykres przedstawiający średnią ilość punktów ze wszystkich testów w każdym przedziale wiekowym (1)
+  - wykres przedstawijacy średnią ilość punktów z konkretnego testu w kazdym przedziale wiekowyn (3)
+  - wykres ze spendzonym czasem we wszsytkich testach w każdym przedziale wiekowym (1)
+  - wykres ze średnim czasem w każdym teście w każdym przedziale wiekowym (3)
 
-WebPage (refactor)
-  - change register endpoint and front
-  - change login endpoint and front
+Zastanowić się czy TaintTestu dodatkowo nie podzielić na wykresy dla kazdego z kolorów oraz nie ppdzielić testu w dashbordzie na poszczególne kolory
+(w końcu testujemy 3 inne kolory poniekąd 3 różne testy)
 
-BackEnd
-  - change queries in all endpoints
-
-Application
-  - change login endpoint and front in app
+ilość wykresów do zrobienia w sumie: 8
