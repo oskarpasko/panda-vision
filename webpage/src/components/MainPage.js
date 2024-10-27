@@ -199,131 +199,131 @@ const MainPage = () => {
           <div className="main-dashboard">
 
           {activeTable === 'dashboard' && (
-  <>
-    <h1 className="section-title">Dashboard</h1>
-    <h2 className="section-title">Ogólne statystyki uzytkowników</h2>
-    <div className="stats-grid">
-      <div className="stat-card">
-        <h3>Użytkownicy</h3>
-        <p>{countOfUsers}</p>
-      </div>
-      <div className="stat-card">
-        <h3>Kobiety</h3>
-        <p>{countOfFemales}</p>
-      </div>
-      <div className="stat-card">
-        <h3>Męzczyźni</h3>
-        <p>{countOfMales}</p>
-      </div>
-      <div className="stat-card">
-        <h3>Inne płci</h3>
-        <p>{countOfOthers}</p>
-      </div>
-    </div>
+            <>
+              <h1 className="section-title">Dashboard</h1>
+              <h2 className="section-title">Ogólne statystyki uzytkowników</h2>
+              <div className="stats-grid">
+                <div className="stat-card">
+                  <h3>Użytkownicy</h3>
+                  <p>{countOfUsers}</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Kobiety</h3>
+                  <p>{countOfFemales}</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Męzczyźni</h3>
+                  <p>{countOfMales}</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Inne płci</h3>
+                  <p>{countOfOthers}</p>
+                </div>
+              </div>
 
-    {/* Divider line */}
-    <div className="divider"></div>
+              {/* Divider line */}
+              <div className="divider"></div>
 
-    <h2 className="section-title">Podział wiekowy użytkowników</h2>
-    <div className="stats-grid">
-      <div className="stat-card">
-        <h3>Osoby ponizej 18 lat</h3>
-        <p>{usersUnder18}</p>
-      </div>
-      <div className="stat-card">
-        <h3>Osoby 18 - 35 lat</h3>
-        <p>{usersBetween1835}</p>
-      </div>
-      <div className="stat-card">
-        <h3>Osoby 36 - 60 lat</h3>
-        <p>{usersBetween3660}</p>
-      </div>
-      <div className="stat-card">
-        <h3>Osoby powyzej 60 lat</h3>
-        <p>{usersUp60}</p>
-      </div>
-    </div>
+              <h2 className="section-title">Podział wiekowy użytkowników</h2>
+              <div className="stats-grid">
+                <div className="stat-card">
+                  <h3>Osoby ponizej 18 lat</h3>
+                  <p>{usersUnder18}</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Osoby 18 - 35 lat</h3>
+                  <p>{usersBetween1835}</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Osoby 36 - 60 lat</h3>
+                  <p>{usersBetween3660}</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Osoby powyzej 60 lat</h3>
+                  <p>{usersUp60}</p>
+                </div>
+              </div>
 
-    {/* Divider line */}
-    <div className="divider"></div>
+              {/* Divider line */}
+              <div className="divider"></div>
 
-    <h2 className="section-title">Ogólne statystyki testów</h2>
-    <div className="stats-grid">
-      <div className="stat-card">
-        <h3>Zarejestrowane testy</h3>
-        <p>{countOfTests}</p>
-      </div>
-      <div className="stat-card">
-        <h3>Czas spędzony w testach</h3>
-        <p>{countOfTestsTime}min</p>
-      </div>
-      <div className="stat-card">
-        <h3>Poprawne odpowiedzi</h3>
-        <p>{countOfCorrectTests}%</p>
-      </div>
-      <div className="stat-card">
-        <h3>Błędne odpowiedzi</h3>
-        <p>{countOfBadTests}%</p>
-      </div>
-    </div>
+              <h2 className="section-title">Ogólne statystyki testów</h2>
+              <div className="stats-grid">
+                <div className="stat-card">
+                  <h3>Zarejestrowane testy</h3>
+                  <p>{countOfTests}</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Czas spędzony w testach</h3>
+                  <p>{countOfTestsTime}min</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Poprawne odpowiedzi</h3>
+                  <p>{countOfCorrectTests}%</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Błędne odpowiedzi</h3>
+                  <p>{countOfBadTests}%</p>
+                </div>
+              </div>
 
-    {/* Divider line */}
-    <div className="divider"></div>
+              {/* Divider line */}
+              <div className="divider"></div>
 
-    <h2 className="section-title">Statystyki: Test kolorów</h2>
-    <div className="stats-grid">
-      <div className="stat-card">
-        <h3>Zarejestrowane testy</h3>
-        <p>{colorTestCount}</p>
-      </div>
-      <div className="stat-card">
-        <h3>Czas spędzony podczas testu</h3>
-        <p>{colorTestTime} min</p>
-      </div>
-      <div className="stat-card">
-        <h3>Średnia ilość błędów</h3>
-        <p>{colorTestAvg}</p>
-      </div>
-    </div>
+              <h2 className="section-title">Statystyki: Test kolorów</h2>
+              <div className="stats-grid">
+                <div className="stat-card">
+                  <h3>Zarejestrowane testy</h3>
+                  <p>{colorTestCount}</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Czas spędzony podczas testu</h3>
+                  <p>{colorTestTime} min</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Średnia ilość błędów</h3>
+                  <p>{colorTestAvg}</p>
+                </div>
+              </div>
 
-    {/* Divider line */}
-    <div className="divider"></div>
+              {/* Divider line */}
+              <div className="divider"></div>
 
-    <h2 className="section-title">Statystyki: Test barw</h2>
-    <div className="stats-grid">
-      <div className="stat-card">
-        <h3>Zarejestrowane testy</h3>
-        <p>{taintTestCount}</p>
-      </div>
-      <div className="stat-card">
-        <h3>Czas spędzony podczas testu</h3>
-        <p>{taintTestTime} min</p>
-      </div>
-      <div className="stat-card">
-        <h3>Średnia ilość błędów</h3>
-        <p>{taintTestAvg}</p>
-      </div>
-    </div>
+              <h2 className="section-title">Statystyki: Test barw</h2>
+              <div className="stats-grid">
+                <div className="stat-card">
+                  <h3>Zarejestrowane testy</h3>
+                  <p>{taintTestCount}</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Czas spędzony podczas testu</h3>
+                  <p>{taintTestTime} min</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Średnia ilość błędów</h3>
+                  <p>{taintTestAvg}</p>
+                </div>
+              </div>
 
-    {/* Divider line */}
-    <div className="divider"></div>
+              {/* Divider line */}
+              <div className="divider"></div>
 
-    <h2 className="section-title">Statystyki: Test Ishihary</h2>
-    <div className="stats-grid">
-      <div className="stat-card">
-        <h3>Zarejestrowane testy</h3>
-        <p>{ishiharaTestCount}</p>
-      </div>
-      <div className="stat-card">
-        <h3>Czas spędzony podczas testu</h3>
-        <p>{ishiharaTestTime} min</p>
-      </div>
-      <div className="stat-card">
-        <h3>Średnia ilość błędów</h3>
-        <p>{ishiharaTestAvg}</p>
-      </div>
-    </div>
-  </>
+              <h2 className="section-title">Statystyki: Test Ishihary</h2>
+              <div className="stats-grid">
+                <div className="stat-card">
+                  <h3>Zarejestrowane testy</h3>
+                  <p>{ishiharaTestCount}</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Czas spędzony podczas testu</h3>
+                  <p>{ishiharaTestTime} min</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Średnia ilość błędów</h3>
+                  <p>{ishiharaTestAvg}</p>
+                </div>
+              </div>
+        </>
 )}
 
 
@@ -365,6 +365,7 @@ const MainPage = () => {
                     <th>Czas testu [ s ]</th>
                     <th>Poprawne odpowiedzi</th>
                     <th>Błędne odpowiedzi</th>
+                    <th>Testowany kolor</th>
                     <th>Uzytkownik</th>
                   </tr>
                 </thead>
@@ -376,6 +377,7 @@ const MainPage = () => {
                         <td>{row.time_of_test}</td>
                         <td>{row.correct_colors}</td>
                         <td>{row.error_colors}</td>
+                        <td>{row.error_log}</td>
                         <td>{row.user}</td>
                       </tr>
                     ))
@@ -493,6 +495,7 @@ const MainPage = () => {
                     <th>Czas testu [ s ]</th>
                     <th>Poprawne odpowiedzi</th>
                     <th>Błędne odpowiedzi</th>
+                    <th>Testowany kolor</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -503,6 +506,7 @@ const MainPage = () => {
                         <td>{row.time_of_test}</td>
                         <td>{row.correct_colors}</td>
                         <td>{row.error_colors}</td>
+                        <td>{row.error_log}</td>
                       </tr>
                     ))
                   ) : (
