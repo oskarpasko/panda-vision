@@ -11,13 +11,25 @@ const MainPage = () => {
   const [activeTable, setActiveTable] = useState(null);  // Initialize as null
 
   const [countOfUsers, setcountOfUsers] = useState(0); 
+  const [countOfFemales, setCountOfFemales] = useState(0);
+  const [countOfMales, setCountOfMales] = useState(0);
+  const [countOfOthers, setCountOfOthers] = useState(0);
   const [countOfTests, setcountOfTests] = useState(0); 
   const [countOfTestsTime, setcountOfTestsTime] = useState(0); 
   const [countOfCorrectTests, setcountOfCorrectTests] = useState(0); 
   const [countOfBadTests, setcountOfBadTests] = useState(0); 
   const [colorTableDataAdmin, setColorTableDataAdmin] = useState([]);         // State for colors table initialized as empty array
+  const [colorTestCount, setColorTestCount] = useState(0);
+  const [colorTestTime, setColorTestTime] = useState(0);
+  const [colorTestAvg, setColorTestAvg] = useState(0);
   const [taintTableDataAdmin, setTaintTableDataAdmin] = useState([]);         // State for taints table initialized as empty array
+  const [taintTestCount, setTaintTestCount] = useState(0);
+  const [taintTestTime, setTaintTestTime] = useState(0);
+  const [taintTestAvg, setTaintTestAvg] = useState(0);
   const [ishiharaTableDataAdmin, setIshiharaTableDataAdmin] = useState([]);   // State for Ishihara table initialized as empty array
+  const [ishiharaTestCount, setIshiharaTestCount] = useState(0);
+  const [ishiharaTestTime, setIshiharaTestTime] = useState(0);
+  const [ishiharaTestAvg, setIshiharaTestAvg] = useState(0);
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
@@ -61,13 +73,25 @@ const MainPage = () => {
             console.log(data)
             // fetch data: 
             setcountOfUsers(data.users);                          // count of users
+            setCountOfFemales(data.females);
+            setCountOfMales(data.males);
+            setCountOfOthers(data.others);
             setcountOfTests(data.tests);                          // count of all tests
             setcountOfTestsTime(data.tests_time)                  // time of all tests
             setcountOfCorrectTests(data.correct_tests);           // count of % correct test
             setcountOfBadTests(data.error_tests);                 // count of % tests with at least 1 error
             setColorTableDataAdmin(data.color_test || [])         // all color test results
+            setColorTestCount(data.color_test_num);
+            setColorTestTime(data.color_test_time);
+            setColorTestAvg(data.color_test_avg);
             setIshiharaTableDataAdmin(data.ishihara_test || [])   // all ishihara test results
+            setIshiharaTestCount(data.ishihara_test_num);
+            setIshiharaTestTime(data.ishihara_test_time);
+            setIshiharaTestAvg(data.ishihara_test_avg);
             setTaintTableDataAdmin(data.taint_test || [])         // all taint test results
+            setTaintTestCount(data.taint_test_num);
+            setTaintTestTime(data.taint_test_time);
+            setTaintTestAvg(data.taint_test_avg);
           }
         } catch (err) {
           console.error('Error parsing data:', err);
@@ -159,15 +183,15 @@ const MainPage = () => {
       </div>
       <div className="stat-card">
         <h3>Kobiety</h3>
-        <p> N/A </p>
+        <p>{countOfFemales}</p>
       </div>
       <div className="stat-card">
         <h3>Męzczyźni</h3>
-        <p> N/A </p>
+        <p>{countOfMales}</p>
       </div>
       <div className="stat-card">
         <h3>Inne płci</h3>
-        <p> N/A </p>
+        <p>{countOfOthers}</p>
       </div>
     </div>
 
@@ -224,15 +248,15 @@ const MainPage = () => {
     <div className="stats-grid">
       <div className="stat-card">
         <h3>Zarejestrowane testy</h3>
-        <p> N/A </p>
+        <p>{colorTestCount}</p>
       </div>
       <div className="stat-card">
         <h3>Czas spędzony podczas testu</h3>
-        <p> N/A </p>
+        <p>{colorTestTime} min</p>
       </div>
       <div className="stat-card">
         <h3>Średnia ilość błędów</h3>
-        <p> N/A </p>
+        <p>{colorTestAvg}</p>
       </div>
     </div>
 
@@ -243,15 +267,15 @@ const MainPage = () => {
     <div className="stats-grid">
       <div className="stat-card">
         <h3>Zarejestrowane testy</h3>
-        <p> N/A </p>
+        <p>{taintTestCount}</p>
       </div>
       <div className="stat-card">
         <h3>Czas spędzony podczas testu</h3>
-        <p> N/A </p>
+        <p>{taintTestTime} min</p>
       </div>
       <div className="stat-card">
         <h3>Średnia ilość błędów</h3>
-        <p> N/A </p>
+        <p>{taintTestAvg}</p>
       </div>
     </div>
 
@@ -262,15 +286,15 @@ const MainPage = () => {
     <div className="stats-grid">
       <div className="stat-card">
         <h3>Zarejestrowane testy</h3>
-        <p> N/A </p>
+        <p>{ishiharaTestCount}</p>
       </div>
       <div className="stat-card">
         <h3>Czas spędzony podczas testu</h3>
-        <p> N/A </p>
+        <p>{ishiharaTestTime} min</p>
       </div>
       <div className="stat-card">
         <h3>Średnia ilość błędów</h3>
-        <p> N/A </p>
+        <p>{ishiharaTestAvg}</p>
       </div>
     </div>
   </>
