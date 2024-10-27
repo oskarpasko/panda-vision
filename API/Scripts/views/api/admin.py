@@ -140,36 +140,45 @@ def get_data():
 
     # Use a context manager to ensure resources are cleaned up properly
     with connection.cursor(DictCursor) as cursor:
-        color_num, color_time, color_avg = get_color_test_details(cursor)
-        taint_num, taint_time, taint_avg = get_taint_test_details(cursor)
-        ishihara_num, ishihara_time, ishiahara_avg = get_ishihara_test_details(cursor)
-        age_brackets = get_users_brackets(cursor)
-        # Retrieve counts from the database using the helper functions
-        users = get_user_count(cursor)
-        print(age_brackets)
-        users_18 = age_brackets['users_18']
-        users_18_35 = age_brackets['users_18_35']
-        users_36_60 = age_brackets['users_36_60']
-        users_60 = age_brackets['users_60']
-        females = get_female_count(cursor)
-        males = get_male_count(cursor)
-        others = get_other_sex_count(cursor)
-        tests = get_total_test_count(cursor)
-        tests_time = get_total_test_time(cursor)
-        corrects = get_correct_test_count(cursor)
-        bads = get_error_test_count(cursor)
-        color_test = get_color_test_user_results(cursor)
-        color_test_num = color_num
-        color_test_time = color_time
-        color_test_avg = color_avg
-        ishihara_test = get_ishihara_test_results(cursor)
-        taint_test_num = taint_num
-        taint_test_time = taint_time
-        taint_test_avg = taint_avg
-        taint_test = get_taint_test_user_results(cursor)
-        ishihara_test_num = ishihara_num
-        ishihara_test_time = ishihara_time
-        ishihara_test_avg = ishiahara_avg
+        # == GETTING MULTIPLE VARIABLES FROM QUERY ==
+        color_num, color_time, color_avg = get_color_test_details(cursor)               # amount, time, avg errors of all color test
+        taint_num, taint_time, taint_avg = get_taint_test_details(cursor)               # amount, time, avg errors of all taint test
+        ishihara_num, ishihara_time, ishiahara_avg = get_ishihara_test_details(cursor)  # amount, time, avg errors of all ishihara test
+        age_brackets = get_users_brackets(cursor)                                       # amount of users with age brackets
+
+        # == GETTING SINGLE VARIABLE FROM QUERY ==
+        # -- users --
+        users = get_user_count(cursor)                           # amount of all users
+        # -- age brackets --
+        users_18 = age_brackets['users_18']                      # amount of users under 18 yo
+        users_18_35 = age_brackets['users_18_35']                # amount of users between 18 and 35 yo
+        users_36_60 = age_brackets['users_36_60']                # amount of users between 36 and 60 yo
+        users_60 = age_brackets['users_60']                      # amount of users up to 60 yo
+        # -- users sex --
+        females = get_female_count(cursor)                       # amount of females users
+        males = get_male_count(cursor)                           # amount of males users
+        others = get_other_sex_count(cursor)                     # amount of users with other sex
+        # -- general test stats --
+        tests = get_total_test_count(cursor)                     # amount of all tests
+        tests_time = get_total_test_time(cursor)                 # amount of all time during all tests
+        corrects = get_correct_test_count(cursor)                # % of all correct answers
+        bads = get_error_test_count(cursor)                      # % of all bad answers
+        # -- all tests to display in table --
+        color_test = get_color_test_user_results(cursor)         # all done color tests
+        taint_test = get_taint_test_user_results(cursor)         # all done taint tests
+        ishihara_test = get_ishihara_test_results(cursor)        # all done ishihara tests
+        # -- color test stats --
+        color_test_num = color_num                               # amount of all done color tests
+        color_test_time = color_time                             # time spend during color test
+        color_test_avg = color_avg                               # average errors in color test
+        # -- taint test stats --
+        taint_test_num = taint_num                               # amount of all done taint tests
+        taint_test_time = taint_time                             # time spend during taint test
+        taint_test_avg = taint_avg                               # average errors in taint test
+        # -- ishihara test stats --
+        ishihara_test_num = ishihara_num                         # amount of all done ishihara tests
+        ishihara_test_time = ishihara_time                       # time spend during ishihara test
+        ishihara_test_avg = ishiahara_avg                        # average errors in ishihara test
 
     # Close the database connection
     connection.close()
@@ -179,27 +188,34 @@ def get_data():
     # Return the result as JSON
     return jsonify({
         'users': users,
+        # -- age brackets --
         'users_18': users_18[0]['suma'],
         'users_18_35': users_18_35[0]['suma'],
         'users_36_60': users_36_60[0]['suma'],
         'users_60': users_60[0]['suma'],
+        # -- users sex --
         'females': females,
         'males': males,
         'others': others,
+        # -- general test stats --
         'tests': tests,
         'tests_time': round(tests_time / 60, 2),
         'correct_tests': round((corrects / tests) * 100, 2),
         'error_tests': round((bads / tests) * 100, 2),
+        # -- all tests to display in table --
         'color_test': color_test,
+        'ishihara_test': ishihara_test,
+        'taint_test': taint_test,
+        # -- color test stats --
         'color_test_num': color_test_num,
         'color_test_time': round(color_test_time / 60, 2),
         'color_test_avg': round(color_test_avg, 2),
-        'ishihara_test': ishihara_test,
-        'ishihara_test_num': ishihara_test_num,
-        'ishihara_test_time': round(ishihara_test_time / 60, 2),
-        'ishihara_test_avg': round(ishihara_test_avg, 2),
-        'taint_test': taint_test,
+        # -- taint test stats --
         'taint_test_num': taint_test_num,
         'taint_test_time': round(taint_test_time / 60, 2),
         'taint_test_avg': round(taint_test_avg, 2),
+        # -- ishihara test stats --
+        'ishihara_test_num': ishihara_test_num,
+        'ishihara_test_time': round(ishihara_test_time / 60, 2),
+        'ishihara_test_avg': round(ishihara_test_avg, 2),
     }), 200
