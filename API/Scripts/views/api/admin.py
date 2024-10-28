@@ -83,6 +83,7 @@ def get_taint_test_user_results(cursor):
     error_tests_query = "SELECT * FROM pandavision.taint_test_user_results;"
     cursor.execute(error_tests_query)
     return cursor.fetchall()
+
 # Get details data from color test
 def get_color_test_details(cursor):
     color_test_details = "SELECT count(*) as liczba, sum(time_of_test) as suma, AVG(error_colors) as srednia FROM color_test_user_results;"
@@ -95,6 +96,33 @@ def get_color_test_details(cursor):
 # Get details data from taint test
 def get_taint_test_details(cursor):
     color_test_details = "SELECT count(*) as liczba, sum(time_of_test) as suma, AVG(error_colors) as srednia FROM taint_test_user_results;"
+    cursor.execute(color_test_details)
+    result = cursor.fetchone()
+    liczba = result['liczba'] if 'liczba' in result else None
+    time = result['suma'] if 'suma' in result else None
+    srednia = result['srednia'] if 'srednia' in result else None
+    return liczba, time, srednia
+# Get details data from taint test woth color red
+def get_taint_test_red_details(cursor):
+    color_test_details = "SELECT count(*) as liczba, sum(time_of_test) as suma, AVG(error_colors) as srednia FROM taint_test_user_results WHERE error_log = 'RED';"
+    cursor.execute(color_test_details)
+    result = cursor.fetchone()
+    liczba = result['liczba'] if 'liczba' in result else None
+    time = result['suma'] if 'suma' in result else None
+    srednia = result['srednia'] if 'srednia' in result else None
+    return liczba, time, srednia
+# Get details data from taint test woth color green
+def get_taint_test_green_details(cursor):
+    color_test_details = "SELECT count(*) as liczba, sum(time_of_test) as suma, AVG(error_colors) as srednia FROM taint_test_user_results WHERE error_log = 'GREEN';"
+    cursor.execute(color_test_details)
+    result = cursor.fetchone()
+    liczba = result['liczba'] if 'liczba' in result else None
+    time = result['suma'] if 'suma' in result else None
+    srednia = result['srednia'] if 'srednia' in result else None
+    return liczba, time, srednia
+# Get details data from taint test woth color blue
+def get_taint_test_blue_details(cursor):
+    color_test_details = "SELECT count(*) as liczba, sum(time_of_test) as suma, AVG(error_colors) as srednia FROM taint_test_user_results WHERE error_log = 'BLUE';"
     cursor.execute(color_test_details)
     result = cursor.fetchone()
     liczba = result['liczba'] if 'liczba' in result else None
@@ -140,11 +168,14 @@ def get_data():
 
     # Use a context manager to ensure resources are cleaned up properly
     with connection.cursor(DictCursor) as cursor:
-        # == GETTING MULTIPLE VARIABLES FROM QUERY ==
-        color_num, color_time, color_avg = get_color_test_details(cursor)               # amount, time, avg errors of all color test
-        taint_num, taint_time, taint_avg = get_taint_test_details(cursor)               # amount, time, avg errors of all taint test
-        ishihara_num, ishihara_time, ishiahara_avg = get_ishihara_test_details(cursor)  # amount, time, avg errors of all ishihara test
-        age_brackets = get_users_brackets(cursor)                                       # amount of users with age brackets
+        # == GETTING MULTIPLE VARIABLES FROM QUERY ==   
+        color_num, color_time, color_avg = get_color_test_details(cursor)                           # amount, time, avg errors of all color test
+        taint_num, taint_time, taint_avg = get_taint_test_details(cursor)                           # amount, time, avg errors of all taint test
+        ishihara_num, ishihara_time, ishiahara_avg = get_ishihara_test_details(cursor)              # amount, time, avg errors of all ishihara test
+        taint_red_num, taint_red_time, taint_red_avg = get_taint_test_red_details(cursor)           # amount, time, `vg errors of red test in taint test`
+        taint_green_num, taint_green_time, taint_green_avg = get_taint_test_green_details(cursor)   # amount, time, `vg errors of green test in taint test`
+        taint_blue_num, taint_blue_time, taint_blue_avg = get_taint_test_blue_details(cursor)       # amount, time, `vg errors of blue test in taint test`
+        age_brackets = get_users_brackets(cursor)                                                   # amount of users with age brackets
 
         # == GETTING SINGLE VARIABLE FROM QUERY ==
         # -- users --
@@ -175,6 +206,19 @@ def get_data():
         taint_test_num = taint_num                               # amount of all done taint tests
         taint_test_time = taint_time                             # time spend during taint test
         taint_test_avg = taint_avg                               # average errors in taint test
+        # -- taint test stats with specific colors --
+            # -- red --
+        taint_test_red_num = taint_red_num                       # amount of all taint tests with color red
+        taint_test_red_time = taint_red_time                     # time spend during taint test with color red
+        taint_test_red_avg = taint_red_avg                     # average errors in taint test with color red
+            # -- green --
+        taint_test_green_num = taint_green_num                   # amount of all taint tests with color green
+        taint_test_green_time = taint_green_time                 # time spend during taint test with color green
+        taint_test_green_avg = taint_green_avg                   # average errors in taint test with color green
+            # -- blue --
+        taint_test_blue_num = taint_blue_num                     # amount of all taint tests with color blue
+        taint_test_blue_time = taint_blue_time                   # time spend during taint test with color blue
+        taint_test_blue_avg = taint_blue_avg                     # average errors in taint test with color blue
         # -- ishihara test stats --
         ishihara_test_num = ishihara_num                         # amount of all done ishihara tests
         ishihara_test_time = ishihara_time                       # time spend during ishihara test
@@ -214,6 +258,19 @@ def get_data():
         'taint_test_num': taint_test_num,
         'taint_test_time': round(taint_test_time / 60, 2),
         'taint_test_avg': round(taint_test_avg, 2),
+        # -- taint test stats with specific colors --
+            # -- red --
+        'taint_test_red_num': taint_test_red_num,
+        'taint_test_red_time': round(taint_test_red_time / 60, 2),
+        'taint_test_red_avg': round(taint_test_red_avg, 2),
+            # -- green --
+        'taint_test_green_num': taint_test_green_num,
+        'taint_test_green_time': round(taint_test_green_time / 60, 2),
+        'taint_test_green_avg': round(taint_test_green_avg, 2),
+            # -- blue --
+        'taint_test_blue_num': taint_test_blue_num,
+        'taint_test_blue_time': round(taint_test_blue_time / 60, 2),
+        'taint_test_blue_avg': round(taint_test_blue_avg, 2),
         # -- ishihara test stats --
         'ishihara_test_num': ishihara_test_num,
         'ishihara_test_time': round(ishihara_test_time / 60, 2),

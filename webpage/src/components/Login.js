@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './../styles/Login.scss'; // Import SCSS file
+import BASE_URL from '../config';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -27,7 +28,7 @@ const Login = () => {
     setErrorMessage(''); // Reset error message on new attempt
 
     try {
-      const response = await fetch('http://192.168.0.166:5000/api/login', {
+      const response = await fetch(BASE_URL+'/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),
