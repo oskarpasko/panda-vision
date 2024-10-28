@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './../styles/Registration.scss'; // Import SCSS file
+import BASE_URL from '../config';
 
 const Registration = () => {
   const [username, setUsername] = useState(''); // Change to username
@@ -32,7 +33,7 @@ const Registration = () => {
     setErrorMessage(''); // Reset error message on new attempt
 
     try {
-      const response = await fetch('http://192.168.0.166:5000/api/register', {
+      const response = await fetch(BASE_URL+'/api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, dateOfBirth, gender, password }),

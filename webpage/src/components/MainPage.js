@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './../styles/MainPage.scss'; // Import styles
 import logo from '../images/logo.png'; // Ensure the correct path to the logo
+import BASE_URL from '../config';
 
 const MainPage = () => {
   /* GENERAL */
@@ -40,6 +41,19 @@ const MainPage = () => {
   const [taintTestCount, setTaintTestCount] = useState(0);
   const [taintTestTime, setTaintTestTime] = useState(0);
   const [taintTestAvg, setTaintTestAvg] = useState(0);
+  /* TAINT TEST STATS WITH SPECIFIC COLORS */
+    /* -- RED */
+  const [taintTestRedCount, setTaintTestRedCount] = useState(0);
+  const [taintTestRedTime, setTaintTestRedTime] = useState(0);
+  const [taintTestRedAvg, setTaintTestRedAvg] = useState(0);
+    /* -- GREEN */
+  const [taintTestGreenCount, setTaintTestGreenCount] = useState(0);
+  const [taintTestGreenTime, setTaintTestGreenTime] = useState(0);
+  const [taintTestGreenAvg, setTaintTestGreenAvg] = useState(0);
+    /* -- BLUE */
+  const [taintTestBlueCount, setTaintTestBlueCount] = useState(0);
+  const [taintTestBlueTime, setTaintTestBlueTime] = useState(0);
+  const [taintTestBlueAvg, setTaintTestBlueAvg] = useState(0);
   /* ISHIHARA TEST STATS */
   const [ishiharaTestCount, setIshiharaTestCount] = useState(0);
   const [ishiharaTestTime, setIshiharaTestTime] = useState(0);
@@ -65,7 +79,7 @@ const MainPage = () => {
   
   /* ===== FETCHING FOR ADMIN ===== */
   const fetchAdminData = (username) => {
-    fetch('http://192.168.0.166:5000/api/admin', {
+    fetch(BASE_URL+'/api/admin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -84,7 +98,6 @@ const MainPage = () => {
           if (typeof data === 'string') {
             console.error('Non-JSON response:', data);  // Log non-JSON response
           } else {
-            console.log(data)
             /* ===== FECTH DATAS ===== */
             setcountOfUsers(data.users);                          // count of users
 
@@ -117,6 +130,18 @@ const MainPage = () => {
             setTaintTestCount(data.taint_test_num);               // amount of all done ishihara tests
             setTaintTestTime(data.taint_test_time);               // time spend during ishihara test
             setTaintTestAvg(data.taint_test_avg);                 // average errors in ishihara test
+
+            setTaintTestRedCount(data.taint_test_red_num)         // amount of done taint test with color red
+            setTaintTestRedTime(data.taint_test_red_time)         // time spend during taint test with color red
+            setTaintTestRedAvg(data.taint_test_red_avg)           // average errors in taint test with color red
+
+            setTaintTestGreenCount(data.taint_test_green_num)      // amount of done taint test with color green
+            setTaintTestGreenTime(data.taint_test_green_time)     // time spend during taint test with color green
+            setTaintTestGreenAvg(data.taint_test_green_avg)       // average errors in taint test with color green
+
+            setTaintTestBlueCount(data.taint_test_blue_num)       // amount of done taint test with color blue
+            setTaintTestBlueTime(data.taint_test_blue_time)       // time spend during taint test with color blue
+            setTaintTestBlueAvg(data.taint_test_blue_avg)         // average errors in taint test with color blue
           }
         } catch (err) {
           console.error('Error parsing data:', err);
@@ -126,7 +151,7 @@ const MainPage = () => {
   };
   /* ===== FETCHING FOR USER ===== */
   const fetchUserData = (username) => {
-    fetch('http://192.168.0.166:5000/api/main', {
+    fetch(BASE_URL+'/api/main', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -270,7 +295,7 @@ const MainPage = () => {
               {/* Divider line */}
               <div className="divider"></div>
 
-              <h2 className="section-title">Statystyki: Test kolorów</h2>
+              <h2 className="section-title">Test kolorów</h2>
               <div className="stats-grid">
                 <div className="stat-card">
                   <h3>Zarejestrowane testy</h3>
@@ -289,7 +314,7 @@ const MainPage = () => {
               {/* Divider line */}
               <div className="divider"></div>
 
-              <h2 className="section-title">Statystyki: Test barw</h2>
+              <h2 className="section-title">Test barw</h2>
               <div className="stats-grid">
                 <div className="stat-card">
                   <h3>Zarejestrowane testy</h3>
@@ -302,6 +327,54 @@ const MainPage = () => {
                 <div className="stat-card">
                   <h3>Średnia ilość błędów</h3>
                   <p>{taintTestAvg}</p>
+                </div>
+              </div>
+
+              <h3 className="section-title">Test barw: Kolor Czerwony</h3>
+              <div className="stats-grid">
+                <div className="stat-card">
+                  <h3>Zarejestrowane testy</h3>
+                  <p>{taintTestRedCount}</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Czas spędzony podczas testu</h3>
+                  <p>{taintTestRedTime} min</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Średnia ilość błędów</h3>
+                  <p>{taintTestRedAvg}</p>
+                </div>
+              </div>
+
+              <h3 className="section-title">Test barw: Kolor Zielony</h3>
+              <div className="stats-grid">
+                <div className="stat-card">
+                  <h3>Zarejestrowane testy</h3>
+                  <p>{taintTestGreenCount}</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Czas spędzony podczas testu</h3>
+                  <p>{taintTestGreenTime} min</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Średnia ilość błędów</h3>
+                  <p>{taintTestGreenAvg}</p>
+                </div>
+              </div>
+
+              <h3 className="section-title">Test barw: Kolor Niebieski</h3>
+              <div className="stats-grid">
+                <div className="stat-card">
+                  <h3>Zarejestrowane testy</h3>
+                  <p>{taintTestBlueCount}</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Czas spędzony podczas testu</h3>
+                  <p>{taintTestBlueTime} min</p>
+                </div>
+                <div className="stat-card">
+                  <h3>Średnia ilość błędów</h3>
+                  <p>{taintTestBlueAvg}</p>
                 </div>
               </div>
 
@@ -420,6 +493,12 @@ const MainPage = () => {
               </table>
 
             </>
+            )}
+
+            {activeTable === 'charts' && (
+              <>
+                <h1>Wykresy</h1>
+              </>
             )}
           </div>
         </div>
