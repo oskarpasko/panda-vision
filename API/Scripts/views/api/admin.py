@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, Blueprint
 from flask_cors import cross_origin
 from pymysql.cursors import DictCursor
 from .db_config import get_db_connection
+from .queries.queries import QueryManager
 
 app = Flask(__name__)
 
@@ -150,35 +151,8 @@ def get_users_brackets(cursor):
         cursor.execute(query)
         results[key] = cursor.fetchall()
     return results
-# Test
-def get_time_age_bracket_chart(cursor):
-    query = """
-    SELECT AVG(CONVERT(time_of_test, UNSIGNED)) AS time, '0-17' AS age_bracket
-    FROM pandavision.color_test_user_results 
-    LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
-    WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) < 18
-
-    UNION ALL
-
-    SELECT AVG(CONVERT(time_of_test, UNSIGNED)) AS time, '18-35' AS age_bracket
-    FROM pandavision.color_test_user_results 
-    LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
-    WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) BETWEEN 18 AND 35
-
-    UNION ALL
-
-    SELECT AVG(CONVERT(time_of_test, UNSIGNED)) AS time, '36-60' AS age_bracket
-    FROM pandavision.color_test_user_results 
-    LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
-    WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) BETWEEN 36 AND 60
-
-    UNION ALL
-
-    SELECT AVG(CONVERT(time_of_test, UNSIGNED)) AS time, '60+' AS age_bracket
-    FROM pandavision.color_test_user_results 
-    LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
-    WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) > 60;
-    """
+# Method to get results for charts
+def get_chart_data(cursor, query):
     cursor.execute(query)
     results = cursor.fetchall()
     return results
@@ -186,6 +160,9 @@ def get_time_age_bracket_chart(cursor):
 @api_admin_blueprint.route('/api/admin', methods=['POST'])
 @cross_origin()
 def get_data():
+    # Init class with queries
+    query_manager = QueryManager()
+
     # Get the incoming data from the POST request
     data = request.get_json()
     user_username = data.get('username')  # Extract username from the request
@@ -208,7 +185,12 @@ def get_data():
         age_brackets = get_users_brackets(cursor)                                                   # amount of users with age brackets
         
         # == CHARTS ==
-        time_age_bracket_chart = get_time_age_bracket_chart(cursor)     # chart with time with each age bracket
+        color_time_age_bracket_chart = get_chart_data(cursor, query_manager.color_test_time_age_bracket())        # chart with time with each age bracket in color test
+        taint_time_age_bracket_chart = get_chart_data(cursor, query_manager.taint_test_time_age_bracket())        # chart with time with each age bracket in taint test    
+        ishihara_time_age_bracket_chart = get_chart_data(cursor, query_manager.ishihara_test_time_age_bracket())  # chart with time with each age bracket in ishihara test    
+        taint_red_test_time_age_bracket_chart = get_chart_data(cursor, query_manager.taint_red_test_time_age_bracket())  # chart with time with each age bracket in taint test (red)   
+        taint_green_test_time_age_bracket_chart = get_chart_data(cursor, query_manager.taint_green_test_time_age_bracket())  # chart with time with each age bracket in taint test (green)   
+        taint_blue_test_time_age_bracket_chart = get_chart_data(cursor, query_manager.taint_blue_test_time_age_bracket())  # chart with time with each age bracket in taint test (blue)   
 
         # == GETTING SINGLE VARIABLE FROM QUERY ==
         # -- users --
@@ -309,5 +291,10 @@ def get_data():
         'ishihara_test_time': round(ishihara_test_time / 60, 2),
         'ishihara_test_avg': round(ishihara_test_avg, 2),
         # -- charts --
-        'time_age_bracket_chart': time_age_bracket_chart,
+        'color_time_age_bracket_chart': color_time_age_bracket_chart,
+        'taint_time_age_bracket_chart': taint_time_age_bracket_chart,
+        'ishihara_time_age_bracket_chart': ishihara_time_age_bracket_chart,
+        'taint_red_test_time_age_bracket_chart': taint_red_test_time_age_bracket_chart,
+        'taint_green_test_time_age_bracket_chart': taint_green_test_time_age_bracket_chart,
+        'taint_blue_test_time_age_bracket_chart': taint_blue_test_time_age_bracket_chart,
     }), 200
