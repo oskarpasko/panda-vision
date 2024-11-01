@@ -6,6 +6,6 @@ PandaVision/.vscode/settings.json
 API/Scripts/__pycache__/app.cpython-312.pyc
 API/Scripts/views/__pycache__/color_test.cpython-312.pyc
 API/Scripts/views/__pycache__/login.cpython-312.pyc
- API/Scripts/views/__pycache__/color_test_result.cpython-312.pyc
+API/Scripts/views/__pycache__/color_test_result.cpython-312.pyc
 API/Scripts/views/__pycache__/taint_test_result.cpython-312.pyc 
 __pycache__/
