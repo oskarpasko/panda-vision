@@ -83,7 +83,6 @@ def get_taint_test_user_results(cursor):
     error_tests_query = "SELECT * FROM pandavision.taint_test_user_results;"
     cursor.execute(error_tests_query)
     return cursor.fetchall()
-
 # Get details data from color test
 def get_color_test_details(cursor):
     color_test_details = "SELECT count(*) as liczba, sum(time_of_test) as suma, AVG(error_colors) as srednia FROM color_test_user_results;"
@@ -151,7 +150,38 @@ def get_users_brackets(cursor):
         cursor.execute(query)
         results[key] = cursor.fetchall()
     return results
+# Test
+def get_time_age_bracket_chart(cursor):
+    query = """
+    SELECT AVG(CONVERT(time_of_test, UNSIGNED)) AS time, '0-17' AS age_bracket
+    FROM pandavision.color_test_user_results 
+    LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
+    WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) < 18
 
+    UNION ALL
+
+    SELECT AVG(CONVERT(time_of_test, UNSIGNED)) AS time, '18-35' AS age_bracket
+    FROM pandavision.color_test_user_results 
+    LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
+    WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) BETWEEN 18 AND 35
+
+    UNION ALL
+
+    SELECT AVG(CONVERT(time_of_test, UNSIGNED)) AS time, '36-60' AS age_bracket
+    FROM pandavision.color_test_user_results 
+    LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
+    WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) BETWEEN 36 AND 60
+
+    UNION ALL
+
+    SELECT AVG(CONVERT(time_of_test, UNSIGNED)) AS time, '60+' AS age_bracket
+    FROM pandavision.color_test_user_results 
+    LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
+    WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) > 60;
+    """
+    cursor.execute(query)
+    results = cursor.fetchall()
+    return results
 
 @api_admin_blueprint.route('/api/admin', methods=['POST'])
 @cross_origin()
@@ -176,6 +206,9 @@ def get_data():
         taint_green_num, taint_green_time, taint_green_avg = get_taint_test_green_details(cursor)   # amount, time, `vg errors of green test in taint test`
         taint_blue_num, taint_blue_time, taint_blue_avg = get_taint_test_blue_details(cursor)       # amount, time, `vg errors of blue test in taint test`
         age_brackets = get_users_brackets(cursor)                                                   # amount of users with age brackets
+        
+        # == CHARTS ==
+        time_age_bracket_chart = get_time_age_bracket_chart(cursor)     # chart with time with each age bracket
 
         # == GETTING SINGLE VARIABLE FROM QUERY ==
         # -- users --
@@ -275,4 +308,6 @@ def get_data():
         'ishihara_test_num': ishihara_test_num,
         'ishihara_test_time': round(ishihara_test_time / 60, 2),
         'ishihara_test_avg': round(ishihara_test_avg, 2),
+        # -- charts --
+        'time_age_bracket_chart': time_age_bracket_chart,
     }), 200
