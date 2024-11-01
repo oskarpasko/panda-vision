@@ -2,6 +2,19 @@ import React, { useState, useEffect } from 'react';
 import './../styles/MainPage.scss'; // Import styles
 import logo from '../images/logo.png'; // Ensure the correct path to the logo
 import BASE_URL from '../config';
+import { Bar } from 'react-chartjs-2';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+
+// Zarejestruj potrzebne komponenty
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const MainPage = () => {
   /* GENERAL */
@@ -58,6 +71,8 @@ const MainPage = () => {
   const [ishiharaTestCount, setIshiharaTestCount] = useState(0);
   const [ishiharaTestTime, setIshiharaTestTime] = useState(0);
   const [ishiharaTestAvg, setIshiharaTestAvg] = useState(0);
+  /* CHARTS */
+  const [timeAgeBracketchartData, settimeAgeBracketChartData] = useState(null);
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
@@ -142,6 +157,20 @@ const MainPage = () => {
             setTaintTestBlueCount(data.taint_test_blue_num)       // amount of done taint test with color blue
             setTaintTestBlueTime(data.taint_test_blue_time)       // time spend during taint test with color blue
             setTaintTestBlueAvg(data.taint_test_blue_avg)         // average errors in taint test with color blue
+
+            settimeAgeBracketChartData({
+              labels: data.time_age_bracket_chart.map(item => item.age_bracket),
+              datasets: [
+                  {
+                      label: 'Average Time (ms)',
+                      data: data.time_age_bracket_chart.map(item => item.time),
+                      backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                      borderColor: 'rgba(75, 192, 192, 1)',
+                      borderWidth: 1,
+                  },
+              ],
+          });
+          
           }
         } catch (err) {
           console.error('Error parsing data:', err);
@@ -498,6 +527,48 @@ const MainPage = () => {
             {activeTable === 'charts' && (
               <>
                 <h1>Wykresy</h1>
+                <div className="chart-container">
+                  <h2>Średni czas wykonania testu w przedziałach wiekowych</h2>
+                  <div className="chart">
+                      <Bar
+                          data={timeAgeBracketchartData}
+                          options={{
+                              responsive: true,
+                              maintainAspectRatio: true,
+                              scales: {
+                                  y: {
+                                      beginAtZero: true,
+                                      title: {
+                                          display: true,
+                                          text: 'Czas (s)',
+                                          color: '#666',
+                                      },
+                                      ticks: {
+                                          color: '#666',
+                                      },
+                                  },
+                                  x: {
+                                      title: {
+                                          display: true,
+                                          text: 'Przedziały wiekowe',
+                                          color: '#666',
+                                      },
+                                      ticks: {
+                                          color: '#666',
+                                      },
+                                  },
+                              },
+                              plugins: {
+                                  legend: {
+                                      labels: {
+                                          color: '#333',
+                                      },
+                                  },
+                              },
+                          }}
+                      />
+                  </div>
+                </div>
               </>
             )}
           </div>
