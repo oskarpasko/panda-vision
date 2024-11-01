@@ -2,9 +2,3 @@ Wykresy:
   - wykres przedstawiający średnią ilość punktów ze wszystkich testów w każdym przedziale wiekowym (1)
   - wykres przedstawijacy średnią ilość punktów z konkretnego testu w kazdym przedziale wiekowyn (3)
   - wykres ze spendzonym czasem we wszsytkich testach w każdym przedziale wiekowym (1)
-  - wykres ze średnim czasem w każdym teście w każdym przedziale wiekowym (3)
-
-Zastanowić się czy TaintTestu dodatkowo nie podzielić na wykresy dla kazdego z kolorów oraz nie ppdzielić testu w dashbordzie na poszczególne kolory
-(w końcu testujemy 3 inne kolory poniekąd 3 różne testy)
-
-ilość wykresów do zrobienia w sumie: 8
