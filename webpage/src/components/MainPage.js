@@ -73,6 +73,11 @@ const MainPage = () => {
   const [ishiharaTestAvg, setIshiharaTestAvg] = useState(0);
   /* CHARTS */
   const [timeAgeBracketchartData, settimeAgeBracketChartData] = useState(null);
+  const [taintTimeAgeBracketchartData, setTaintTimeAgeBracketChartData] = useState(null);
+  const [ishiharaTimeAgeBracketchartData, setIshiharaTimeAgeBracketChartData] = useState(null);
+  const [taintRedTimeAgeBracketChartData, setTaintRedTimeAgeBracketChartData] = useState(null);
+  const [taintGreenTimeAgeBracketChartData, setTaintGreenTimeAgeBracketChartData] = useState(null);
+  const [taintBlueTimeAgeBracketChartData, setTaintBlueTimeAgeBracketChartData] = useState(null);
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
@@ -158,12 +163,72 @@ const MainPage = () => {
             setTaintTestBlueTime(data.taint_test_blue_time)       // time spend during taint test with color blue
             setTaintTestBlueAvg(data.taint_test_blue_avg)         // average errors in taint test with color blue
 
-            settimeAgeBracketChartData({
-              labels: data.time_age_bracket_chart.map(item => item.age_bracket),
+            settimeAgeBracketChartData({  // get data to chart avg time in color test for age brackets
+              labels: data.color_time_age_bracket_chart.map(item => item.age_bracket),
               datasets: [
                   {
-                      label: 'Average Time (ms)',
-                      data: data.time_age_bracket_chart.map(item => item.time),
+                      label: 'Średni czas (s)',
+                      data: data.color_time_age_bracket_chart.map(item => item.time),
+                      backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                      borderColor: 'rgba(75, 192, 192, 1)',
+                      borderWidth: 1,
+                  },
+              ],
+          });
+            setTaintTimeAgeBracketChartData({  // get data to chart avg time in taint test for age brackets
+              labels: data.taint_time_age_bracket_chart.map(item => item.age_bracket),
+              datasets: [
+                  {
+                      label: 'Średni czas (s)',
+                      data: data.taint_time_age_bracket_chart.map(item => item.time),
+                      backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                      borderColor: 'rgba(75, 192, 192, 1)',
+                      borderWidth: 1,
+                  },
+              ],
+          });
+            setIshiharaTimeAgeBracketChartData({  // get data to chart avg time in ishihara test for age brackets
+              labels: data.ishihara_time_age_bracket_chart.map(item => item.age_bracket),
+              datasets: [
+                  {
+                      label: 'Średni czas (s)',
+                      data: data.ishihara_time_age_bracket_chart.map(item => item.time),
+                      backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                      borderColor: 'rgba(75, 192, 192, 1)',
+                      borderWidth: 1,
+                  },
+              ],
+          });
+            setTaintRedTimeAgeBracketChartData({  // get data to chart avg time in taint (red) test for age brackets
+              labels: data.taint_red_test_time_age_bracket_chart.map(item => item.age_bracket),
+              datasets: [
+                  {
+                      label: 'Średni czas (s)',
+                      data: data.taint_red_test_time_age_bracket_chart.map(item => item.time),
+                      backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                      borderColor: 'rgba(75, 192, 192, 1)',
+                      borderWidth: 1,
+                  },
+              ],
+          });
+            setTaintGreenTimeAgeBracketChartData({  // get data to chart avg time in taint (green) test for age brackets
+              labels: data.taint_green_test_time_age_bracket_chart.map(item => item.age_bracket),
+              datasets: [
+                  {
+                      label: 'Średni czas (s)',
+                      data: data.taint_green_test_time_age_bracket_chart.map(item => item.time),
+                      backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                      borderColor: 'rgba(75, 192, 192, 1)',
+                      borderWidth: 1,
+                  },
+              ],
+          });
+            setTaintBlueTimeAgeBracketChartData({  // get data to chart avg time in taint (blue) test for age brackets
+              labels: data.taint_blue_test_time_age_bracket_chart.map(item => item.age_bracket),
+              datasets: [
+                  {
+                      label: 'Średni czas (s)',
+                      data: data.taint_blue_test_time_age_bracket_chart.map(item => item.time),
                       backgroundColor: 'rgba(75, 192, 192, 0.6)',
                       borderColor: 'rgba(75, 192, 192, 1)',
                       borderWidth: 1,
@@ -527,53 +592,272 @@ const MainPage = () => {
             {activeTable === 'charts' && (
               <>
                 <h1>Wykresy</h1>
-                <div className="chart-container">
-                  <h2>Średni czas wykonania testu w przedziałach wiekowych</h2>
-                  <div className="chart">
-                      <Bar
-                          data={timeAgeBracketchartData}
-                          options={{
-                              responsive: true,
-                              maintainAspectRatio: true,
-                              scales: {
-                                  y: {
-                                      beginAtZero: true,
-                                      title: {
-                                          display: true,
-                                          text: 'Czas (s)',
-                                          color: '#666',
-                                      },
-                                      ticks: {
-                                          color: '#666',
-                                      },
-                                  },
-                                  x: {
-                                      title: {
-                                          display: true,
-                                          text: 'Przedziały wiekowe',
-                                          color: '#666',
-                                      },
-                                      ticks: {
-                                          color: '#666',
-                                      },
-                                  },
-                              },
-                              plugins: {
-                                  legend: {
-                                      labels: {
-                                          color: '#333',
-                                      },
-                                  },
-                              },
-                          }}
-                      />
+                <div class="chart-section">
+                  <div className="chart-container">
+                    <h2>Średni czas wykonania testu kolorów w przedziałach wiekowych</h2>
+                    <div className="chart">
+                        <Bar
+                            data={timeAgeBracketchartData}
+                            options={{
+                                responsive: true,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Czas (s)',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Przedziały wiekowe',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            color: '#333',
+                                        },
+                                    },
+                                },
+                            }}
+                        />
+                    </div>
+                  </div>
+
+                  <div className="chart-container">
+                    <h2>Średni czas wykonania testu barw w przedziałach wiekowych</h2>
+                    <div className="chart">
+                        <Bar
+                            data={taintTimeAgeBracketchartData}
+                            options={{
+                                responsive: true,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Czas (s)',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Przedziały wiekowe',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            color: '#333',
+                                        },
+                                    },
+                                },
+                            }}
+                        />
+                    </div>
+                  </div>
+
+                  <div className="chart-container">
+                    <h2>Średni czas wykonania testu Ishihary w przedziałach wiekowych</h2>
+                    <div className="chart">
+                        <Bar
+                            data={ishiharaTimeAgeBracketchartData}
+                            options={{
+                                responsive: true,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Czas (s)',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Przedziały wiekowe',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            color: '#333',
+                                        },
+                                    },
+                                },
+                            }}
+                        />
+                    </div>
                   </div>
                 </div>
-              </>
-            )}
-          </div>
-        </div>
 
+                {/* Divider line */}
+                <div className="divider"></div>
+
+                <div class="chart-section">
+                  <div className="chart-container">
+                    <h2>Średni czas wykonania testu barwy czerwonej w przedziałach wiekowych</h2>
+                    <div className="chart">
+                        <Bar
+                            data={taintRedTimeAgeBracketChartData}
+                            options={{
+                                responsive: true,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Czas (s)',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Przedziały wiekowe',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            color: '#333',
+                                        },
+                                    },
+                                },
+                            }}
+                        />
+                    </div>
+                  </div>
+
+                  <div className="chart-container">
+                    <h2>Średni czas wykonania testu barwy zielonej w przedziałach wiekowych</h2>
+                    <div className="chart">
+                        <Bar
+                            data={taintGreenTimeAgeBracketChartData}
+                            options={{
+                                responsive: true,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Czas (s)',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Przedziały wiekowe',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            color: '#333',
+                                        },
+                                    },
+                                },
+                            }}
+                        />
+                    </div>
+                  </div>
+
+                  <div className="chart-container">
+                    <h2>Średni czas wykonania testu barwy niebieskiej w przedziałach wiekowych</h2>
+                    <div className="chart">
+                        <Bar
+                            data={taintBlueTimeAgeBracketChartData}
+                            options={{
+                                responsive: true,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Czas (s)',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Przedziały wiekowe',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            color: '#333',
+                                        },
+                                    },
+                                },
+                            }}
+                        />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Divider line */}
+                <div className="divider"></div>
+
+                </>
+              )}
+            </div>
+        </div>
         <footer className="footer">
           &copy; {new Date().getFullYear()} Oskar Paśko. Wszelkie prawa zastrzeżone.
         </footer>
