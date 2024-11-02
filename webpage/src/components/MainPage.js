@@ -83,6 +83,7 @@ const MainPage = () => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
   
     if (storedUser) {
+      document.title = "PandaVision"
       setUserName(storedUser.username);
       setRole(storedUser.role); // Set the role of the user
       fetchUserData(storedUser.username);  // Fetch user data with username
@@ -90,6 +91,7 @@ const MainPage = () => {
   
       // Set activeTable based on the user's role after setting role
       if (storedUser.role === 'admin') {
+        document.title = "Panel Admina"
         setActiveTable('dashboard');  // Set 'dashboard' for admin
       } else {
         setActiveTable('colors');  // Set 'colors' for regular users
