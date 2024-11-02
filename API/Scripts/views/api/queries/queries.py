@@ -260,3 +260,101 @@ class QueryManager:
         LEFT JOIN pandavision.users ON ishihara_test_results.user = users.username 
         WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) > 60;
         """
+    @staticmethod
+    def all_test_avG_time_age_bracket(): # get time of all test in age brackets
+        return """
+        SELECT AVG(total_time) AS time, '0-17' AS age_bracket
+        FROM (
+            SELECT CONVERT(time_of_test, UNSIGNED) AS total_time
+            FROM pandavision.color_test_user_results 
+            LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
+            WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) < 18
+            
+            UNION ALL
+
+            SELECT CONVERT(time_of_test, UNSIGNED) AS total_time
+            FROM pandavision.taint_test_user_results 
+            LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
+            WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) < 18
+            
+            UNION ALL
+
+            SELECT CONVERT(time_of_test, UNSIGNED) AS total_time
+            FROM pandavision.ishihara_test_results 
+            LEFT JOIN pandavision.users ON ishihara_test_results.user = users.username 
+            WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) < 18
+        ) AS combined_times
+
+        UNION ALL
+
+        SELECT AVG(total_time) AS time, '18-35' AS age_bracket
+        FROM (
+            SELECT CONVERT(time_of_test, UNSIGNED) AS total_time
+            FROM pandavision.color_test_user_results  
+            LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
+            WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) BETWEEN 18 AND 35
+            
+            UNION ALL
+
+            SELECT CONVERT(time_of_test, UNSIGNED) AS total_time
+            FROM pandavision.taint_test_user_results 
+            LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
+            WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) BETWEEN 18 AND 35
+            
+            UNION all
+            
+            SELECT CONVERT(time_of_test, UNSIGNED) AS total_time
+            FROM pandavision.ishihara_test_results 
+            LEFT JOIN pandavision.users ON ishihara_test_results.user = users.username 
+            WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) BETWEEN 18 AND 35
+        ) AS combined_times
+
+        UNION ALL
+
+        SELECT AVG(total_time) AS time, '36-60' AS age_bracket
+        FROM (
+            SELECT CONVERT(time_of_test, UNSIGNED) AS total_time
+            FROM pandavision.color_test_user_results 
+            LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
+            WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) BETWEEN 36 AND 60
+            
+            UNION ALL
+
+            SELECT CONVERT(time_of_test, UNSIGNED) AS total_time
+            FROM pandavision.taint_test_user_results 
+            LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
+            WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) BETWEEN 36 AND 60
+            
+            UNION ALL
+
+            SELECT CONVERT(time_of_test, UNSIGNED) AS total_time
+            FROM pandavision.ishihara_test_results 
+            LEFT JOIN pandavision.users ON ishihara_test_results.user = users.username 
+            WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) BETWEEN 36 AND 60
+        ) AS combined_times
+
+        UNION ALL
+
+        SELECT AVG(total_time) AS time, '60+' AS age_bracket
+        FROM (
+            SELECT CONVERT(time_of_test, UNSIGNED) AS total_time
+            FROM pandavision.color_test_user_results 
+            LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
+            WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) > 60
+            
+            UNION ALL
+
+            SELECT CONVERT(time_of_test, UNSIGNED) AS total_time
+            FROM pandavision.taint_test_user_results 
+            LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
+            WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) > 60
+            
+            UNION all
+            
+            SELECT CONVERT(time_of_test, UNSIGNED) AS total_time
+            FROM pandavision.ishihara_test_results 
+            LEFT JOIN pandavision.users ON ishihara_test_results.user = users.username 
+            WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) > 60
+        ) AS combined_times;
+        """
+

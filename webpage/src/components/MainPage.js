@@ -81,6 +81,7 @@ const MainPage = () => {
   const [colorErrorAgeBracketChartData, setColorErrorAgeBracketChartData] = useState(null);
   const [taintErrorAgeBracketChartData, setTaintErrorAgeBracketChartData] = useState(null);
   const [ishiharaErrorAgeBracketChartData, setIshiharaErrorAgeBracketChartData] = useState(null);
+  const [allTestsTimeAgeBracketChartData, setAllTestsTimeAgeBracketChartData] = useState(null);
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
@@ -174,8 +175,8 @@ const MainPage = () => {
                   {
                       label: 'Średni czas (s)',
                       data: data.color_time_age_bracket_chart.map(item => item.time),
-                      backgroundColor: 'rgba(75, 192, 192, 0.6)',
-                      borderColor: 'rgba(75, 192, 192, 1)',
+                      backgroundColor: 'rgba(176, 78, 255, 0.6)',
+                      borderColor: 'rgba(176, 78, 255, 1)',
                       borderWidth: 1,
                   },
               ],
@@ -186,8 +187,8 @@ const MainPage = () => {
                   {
                       label: 'Średni czas (s)',
                       data: data.taint_time_age_bracket_chart.map(item => item.time),
-                      backgroundColor: 'rgba(75, 192, 192, 0.6)',
-                      borderColor: 'rgba(75, 192, 192, 1)',
+                      backgroundColor: 'rgba(206, 106, 255, 0.6)',
+                      borderColor: 'rgba(206, 106, 255, 1)',
                       borderWidth: 1,
                   },
               ],
@@ -198,8 +199,8 @@ const MainPage = () => {
                   {
                       label: 'Średni czas (s)',
                       data: data.ishihara_time_age_bracket_chart.map(item => item.time),
-                      backgroundColor: 'rgba(75, 192, 192, 0.6)',
-                      borderColor: 'rgba(75, 192, 192, 1)',
+                      backgroundColor: 'rgba(237, 134, 255, 0.6)',
+                      borderColor: 'rgba(237, 134, 255, 1)',
                       borderWidth: 1,
                   },
               ],
@@ -210,8 +211,8 @@ const MainPage = () => {
                   {
                       label: 'Średni czas (s)',
                       data: data.taint_red_test_time_age_bracket_chart.map(item => item.time),
-                      backgroundColor: 'rgba(75, 192, 192, 0.6)',
-                      borderColor: 'rgba(75, 192, 192, 1)',
+                      backgroundColor: 'rgba(236, 152, 159, 0.6)',
+                      borderColor: 'rgba(236, 152, 159, 1)',
                       borderWidth: 1,
                   },
               ],
@@ -234,8 +235,8 @@ const MainPage = () => {
                   {
                       label: 'Średni czas (s)',
                       data: data.taint_blue_test_time_age_bracket_chart.map(item => item.time),
-                      backgroundColor: 'rgba(75, 192, 192, 0.6)',
-                      borderColor: 'rgba(75, 192, 192, 1)',
+                      backgroundColor: 'rgba(97, 195, 231, 0.6)',
+                      borderColor: 'rgba(97, 195, 231, 1)',
                       borderWidth: 1,
                   },
               ],
@@ -244,10 +245,10 @@ const MainPage = () => {
               labels: data.color_error_age_bracket_chart.map(item => item.age_bracket),
               datasets: [
                   {
-                      label: 'Średni czas (s)',
+                      label: 'Średnia ilość błędów',
                       data: data.color_error_age_bracket_chart.map(item => item.error),
-                      backgroundColor: 'rgba(75, 192, 192, 0.6)',
-                      borderColor: 'rgba(75, 192, 192, 1)',
+                      backgroundColor: 'rgba(176, 78, 255, 0.6)',
+                      borderColor: 'rgba(176, 78, 255, 1)',
                       borderWidth: 1,
                   },
               ],
@@ -256,10 +257,10 @@ const MainPage = () => {
               labels: data.taint_error_age_bracket_chart.map(item => item.age_bracket),
               datasets: [
                   {
-                      label: 'Średni czas (s)',
+                      label: 'Średnia ilość błędów',
                       data: data.taint_error_age_bracket_chart.map(item => item.error),
-                      backgroundColor: 'rgba(75, 192, 192, 0.6)',
-                      borderColor: 'rgba(75, 192, 192, 1)',
+                      backgroundColor: 'rgba(206, 106, 255, 0.6)',
+                      borderColor: 'rgba(206, 106, 255, 1)',
                       borderWidth: 1,
                   },
               ],
@@ -268,10 +269,22 @@ const MainPage = () => {
               labels: data.ishiahra_error_age_bracket_chart.map(item => item.age_bracket),
               datasets: [
                   {
-                      label: 'Średni czas (s)',
+                      label: 'Średnia ilość błędów',
                       data: data.ishiahra_error_age_bracket_chart.map(item => item.error),
-                      backgroundColor: 'rgba(75, 192, 192, 0.6)',
-                      borderColor: 'rgba(75, 192, 192, 1)',
+                      backgroundColor: 'rgba(237, 134, 255, 0.6)',
+                      borderColor: 'rgba(237, 134, 255, 1)',
+                      borderWidth: 1,
+                  },
+              ],
+          });
+            setAllTestsTimeAgeBracketChartData({  // get data to chart avg error in ishihara test
+              labels: data.all_tests_avg_time_age_bracket_chart.map(item => item.age_bracket),
+              datasets: [
+                  {
+                      label: 'Średni czas (s)',
+                      data: data.all_tests_avg_time_age_bracket_chart.map(item => item.time),
+                      backgroundColor: 'rgba(114, 1, 220, 0.6)',
+                      borderColor: 'rgba(114, 1, 220, 1)',
                       borderWidth: 1,
                   },
               ],
@@ -351,7 +364,7 @@ const MainPage = () => {
           {/* Sidebar for selecting tables */}
           <div className="side-panel">
             <button onClick={() => switchTable('dashboard')}>Dashboard</button>
-            <button onClick={() => switchTable('users_results')}>Wyniki Uytkowników</button>
+            <button onClick={() => switchTable('users_results')}>Wyniki Uzytkowników</button>
             <button onClick={() => switchTable('charts')}>Wykresy</button>
             <button onClick={() => switchTable('raports')}>Raporty</button>
           </div>
@@ -633,9 +646,59 @@ const MainPage = () => {
             {activeTable === 'charts' && (
               <>
                 <h1>Wykresy</h1>
+
+                <h2>Wykresy ogólne</h2>
                 <div class="chart-section">
                   <div className="chart-container">
-                    <h2>Średni czas wykonania testu kolorów w przedziałach wiekowych</h2>
+                    <h2>Średni czas wykonanywania wszystkich testów w przedziałach wiekowych</h2>
+                    <div className="chart">
+                        <Bar
+                            data={allTestsTimeAgeBracketChartData}
+                            options={{
+                                responsive: true,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Czas (s)',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Przedziały wiekowe',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            color: '#333',
+                                        },
+                                    },
+                                },
+                            }}
+                        />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Divider line */}
+                <div className="divider"></div>
+
+                <h2>Wykresy średnich czasów dla poszczególnych testów</h2>
+                <div class="chart-section">
+                  <div className="chart-container">
+                    <h2>Test kolorów</h2>
                     <div className="chart">
                         <Bar
                             data={timeAgeBracketchartData}
@@ -677,7 +740,7 @@ const MainPage = () => {
                   </div>
 
                   <div className="chart-container">
-                    <h2>Średni czas wykonania testu barw w przedziałach wiekowych</h2>
+                    <h2>Test barw</h2>
                     <div className="chart">
                         <Bar
                             data={taintTimeAgeBracketchartData}
@@ -719,7 +782,7 @@ const MainPage = () => {
                   </div>
 
                   <div className="chart-container">
-                    <h2>Średni czas wykonania testu Ishihary w przedziałach wiekowych</h2>
+                    <h2>Test Ishihary</h2>
                     <div className="chart">
                         <Bar
                             data={ishiharaTimeAgeBracketchartData}
@@ -764,9 +827,10 @@ const MainPage = () => {
                 {/* Divider line */}
                 <div className="divider"></div>
 
+                <h2>Wykresy średnich czasów dla poszczególnych barw w Taint Test</h2>
                 <div class="chart-section">
                   <div className="chart-container">
-                    <h2>Średni czas wykonania testu barwy czerwonej w przedziałach wiekowych</h2>
+                    <h2>Barwa czerwona</h2>
                     <div className="chart">
                         <Bar
                             data={taintRedTimeAgeBracketChartData}
@@ -808,7 +872,7 @@ const MainPage = () => {
                   </div>
 
                   <div className="chart-container">
-                    <h2>Średni czas wykonania testu barwy zielonej w przedziałach wiekowych</h2>
+                    <h2>Barwa zielona</h2>
                     <div className="chart">
                         <Bar
                             data={taintGreenTimeAgeBracketChartData}
@@ -850,7 +914,7 @@ const MainPage = () => {
                   </div>
 
                   <div className="chart-container">
-                    <h2>Średni czas wykonania testu barwy niebieskiej w przedziałach wiekowych</h2>
+                    <h2>Barwa niebieska</h2>
                     <div className="chart">
                         <Bar
                             data={taintBlueTimeAgeBracketChartData}
@@ -895,9 +959,10 @@ const MainPage = () => {
                 {/* Divider line */}
                 <div className="divider"></div>
 
+                <h2>Wykresy średniej ilości błędów dla poszczególnych testów</h2>
                 <div class="chart-section">
                   <div className="chart-container">
-                    <h2>Średni czas wykonania testu barwy czerwonej w przedziałach wiekowych</h2>
+                    <h2>Test kolorów</h2>
                     <div className="chart">
                         <Bar
                             data={colorErrorAgeBracketChartData}
@@ -908,7 +973,7 @@ const MainPage = () => {
                                         beginAtZero: true,
                                         title: {
                                             display: true,
-                                            text: 'Czas (s)',
+                                            text: 'Błędy',
                                             color: '#666',
                                         },
                                         ticks: {
@@ -939,7 +1004,7 @@ const MainPage = () => {
                   </div>
 
                   <div className="chart-container">
-                    <h2>Średni czas wykonania testu barwy zielonej w przedziałach wiekowych</h2>
+                    <h2>Test barw</h2>
                     <div className="chart">
                         <Bar
                             data={taintErrorAgeBracketChartData}
@@ -950,7 +1015,7 @@ const MainPage = () => {
                                         beginAtZero: true,
                                         title: {
                                             display: true,
-                                            text: 'Czas (s)',
+                                            text: 'Błędy',
                                             color: '#666',
                                         },
                                         ticks: {
@@ -981,7 +1046,7 @@ const MainPage = () => {
                   </div>
 
                   <div className="chart-container">
-                    <h2>Średni czas wykonania testu barwy niebieskiej w przedziałach wiekowych</h2>
+                    <h2>Test Ishihary</h2>
                     <div className="chart">
                         <Bar
                             data={ishiharaErrorAgeBracketChartData}
@@ -992,7 +1057,7 @@ const MainPage = () => {
                                         beginAtZero: true,
                                         title: {
                                             display: true,
-                                            text: 'Czas (s)',
+                                            text: 'Błędy',
                                             color: '#666',
                                         },
                                         ticks: {
