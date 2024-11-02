@@ -185,12 +185,15 @@ def get_data():
         age_brackets = get_users_brackets(cursor)                                                   # amount of users with age brackets
         
         # == CHARTS ==
-        color_time_age_bracket_chart = get_chart_data(cursor, query_manager.color_test_time_age_bracket())        # chart with time with each age bracket in color test
-        taint_time_age_bracket_chart = get_chart_data(cursor, query_manager.taint_test_time_age_bracket())        # chart with time with each age bracket in taint test    
-        ishihara_time_age_bracket_chart = get_chart_data(cursor, query_manager.ishihara_test_time_age_bracket())  # chart with time with each age bracket in ishihara test    
-        taint_red_test_time_age_bracket_chart = get_chart_data(cursor, query_manager.taint_red_test_time_age_bracket())  # chart with time with each age bracket in taint test (red)   
-        taint_green_test_time_age_bracket_chart = get_chart_data(cursor, query_manager.taint_green_test_time_age_bracket())  # chart with time with each age bracket in taint test (green)   
-        taint_blue_test_time_age_bracket_chart = get_chart_data(cursor, query_manager.taint_blue_test_time_age_bracket())  # chart with time with each age bracket in taint test (blue)   
+        color_time_age_bracket_chart = get_chart_data(cursor, query_manager.color_test_time_age_bracket())                   # chart with time in age bracket in color test
+        taint_time_age_bracket_chart = get_chart_data(cursor, query_manager.taint_test_time_age_bracket())                   # chart with time in age bracket in taint test    
+        ishihara_time_age_bracket_chart = get_chart_data(cursor, query_manager.ishihara_test_time_age_bracket())             # chart with time in age bracket in ishihara test    
+        taint_red_test_time_age_bracket_chart = get_chart_data(cursor, query_manager.taint_red_test_time_age_bracket())      # chart with time in age bracket in taint test (red)   
+        taint_green_test_time_age_bracket_chart = get_chart_data(cursor, query_manager.taint_green_test_time_age_bracket())  # chart with time in age bracket in taint test (green)   
+        taint_blue_test_time_age_bracket_chart = get_chart_data(cursor, query_manager.taint_blue_test_time_age_bracket())    # chart with time in age bracket in taint test (blue)   
+        color_error_age_bracket_chart = get_chart_data(cursor, query_manager.color_test_error_age_bracket())                 # chart with error in age brackets in color test
+        taint_error_age_bracket_chart = get_chart_data(cursor, query_manager.taint_test_error_age_bracket())                 # chart with error in age brackets in taint test
+        ishiahra_error_age_bracket_chart = get_chart_data(cursor, query_manager.ishihara_test_error_age_bracket())           # chart with error in age brackets in ishihara test
 
         # == GETTING SINGLE VARIABLE FROM QUERY ==
         # -- users --
@@ -297,4 +300,7 @@ def get_data():
         'taint_red_test_time_age_bracket_chart': taint_red_test_time_age_bracket_chart,
         'taint_green_test_time_age_bracket_chart': taint_green_test_time_age_bracket_chart,
         'taint_blue_test_time_age_bracket_chart': taint_blue_test_time_age_bracket_chart,
+        'color_error_age_bracket_chart': color_error_age_bracket_chart,
+        'taint_error_age_bracket_chart': taint_error_age_bracket_chart,
+        'ishiahra_error_age_bracket_chart': ishiahra_error_age_bracket_chart,
     }), 200

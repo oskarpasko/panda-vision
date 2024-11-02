@@ -173,4 +173,90 @@ class QueryManager:
     LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
     WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) > 60 and error_log = 'BLUE';
     """
+    @staticmethod
+    def color_test_error_age_bracket(): # get avg error during color test
+        return """
+        SELECT AVG(CONVERT(error_colors, UNSIGNED)) AS error, '0-17' AS age_bracket
+        FROM pandavision.color_test_user_results 
+        LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
+        WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) < 18
 
+        UNION ALL
+
+        SELECT AVG(CONVERT(error_colors, UNSIGNED)) AS error, '18-35' AS age_bracket
+        FROM pandavision.color_test_user_results 
+        LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
+        WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) BETWEEN 18 AND 35
+
+        UNION ALL
+
+        SELECT AVG(CONVERT(error_colors, UNSIGNED)) AS error, '36-60' AS age_bracket
+        FROM pandavision.color_test_user_results 
+        LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
+        WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) BETWEEN 36 AND 60
+
+        UNION ALL
+
+        SELECT AVG(CONVERT(error_colors, UNSIGNED)) AS error, '60+' AS age_bracket
+        FROM pandavision.color_test_user_results 
+        LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
+        WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) > 60;
+        """
+    @staticmethod
+    def taint_test_error_age_bracket(): # get avg error during taint test
+        return """
+        SELECT AVG(CONVERT(error_colors, UNSIGNED)) AS error, '0-17' AS age_bracket
+        FROM pandavision.taint_test_user_results 
+        LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
+        WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) < 18
+
+        UNION ALL
+
+        SELECT AVG(CONVERT(error_colors, UNSIGNED)) AS error, '18-35' AS age_bracket
+        FROM pandavision.taint_test_user_results 
+        LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
+        WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) BETWEEN 18 AND 35
+
+        UNION ALL
+
+        SELECT AVG(CONVERT(error_colors, UNSIGNED)) AS error, '36-60' AS age_bracket
+        FROM pandavision.taint_test_user_results 
+        LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
+        WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) BETWEEN 36 AND 60
+
+        UNION ALL
+
+        SELECT AVG(CONVERT(error_colors, UNSIGNED)) AS error, '60+' AS age_bracket
+        FROM pandavision.taint_test_user_results 
+        LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
+        WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) > 60;
+        """
+    @staticmethod
+    def ishihara_test_error_age_bracket(): # get avg error during ishihara test
+        return """
+        SELECT AVG(CONVERT(error_colors, UNSIGNED)) AS error, '0-17' AS age_bracket
+        FROM pandavision.ishihara_test_results 
+        LEFT JOIN pandavision.users ON ishihara_test_results.user = users.username 
+        WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) < 18
+
+        UNION ALL
+
+        SELECT AVG(CONVERT(error_colors, UNSIGNED)) AS error, '18-35' AS age_bracket
+        FROM pandavision.ishihara_test_results 
+        LEFT JOIN pandavision.users ON ishihara_test_results.user = users.username 
+        WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) BETWEEN 18 AND 35
+
+        UNION ALL
+
+        SELECT AVG(CONVERT(error_colors, UNSIGNED)) AS error, '36-60' AS age_bracket
+        FROM pandavision.ishihara_test_results 
+        LEFT JOIN pandavision.users ON ishihara_test_results.user = users.username 
+        WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) BETWEEN 36 AND 60
+
+        UNION ALL
+
+        SELECT AVG(CONVERT(error_colors, UNSIGNED)) AS error, '60+' AS age_bracket
+        FROM pandavision.ishihara_test_results 
+        LEFT JOIN pandavision.users ON ishihara_test_results.user = users.username 
+        WHERE TIMESTAMPDIFF(YEAR, users.date_of_birth, CURDATE()) > 60;
+        """
