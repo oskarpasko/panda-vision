@@ -194,6 +194,7 @@ def get_data():
         color_error_age_bracket_chart = get_chart_data(cursor, query_manager.color_test_error_age_bracket())                 # chart with error in age brackets in color test
         taint_error_age_bracket_chart = get_chart_data(cursor, query_manager.taint_test_error_age_bracket())                 # chart with error in age brackets in taint test
         ishiahra_error_age_bracket_chart = get_chart_data(cursor, query_manager.ishihara_test_error_age_bracket())           # chart with error in age brackets in ishihara test
+        all_tests_avg_time_age_bracket_chart = get_chart_data(cursor, query_manager.all_test_avG_time_age_bracket())         # chart with time in all tests in age brackets 
 
         # == GETTING SINGLE VARIABLE FROM QUERY ==
         # -- users --
@@ -303,4 +304,5 @@ def get_data():
         'color_error_age_bracket_chart': color_error_age_bracket_chart,
         'taint_error_age_bracket_chart': taint_error_age_bracket_chart,
         'ishiahra_error_age_bracket_chart': ishiahra_error_age_bracket_chart,
+        'all_tests_avg_time_age_bracket_chart': all_tests_avg_time_age_bracket_chart,
     }), 200
