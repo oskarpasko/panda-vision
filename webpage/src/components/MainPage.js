@@ -13,7 +13,6 @@ import {
   Legend,
 } from 'chart.js';
 
-// Zarejestruj potrzebne komponenty
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const MainPage = () => {
