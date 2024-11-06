@@ -364,6 +364,37 @@ table {
             color: red;
           }
         }
+
+        .button-generate-pdf {
+          background: linear-gradient(135deg, $primary-color, #2575fc); // Purple to blue gradient
+          color: #ffffff;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 6px;
+          font-size: 12px;
+          font-weight: 600;
+          cursor: pointer;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        
+          &:hover {
+            background: linear-gradient(135deg, #5a0da8, #1f65d6); // Darker purple to blue gradient on hover
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+          }
+        
+          &:active {
+            transform: translateY(1px);
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+          }
+        
+          &:focus {
+            outline: none;
+            box-shadow: 0 0 4px rgba(37, 117, 252, 0.5); // Soft focus outline
+          }
+        }
+        
       }
 
       h2 {
