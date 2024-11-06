@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './../styles/MainPage.scss'; // Import styles
 import logo from '../images/logo.png'; // Ensure the correct path to the logo
 import BASE_URL from '../config';
+import jsPDF from 'jspdf';
+import { ROBOTO_FONT } from '../styles/fonts';
 import { Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -341,6 +343,43 @@ const MainPage = () => {
       day: 'numeric',
     });
   };
+  /* ===== GENERATE PDF RAPORTS ===== */
+  const generatePDF = (errorLog, user, date, test) => {
+    const doc = new jsPDF();
+    // Replace with the Base64 encoding for your `Roboto-Regular.ttf`
+    doc.addFileToVFS('Roboto-Regular.ttf', ROBOTO_FONT);
+    doc.addFont('Roboto-Regular.ttf', 'Roboto', 'normal');
+    doc.setFont('Roboto'); // Set as the default font
+    // Document Title
+    doc.setFontSize(18);
+    doc.setTextColor('#333333');
+    doc.text('Raport błędów', 10, 15);
+    // Subtitle
+    doc.setFontSize(12);
+    doc.setTextColor('#666666');
+    doc.text('Szczegóły błędów', 10, 25);
+    // Draw a separator line
+    doc.setDrawColor(200, 200, 200);
+    doc.line(10, 30, 200, 30);
+    // Error Log Content
+    doc.setFontSize(10);
+    doc.setTextColor('#000000');
+    // Split and wrap the error log text for proper formatting
+    const pageWidth = 180;
+    const margin = 10;
+    const startY = 40;
+    const wrappedText = doc.splitTextToSize(errorLog, pageWidth - margin * 2);
+    // Add error log text, starting below the header
+    doc.text(wrappedText, margin, startY);
+    // Footer with Date and Page Number
+    doc.setFontSize(8);
+    doc.setTextColor('#888888');
+    const dateDoc = new Date().toLocaleDateString('pl-PL');
+    doc.text(`Data: ${dateDoc}`, margin, 285);
+    doc.text(`Strona 1`, 190, 285, null, null, 'right');
+    // Title
+    doc.save(test+'_log_'+user+'_'+date+''+'.pdf');
+  }
 
   /* ===== SWITCH TABLES ===== */
   const switchTable = (table) => {
@@ -365,7 +404,6 @@ const MainPage = () => {
             <button onClick={() => switchTable('dashboard')}>Dashboard</button>
             <button onClick={() => switchTable('users_results')}>Wyniki Uzytkowników</button>
             <button onClick={() => switchTable('charts')}>Wykresy</button>
-            <button onClick={() => switchTable('raports')}>Raporty</button>
           </div>
 
           <div className="main-dashboard">
@@ -557,6 +595,7 @@ const MainPage = () => {
                     <th>Czas testu [ s ]</th>
                     <th>Błędne odpowiedzi</th>
                     <th>Uzytkownik</th>
+                    <td>Error Log</td>
                   </tr>
                 </thead>
                 <tbody>
@@ -567,6 +606,15 @@ const MainPage = () => {
                         <td>{row.time_of_test}</td>
                         <td>{row.error_colors}</td>
                         <td>{row.user}</td>
+                        <td>
+                            {row.error_log ? (
+                              <button className="button-generate-pdf" onClick={() => generatePDF(row.error_log, row.user, formatDate(row.date_of_test), "Color")}>
+                                Raport
+                              </button>
+                            ) : (
+                              "---"
+                            )}
+                          </td>
                       </tr>
                     ))
                   ) : (
@@ -610,35 +658,44 @@ const MainPage = () => {
               </table>
 
               <h3>Wyniki testów Ishihary</h3>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Data Testu</th>
-                    <th>Czas testu [ s ]</th>
-                    <th>Poprawne odpowiedzi</th>
-                    <th>Błędne odpowiedzi</th>
-                    <th>Uzytkownik</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {ishiharaTableDataAdmin.length > 0 ? (
-                    ishiharaTableDataAdmin.map((row) => (
-                      <tr key={row.id} className={row.error_colors > 0 ? 'error-row' : ''}>
-                        <td>{formatDate(row.date_of_test)}</td>
-                        <td>{row.time_of_test}</td>
-                        <td>{row.correct_colors}</td>
-                        <td>{row.error_colors}</td>
-                        <td>{row.user}</td>
-                      </tr>
-                    ))
-                  ) : (
+                <table>
+                  <thead>
                     <tr>
-                      <td colSpan="4">Brak wyników testów</td>
+                      <th>Data Testu</th>
+                      <th>Czas testu [ s ]</th>
+                      <th>Poprawne odpowiedzi</th>
+                      <th>Błędne odpowiedzi</th>
+                      <th>Uzytkownik</th>
+                      <th>Error Log</th>
                     </tr>
-                  )}
-                </tbody>
-              </table>
-
+                  </thead>
+                  <tbody>
+                    {ishiharaTableDataAdmin.length > 0 ? (
+                      ishiharaTableDataAdmin.map((row) => (
+                        <tr key={row.id} className={row.error_colors > 0 ? 'error-row' : ''}>
+                          <td>{formatDate(row.date_of_test)}</td>
+                          <td>{row.time_of_test}</td>
+                          <td>{row.correct_colors}</td>
+                          <td>{row.error_colors}</td>
+                          <td>{row.user}</td>
+                          <td>
+                            {row.error_log ? (
+                              <button className="button-generate-pdf" onClick={() => generatePDF(row.error_log, row.user, formatDate(row.date_of_test), "Ishihara")}>
+                                Raport
+                              </button>
+                            ) : (
+                              "---"
+                            )}
+                          </td>
+                        </tr>
+                      ))
+                    ) : (
+                      <tr>
+                        <td colSpan="6">Brak wyników testów</td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
             </>
             )}
 
