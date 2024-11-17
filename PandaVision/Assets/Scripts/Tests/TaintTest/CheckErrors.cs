@@ -77,7 +77,7 @@ public class CheckErrors : MonoBehaviour
         form.AddField("error_log", GlobalColor.globalColor);
         form.AddField("user", LoggedUsername.loggedUserName);
 
-        using (UnityWebRequest webRequest = UnityWebRequest.Post("http://192.168.0.166:5000/taint_test_result", form))
+        using (UnityWebRequest webRequest = UnityWebRequest.Post(ApiUrl.Apiurl + "/taint_test_result", form))
         {
             yield return webRequest.SendWebRequest();
         }

@@ -106,7 +106,7 @@ public class IshiharaTest : MonoBehaviour
             form.AddField("error_log", errorLog);
             form.AddField("user", LoggedUsername.loggedUserName);
 
-            using (UnityWebRequest webRequest = UnityWebRequest.Post("http://192.168.0.166:5000/ishihara_test_result", form))
+            using (UnityWebRequest webRequest = UnityWebRequest.Post(ApiUrl.Apiurl + "/ishihara_test_result", form))
             {
                 yield return webRequest.SendWebRequest();
             }
