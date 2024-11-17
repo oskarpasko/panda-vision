@@ -55,7 +55,7 @@ public class GettingColorTest : MonoBehaviour
         }
         else
         {
-            UnityWebRequest www = UnityWebRequest.Get("http://192.168.0.166:5000/color_test"); // connect with db
+            UnityWebRequest www = UnityWebRequest.Get(ApiUrl.Apiurl + "/color_test"); // connect with db
             yield return www.SendWebRequest();
 
             if (www.result != UnityWebRequest.Result.Success) // checking connection
