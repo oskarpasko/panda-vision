@@ -1,4 +1,36 @@
-Wykresy:
-  - wykres przedstawiający średnią ilość punktów ze wszystkich testów w każdym przedziale wiekowym (1)
+** Dodanie opisów do badań w aplikacji: **
+Test Kolorów
+W teście należy rozpoznać kolory wyświetlane na ekranie. Na środku pojawia się losowy kolor, a poniżej prezentowane są cztery opcje odpowiedzi oznaczone nazwami kolorów. 
 
-  - wykres ze spendzonym czasem we wszsytkich testach w każdym przedziale wiekowym (1)
+Zadaniem jest wybranie odpowiedzi pasującej do wyświetlanego koloru. 
+
+Po zakończeniu testu analizowany będzie czas wykonania testu oraz liczba poprawnych i błędnych odpowiedzi.
+-------------------------------------
+Test Barw
+W tym teście należy na początku wybrać kolor, który będzie podlegał ocenie: czerwony, zielony lub niebieski. 
+Po dokonaniu wyboru i rozpoczęciu zadania pojawi się 15 sześcianów w losowym układzie - 5 w wybranym kolorze (w różnych odcieniach) oraz 10 w pozostałych kolorach (w różnych odcieniach). 
+
+Zadaniem jest uporządkowanie 5 sześcianów w wybranym kolorze na specjalnie oznaczonych miejscach. Sześciany należy ustawiać w kolejności od najbardziej nasyconego koloru (po lewej) do najmniej nasyconego (po prawej). 
+
+Po zakończeniu testu analizowany będzie czas wykonania testu oraz liczba poprawnych i błędnych odpowiedz
+-----------------------------------------------
+Test Ishihary
+W tym teście na ekranie będą wyświetlane tablice Ishihary.
+
+Zadaniem jest wpisanie liczby widocznej na wyświetlonym obrazku w polu tekstowym i naciśnięcie przycisku „Następny”. Jeśli na obrazku nie da się rozpoznać żadnej liczby, pole należy pozostawić puste i również nacisnąć „Następny”.
+
+Po zakończeniu testu analizowany będzie czas wykonania testu oraz liczba poprawnych i błędnych odpowiedzi.
+
+** Dodanie tutoriali do badań: **
+Zrobienie nowej tabeli w bazie, która przechowuje czas wykonania z tutorialu
+tutorial_time
+- id
+- name (np. Taint Tutorial)
+- time
+- username (FK)
+
+Tutorial do testu barw będzie polegał na tym że user ma poukładać 5 cubów od największego do najmniejszego, tutorial ma za zadanie nauczyć jak manewrować cubami.
+Tutorial do testu ishihary będzie polegać na wpisaniu odopwienich liczb z canvasa (zwykłych czarnych na białym tle), tets ma za zadanie zaznajomienie jak wpisywać liczby
+W testach nie zbieramy informacji i błędnych dopasowaniach.
+
+Pomyśleć czy nie dać gdzieś na boku w tutorialach na boku gdzieś canvasa wyjaśniającego sterowanie kontolerem, któ©y przycisk co robi.
