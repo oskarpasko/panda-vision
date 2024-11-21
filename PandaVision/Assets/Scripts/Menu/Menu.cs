@@ -38,6 +38,12 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("ColorCubeTestScene");
     }
 
+    // method which starts Color Cube Tutorial
+    public void ColorCubeTutorialStart()
+    {
+        SceneManager.LoadScene("ColorCubeTutorial");
+    }
+
     // method which shows description ob Ishihara Test
     public void IshiharaTestDescription()
     {
@@ -46,9 +52,15 @@ public class Menu : MonoBehaviour
         ishiharaDescButton.SetActive(true);
     }
 
-    // method which starts Color Ishihara Scene
+    // method which starts Ishihara Scene
     public void IshiharaTestStart()
     {
         SceneManager.LoadScene("IshiharaTest");
+    }
+
+    // method which starts Ishihara Tutorial
+    public void IshiharaTutorialStart()
+    {
+        SceneManager.LoadScene("IshiharaTutorial");
     }
 }
