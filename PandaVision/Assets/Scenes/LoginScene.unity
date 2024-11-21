@@ -11772,6 +11772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loginCanvas: {fileID: 469900957}
   menuCanvas: {fileID: 653104764}
+  descCanvas: {fileID: 292123676}
 --- !u!1 &1099650963
 GameObject:
   m_ObjectHideFlags: 0
