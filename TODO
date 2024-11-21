@@ -1,26 +1,3 @@
-** Dodanie opisów do badań w aplikacji: **
-Test Kolorów
-W teście należy rozpoznać kolory wyświetlane na ekranie. Na środku pojawia się losowy kolor, a poniżej prezentowane są cztery opcje odpowiedzi oznaczone nazwami kolorów. 
-
-Zadaniem jest wybranie odpowiedzi pasującej do wyświetlanego koloru. 
-
-Po zakończeniu testu analizowany będzie czas wykonania testu oraz liczba poprawnych i błędnych odpowiedzi.
--------------------------------------
-Test Barw
-W tym teście należy na początku wybrać kolor, który będzie podlegał ocenie: czerwony, zielony lub niebieski. 
-Po dokonaniu wyboru i rozpoczęciu zadania pojawi się 15 sześcianów w losowym układzie - 5 w wybranym kolorze (w różnych odcieniach) oraz 10 w pozostałych kolorach (w różnych odcieniach). 
-
-Zadaniem jest uporządkowanie 5 sześcianów w wybranym kolorze na specjalnie oznaczonych miejscach. Sześciany należy ustawiać w kolejności od najbardziej nasyconego koloru (po lewej) do najmniej nasyconego (po prawej). 
-
-Po zakończeniu testu analizowany będzie czas wykonania testu oraz liczba poprawnych i błędnych odpowiedz
------------------------------------------------
-Test Ishihary
-W tym teście na ekranie będą wyświetlane tablice Ishihary.
-
-Zadaniem jest wpisanie liczby widocznej na wyświetlonym obrazku w polu tekstowym i naciśnięcie przycisku „Następny”. Jeśli na obrazku nie da się rozpoznać żadnej liczby, pole należy pozostawić puste i również nacisnąć „Następny”.
-
-Po zakończeniu testu analizowany będzie czas wykonania testu oraz liczba poprawnych i błędnych odpowiedzi.
-
 ** Dodanie tutoriali do badań: **
 Zrobienie nowej tabeli w bazie, która przechowuje czas wykonania z tutorialu
 tutorial_time
