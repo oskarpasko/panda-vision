@@ -526,12 +526,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Test kolor\xF3w.\n\nPodczas badania b\u0119dzie wy\u015Bwietlny panel
-    z pojawiaj\u0105cymi si\u0119 kolorami. Pod kolorem b\u0119d\u0105 widoczne cztery
-    przyciski z nazwami kolor\xF3w. Celem jest klikn\u0105\u0107 przycisk z nazw\u0105
-    koloru jaki widzimy.\n\nJe\u015Bli podczas badania nie widzisz \u017Cadnego koloru
-    z wypisanych na przyciskach zg\u0142o\u015B to osobie przeprowadzaj\u0105cej
-    badanie!\n\n"
+  m_text: "W te\u015Bcie nale\u017Cy rozpozna\u0107 kolory wy\u015Bwietlane na ekranie.
+    Na \u015Brodku pojawia si\u0119 losowy kolor, a poni\u017Cej prezentowane s\u0105
+    cztery opcje odpowiedzi oznaczone nazwami kolor\xF3w. \r\n\r\nZadaniem jest wybranie
+    odpowiedzi pasuj\u0105cej do wy\u015Bwietlanego koloru. \r\n\r\nPo zako\u0144czeniu
+    testu analizowany b\u0119dzie czas wykonania testu oraz liczba poprawnych i b\u0142\u0119dnych
+    odpowiedzi.\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -558,8 +558,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -594,7 +594,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 48.67108, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -690,8 +690,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1039948178}
   m_HandleRect: {fileID: 1039948177}
   m_Direction: 2
-  m_Value: 0.99999976
-  m_Size: 0.64429885
+  m_Value: 1.0000002
+  m_Size: 0.6442989
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1452,8 +1452,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1233264104}
   m_HandleRect: {fileID: 1233264103}
   m_Direction: 2
-  m_Value: 0.99999976
-  m_Size: 0.64429885
+  m_Value: 1.0000002
+  m_Size: 0.6442989
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1817,7 +1817,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1540276796}
   m_HandleRect: {fileID: 1540276795}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2066,7 +2066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &179778622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2941,7 +2941,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tutaj pojawi si\u0119 opis dotycz\u0105cy testu \nIshihary"
+  m_text: "W tym te\u015Bcie na ekranie b\u0119d\u0105 wy\u015Bwietlane tablice Ishihary.\r\n\r\nZadaniem
+    jest wpisanie liczby widocznej na wy\u015Bwietlonym obrazku w polu tekstowym
+    i naci\u015Bni\u0119cie przycisku \u201ENast\u0119pny\u201D. Je\u015Bli na obrazku
+    nie da si\u0119 rozpozna\u0107 \u017Cadnej liczby, pole nale\u017Cy pozostawi\u0107
+    puste i r\xF3wnie\u017C nacisn\u0105\u0107 \u201ENast\u0119pny\u201D.\r\n\r\nPo
+    zako\u0144czeniu testu analizowany b\u0119dzie czas wykonania testu oraz liczba
+    poprawnych i b\u0142\u0119dnych odpowiedzi."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2968,8 +2974,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3004,7 +3010,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 31.872253, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3566,7 +3572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &292123677
 Transform:
   m_ObjectHideFlags: 0
@@ -13140,13 +13146,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Test Barw.\n\nPrzed nami pojawi si\u0119 p\xF3\u0142ka z kolorowymi sze\u015Bcianami.
-    Zadaniem jest po\u0142o\u017Cy\u0107 sze\u015Bciany na kolorowych polach znajduj\u0105cych
-    si\u0119 przed badanym. Badanie ko\u0144czy si\u0119 kiedy po\u0142o\u017Cymy
-    wszystkie sze\u015Bciany na odpowiednich polach lub kiedy wci\u015Bniemy przycisk
-    \"Zako\u0144cz\".\n\nJe\u015Bli podczas badania nie widzisz \u017Cadnego koloru
-    z wypisanych na przyciskach zg\u0142o\u015B to osobie przeprowadzaj\u0105cej
-    badanie!"
+  m_text: "W tym te\u015Bcie nale\u017Cy na pocz\u0105tku wybra\u0107 kolor, kt\xF3ry
+    b\u0119dzie podlega\u0142 ocenie: czerwony, zielony lub niebieski. \r\nPo dokonaniu
+    wyboru i rozpocz\u0119ciu zadania pojawi si\u0119 15 sze\u015Bcian\xF3w w losowym
+    uk\u0142adzie - 5 w wybranym kolorze (w r\xF3\u017Cnych odcieniach) oraz 10 w
+    pozosta\u0142ych kolorach (w r\xF3\u017Cnych odcieniach). \r\n\r\nZadaniem jest
+    uporz\u0105dkowanie 5 sze\u015Bcian\xF3w w wybranym kolorze na specjalnie oznaczonych
+    miejscach. Sze\u015Bciany nale\u017Cy ustawia\u0107 w kolejno\u015Bci od najbardziej
+    nasyconego koloru (po lewej) do najmniej nasyconego (po prawej). \r\n\r\nPo zako\u0144czeniu
+    testu analizowany b\u0119dzie czas wykonania testu oraz liczba poprawnych i b\u0142\u0119dnych
+    odpowiedzi."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13173,8 +13182,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -13209,7 +13218,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 45.151978, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
