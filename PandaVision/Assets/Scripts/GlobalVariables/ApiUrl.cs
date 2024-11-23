@@ -5,5 +5,5 @@ using UnityEngine;
 
 public class ApiUrl : MonoBehaviour
 {
-    public static String Apiurl = "http://172.20.10.3:5000/";
+    public static String Apiurl = "http://192.168.0.166:5000/";
 }

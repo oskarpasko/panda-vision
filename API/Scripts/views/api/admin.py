@@ -69,21 +69,32 @@ def get_data():
         color_num, color_time, color_avg = get_tests_details(cursor, query_manager.get_color_test_details())                           # amount, time, avg errors of all color test
         taint_num, taint_time, taint_avg = get_tests_details(cursor, query_manager.get_taint_test_details())                           # amount, time, avg errors of all taint test
         ishihara_num, ishihara_time, ishiahara_avg = get_tests_details(cursor, query_manager.get_ishihara_test_details())              # amount, time, avg errors of all ishihara test
-        taint_red_num, taint_red_time, taint_red_avg = get_tests_details(cursor, query_manager.get_taint_test_red_details())           # amount, time, `vg errors of red test in taint test`
-        taint_green_num, taint_green_time, taint_green_avg = get_tests_details(cursor, query_manager.get_taint_test_green_details())   # amount, time, `vg errors of green test in taint test`
-        taint_blue_num, taint_blue_time, taint_blue_avg = get_tests_details(cursor, query_manager.get_taint_test_blue_details())       # amount, time, `vg errors of blue test in taint test`
+        taint_red_num, taint_red_time, taint_red_avg = get_tests_details(cursor, query_manager.get_taint_test_red_details())           # amount, time, avg errors of red test in taint test
+        taint_green_num, taint_green_time, taint_green_avg = get_tests_details(cursor, query_manager.get_taint_test_green_details())   # amount, time, avg errors of green test in taint test
+        taint_blue_num, taint_blue_time, taint_blue_avg = get_tests_details(cursor, query_manager.get_taint_test_blue_details())       # amount, time, avg errors of blue test in taint test
         
         # == CHARTS ==
-        color_time_age_bracket_chart = get_chart_data(cursor, query_manager.color_test_time_age_bracket())                   # chart with time in age bracket in color test
-        taint_time_age_bracket_chart = get_chart_data(cursor, query_manager.taint_test_time_age_bracket())                   # chart with time in age bracket in taint test    
-        ishihara_time_age_bracket_chart = get_chart_data(cursor, query_manager.ishihara_test_time_age_bracket())             # chart with time in age bracket in ishihara test    
-        taint_red_test_time_age_bracket_chart = get_chart_data(cursor, query_manager.taint_red_test_time_age_bracket())      # chart with time in age bracket in taint test (red)   
-        taint_green_test_time_age_bracket_chart = get_chart_data(cursor, query_manager.taint_green_test_time_age_bracket())  # chart with time in age bracket in taint test (green)   
-        taint_blue_test_time_age_bracket_chart = get_chart_data(cursor, query_manager.taint_blue_test_time_age_bracket())    # chart with time in age bracket in taint test (blue)   
-        color_error_age_bracket_chart = get_chart_data(cursor, query_manager.color_test_error_age_bracket())                 # chart with error in age brackets in color test
-        taint_error_age_bracket_chart = get_chart_data(cursor, query_manager.taint_test_error_age_bracket())                 # chart with error in age brackets in taint test
-        ishiahra_error_age_bracket_chart = get_chart_data(cursor, query_manager.ishihara_test_error_age_bracket())           # chart with error in age brackets in ishihara test
-        all_tests_avg_time_age_bracket_chart = get_chart_data(cursor, query_manager.all_test_avG_time_age_bracket())         # chart with time in all tests in age brackets 
+        color_time_age_bracket_chart = get_chart_data(cursor, query_manager.color_test_time_age_bracket())                   # chart with avg time in age bracket in color test
+        taint_time_age_bracket_chart = get_chart_data(cursor, query_manager.taint_test_time_age_bracket())                   # chart with avg time in age bracket in taint test    
+        ishihara_time_age_bracket_chart = get_chart_data(cursor, query_manager.ishihara_test_time_age_bracket())             # chart with avg time in age bracket in ishihara test    
+        taint_red_test_time_age_bracket_chart = get_chart_data(cursor, query_manager.taint_red_test_time_age_bracket())      # chart with avg time in age bracket in taint test (red)   
+        taint_green_test_time_age_bracket_chart = get_chart_data(cursor, query_manager.taint_green_test_time_age_bracket())  # chart with avg time in age bracket in taint test (green)   
+        taint_blue_test_time_age_bracket_chart = get_chart_data(cursor, query_manager.taint_blue_test_time_age_bracket())    # chart with avg time in age bracket in taint test (blue)   
+        color_error_age_bracket_chart = get_chart_data(cursor, query_manager.color_test_error_age_bracket())                 # chart with avg error in age brackets in color test
+        taint_error_age_bracket_chart = get_chart_data(cursor, query_manager.taint_test_error_age_bracket())                 # chart with avg error in age brackets in taint test
+        ishiahra_error_age_bracket_chart = get_chart_data(cursor, query_manager.ishihara_test_error_age_bracket())           # chart with avg error in age brackets in ishihara test
+        all_tests_avg_time_age_bracket_chart = get_chart_data(cursor, query_manager.all_test_avG_time_age_bracket())         # chart with avg time in all tests in age brackets 
+
+        color_time_sex_chart = get_chart_data(cursor, query_manager.color_test_time_sex())                                   # chart with avg time in color test divide between females and males        
+        taint_time_sex_chart = get_chart_data(cursor, query_manager.taint_test_time_sex())                                   # chart with avg time in taint test divide between females and males 
+        ishihara_time_sex_chart = get_chart_data(cursor, query_manager.ishihara_test_time_sex())                             # chart with avg time in ishihara test divide between females and males 
+        taint_red_time_sex_chart = get_chart_data(cursor, query_manager.taint_red_test_time_sex())                           # chart with avg time in taint test divide between females and males (red)  
+        taint_green_time_sex_chart = get_chart_data(cursor, query_manager.taint_green_test_time_sex())                       # chart with avg time in taint test divide between females and males (green)
+        taint_blue_time_sex_chart = get_chart_data(cursor, query_manager.taint_blue_test_time_sex())                         # chart with avg time in taint test divide between females and males (blue)
+        color_error_sex_chart = get_chart_data(cursor, query_manager.color_test_error_sex())                                 # chart with avg errors in color test divide between females and males
+        taint_error_sex_chart = get_chart_data(cursor, query_manager.taint_test_error_sex())                                 # chart with avg errors in taint test divide between females and males
+        ishihara_error_test_chart = get_chart_data(cursor, query_manager.ishihara_test_error_sex())                          # chart with avg errors in ishihara test divide between females and males
+        all_tests_avg_time_sex_chart = get_chart_data(cursor, query_manager.all_test_avg_time_sex())                         # chart with avg time in all tests ivide between females and males
 
         # == GETTING SINGLE VARIABLE FROM QUERY ==
         # -- age brackets --
@@ -192,4 +203,16 @@ def get_data():
         'taint_error_age_bracket_chart': taint_error_age_bracket_chart,
         'ishiahra_error_age_bracket_chart': ishiahra_error_age_bracket_chart,
         'all_tests_avg_time_age_bracket_chart': all_tests_avg_time_age_bracket_chart,
+
+        'color_time_sex_chart': color_time_sex_chart,
+        'taint_time_sex_chart': taint_time_sex_chart, 
+        'ishihara_time_sex_chart': ishihara_time_sex_chart,
+        'taint_red_time_sex_chart': taint_red_time_sex_chart,
+        'taint_green_time_sex_chart': taint_green_time_sex_chart, 
+        'taint_blue_time_sex_chart': taint_blue_time_sex_chart,
+        'color_error_sex_chart': color_error_sex_chart, 
+        'taint_error_sex_chart': taint_error_sex_chart, 
+        'ishihara_error_test_chart': ishihara_error_test_chart,
+        'all_tests_avg_time_sex_chart': all_tests_avg_time_sex_chart 
+
     }), 200

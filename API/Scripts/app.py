@@ -5,6 +5,7 @@ from views.color_test import color_test_blueprint
 from views.login import login_blueprint
 from views.color_test_result import color_test_result_blueprint
 from views.taint_test_result import taint_test_result_blueprint
+from views.taint_tutorial import taint_tutorial_blueprint
 from views.ishihara_test_result import ishihara_test_result_blueprint
 from views.api.login import api_login_blueprint
 from views.api.main import api_main_blueprint
@@ -18,11 +19,20 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Register Blueprints
-app.register_blueprint(color_test_blueprint)
 app.register_blueprint(login_blueprint)
+
+app.register_blueprint(color_test_blueprint)
 app.register_blueprint(color_test_result_blueprint)
+
 app.register_blueprint(taint_test_result_blueprint)
+app.register_blueprint(taint_tutorial_blueprint)
+
 app.register_blueprint(ishihara_test_result_blueprint)
+<<<<<<< Updated upstream
+=======
+app.register_blueprint(ishihara_tutorial_blueprint)
+
+>>>>>>> Stashed changes
 app.register_blueprint(api_login_blueprint)
 app.register_blueprint(api_main_blueprint)
 app.register_blueprint(api_register_blueprint)

@@ -17,6 +17,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IshiharaTest.unity
     guid: 1c9705823be004f4e842b4ac3b425bc7
+<<<<<<< Updated upstream
+=======
+  - enabled: 1
+    path: Assets/Scenes/IshiharaTutorial.unity
+    guid: ac8fb929cd6ac234395643a5be002d80
+  - enabled: 1
+    path: Assets/Scenes/ColorCubeTutorial.unity
+    guid: 18daefad70bbca34eace6391bf876bd0
+>>>>>>> Stashed changes
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: f4de5a511c66b3642bfc98be4dcaf5a3, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ba688aec04da4ad458e44f8a128faf04, type: 2}

@@ -444,3 +444,190 @@ class QueryManager:
         ) AS combined_times;
         """
 
+#
+# QUERIES DIVIDE BETWEEN FAMLES AND MALES
+#
+    @staticmethod
+    def all_test_avg_time_sex():                    # get avg time of all test divide between females and males
+        return """
+        SELECT AVG(total_time) AS time, 'Kobiety' AS sex
+            FROM (
+                SELECT CONVERT(time_of_test, UNSIGNED) AS total_time
+                FROM pandavision.color_test_user_results 
+                LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
+                WHERE users.sex = 'female'
+                
+                UNION ALL
+
+                SELECT CONVERT(time_of_test, UNSIGNED) AS sex
+                FROM pandavision.taint_test_user_results 
+                LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
+                WHERE users.sex = 'female'
+                
+                UNION ALL
+
+                SELECT CONVERT(time_of_test, UNSIGNED) AS sex
+                FROM pandavision.ishihara_test_results 
+                LEFT JOIN pandavision.users ON ishihara_test_results.user = users.username 
+                WHERE users.sex = 'female'
+            ) AS combined_times
+
+            UNION ALL
+
+            SELECT AVG(total_time) AS time, 'Mężczyźni' AS sex
+            FROM (
+                SELECT CONVERT(time_of_test, UNSIGNED) AS total_time
+                FROM pandavision.color_test_user_results  
+                LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
+                WHERE users.sex = 'male'
+                
+                UNION ALL
+
+                SELECT CONVERT(time_of_test, UNSIGNED) AS sex
+                FROM pandavision.taint_test_user_results 
+                LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
+                WHERE users.sex = 'male'
+                
+                UNION all
+                
+                SELECT CONVERT(time_of_test, UNSIGNED) AS sex
+                FROM pandavision.ishihara_test_results 
+                LEFT JOIN pandavision.users ON ishihara_test_results.user = users.username 
+                WHERE users.sex = 'male'
+            ) AS combined_times
+        """
+    @staticmethod
+    def color_test_time_sex():                      # get avg time in color test divide between females and males
+        return """
+        SELECT AVG(CONVERT(time_of_test, UNSIGNED)) AS time, 'Kobiety' AS sex
+        FROM pandavision.color_test_user_results 
+        LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
+        WHERE users.sex = 'female'
+
+        UNION ALL
+
+        SELECT AVG(CONVERT(time_of_test, UNSIGNED)) AS time, 'Mężczyźni' AS sex
+        FROM pandavision.color_test_user_results 
+        LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
+        WHERE users.sex = 'male'
+        """
+    @staticmethod
+    def taint_test_time_sex():                      # get avg time in taint test divide between females and males
+        return """
+        SELECT AVG(CONVERT(time_of_test, UNSIGNED)) AS time, 'Kobiety' AS sex
+        FROM pandavision.taint_test_user_results 
+        LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
+        WHERE users.sex = 'female'
+
+        UNION ALL
+
+        SELECT AVG(CONVERT(time_of_test, UNSIGNED)) AS time, 'Mężczyźni' AS sex
+        FROM pandavision.taint_test_user_results 
+        LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
+        WHERE users.sex = 'male'
+        """
+    @staticmethod
+    def ishihara_test_time_sex():                   # get avg time in ishihara test divide between females and males
+        return """
+        SELECT AVG(CONVERT(time_of_test, UNSIGNED)) AS time, 'Kobiety' AS sex
+        FROM pandavision.ishihara_test_results 
+        LEFT JOIN pandavision.users ON ishihara_test_results.user = users.username 
+        WHERE users.sex = 'female'
+
+        UNION ALL
+
+        SELECT AVG(CONVERT(time_of_test, UNSIGNED)) AS time, 'Mężczyźni' AS sex
+        FROM pandavision.ishihara_test_results 
+        LEFT JOIN pandavision.users ON ishihara_test_results.user = users.username 
+        WHERE users.sex = 'male'
+        """
+    @staticmethod
+    def taint_red_test_time_sex():                  # get avg time with red in taint test divide between females and males
+        return """
+        SELECT AVG(CONVERT(time_of_test, UNSIGNED)) AS time, 'Kobiety' AS sex
+        FROM pandavision.taint_test_user_results 
+        LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
+        WHERE users.sex = 'female' AND error_log = 'RED'
+
+        UNION ALL
+
+        SELECT AVG(CONVERT(time_of_test, UNSIGNED)) AS time, 'Mężczyźni' AS sex
+        FROM pandavision.taint_test_user_results 
+        LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
+        WHERE users.sex = 'male' AND error_log = 'RED'
+        """
+    @staticmethod
+    def taint_green_test_time_sex():                # get avg time with green in taint test divide between females and males
+        return """
+        SELECT AVG(CONVERT(time_of_test, UNSIGNED)) AS time, 'Kobiety' AS sex
+        FROM pandavision.taint_test_user_results 
+        LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
+        WHERE users.sex = 'female' AND error_log = 'GREEN'
+
+        UNION ALL
+
+        SELECT AVG(CONVERT(time_of_test, UNSIGNED)) AS time, 'Mężczyźni' AS sex
+        FROM pandavision.taint_test_user_results 
+        LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
+        WHERE users.sex = 'male' AND error_log = 'GREEN'
+        """
+    @staticmethod
+    def taint_blue_test_time_sex():                 # get avg time with blue in taint test divide between females and males
+        return """
+        SELECT AVG(CONVERT(time_of_test, UNSIGNED)) AS time, 'Kobiety' AS sex
+        FROM pandavision.taint_test_user_results 
+        LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
+        WHERE users.sex = 'female' AND error_log = 'BLUE'
+
+        UNION ALL
+
+        SELECT AVG(CONVERT(time_of_test, UNSIGNED)) AS time, 'Mężczyźni' AS sex
+        FROM pandavision.taint_test_user_results 
+        LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
+        WHERE users.sex = 'male' AND error_log = 'BLUE'
+        """
+    @staticmethod
+    def color_test_error_sex():                     # get avg error during color test divide between females and males
+        return """
+        SELECT AVG(CONVERT(error_colors, UNSIGNED)) AS error, 'Kobiety' AS sex
+        FROM pandavision.color_test_user_results 
+        LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
+        WHERE users.sex = 'female'
+
+        UNION ALL
+
+        SELECT AVG(CONVERT(error_colors, UNSIGNED)) AS error, 'Mężczyźni' AS sex
+        FROM pandavision.color_test_user_results 
+        LEFT JOIN pandavision.users ON color_test_user_results.user = users.username 
+        WHERE users.sex = 'male'
+        """
+    @staticmethod
+    def taint_test_error_sex():                     # get avg error during taint test divide between females and males
+        return """
+        SELECT AVG(CONVERT(error_colors, UNSIGNED)) AS error, 'Kobiety' AS sex
+        FROM pandavision.taint_test_user_results 
+        LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
+        WHERE users.sex = 'female'
+
+        UNION ALL
+
+        SELECT AVG(CONVERT(error_colors, UNSIGNED)) AS error, 'Mężczyźni' AS sex
+        FROM pandavision.taint_test_user_results 
+        LEFT JOIN pandavision.users ON taint_test_user_results.user = users.username 
+        WHERE users.sex = 'male'
+        """
+    @staticmethod
+    def ishihara_test_error_sex():                     # get avg error during ishihara test divide between females and males
+        return """
+        SELECT AVG(CONVERT(error_colors, UNSIGNED)) AS error, 'Kobiety' AS sex
+        FROM pandavision.ishihara_test_results 
+        LEFT JOIN pandavision.users ON ishihara_test_results.user = users.username 
+        WHERE users.sex = 'female'
+
+        UNION ALL
+
+        SELECT AVG(CONVERT(error_colors, UNSIGNED)) AS error, 'Mężczyźni' AS sex
+        FROM pandavision.ishihara_test_results 
+        LEFT JOIN pandavision.users ON ishihara_test_results.user = users.username 
+        WHERE users.sex = 'male'
+        """

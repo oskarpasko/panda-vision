@@ -84,6 +84,17 @@ const MainPage = () => {
   const [ishiharaErrorAgeBracketChartData, setIshiharaErrorAgeBracketChartData] = useState(null);
   const [allTestsTimeAgeBracketChartData, setAllTestsTimeAgeBracketChartData] = useState(null);
 
+  const [colorTimeAvgSexChart, setColorTimeAvgSexChart] = useState(null);
+  const [taintTimeAvgSexChart, setTaintTimeAvgSexChart] = useState(null);
+  const [ishiharaTimeAvgSexChart, setIshiharaTimeAvgSexChart] = useState(null);
+  const [taintRedTimeAvgSexChart, setTaintRedTimeAvgSexChart] = useState(null);
+  const [taintGreenTimeAvgSexChart, setTaintGreenTimeAvgSexChart] = useState(null);
+  const [taintBlueTimeAvgSexChart,setTaintBlueTimeAvgSexChart] = useState(null);
+  const [colorErrorsAvgSexChart, setColorErrorsAvgSexChart] = useState(null);
+  const [taintErrorsAvgSexChart, setTaintErrorsAvgSexChart] = useState(null);
+  const [ishiharaErrorsAvgSexChart,setIshiaharaErrorsAvgSexChart] = useState(null);
+  const [allTestsTimeSexChartData, setAllTestsTimeSexChartData] = useState(null);
+
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
   
@@ -290,6 +301,129 @@ const MainPage = () => {
                   },
               ],
           });
+
+          // CHART DIVIDE BETWEEN FEMALES AND MALES
+
+          setColorTimeAvgSexChart({  // get data to chart avg time in color test divide between females and males
+            labels: data.color_time_sex_chart.map(item => item.sex),
+            datasets: [
+                {
+                    label: 'Średni czas (s)',
+                    data: data.color_time_sex_chart.map(item => item.time),
+                    backgroundColor: 'rgba(176, 78, 255, 0.6)',
+                    borderColor: 'rgba(176, 78, 255, 1)',
+                    borderWidth: 1,
+                },
+            ],
+        });
+          setTaintTimeAvgSexChart({  // get data to chart avg time in taint test divide between females and males
+            labels: data.taint_time_sex_chart.map(item => item.sex),
+            datasets: [
+                {
+                    label: 'Średni czas (s)',
+                    data: data.taint_time_sex_chart.map(item => item.time),
+                    backgroundColor: 'rgba(206, 106, 255, 0.6)',
+                    borderColor: 'rgba(206, 106, 255, 1)',
+                    borderWidth: 1,
+                },
+            ],
+        });
+          setIshiharaTimeAvgSexChart({  // get data to chart avg time in ishihara test divide between females and males
+            labels: data.ishihara_time_sex_chart.map(item => item.sex),
+            datasets: [
+                {
+                    label: 'Średni czas (s)',
+                    data: data.ishihara_time_sex_chart.map(item => item.time),
+                    backgroundColor: 'rgba(237, 134, 255, 0.6)',
+                    borderColor: 'rgba(237, 134, 255, 1)',
+                    borderWidth: 1,
+                },
+            ],
+        });
+          setTaintRedTimeAvgSexChart({  // get data to chart avg time in taint (red) test divide between females and males
+            labels: data.taint_red_time_sex_chart.map(item => item.sex),
+            datasets: [
+                {
+                    label: 'Średni czas (s)',
+                    data: data.taint_red_time_sex_chart.map(item => item.time),
+                    backgroundColor: 'rgba(236, 152, 159, 0.6)',
+                    borderColor: 'rgba(236, 152, 159, 1)',
+                    borderWidth: 1,
+                },
+            ],
+        });
+          setTaintGreenTimeAvgSexChart({  // get data to chart avg time in taint (green) test divide between females and males
+            labels: data.taint_green_time_sex_chart.map(item => item.sex),
+            datasets: [
+                {
+                    label: 'Średni czas (s)',
+                    data: data.taint_green_time_sex_chart.map(item => item.time),
+                    backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1,
+                },
+            ],
+        });
+          setTaintBlueTimeAvgSexChart({  // get data to chart avg time in taint (blue) test divide between females and males
+            labels: data.taint_blue_time_sex_chart.map(item => item.sex),
+            datasets: [
+                {
+                    label: 'Średni czas (s)',
+                    data: data.taint_blue_time_sex_chart.map(item => item.time),
+                    backgroundColor: 'rgba(97, 195, 231, 0.6)',
+                    borderColor: 'rgba(97, 195, 231, 1)',
+                    borderWidth: 1,
+                },
+            ],
+        });
+          setColorErrorsAvgSexChart({  // get data to chart avg error in color test divide between females and males
+            labels: data.color_error_sex_chart.map(item => item.sex),
+            datasets: [
+                {
+                    label: 'Średnia ilość błędów',
+                    data: data.color_error_sex_chart.map(item => item.error),
+                    backgroundColor: 'rgba(176, 78, 255, 0.6)',
+                    borderColor: 'rgba(176, 78, 255, 1)',
+                    borderWidth: 1,
+                },
+            ],
+        });
+          setTaintErrorsAvgSexChart({  // get data to chart avg error in taint test divide between females and males
+            labels: data.taint_error_sex_chart.map(item => item.sex),
+            datasets: [
+                {
+                    label: 'Średnia ilość błędów',
+                    data: data.taint_error_sex_chart.map(item => item.error),
+                    backgroundColor: 'rgba(206, 106, 255, 0.6)',
+                    borderColor: 'rgba(206, 106, 255, 1)',
+                    borderWidth: 1,
+                },
+            ],
+        });
+          setIshiaharaErrorsAvgSexChart({  // get data to chart avg error in ishihara test divide between females and males
+            labels: data.ishihara_error_test_chart.map(item => item.sex),
+            datasets: [
+                {
+                    label: 'Średnia ilość błędów',
+                    data: data.ishihara_error_test_chart.map(item => item.error),
+                    backgroundColor: 'rgba(237, 134, 255, 0.6)',
+                    borderColor: 'rgba(237, 134, 255, 1)',
+                    borderWidth: 1,
+                },
+            ],
+        });
+          setAllTestsTimeSexChartData({  // get data to chart avg error in ishihara test divide between females and males
+            labels: data.all_tests_avg_time_sex_chart.map(item => item.sex),
+            datasets: [
+                {
+                    label: 'Średni czas (s)',
+                    data: data.all_tests_avg_time_sex_chart.map(item => item.time),
+                    backgroundColor: 'rgba(114, 1, 220, 0.6)',
+                    borderColor: 'rgba(114, 1, 220, 1)',
+                    borderWidth: 1,
+                },
+            ],
+        });
           
           }
         } catch (err) {
@@ -746,12 +880,54 @@ const MainPage = () => {
                         />
                     </div>
                   </div>
+
+                  <div className="chart-container">
+                    <h2>Średni czas wykonanywania wszystkich testów ze względu na płeć</h2>
+                    <div className="chart">
+                        <Bar
+                            data={allTestsTimeSexChartData}
+                            options={{
+                                responsive: true,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Czas (s)',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Przedziały wiekowe',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            color: '#333',
+                                        },
+                                    },
+                                },
+                            }}
+                        />
+                    </div>
+                  </div>
                 </div>
 
                 {/* Divider line */}
                 <div className="divider"></div>
 
-                <h2>Wykresy średnich czasów dla poszczególnych testów</h2>
+                <h2>Wykresy średnich czasów dla poszczególnych testów w przedziałach wiekowych</h2>
                 <div class="chart-section">
                   <div className="chart-container">
                     <h2>Test kolorów</h2>
@@ -883,7 +1059,7 @@ const MainPage = () => {
                 {/* Divider line */}
                 <div className="divider"></div>
 
-                <h2>Wykresy średnich czasów dla poszczególnych barw w Taint Test</h2>
+                <h2>Wykresy średnich czasów dla poszczególnych barw w Taint Test w przedziałach wiekowych</h2>
                 <div class="chart-section">
                   <div className="chart-container">
                     <h2>Barwa czerwona</h2>
@@ -1015,7 +1191,7 @@ const MainPage = () => {
                 {/* Divider line */}
                 <div className="divider"></div>
 
-                <h2>Wykresy średniej ilości błędów dla poszczególnych testów</h2>
+                <h2>Wykresy średniej ilości błędów dla poszczególnych testów w przedziałach wiekowych</h2>
                 <div class="chart-section">
                   <div className="chart-container">
                     <h2>Test kolorów</h2>
@@ -1106,6 +1282,402 @@ const MainPage = () => {
                     <div className="chart">
                         <Bar
                             data={ishiharaErrorAgeBracketChartData}
+                            options={{
+                                responsive: true,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Błędy',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Przedziały wiekowe',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            color: '#333',
+                                        },
+                                    },
+                                },
+                            }}
+                        />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Divider line */}
+                <div className="divider"></div>
+
+                <h2>Wykresy średnich czasów dla poszczególnych testów ze względu na płeć</h2>
+                <div class="chart-section">
+                  <div className="chart-container">
+                    <h2>Test kolorów</h2>
+                    <div className="chart">
+                        <Bar
+                            data={colorTimeAvgSexChart}
+                            options={{
+                                responsive: true,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Czas (s)',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Przedziały wiekowe',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            color: '#333',
+                                        },
+                                    },
+                                },
+                            }}
+                        />
+                    </div>
+                  </div>
+
+                  <div className="chart-container">
+                    <h2>Test barw</h2>
+                    <div className="chart">
+                        <Bar
+                            data={taintTimeAvgSexChart}
+                            options={{
+                                responsive: true,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Czas (s)',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Przedziały wiekowe',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            color: '#333',
+                                        },
+                                    },
+                                },
+                            }}
+                        />
+                    </div>
+                  </div>
+
+                  <div className="chart-container">
+                    <h2>Test Ishihary</h2>
+                    <div className="chart">
+                        <Bar
+                            data={ishiharaTimeAvgSexChart}
+                            options={{
+                                responsive: true,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Czas (s)',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Przedziały wiekowe',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            color: '#333',
+                                        },
+                                    },
+                                },
+                            }}
+                        />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Divider line */}
+                <div className="divider"></div>
+
+                <h2>Wykresy średnich czasów dla poszczególnych barw w Taint Test ze względu na płeć</h2>
+                <div class="chart-section">
+                  <div className="chart-container">
+                    <h2>Barwa czerwona</h2>
+                    <div className="chart">
+                        <Bar
+                            data={taintRedTimeAvgSexChart}
+                            options={{
+                                responsive: true,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Czas (s)',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Przedziały wiekowe',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            color: '#333',
+                                        },
+                                    },
+                                },
+                            }}
+                        />
+                    </div>
+                  </div>
+
+                  <div className="chart-container">
+                    <h2>Barwa zielona</h2>
+                    <div className="chart">
+                        <Bar
+                            data={taintGreenTimeAvgSexChart}
+                            options={{
+                                responsive: true,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Czas (s)',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Przedziały wiekowe',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            color: '#333',
+                                        },
+                                    },
+                                },
+                            }}
+                        />
+                    </div>
+                  </div>
+
+                  <div className="chart-container">
+                    <h2>Barwa niebieska</h2>
+                    <div className="chart">
+                        <Bar
+                            data={taintBlueTimeAvgSexChart}
+                            options={{
+                                responsive: true,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Czas (s)',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Przedziały wiekowe',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            color: '#333',
+                                        },
+                                    },
+                                },
+                            }}
+                        />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Divider line */}
+                <div className="divider"></div>
+
+                <h2>Wykresy średniej ilości błędów dla poszczególnych testów ze względu na płeć</h2>
+                <div class="chart-section">
+                  <div className="chart-container">
+                    <h2>Test kolorów</h2>
+                    <div className="chart">
+                        <Bar
+                            data={colorErrorsAvgSexChart}
+                            options={{
+                                responsive: true,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Błędy',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Przedziały wiekowe',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            color: '#333',
+                                        },
+                                    },
+                                },
+                            }}
+                        />
+                    </div>
+                  </div>
+
+                  <div className="chart-container">
+                    <h2>Test barw</h2>
+                    <div className="chart">
+                        <Bar
+                            data={taintErrorsAvgSexChart}
+                            options={{
+                                responsive: true,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Błędy',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Przedziały wiekowe',
+                                            color: '#666',
+                                        },
+                                        ticks: {
+                                            color: '#666',
+                                        },
+                                    },
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            color: '#333',
+                                        },
+                                    },
+                                },
+                            }}
+                        />
+                    </div>
+                  </div>
+
+                  <div className="chart-container">
+                    <h2>Test Ishihary</h2>
+                    <div className="chart">
+                        <Bar
+                            data={ishiharaErrorsAvgSexChart}
                             options={{
                                 responsive: true,
                                 scales: {
