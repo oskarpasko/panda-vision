@@ -1,21 +1,13 @@
-from flask import Flask, request, jsonify, Blueprint
-import pymysql
+from flask import request, jsonify, Blueprint
+from .api.db_config import get_db_connection
 
 taint_tutorial_blueprint = Blueprint('taint_tutorial', __name__)
 
 @taint_tutorial_blueprint.route("/taint_tutorial", methods=['POST'])
 def taint_tutorial():
-    #data to connection with db
-    hostname = 'localhost'
-    user = 'root'
-    password = 'admin'
 
     # Initializing connection
-    db = pymysql.connections.Connection(
-        host=hostname,
-        user=user,
-        password=password
-    )
+    db = get_db_connection()
 
     # data from Unity getting thru POST method
     time = request.form['time']

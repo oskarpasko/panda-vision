@@ -90,7 +90,7 @@ public class GettingColorTest : MonoBehaviour
                 for (int i = 0; i < rows; i++)
                 {
                     // setting color from DB
-                    Color32 colorToCavas = new Color32(Convert.ToByte(colorsArray2D[i, 0]),     // Red
+                    Color32 colorToCavas = new Color32(Convert.ToByte(colorsArray2D[i, 0]),        // Red
                                                        Convert.ToByte(colorsArray2D[i, 1]),        // Green
                                                        Convert.ToByte(colorsArray2D[i, 2]),        // Blue
                                                        255                                         // Alpha

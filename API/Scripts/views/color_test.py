@@ -1,4 +1,4 @@
-from flask import Flask, Blueprint
+from flask import Blueprint
 import pymysql
 import numpy as np
 
@@ -13,7 +13,7 @@ def color_test():
     #data to connection with db
     hostname = 'localhost'
     user = 'root'
-    password = 'admin'
+    password = 'oskarpasko'
 
     # Initializing connection
     db = pymysql.connections.Connection(

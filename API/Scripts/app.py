@@ -31,7 +31,6 @@ app.register_blueprint(taint_tutorial_blueprint)
 app.register_blueprint(ishihara_test_result_blueprint)
 app.register_blueprint(ishihara_tutorial_blueprint)
 
-app.register_blueprint(ishihara_tutorial_blueprint)
 app.register_blueprint(api_login_blueprint)
 app.register_blueprint(api_main_blueprint)
 app.register_blueprint(api_register_blueprint)
