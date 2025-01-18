@@ -903,7 +903,7 @@ const MainPage = () => {
                                     x: {
                                         title: {
                                             display: true,
-                                            text: 'Przedziały wiekowe',
+                                            text: 'Płeć',
                                             color: '#666',
                                         },
                                         ticks: {
@@ -1347,7 +1347,7 @@ const MainPage = () => {
                                     x: {
                                         title: {
                                             display: true,
-                                            text: 'Przedziały wiekowe',
+                                            text: 'Płeć',
                                             color: '#666',
                                         },
                                         ticks: {
@@ -1389,7 +1389,7 @@ const MainPage = () => {
                                     x: {
                                         title: {
                                             display: true,
-                                            text: 'Przedziały wiekowe',
+                                            text: 'Płeć',
                                             color: '#666',
                                         },
                                         ticks: {
@@ -1431,7 +1431,7 @@ const MainPage = () => {
                                     x: {
                                         title: {
                                             display: true,
-                                            text: 'Przedziały wiekowe',
+                                            text: 'Płeć',
                                             color: '#666',
                                         },
                                         ticks: {
@@ -1479,7 +1479,7 @@ const MainPage = () => {
                                     x: {
                                         title: {
                                             display: true,
-                                            text: 'Przedziały wiekowe',
+                                            text: 'Płeć',
                                             color: '#666',
                                         },
                                         ticks: {
@@ -1521,7 +1521,7 @@ const MainPage = () => {
                                     x: {
                                         title: {
                                             display: true,
-                                            text: 'Przedziały wiekowe',
+                                            text: 'Płeć',
                                             color: '#666',
                                         },
                                         ticks: {
@@ -1563,7 +1563,7 @@ const MainPage = () => {
                                     x: {
                                         title: {
                                             display: true,
-                                            text: 'Przedziały wiekowe',
+                                            text: 'Płeć',
                                             color: '#666',
                                         },
                                         ticks: {
@@ -1611,7 +1611,7 @@ const MainPage = () => {
                                     x: {
                                         title: {
                                             display: true,
-                                            text: 'Przedziały wiekowe',
+                                            text: 'Płeć',
                                             color: '#666',
                                         },
                                         ticks: {
@@ -1653,7 +1653,7 @@ const MainPage = () => {
                                     x: {
                                         title: {
                                             display: true,
-                                            text: 'Przedziały wiekowe',
+                                            text: 'Płeć',
                                             color: '#666',
                                         },
                                         ticks: {
@@ -1695,7 +1695,7 @@ const MainPage = () => {
                                     x: {
                                         title: {
                                             display: true,
-                                            text: 'Przedziały wiekowe',
+                                            text: 'Płeć',
                                             color: '#666',
                                         },
                                         ticks: {
