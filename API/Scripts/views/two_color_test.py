@@ -2,13 +2,12 @@ from flask import Blueprint
 import pymysql
 import numpy as np
 
-color_test_blueprint = Blueprint('color_test', __name__)
+two_color_test_blueprint = Blueprint('two_color_test', __name__)
 
-@color_test_blueprint.route("/color_test",)
-def color_test():
+@two_color_test_blueprint.route("/two_color_test",)
+def two_color_test():
     # array to store all data from DB
-    rows, cols = (1, 7)
-    colors = [[0]*cols]*rows
+    colors = []
 
     #data to connection with db
     hostname = 'localhost'
@@ -26,15 +25,15 @@ def color_test():
     cursor = db.cursor()
 
     # Executing SQL query
-    cursor.execute(f"SELECT * FROM pandavision.color_test;")
+    cursor.execute(f"SELECT * FROM pandavision.two_color_test;")
 
     # Adding data from DB to the 2D array
     for data in cursor:
-        new_row = [data[1], data[2], data[3], data[4], data[5], data[6], data[7]]
+        new_row = [data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8]]
         colors.append(new_row)
 
     # Deleting startup row aka first row (first row -> 0,0,0,0,0,0,0,0)
-    del(colors[0])
+    #del(colors[0])
 
     # Shuffle the 2D array
     np.random.shuffle(colors)
