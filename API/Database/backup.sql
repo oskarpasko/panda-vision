@@ -75,10 +75,20 @@ CREATE TABLE `color_test` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+CREATE TABLE `two_color_test` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `correct_red` int NOT NULL,
+  `correct_green` int NOT NULL,
+  `correct_blue` int NOT NULL,
+  `incorrect_red` int NOT NULL,
+  `incorrect_green` int NOT NULL,
+  `incorrect_blue` int NOT NULL,
+  `correct_answer` varchar(50) NOT NULL,
+  `incorrect_answer` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
-
-
+/* SIMPLE INSERTS */
 
 INSERT INTO pandavision.color_test (red,green,blue,correct_answer,incorrect_answer_A,incorrect_answer_B,incorrect_answer_C) VALUES
 	 (255,0,0,'Czerwony','Pomarańczowy','Niebieski','Zielony'),
