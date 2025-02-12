@@ -1,5 +1,7 @@
 CREATE DATABASE `pandavision` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 
+use pandavision;
+
 -- pandavision.users definition
 
 CREATE TABLE `users` (
@@ -92,7 +94,7 @@ INSERT INTO pandavision.color_test (red,green,blue,correct_answer,incorrect_answ
 
 INSERT INTO pandavision.users (username,passwd,date_of_birth,sex,`role`) VALUES
 	 ('oskarpasko','388aad61adc1b90ac3707d55ff6211d904125d5b39471a22fde89183baaeaa23','2000-10-26 00:00:00','male','admin'),
-	 ('oskarpaskotest','388aad61adc1b90ac3707d55ff6211d904125d5b39471a22fde89183baaeaa23','2000-02-12 00:00:00','male','user'),
+	 ('oskarpaskotest','388aad61adc1b90ac3707d55ff6211d904125d5b39471a22fde89183baaeaa23','2000-02-12 00:00:00','male','user');
 
 
 
