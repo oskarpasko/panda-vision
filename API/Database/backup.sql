@@ -102,6 +102,48 @@ INSERT INTO pandavision.color_test (red,green,blue,correct_answer,incorrect_answ
 	 (67,144,255,'Niebieski','Zielony','Fioletowy','Czerwony'),
 	 (232,236,62,'Żółty','Czerwony','Zielony','Fioletowy');
 
+   INSERT INTO pandavision.two_color_test (correct_red,correct_green,correct_blue,incorrect_red,incorrect_green,incorrect_blue,correct_answer,incorrect_answer) VALUES
+	 (247,88,88,88,247,88,'czerwony','zielony'),
+	 (255,204,51,79,255,51,'pommarańczowy','zielony'),
+	 (244,252,20,29,252,37,'żółty','zielony'),
+	 (128,250,132,250,128,128,'zielony','czerwony'),
+	 (143,222,104,222,210,104,'zielony','pomarańczowy'),
+	 (77,242,137,231,242,77,'zielony','żółty'),
+	 (255,0,0,0,0,0,'czerwony','czarny'),
+	 (24,24,24,154,13,13,'czarny','czerwony'),
+	 (252,245,49,252,184,49,'pomarańczowy','żółty'),
+	 (128,255,81,250,255,81,'zielony','żółty');
+INSERT INTO pandavision.two_color_test (correct_red,correct_green,correct_blue,incorrect_red,incorrect_green,incorrect_blue,correct_answer,incorrect_answer) VALUES
+	 (249,249,11,249,201,11,'żółty','pomarańczowy'),
+	 (247,243,121,155,247,121,'żółty','zielony'),
+	 (248,252,138,252,150,138,'żółty','czerwony'),
+	 (5,215,47,215,5,40,'zielony','czerwony'),
+	 (243,73,101,118,243,73,'czerwony','zielony'),
+	 (240,161,148,240,234,148,'czerwony','źółty'),
+	 (193,32,252,47,32,252,'fioletowy','niebieski'),
+	 (79,186,240,176,79,240,'niebieski','fioletowy'),
+	 (162,38,38,162,154,38,'czerwony','brązowo-żółty'),
+	 (171,159,3,171,3,3,'brązowo-żółty','czerwony');
+INSERT INTO pandavision.two_color_test (correct_red,correct_green,correct_blue,incorrect_red,incorrect_green,incorrect_blue,correct_answer,incorrect_answer) VALUES
+	 (197,249,195,247,249,195,'zielony','beżowy'),
+	 (242,243,212,214,243,212,'beżowy','zielony'),
+	 (169,181,255,169,255,184,'niebieski','zielony'),
+	 (39,159,59,40,7,205,'zielony','niebieski'),
+	 (250,250,38,245,15,15,'żółty','czerwony'),
+	 (243,193,193,250,253,159,'czerwony','żółty'),
+	 (159,206,253,159,253,212,'niebieski','zielony'),
+	 (0,255,0,0,0,255,'zielony','niebieski'),
+	 (247,255,0,255,0,0,'żółty','czerwony'),
+	 (245,66,30,245,245,30,'czerwony','żółty');
+INSERT INTO pandavision.two_color_test (correct_red,correct_green,correct_blue,incorrect_red,incorrect_green,incorrect_blue,correct_answer,incorrect_answer) VALUES
+	 (97,233,48,48,159,233,'zielony','niebieski'),
+	 (20,6,218,6,218,20,'niebieski','zielony'),
+	 (240,253,56,188,56,253,'żółty','fioletowy'),
+	 (255,255,16,222,222,214,'żółtly','szary'),
+	 (174,13,206,206,206,13,'fioletowy','żółty'),
+	 (154,154,148,247,247,159,'szary','żółty');
+
+
 INSERT INTO pandavision.users (username,passwd,date_of_birth,sex,`role`) VALUES
 	 ('oskarpasko','388aad61adc1b90ac3707d55ff6211d904125d5b39471a22fde89183baaeaa23','2000-10-26 00:00:00','male','admin'),
 	 ('oskarpaskotest','388aad61adc1b90ac3707d55ff6211d904125d5b39471a22fde89183baaeaa23','2000-02-12 00:00:00','male','user');
