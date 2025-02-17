@@ -47,10 +47,7 @@ public class TwoColorsTest : MonoBehaviour
     // Mehtod to get colors from db
     IEnumerator GetColor()
     {
-        /*
-!!!!!!!!!!   zmienić wartość na == po testach aplikacji
-        */
-        if(LoggedUsername.loggedUserName != null)
+        if(LoggedUsername.loggedUserName == null)
         {
             SceneManager.LoadScene("LoginScene");
         }
