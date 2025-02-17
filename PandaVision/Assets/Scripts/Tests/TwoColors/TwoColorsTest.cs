@@ -153,7 +153,7 @@ public class TwoColorsTest : MonoBehaviour
                 form.AddField("error_log", errorLog);
                 form.AddField("user", LoggedUsername.loggedUserName);
 
-                using (UnityWebRequest webRequest = UnityWebRequest.Post(ApiUrl.Apiurl + "two_/color_test_result", form))
+                using (UnityWebRequest webRequest = UnityWebRequest.Post(ApiUrl.Apiurl + "two_color_test_result", form))
                 {
                     yield return webRequest.SendWebRequest();
                 }
