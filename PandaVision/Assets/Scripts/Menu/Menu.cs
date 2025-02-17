@@ -8,6 +8,7 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] private GameObject testColorDescButton;
     [SerializeField] private GameObject testTwoColorDescButton;
+    [SerializeField] private GameObject testTwoColorETDescButton;
     [SerializeField] private GameObject testColorCubeDescButton;
     [SerializeField] private GameObject ishiharaDescButton;
 
@@ -17,6 +18,7 @@ public class Menu : MonoBehaviour
         testColorCubeDescButton.SetActive(false);
         ishiharaDescButton.SetActive(false);
         testTwoColorDescButton.SetActive(false);
+        testTwoColorETDescButton.SetActive(false);
         testColorDescButton.SetActive(true);
     }
 
@@ -32,6 +34,7 @@ public class Menu : MonoBehaviour
         testColorDescButton.SetActive(false);
         ishiharaDescButton.SetActive(false);
         testTwoColorDescButton.SetActive(false);
+        testTwoColorETDescButton.SetActive(false);
         testColorCubeDescButton.SetActive(true);
     }
 
@@ -53,6 +56,7 @@ public class Menu : MonoBehaviour
         testColorDescButton.SetActive(false);
         testColorCubeDescButton.SetActive(false);
         testTwoColorDescButton.SetActive(false);
+        testTwoColorETDescButton.SetActive(false);
         ishiharaDescButton.SetActive(true);
     }
 
@@ -74,12 +78,28 @@ public class Menu : MonoBehaviour
         testColorCubeDescButton.SetActive(false);
         ishiharaDescButton.SetActive(false);
         testColorDescButton.SetActive(false);
-        testTwoColorDescButton.SetActive(true);
+        testTwoColorDescButton.SetActive(false);
+        testTwoColorETDescButton.SetActive(true);
     }
 
     // method which starts Color Test Scene
     public void TwoColorTestStart()
     {
         SceneManager.LoadScene("TwoColorTestScene");
+    }
+
+    // method which shows description of Two Color Test
+    public void TwoColorTestETDescription()
+    {
+        testColorCubeDescButton.SetActive(false);
+        ishiharaDescButton.SetActive(false);
+        testColorDescButton.SetActive(false);
+        testTwoColorDescButton.SetActive(true);
+    }
+
+    // method which starts Color Test Scene
+    public void TwoColorETTestStart()
+    {
+        SceneManager.LoadScene("TwoColorTestEyeTrackerScene");
     }
 }
