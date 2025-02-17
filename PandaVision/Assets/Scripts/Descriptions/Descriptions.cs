@@ -5,6 +5,7 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     [SerializeField] private GameObject testColorButton;
+    [SerializeField] private GameObject testTwoColorButton;
     [SerializeField] private GameObject testColorCubeButton;
     [SerializeField] private GameObject ishiharaButton;
 
@@ -23,5 +24,10 @@ public class NewBehaviourScript : MonoBehaviour
     public void ishiharaDescHide()
     {
         ishiharaButton.SetActive(false);
+    }
+    // method which hide description of Two Colors Test
+    public void testTwoColorDescHide()
+    {
+        testTwoColorButton.SetActive(false);
     }
 }

@@ -3,6 +3,7 @@ from flask_cors import CORS
 
 from views.color_test import color_test_blueprint
 from views.two_color_test import two_color_test_blueprint
+from views.two_color_test_result import two_color_test_result_blueprint
 from views.login import login_blueprint
 from views.color_test_result import color_test_result_blueprint
 from views.taint_test_result import taint_test_result_blueprint
@@ -27,6 +28,7 @@ app.register_blueprint(color_test_blueprint)
 app.register_blueprint(color_test_result_blueprint)
 
 app.register_blueprint(two_color_test_blueprint)
+app.register_blueprint(two_color_test_result_blueprint)
 
 app.register_blueprint(taint_test_result_blueprint)
 app.register_blueprint(taint_tutorial_blueprint)
