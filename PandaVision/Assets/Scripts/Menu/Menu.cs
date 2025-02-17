@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     [SerializeField] private GameObject testColorDescButton;
+    [SerializeField] private GameObject testTwoColorDescButton;
     [SerializeField] private GameObject testColorCubeDescButton;
     [SerializeField] private GameObject ishiharaDescButton;
 
@@ -15,6 +16,7 @@ public class Menu : MonoBehaviour
     {
         testColorCubeDescButton.SetActive(false);
         ishiharaDescButton.SetActive(false);
+        testTwoColorDescButton.SetActive(false);
         testColorDescButton.SetActive(true);
     }
 
@@ -29,6 +31,7 @@ public class Menu : MonoBehaviour
     {
         testColorDescButton.SetActive(false);
         ishiharaDescButton.SetActive(false);
+        testTwoColorDescButton.SetActive(false);
         testColorCubeDescButton.SetActive(true);
     }
 
@@ -49,6 +52,7 @@ public class Menu : MonoBehaviour
     {
         testColorDescButton.SetActive(false);
         testColorCubeDescButton.SetActive(false);
+        testTwoColorDescButton.SetActive(false);
         ishiharaDescButton.SetActive(true);
     }
 
@@ -62,5 +66,20 @@ public class Menu : MonoBehaviour
     public void IshiharaTutorialStart()
     {
         SceneManager.LoadScene("IshiharaTutorial");
+    }
+
+    // method which shows description of Two Color Test
+    public void TwoColorTestDescription()
+    {
+        testColorCubeDescButton.SetActive(false);
+        ishiharaDescButton.SetActive(false);
+        testColorDescButton.SetActive(false);
+        testTwoColorDescButton.SetActive(true);
+    }
+
+    // method which starts Color Test Scene
+    public void TwoColorTestStart()
+    {
+        SceneManager.LoadScene("TwoColorTestScene");
     }
 }

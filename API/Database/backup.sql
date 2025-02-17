@@ -61,6 +61,21 @@ CREATE TABLE `color_test_user_results` (
   CONSTRAINT `color_test_user_results_ibfk_1` FOREIGN KEY (`user`) REFERENCES `users` (`username`) ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+-- pandavision.two_color_test_user_results definition
+
+CREATE TABLE `two_color_test_user_results` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `date_of_test` timestamp NOT NULL,
+  `time_of_test` varchar(10) NOT NULL,
+  `correct_colors` varchar(255) DEFAULT NULL,
+  `error_colors` varchar(255) DEFAULT NULL,
+  `error_log` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `user` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `color_test_user_results_ibfk_1` (`user`),
+  CONSTRAINT `two_color_test_user_results_ibfk_1` FOREIGN KEY (`user`) REFERENCES `users` (`username`) ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 -- pandavision.color_test definition
 
 CREATE TABLE `color_test` (
