@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'user', component: UserComponent },
   { path: 'admin', component: AdminComponent },
-  // Możesz dodać więcej tras
+  { path: 'register', loadChildren: () => import('./registration/registration.module').then(m => m.RegistrationModule) },
 ];
 
 @NgModule({

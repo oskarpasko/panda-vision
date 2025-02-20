@@ -1,0 +1,39 @@
+<div class="registration-container">
+    <form class="registration-form" (ngSubmit)="register()">
+      <h2>Rejestracja</h2>
+  
+      <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+  
+      <div class="input-group">
+        <input type="text" [(ngModel)]="username" name="username" placeholder="Nazwa użytkownika" required />
+      </div>
+  
+      <div class="input-group">
+        <input type="date" [(ngModel)]="dateOfBirth" name="dateOfBirth" required />
+      </div>
+  
+      <div class="input-group">
+        <select [(ngModel)]="gender" name="gender" required>
+          <option value="">Wybierz płeć</option>
+          <option value="female">Kobieta</option>
+          <option value="male">Mężczyzna</option>
+          <option value="other">Inna</option>
+        </select>
+      </div>
+  
+      <div class="input-group">
+        <input type="password" [(ngModel)]="password" name="password" placeholder="Hasło" required />
+      </div>
+  
+      <div class="input-group">
+        <input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" placeholder="Potwierdź hasło" required />
+      </div>
+  
+      <button class="register-btn" type="submit" [disabled]="isLoading">{{ isLoading ? 'Rejestrowanie...' : 'Zarejestruj się' }}</button>
+  
+      <div class="login-link">
+        <p>Masz już konto? <a routerLink="/login">Zaloguj się</a></p>
+      </div>
+    </form>
+  </div>
+  
