@@ -7,7 +7,7 @@ import { API_CONFIG } from '../api-endpoints';
   standalone: false,
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
   username: string = '';
