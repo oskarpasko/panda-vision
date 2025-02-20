@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { API_CONFIG } from '../api-endpoints';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   standalone: false,
@@ -18,7 +19,9 @@ export class RegistrationComponent {
   errorMessage: string = '';
   isLoading: boolean = false;
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router, private titleService: Title) {
+    this.titleService.setTitle('Rejestracja');
+  }
 
   register() {
     if (!this.username || !this.dateOfBirth || !this.gender || !this.password || !this.confirmPassword) {

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { API_CONFIG } from '../api-endpoints';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   standalone: false,
@@ -14,7 +15,9 @@ export class LoginComponent {
   password: string = '';
   errorMessage: string = '';
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router, private titleService: Title) {
+    this.titleService.setTitle('Logowanie');
+  }
 
   login() {
     const loginData = {
