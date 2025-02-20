@@ -1,1 +1,31 @@
-<p>user works!</p>
+<div class="main-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h3>Panel użytkownika</h3>
+      <ul>
+        <li><a routerLink="/user/data">Moje dane</a></li>
+        <li><a routerLink="/user/tests">Wyniki testów</a></li>
+        <li><a routerLink="/user/settings">Ustawienia</a></li>
+      </ul>
+    </div>
+  
+    <!-- Main content area -->
+    <div class="main-content">
+      <h2>Witaj, {{ username }}</h2>
+      <p>Sprawdź swoje najnowsze wyniki testów poniżej:</p>
+  
+      <div class="test-summary">
+        <div class="test-item">
+          <h3>Test 1: Matematyka</h3>
+          <p>Wynik: 85%</p>
+          <button>Zobacz szczegóły</button>
+        </div>
+        <div class="test-item">
+          <h3>Test 2: Język Angielski</h3>
+          <p>Wynik: 92%</p>
+          <button>Zobacz szczegóły</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
