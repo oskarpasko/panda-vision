@@ -1,6 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap');
+
+* {
+    font-family: "Cabin", sans-serif;
+  }
+
 html, body {
     margin: 0;
     padding: 0;
+
+  background-image: url('../public/assets/images/webaner.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 430px;
+  margin: 0;
 }
