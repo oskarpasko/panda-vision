@@ -1,0 +1,124 @@
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+
+  .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px; /* Spacing between sections */
+
+      .footer-section {
+          flex: 1 1 200px; /* Ensures each section has a minimum width of 200px */
+          margin-bottom: 20px;
+
+          h3 {
+              font-size: 1.5em;
+              margin-bottom: 10px;
+              color: #fff;
+          }
+
+          p {
+              color: #ccc;
+              font-size: 1em;
+          }
+
+          ul {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+
+              li {
+                  margin-bottom: 10px;
+
+                  a {
+                      color: #fff;
+                      text-decoration: none;
+                      font-size: 1em;
+                      transition: color 0.3s;
+
+                      &:hover {
+                          color: #00bcd4;
+                      }
+                  }
+              }
+          }
+      }
+
+      /* Social Media Icons */
+      .social-icons {
+          display: flex;
+          gap: 20px;
+          margin-top: 20px;
+
+          .social-icon {
+              color: #fff;
+              font-size: 1.5em;
+              transition: color 0.3s;
+
+              &:hover {
+                  color: #00bcd4;
+              }
+          }
+      }
+
+      /* Newsletter */
+      .newsletter-form {
+          display: flex;
+          gap: 10px;
+          flex-wrap: wrap;
+
+          input {
+              padding: 10px;
+              font-size: 1em;
+              border-radius: 5px;
+              border: none;
+              width: 60%;
+              max-width: 350px;
+          }
+
+          button {
+              padding: 10px 20px;
+              background-color: #00bcd4;
+              color: white;
+              font-size: 1em;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+
+              &:hover {
+                  background-color: #0097a7;
+              }
+          }
+      }
+  }
+
+  /* Copyright Section */
+  .footer-bottom {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 10px;
+      border-top: 1px solid #444;
+
+      p {
+          font-size: 1em;
+          color: #ccc;
+      }
+  }
+}
+
+/* Responsiveness: for smaller screens */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center; /* Align sections to the center */
+  }
+
+  .footer-section {
+      flex: 1 1 100%;
+      text-align: center;
+  }
+}

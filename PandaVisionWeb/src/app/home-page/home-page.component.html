@@ -1,18 +1,5 @@
 <div class="home-container">
-  <!-- Pasek nawigacyjny -->
-  <nav class="top-nav">
-    <div class="nav-content">
-      <img src="favicon.ico" alt="Logo" class="logo" />
-      <div class="nav-links">
-        <a routerLink="/" class="menu-item">Strona główna</a>
-        <a routerLink="/about" class="menu-item">O nas</a>
-        <a routerLink="/contact" class="menu-item">Kontakt</a>
-        <a *ngIf="isLoggedIn && user?.role === 'admin'" routerLink="/admin" class="menu-item">Panel administratora</a>
-        <a *ngIf="isLoggedIn && user?.role !== 'admin'" routerLink="/user" class="menu-item">Panel użytkownika</a>
-      </div>
-      <button *ngIf="isLoggedIn" class="logout-button" (click)="logout()">Wyloguj się</button>
-    </div>
-  </nav>
+  <!-- Navigation Bar -->  
 
   <div class="content-container">
     <section class="main-content">
@@ -38,9 +25,8 @@
         <p>Twoja rola: <strong>{{ user?.role }}</strong></p>
       </div>
 
-      <!-- Opisy z obrazkami -->
       <div class="main-container">
-        <!-- Sekcja 1: Slider z funkcjami -->
+        <!-- Section 1: Feature Slider -->
         <section class="feature-slider">
           <h2>Panda Vision</h2>
           <div class="slider-container">
@@ -62,7 +48,7 @@
           </div>   
         </section>
       
-        <!-- Sekcja 2: O Daltonizmie -->
+        <!-- Section 2: About Color Blindness -->
         <section class="color-blindness">
           <p>Daltonizm to termin określający zaburzenia widzenia kolorów. Istnieje wiele rodzajów daltonizmu, w tym:</p>
           <ul>
@@ -73,7 +59,7 @@
           <p>W naszej aplikacji, testy dostępności uwzględniają te zaburzenia, co pozwala na lepsze dostosowanie aplikacji do osób z różnymi rodzajami daltonizmu.</p>
         </section>
       
-        <!-- Sekcja 3: Statystyki z danymi -->
+        <!-- Section 3: Statistics -->
         <section class="stats-section">
           <div class="stats-container">
             <div class="stat-item">
@@ -95,7 +81,7 @@
           </div>
         </section>
       
-        <!-- Sekcja 4: Ciekawostki o dostępności -->
+        <!-- Section 4: Accessibility Facts -->
         <section class="accessibility-facts">
           <h2>Ciekawostki o Dostępności</h2>
           <ul>
@@ -105,7 +91,7 @@
           </ul>
         </section>
       
-        <!-- Sekcja 5: Formularz kontaktowy -->
+        <!-- Section 5: Contact Form -->
         <section class="contact-form">
           <h2>Skontaktuj się z nami</h2>
           <form>
@@ -127,54 +113,5 @@
       </div>
       
     </section>
-  </div>
-
-  <!-- Stopka -->
-  <footer class="footer">
-    <div class="footer-container">
-      <!-- Sekcja: O nas -->
-      <div class="footer-section about">
-        <h3>O Nas</h3>
-        <p>Nasza platforma pomaga w testowaniu dostępności aplikacji. Zapewniamy narzędzia, które wspierają twórców aplikacji w dostosowywaniu produktów do potrzeb osób z różnymi rodzajami niepełnosprawności.</p>
-      </div>
-  
-      <!-- Sekcja: Linki -->
-      <div class="footer-section links">
-        <h3>Linki</h3>
-        <ul>
-          <li><a href="/about">O nas</a></li>
-          <li><a href="/features">Funkcje</a></li>
-          <li><a href="/services">Usługi</a></li>
-          <li><a href="/contact">Kontakt</a></li>
-          <li><a href="/privacy-policy">Polityka prywatności</a></li>
-        </ul>
-      </div>
-  
-      <!-- Sekcja: Social Media -->
-      <div class="footer-section social">
-        <h3>Śledź nas</h3>
-        <div class="social-icons">
-          <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
-          <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-  
-      <!-- Sekcja: Newsletter -->
-      <div class="footer-section newsletter">
-        <h3>Zapisz się do newslettera</h3>
-        <p>Chcesz otrzymywać najnowsze informacje o funkcjach naszej platformy? Zapisz się do naszego newslettera!</p>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Twój adres e-mail" required />
-          <button type="submit">Zapisz się</button>
-        </form>
-      </div>
-    </div>
-  
-    <!-- Sekcja: Copyright -->
-    <div class="footer-bottom">
-      <p>&copy; 2025 Oskar Paśko. Wszelkie prawa zastrzeżone.</p>
-    </div>
-  </footer>  
+  </div>  
 </div>
