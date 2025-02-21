@@ -1,0 +1,13 @@
+<nav class="top-nav">
+    <div class="nav-content">
+      <img src="favicon.ico" alt="Logo" class="logo" />
+      <div class="nav-links">
+        <a routerLink="/" class="menu-item">Strona główna</a>
+        <a routerLink="/about" class="menu-item">O nas</a>
+        <a routerLink="/contact" class="menu-item">Kontakt</a>
+        <a *ngIf="isLoggedIn && user?.role === 'admin'" routerLink="/admin" class="menu-item">Panel administratora</a>
+        <a *ngIf="isLoggedIn && user?.role !== 'admin'" routerLink="/user" class="menu-item">Panel użytkownika</a>
+      </div>
+      <button *ngIf="isLoggedIn" class="logout-button" (click)="logout()">Wyloguj się</button>
+    </div>
+  </nav>

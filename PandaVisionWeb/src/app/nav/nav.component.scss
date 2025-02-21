@@ -1,0 +1,64 @@
+$primary-color: #7201dc;
+
+/* Navigation Bar (Full width, but limited content width) */
+.top-nav {
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center; // Center content
+    position: fixed;
+    z-index: 1000;
+}
+
+/* Navigation Container (Max width: 1500px) */
+.nav-content {
+    width: 100%;
+    max-width: 1500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+/* Navigation Links */
+.nav-links {
+    margin-left: 50px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+}
+
+/* Menu Item */
+.menu-item {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Logout Button */
+.logout-button {
+    background-color: white;
+    color: $primary-color;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: lighten($primary-color, 10%);
+        color: white;
+    }
+}
