@@ -16,6 +16,7 @@ export class HomeComponent {
   errorMessage: string = '';
   isLoggedIn: boolean = false;
   user: any = null;
+  test: string = 'N/A';
 
   // Inject HttpClient for API calls and Title service for setting page title
   constructor(
@@ -60,6 +61,7 @@ export class HomeComponent {
       }
     );
   }
+  
 
   // Array of images for the slider
   images = [

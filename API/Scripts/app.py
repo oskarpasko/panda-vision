@@ -12,6 +12,7 @@ from views.ishihara_test_result import ishihara_test_result_blueprint
 from views.ishihara_tutorial import ishihara_tutorial_blueprint
 from views.api.login import api_login_blueprint
 from views.api.main import api_main_blueprint
+from views.api.main_page import api_main_page_blueprint
 from views.api.register import api_register_blueprint
 from views.api.admin import api_admin_blueprint
 
@@ -38,6 +39,7 @@ app.register_blueprint(ishihara_tutorial_blueprint)
 
 app.register_blueprint(api_login_blueprint)
 app.register_blueprint(api_main_blueprint)
+app.register_blueprint(api_main_page_blueprint)
 app.register_blueprint(api_register_blueprint)
 app.register_blueprint(api_admin_blueprint)
 
