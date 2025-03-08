@@ -12,7 +12,7 @@ def two_color_test():
     #data to connection with db
     hostname = 'localhost'
     user = 'root'
-    password = 'admin'
+    password = 'oskarpasko'
 
     # Initializing connection
     db = pymysql.connections.Connection(

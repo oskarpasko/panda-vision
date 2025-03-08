@@ -1,0 +1,25 @@
+<div class="home-container">
+    <!-- Navigation Bar -->  
+  
+    <div class="content-container">
+        <section class="main-content">
+            <div class="main-container">
+                <h2>Wykresy</h2>
+                <div class="plots">
+                    <div *ngIf="plot1">
+                        <img [src]="'data:image/png;base64,' + plot1" alt="Wykres 1">
+                    </div>
+
+                    <div *ngIf="plot2">
+                        <img [src]="'data:image/png;base64,' + plot2" alt="Wykres 2">
+                    </div>
+                    
+                    <div *ngIf="plot3">
+                        <img [src]="'data:image/png;base64,' + plot3" alt="Wykres 3">
+                    </div>
+                </div> 
+            </div>
+        </section>
+    </div>  
+  </div>
+  

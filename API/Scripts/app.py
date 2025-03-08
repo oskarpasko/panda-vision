@@ -15,6 +15,7 @@ from views.api.main import api_main_blueprint
 from views.api.main_page import api_main_page_blueprint
 from views.api.register import api_register_blueprint
 from views.api.admin import api_admin_blueprint
+from views.api.data.plots import api_plots_blueprint
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -42,6 +43,7 @@ app.register_blueprint(api_main_blueprint)
 app.register_blueprint(api_main_page_blueprint)
 app.register_blueprint(api_register_blueprint)
 app.register_blueprint(api_admin_blueprint)
+app.register_blueprint(api_plots_blueprint)
 
 app.config['CORS_HEADERS'] = 'Content-Type'
 
