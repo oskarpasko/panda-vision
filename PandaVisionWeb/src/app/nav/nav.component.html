@@ -6,7 +6,9 @@
         <a routerLink="/about" class="menu-item">O nas</a>
         <a routerLink="/contact" class="menu-item">Kontakt</a>
         <a *ngIf="isLoggedIn && user?.role === 'admin'" routerLink="/admin" class="menu-item">Panel administratora</a>
+        <a *ngIf="isLoggedIn && user?.role === 'admin'" routerLink="/plots" class="menu-item">Wykresy</a>
         <a *ngIf="isLoggedIn && user?.role !== 'admin'" routerLink="/user" class="menu-item">Panel użytkownika</a>
+        <a *ngIf="isLoggedIn && user?.role !== 'admin'" routerLink="/tests" class="menu-item">Testy</a>
       </div>
       <button *ngIf="isLoggedIn" class="logout-button" (click)="logout()">Wyloguj się</button>
     </div>

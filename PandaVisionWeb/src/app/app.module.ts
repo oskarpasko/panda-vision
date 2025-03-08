@@ -10,6 +10,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home-page/home-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
+import { PlotsComponent } from './admin/plots/plots.component';
+import { TestsComponent } from './user/tests/tests.component';
+import { TwoColorsComponent } from './user/tests/two-colors/two-colors.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { NavComponent } from './nav/nav.component';
     AdminComponent,
     HomeComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    PlotsComponent,
+    TestsComponent,
+    TwoColorsComponent
   ],
   imports: [
     BrowserModule,
