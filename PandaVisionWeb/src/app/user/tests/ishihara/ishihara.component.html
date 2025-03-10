@@ -1,0 +1,21 @@
+<div class="home-container">
+    <!-- Navigation Bar -->  
+  
+    <div class="content-container">
+        <section class="main-content">
+            <div class="ishihara-wrapper">
+                <img [src]="currentImage" alt="Test Ishihary" />
+              
+                <div class="answer-section">
+                  <input
+                    type="number"
+                    [(ngModel)]="userInput"
+                    placeholder="Wpisz liczbę"
+                  />
+                  <button (click)="submitAnswer()">Zatwierdź</button>
+                </div>
+              </div>              
+        </section>
+    </div>  
+  </div>
+  

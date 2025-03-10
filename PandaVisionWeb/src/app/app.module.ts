@@ -13,6 +13,7 @@ import { NavComponent } from './nav/nav.component';
 import { PlotsComponent } from './admin/plots/plots.component';
 import { TestsComponent } from './user/tests/tests.component';
 import { TwoColorsComponent } from './user/tests/two-colors/two-colors.component';
+import { IshiharaComponent } from './user/tests/ishihara/ishihara.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TwoColorsComponent } from './user/tests/two-colors/two-colors.component
     NavComponent,
     PlotsComponent,
     TestsComponent,
-    TwoColorsComponent
+    TwoColorsComponent,
+    IshiharaComponent
   ],
   imports: [
     BrowserModule,
