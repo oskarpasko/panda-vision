@@ -6,6 +6,7 @@ import { HomeComponent } from './home-page/home-page.component';
 import { PlotsComponent } from './admin/plots/plots.component';
 import { TestsComponent } from './user/tests/tests.component';
 import { TwoColorsComponent } from './user/tests/two-colors/two-colors.component';
+import { IshiharaComponent } from './user/tests/ishihara/ishihara.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'plots', component: PlotsComponent },
   { path: 'tests', component: TestsComponent },
   { path: 'two-colors', component: TwoColorsComponent },
+  { path: 'ishihara', component: IshiharaComponent },
   { path: 'register', loadChildren: () => import('./registration/registration.module').then(m => m.RegistrationModule) },
 ];
 
