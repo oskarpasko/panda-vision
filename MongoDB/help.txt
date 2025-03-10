@@ -1,0 +1,3 @@
+Start MongoDB server:
+
+mongod --dbpath /Users/oskarpasko/Documents/GitHub/panda-vision/MongoDB/data --logpath /Users/oskarpasko/Documents/GitHub/panda-vision/MongoDB/logs/mongo.log
