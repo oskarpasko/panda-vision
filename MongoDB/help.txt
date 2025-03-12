@@ -1,3 +1,52 @@
 Start MongoDB server:
 
 mongod --dbpath /Users/oskarpasko/Documents/GitHub/panda-vision/MongoDB/data --logpath /Users/oskarpasko/Documents/GitHub/panda-vision/MongoDB/logs/mongo.log
+
+Create DB:
+use <name>
+
+Insert one row:
+db.flightData.insertOne({
+"departureAirport": "MUC",
+"ArrivalAirport": "SFO",
+"aircraft": "Airbus A380",
+"distance": 12000,
+"intercontinental": true})
+
+db.flightData.insertOne({
+"departureAirport": "TXL",
+"ArrivalAirport": "SLHR",
+_id: "txl-lhr-1"})
+
+Insert Many:
+db.flightData.insertMany([
+{
+"departureAirport": "MUC",
+"ArrivalAirport": "SFO",
+"aircraft": "Airbus A380",
+"distance": 12000,
+"intercontinental": true},
+{
+"departureAirport": "LHR",
+"ArrivalAirport": "TXL",
+"aircraft": "Airbus A320",
+"distance": 950,
+"intercontinental": false}])
+
+Select all:
+db.flightData.find().toArray()
+Select One:
+db.flightData.find({distance: 950})
+db.flightData.find({distance: {$gt: 10000}})
+
+Delete One:
+db.flightData.deleteOne({departureAirport: "TXL"})
+Delete All:
+db.flightData.deleteMany({})
+
+Update One:
+db.flightData.updateOne({distance: 12000}, {$set: {marker: "delete"}})
+Update Many:
+db.flightData.updateMany({}, {$set: {marker: "toDelete"}})
+
+$gt - grater than
