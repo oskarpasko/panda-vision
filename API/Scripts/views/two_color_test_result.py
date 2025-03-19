@@ -1,33 +1,45 @@
 from flask import request, jsonify, Blueprint
-from .api.db_config import get_db_connection
-
+from datetime import datetime
+from .api.db_config import get_mongo_connection
 
 two_color_test_result_blueprint = Blueprint('two_color_test_result', __name__)
 
 @two_color_test_result_blueprint.route("/two_color_test_result", methods=['POST'])
 def two_color_test_result():
-    # Initializing connection
-    db = get_db_connection()
+    # Connect to MongoDB
+    mongo_client = get_mongo_connection()
+    db = mongo_client["panda-vision"]
+    collection = db["two_color_test_user_results"]
 
-    # data from Unity getting thru POST method
-    time = request.form['time']
-    correct_colors = request.form['correct_colors']
-    error_colors = request.form['error_colors']
-    error_log = request.form['error_log']
-    user = request.form['user']
+    try:
+        # Retrieve data from the form
+        time = float(request.form.get('time'))
+        correct_colors = int(request.form.get('correct_colors'))
+        error_colors = int(request.form.get('error_colors'))
+        error_log = request.form.get('error_log', '')
+        user = request.form.get('user')
 
-    # Creating cursor object
-    cursor = db.cursor()
+        # Document matching the jsonSchema
+        document = {
+            "date_of_test": datetime.utcnow(),
+            "time_of_test": time,
+            "correct_colors": correct_colors,
+            "error_colors": error_colors,
+            "error_log": error_log,
+            "start_log": "",
+            "end_log": "",
+            "meantime": [],
+            "user": user
+        }
 
-    # Executing SQL query
-    cursor.execute(f"INSERT INTO pandavision.two_color_test_user_results VALUES (null, CURDATE(), '{time}', '{correct_colors}', '{error_colors}', '{error_log}', '{user}');")
+        # Insert the document into the collection
+        collection.insert_one(document)
 
-    db.commit()
-    return jsonify(), 200
+        return jsonify({"message": "Result saved successfully"}), 200
 
-    # Closing the cursor and connection to the database
-    cursor.close()
-    db.close()
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 
 if __name__ == "__main__":
     app.run(debug=True)
