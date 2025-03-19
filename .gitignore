@@ -13,3 +13,4 @@ __pycache__/
 API/Scripts/views/__pycache__/color_test_result.cpython-312.pyc
 API/Scripts/views/__pycache__/taint_test_result.cpython-312.pyc
 PandaVisionWeb/package-lock.json
+MongoDB/data/diagnostic.data/metrics.interim
