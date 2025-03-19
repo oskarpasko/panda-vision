@@ -6,15 +6,15 @@ color_test_blueprint = Blueprint('color_test', __name__)
 
 @color_test_blueprint.route("/color_test", methods=["GET"])
 def color_test():
-    # Połączenie z MongoDB
+    # Connect to MongoDB
     client = MongoClient("mongodb://localhost:27017/")
     db = client["panda-vision"]
     collection = db["color_test"]
 
-    # Pobranie wszystkich dokumentów
+    # Retrieve all documents
     documents = list(collection.find({}))
 
-    # Przetworzenie danych do tablicy 2D
+    # Process the data into a 2D array
     colors = []
     for doc in documents:
         row = [
@@ -28,10 +28,10 @@ def color_test():
         ]
         colors.append(row)
 
-    # Przemieszanie tablicy
+    # Shuffle the array
     np.random.shuffle(colors)
 
-    # Zwrócenie danych jako JSON
+    # Return the data as JSON
     return jsonify(colors)
 
 if __name__ == "__main__":

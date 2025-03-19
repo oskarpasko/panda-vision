@@ -6,23 +6,23 @@ login_blueprint = Blueprint('login', __name__)
 
 @login_blueprint.route("/", methods=['POST'])
 def login():
-    # Połączenie z Mongo
+    # Connect to MongoDB
     mongo_client = get_mongo_connection()
     db = mongo_client["panda-vision"]
     users_collection = db["users"]
 
-    # Pobranie danych z formularza
+    # Get data from the form
     username = request.form.get('username')
     password = request.form.get('password')
 
     if not username or not password:
         return jsonify({"error": "Missing username or password"}), 400
 
-    # Szukanie użytkownika po loginie
+    # Search for the user by username
     user = users_collection.find_one({"login": username})
 
     if user and bcrypt.checkpw(password.encode('utf-8'), user['password'].encode('utf-8')):
-        # Można opcjonalnie zwrócić dane użytkownika
+        # Optionally return user data
         return jsonify({
             "message": "Login successful",
             "user": {

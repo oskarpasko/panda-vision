@@ -1,38 +1,51 @@
 from flask import request, jsonify, Blueprint
-from .api.db_config import get_db_connection
+from datetime import datetime
+from .api.db_config import get_mongo_connection
 
 taint_test_result_blueprint = Blueprint('taint_test_result', __name__)
 
 @taint_test_result_blueprint.route("/taint_test_result", methods=['POST'])
 def taint_test_result():
 
-    # Initializing connection
-    db = get_db_connection()
+    # Establishing connection to MongoDB
+    mongo_client = get_mongo_connection()
+    db = mongo_client["panda-vision"]
+    collection = db["taint_test_user_results"]
 
-    # data from Unity getting thru POST method
-    time = request.form['time']
-    correct_colors = request.form['correct_colors']
-    error_colors = request.form['error_colors']
-    error_log = request.form['error_log']
-    user = request.form['user']
+    # Data received from Unity through the POST method
+    time = float(request.form.get('time'))
+    correct_colors = int(request.form.get('correct_colors'))
+    error_colors = int(request.form.get('error_colors'))
+    error_log = request.form.get('error_log', '')
+    user = request.form.get('user')
+    
+    # Mapping the error_log value to a color name
     log = ''
+    if error_log == '0':
+        log = 'Red'
+    elif error_log == '1':
+        log = 'Green'
+    elif error_log == '2':
+        log = 'Blue'
 
-    # Creating cursor object
-    cursor = db.cursor()
+    # Preparing the document to insert into MongoDB
+    result_document = {
+        "date_of_test": datetime.utcnow(),  # current date and time
+        "time_of_test": time,
+        "correct_colors": correct_colors,
+        "error_colors": error_colors,
+        "error_log": log,
+        "start_log": "",  # Empty start log
+        "end_log": "",  # Empty end log
+        "meantime": [],  # Empty meantime array
+        "user": user
+    }
 
-    if error_log == '0':log = 'Red'
-    elif error_log == '1': log = 'Green'
-    elif error_log == '2': log = 'Blue'
+    # Inserting the result into MongoDB
+    collection.insert_one(result_document)
 
-    # Executing SQL query
-    cursor.execute(f"INSERT INTO pandavision.taint_test_user_results VALUES (null, CURDATE(), '{time}', '{correct_colors}', '{error_colors}', '{log}', '{user}');")
-
-    db.commit()
-    return jsonify(), 200
-
-    # Closing the cursor and connection to the database
-    cursor.close()
-    db.close()
+    # Returning a successful response
+    return jsonify({"message": "Result saved successfully"}), 200
 
 if __name__ == "__main__":
     app.run(debug=True)
