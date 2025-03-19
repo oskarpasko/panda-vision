@@ -1,32 +1,40 @@
 from flask import request, jsonify, Blueprint
-from .api.db_config import get_db_connection
+from .api.db_config import get_mongo_connection
+import bcrypt
 
 login_blueprint = Blueprint('login', __name__)
 
 @login_blueprint.route("/", methods=['POST'])
 def login():
-    # Initializing connection
-    db = get_db_connection()
+    # Połączenie z Mongo
+    mongo_client = get_mongo_connection()
+    db = mongo_client["panda-vision"]
+    users_collection = db["users"]
 
-    # data from InputField from Unity getting thru POST method
-    username = request.form['username']
-    password = request.form['password']
+    # Pobranie danych z formularza
+    username = request.form.get('username')
+    password = request.form.get('password')
 
-    # Creating cursor object
-    cursor = db.cursor()
+    if not username or not password:
+        return jsonify({"error": "Missing username or password"}), 400
 
-    # Executing SQL query
-    query = cursor.execute(f"SELECT username FROM pandavision.users WHERE username='{username}' AND passwd=SHA2('{password}', 256);")
+    # Szukanie użytkownika po loginie
+    user = users_collection.find_one({"login": username})
 
-    # checking if data are valid
-    if query == 1:
-        return jsonify(), 200 # if user exists in db
+    if user and bcrypt.checkpw(password.encode('utf-8'), user['password'].encode('utf-8')):
+        # Można opcjonalnie zwrócić dane użytkownika
+        return jsonify({
+            "message": "Login successful",
+            "user": {
+                "login": user['login'],
+                "role": user.get('role'),
+                "status": user.get('status'),
+                "condition": user.get('condition')
+            }
+        }), 200
     else:
-        return jsonify(), 401 # if user doesn't exist
+        return jsonify({"error": "Invalid credentials"}), 401
 
-    # Closing the cursor and connection to the database
-    cursor.close()
-    db.close()
 
 if __name__ == "__main__":
     app.run(debug=True)

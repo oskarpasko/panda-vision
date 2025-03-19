@@ -1,52 +1,38 @@
-from flask import Blueprint
-import pymysql
+from flask import Blueprint, jsonify
+from pymongo import MongoClient
 import numpy as np
 
 color_test_blueprint = Blueprint('color_test', __name__)
 
-@color_test_blueprint.route("/color_test",)
+@color_test_blueprint.route("/color_test", methods=["GET"])
 def color_test():
-    # array to store all data from DB
-    rows, cols = (1, 7)
-    colors = [[0]*cols]*rows
+    # Połączenie z MongoDB
+    client = MongoClient("mongodb://localhost:27017/")
+    db = client["panda-vision"]
+    collection = db["color_test"]
 
-    #data to connection with db
-    hostname = 'localhost'
-    user = 'root'
-    password = 'admin'
+    # Pobranie wszystkich dokumentów
+    documents = list(collection.find({}))
 
-    # Initializing connection
-    db = pymysql.connections.Connection(
-        host=hostname,
-        user=user,
-        password=password
-    )
+    # Przetworzenie danych do tablicy 2D
+    colors = []
+    for doc in documents:
+        row = [
+            doc.get("red", 0),
+            doc.get("green", 0),
+            doc.get("blue", 0),
+            doc.get("correct_answer", ""),
+            doc.get("incorrect_answer_A", ""),
+            doc.get("incorrect_answer_B", ""),
+            doc.get("incorrect_answer_C", "")
+        ]
+        colors.append(row)
 
-    # Creating cursor object
-    cursor = db.cursor()
-
-    # Executing SQL query
-    cursor.execute(f"SELECT * FROM pandavision.color_test;")
-
-    # Adding data from DB to the 2D array
-    for data in cursor:
-        new_row = [data[1], data[2], data[3], data[4], data[5], data[6], data[7]]
-        colors.append(new_row)
-
-    # Deleting startup row aka first row (first row -> 0,0,0,0,0,0,0,0)
-    del(colors[0])
-
-    # Shuffle the 2D array
+    # Przemieszanie tablicy
     np.random.shuffle(colors)
 
-    #print(colors)
-
-    # Closing the cursor and connection to the database
-    cursor.close()
-    db.close()
-
-    # return 2D array of all colors
-    return colors
+    # Zwrócenie danych jako JSON
+    return jsonify(colors)
 
 if __name__ == "__main__":
     app.run(debug=True)

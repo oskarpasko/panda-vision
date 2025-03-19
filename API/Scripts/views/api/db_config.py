@@ -1,4 +1,9 @@
 import pymysql
+from pymongo import MongoClient
+
+def get_mongo_connection():
+    return MongoClient("mongodb://localhost:27017/")
+
 
 # Database configuration
 def get_db_connection():
