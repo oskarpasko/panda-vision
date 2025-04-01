@@ -1,40 +1,42 @@
+<!-- two-colors.component.html -->
 <div class="home-container">
-    <!-- Navigation Bar -->  
-  
-    <div class="content-container">
-        <section class="main-content">
-            <div class="main-container">
-                <div class="container">
-                    <button *ngIf="!isTestRunning" (click)="startTest()">Start</button>
-                  
-                    <div *ngIf="isTestRunning && colors.length > 0" class="color-pair">
-                        <h2>{{ colors[currentIndex][6] }}</h2>
-                        <div class="color-boxes">
-                          <ng-container *ngIf="!isReversed; else reversedColors">
-                            <div 
-                              class="color-box" 
-                              [style.backgroundColor]="'rgb(' + colors[currentIndex][0] + ',' + colors[currentIndex][1] + ',' + colors[currentIndex][2] + ')'"
-                            ></div>
-                            <div 
-                              class="color-box" 
-                              [style.backgroundColor]="'rgb(' + colors[currentIndex][3] + ',' + colors[currentIndex][4] + ',' + colors[currentIndex][5] + ')'"
-                            ></div>
-                          </ng-container>
-                          <ng-template #reversedColors>
-                            <div 
-                              class="color-box" 
-                              [style.backgroundColor]="'rgb(' + colors[currentIndex][3] + ',' + colors[currentIndex][4] + ',' + colors[currentIndex][5] + ')'"
-                            ></div>
-                            <div 
-                              class="color-box" 
-                              [style.backgroundColor]="'rgb(' + colors[currentIndex][0] + ',' + colors[currentIndex][1] + ',' + colors[currentIndex][2] + ')'"
-                            ></div>
-                          </ng-template>
-                        </div>
-                      </div>                      
-                </div>                                    
+  <!-- Navigation Bar -->  
+
+  <div class="content-container">
+    <section class="main-content">
+      <div class="main-container">
+        <div class="container">
+          <button *ngIf="!isTestRunning" (click)="startTest()">Start</button>
+          
+          <div *ngIf="isTestRunning && colors.length > 0" class="color-pair">
+            <!-- Wyświetlanie poprawnego i błędnego koloru -->
+            <h2>{{ colors[currentIndex]?.correct_answer }} vs {{ colors[currentIndex]?.incorrect_answer }}</h2>
+            <div class="color-boxes">
+              <!-- Sprawdzanie, czy kolejność kolorów ma być odwrócona -->
+              <ng-container *ngIf="!isReversed; else reversedColors">
+                <div 
+                  class="color-box" 
+                  [style.backgroundColor]="'rgb(' + colors[currentIndex]?.correct_red + ',' + colors[currentIndex]?.correct_green + ',' + colors[currentIndex]?.correct_blue + ')'"
+                ></div>
+                <div 
+                  class="color-box" 
+                  [style.backgroundColor]="'rgb(' + colors[currentIndex]?.incorrect_red + ',' + colors[currentIndex]?.incorrect_green + ',' + colors[currentIndex]?.incorrect_blue + ')'"
+                ></div>
+              </ng-container>
+              <ng-template #reversedColors>
+                <div 
+                  class="color-box" 
+                  [style.backgroundColor]="'rgb(' + colors[currentIndex]?.incorrect_red + ',' + colors[currentIndex]?.incorrect_green + ',' + colors[currentIndex]?.incorrect_blue + ')'"
+                ></div>
+                <div 
+                  class="color-box" 
+                  [style.backgroundColor]="'rgb(' + colors[currentIndex]?.correct_red + ',' + colors[currentIndex]?.correct_green + ',' + colors[currentIndex]?.correct_blue + ')'"
+                ></div>
+              </ng-template>
             </div>
-        </section>
-    </div>  
-  </div>
-  
+          </div>                      
+        </div>                                    
+      </div>
+    </section>
+  </div>  
+</div>

@@ -1,3 +1,4 @@
+// two-colors.component.ts
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -10,7 +11,18 @@ import { API_CONFIG } from '../../../api-endpoints';
   styleUrl: './two-colors.component.scss'
 })
 export class TwoColorsComponent implements OnInit {
-  colors: number[][] = [];
+  // Zmieniamy typ na obiekt z właściwościami odpowiadającymi strukturze danych
+  colors: {
+    correct_answer: string;
+    correct_red: number;
+    correct_green: number;
+    correct_blue: number;
+    incorrect_answer: string;
+    incorrect_red: number;
+    incorrect_green: number;
+    incorrect_blue: number;
+  }[] = [];
+
   currentIndex: number = 0;
   isTestRunning: boolean = false;
   interval: any;
@@ -23,9 +35,12 @@ export class TwoColorsComponent implements OnInit {
   }
 
   fetchColors(): void {
-    this.http.get<number[][]>(API_CONFIG.baseUrl+API_CONFIG.endpoints.two_colors).subscribe(
+    // Pobieramy dane z API i ustawiamy typ danych
+    this.http.get<typeof this.colors>(API_CONFIG.baseUrl + API_CONFIG.endpoints.two_colors).subscribe(
       (data) => {
         this.colors = data;
+        console.log("Aktualny indeks:", this.currentIndex);
+        console.log("Aktualny kolor:", this.colors[this.currentIndex]);
       },
       (error) => {
         console.error('Error fetching colors:', error);
