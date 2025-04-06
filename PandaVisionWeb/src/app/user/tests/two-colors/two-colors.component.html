@@ -1,4 +1,3 @@
-<!-- two-colors.component.html -->
 <div class="home-container">
   <!-- Navigation Bar -->  
 
@@ -10,7 +9,8 @@
           
           <div *ngIf="isTestRunning && colors.length > 0" class="color-pair">
             <!-- Wyświetlanie poprawnego i błędnego koloru -->
-            <h2>{{ colors[currentIndex]?.correct_answer }} vs {{ colors[currentIndex]?.incorrect_answer }}</h2>
+            <h2>Popatrz na kolor:</h2>
+            <h2>{{ colors[currentIndex]?.correct_answer }}</h2>
             <div class="color-boxes">
               <!-- Sprawdzanie, czy kolejność kolorów ma być odwrócona -->
               <ng-container *ngIf="!isReversed; else reversedColors">
@@ -37,6 +37,12 @@
           </div>                      
         </div>                                    
       </div>
+
+      <!-- Dodane obrazy do rogów w środku -->
+      <img src="assets/images/tags/tag36h11_0.png" alt="Image 1" class="corner-image top-left">
+      <img src="assets/images/tags/tag36h11_1.png" alt="Image 2" class="corner-image top-right">
+      <img src="assets/images/tags/tag36h11_2.png" alt="Image 3" class="corner-image bottom-left">
+      <img src="assets/images/tags/tag36h11_3.png" alt="Image 4" class="corner-image bottom-right">
     </section>
   </div>  
 </div>
