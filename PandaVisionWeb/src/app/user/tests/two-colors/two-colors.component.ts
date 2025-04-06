@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { API_CONFIG } from '../../../api-endpoints';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-two-colors',
@@ -21,12 +22,25 @@ export class TwoColorsComponent implements OnInit {
     incorrect_blue: number;
   }[] = [];
 
+  /*
+    Time of test in miliseconds
+    1000 -> 1s
+  */
+  TIME_OF_TEST: number = 1000;
+
   currentIndex: number = 0;
   isTestRunning: boolean = false;
   interval: any;
   isReversed: boolean = false;
+  showUserInfoPopup: boolean = false;
+  gender: 'male' | 'female' | null = null;
+  dateOfBirth: string = '';
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private authService: AuthService
+  ) {}
 
   ngOnInit(): void {
     this.fetchColors();
@@ -36,8 +50,6 @@ export class TwoColorsComponent implements OnInit {
     this.http.get<typeof this.colors>(API_CONFIG.baseUrl + API_CONFIG.endpoints.two_colors).subscribe(
       (data) => {
         this.colors = data;
-        console.log("Aktualny indeks:", this.currentIndex);
-        console.log("Aktualny kolor:", this.colors[this.currentIndex]);
       },
       (error) => {
         console.error('Error fetching colors:', error);
@@ -46,18 +58,39 @@ export class TwoColorsComponent implements OnInit {
   }
 
   startTest(): void {
+    if (!this.authService.isLoggedIn()) {
+      this.showUserInfoPopup = true;
+      return;
+    }
+  
+    this.runTest();
+  }
+  
+  runTest(): void {
     if (this.colors.length === 0) return;
+  
     this.isTestRunning = true;
     this.currentIndex = 0;
     this.randomizeOrder();
+  
     this.interval = setInterval(() => {
       this.currentIndex++;
       this.randomizeOrder();
       if (this.currentIndex >= this.colors.length) {
         this.endTest();
       }
-    }, 1000);
+    }, this.TIME_OF_TEST);
   }
+
+  confirmUserInfo(): void {
+  if (!this.gender || !this.dateOfBirth) {
+    alert('Proszę uzupełnić wszystkie pola.');
+    return;
+  }
+
+  this.showUserInfoPopup = false;
+  this.runTest();
+}
 
   randomizeOrder(): void {
     this.isReversed = Math.random() < 0.5;
@@ -67,23 +100,20 @@ export class TwoColorsComponent implements OnInit {
     clearInterval(this.interval);
     this.isTestRunning = false;
   
-    // Przykładowe dane - można je dynamicznie zebrać od użytkownika (formularz)
+    const isLoggedIn = this.authService.isLoggedIn();
     const payload = {
-      time: this.colors.length,                    // np. 10 sekund testu
-      user: 'anonymous',                           // lub pobrać z sesji/logowania
-      genre: 'unspecified',                        // np. 'male' / 'female'
-      date_of_birth: '2000-01-01T00:00:00.000Z'    // lub null, jeśli nieznana
+      time: this.colors.length,
+      user: isLoggedIn ? this.authService.getUsername() : 'N/A',
+      genre: isLoggedIn ? null : this.gender,
+      date_of_birth: isLoggedIn ? null : new Date(this.dateOfBirth).toISOString()
     };
   
-    this.http.post(API_CONFIG.baseUrl+API_CONFIG.endpoints.two_colors_result, payload).subscribe({
-      next: (res) => {
-        console.log("Wynik zapisany", res);
-        this.router.navigate(['/tests']);
-      },
+    this.http.post(API_CONFIG.baseUrl + API_CONFIG.endpoints.two_colors_result, payload).subscribe({
+      next: () => this.router.navigate(['/tests']),
       error: (err) => {
         console.error("Błąd przy zapisie wyniku:", err);
         this.router.navigate(['/tests']);
       }
     });
-  }  
+  }   
 }
