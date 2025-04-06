@@ -1,4 +1,3 @@
-// two-colors.component.ts
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -11,7 +10,6 @@ import { API_CONFIG } from '../../../api-endpoints';
   styleUrl: './two-colors.component.scss'
 })
 export class TwoColorsComponent implements OnInit {
-  // Zmieniamy typ na obiekt z właściwościami odpowiadającymi strukturze danych
   colors: {
     correct_answer: string;
     correct_red: number;
@@ -35,7 +33,6 @@ export class TwoColorsComponent implements OnInit {
   }
 
   fetchColors(): void {
-    // Pobieramy dane z API i ustawiamy typ danych
     this.http.get<typeof this.colors>(API_CONFIG.baseUrl + API_CONFIG.endpoints.two_colors).subscribe(
       (data) => {
         this.colors = data;
@@ -59,7 +56,7 @@ export class TwoColorsComponent implements OnInit {
       if (this.currentIndex >= this.colors.length) {
         this.endTest();
       }
-    }, 5000);
+    }, 1000);
   }
 
   randomizeOrder(): void {
@@ -69,6 +66,24 @@ export class TwoColorsComponent implements OnInit {
   endTest(): void {
     clearInterval(this.interval);
     this.isTestRunning = false;
-    this.router.navigate(['/tests']);
-  }
+  
+    // Przykładowe dane - można je dynamicznie zebrać od użytkownika (formularz)
+    const payload = {
+      time: this.colors.length,                    // np. 10 sekund testu
+      user: 'anonymous',                           // lub pobrać z sesji/logowania
+      genre: 'unspecified',                        // np. 'male' / 'female'
+      date_of_birth: '2000-01-01T00:00:00.000Z'    // lub null, jeśli nieznana
+    };
+  
+    this.http.post(API_CONFIG.baseUrl+API_CONFIG.endpoints.two_colors_result, payload).subscribe({
+      next: (res) => {
+        console.log("Wynik zapisany", res);
+        this.router.navigate(['/tests']);
+      },
+      error: (err) => {
+        console.error("Błąd przy zapisie wyniku:", err);
+        this.router.navigate(['/tests']);
+      }
+    });
+  }  
 }
