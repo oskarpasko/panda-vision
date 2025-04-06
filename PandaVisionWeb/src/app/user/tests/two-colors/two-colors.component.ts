@@ -22,6 +22,12 @@ export class TwoColorsComponent implements OnInit {
     incorrect_blue: number;
   }[] = [];
 
+  /*
+    Time of test in miliseconds
+    1000 -> 1s
+  */
+  TIME_OF_TEST: number = 1000;
+
   currentIndex: number = 0;
   isTestRunning: boolean = false;
   interval: any;
@@ -73,7 +79,7 @@ export class TwoColorsComponent implements OnInit {
       if (this.currentIndex >= this.colors.length) {
         this.endTest();
       }
-    }, 1000);
+    }, this.TIME_OF_TEST);
   }
 
   confirmUserInfo(): void {
@@ -85,7 +91,6 @@ export class TwoColorsComponent implements OnInit {
   this.showUserInfoPopup = false;
   this.runTest();
 }
-
 
   randomizeOrder(): void {
     this.isReversed = Math.random() < 0.5;
@@ -99,8 +104,8 @@ export class TwoColorsComponent implements OnInit {
     const payload = {
       time: this.colors.length,
       user: isLoggedIn ? this.authService.getUsername() : 'N/A',
-      genre: isLoggedIn ? 'unspecified' : this.gender,
-      date_of_birth: isLoggedIn ? '2000-01-01T00:00:00.000Z' : new Date(this.dateOfBirth).toISOString()
+      genre: isLoggedIn ? null : this.gender,
+      date_of_birth: isLoggedIn ? null : new Date(this.dateOfBirth).toISOString()
     };
   
     this.http.post(API_CONFIG.baseUrl + API_CONFIG.endpoints.two_colors_result, payload).subscribe({

@@ -10,26 +10,36 @@ def two_color_test_result():
     mongo_client = get_mongo_connection()
     db = mongo_client["panda-vision"]
     collection = db["two_color_test_user_results"]
+    users_collection = db["users"] 
 
     try:
-        # Przyjmujemy JSON (Content-Type: application/json)
         data = request.get_json()
 
-        # Wymagane pola
-        time = float(data['time'])  # wymagane
-        date_of_test = datetime.utcnow()  # automatycznie teraz
+        time = float(data['time'])  
+        date_of_test = datetime.utcnow() 
 
         # Opcjonalne pola
         user = data.get('user') or None
         genre = data.get('genre') or None
-
-        dob_str = data.get('date_of_birth')
         date_of_birth = None
+        dob_str = data.get('date_of_birth')
+
         if dob_str:
             try:
                 date_of_birth = date_parser.parse(dob_str)
             except Exception:
                 return jsonify({"error": "Invalid date_of_birth format"}), 400
+
+        if not genre and not date_of_birth:
+            if user:
+                user_data = users_collection.find_one({"login": user})
+                if user_data:
+                    if not genre:
+                        genre = user_data.get("gender") 
+                    if not date_of_birth:
+                        date_of_birth = user_data.get("birthDate") 
+                else:
+                    return jsonify({"error": "User not found"}), 404
 
         # Dokument do zapisania
         result_document = {
