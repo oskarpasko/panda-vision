@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { API_CONFIG } from '../../../api-endpoints';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-two-colors',
@@ -26,7 +27,11 @@ export class TwoColorsComponent implements OnInit {
   interval: any;
   isReversed: boolean = false;
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private authService: AuthService
+  ) {}
 
   ngOnInit(): void {
     this.fetchColors();
@@ -36,8 +41,6 @@ export class TwoColorsComponent implements OnInit {
     this.http.get<typeof this.colors>(API_CONFIG.baseUrl + API_CONFIG.endpoints.two_colors).subscribe(
       (data) => {
         this.colors = data;
-        console.log("Aktualny indeks:", this.currentIndex);
-        console.log("Aktualny kolor:", this.colors[this.currentIndex]);
       },
       (error) => {
         console.error('Error fetching colors:', error);
@@ -67,17 +70,15 @@ export class TwoColorsComponent implements OnInit {
     clearInterval(this.interval);
     this.isTestRunning = false;
   
-    // Przykładowe dane - można je dynamicznie zebrać od użytkownika (formularz)
     const payload = {
-      time: this.colors.length,                    // np. 10 sekund testu
-      user: 'anonymous',                           // lub pobrać z sesji/logowania
-      genre: 'unspecified',                        // np. 'male' / 'female'
-      date_of_birth: '2000-01-01T00:00:00.000Z'    // lub null, jeśli nieznana
+      time: this.colors.length, 
+      user: this.authService.getUsername() ?? 'N/A',                 
+      genre: 'unspecified',                      
+      date_of_birth: '2000-01-01T00:00:00.000Z' 
     };
   
     this.http.post(API_CONFIG.baseUrl+API_CONFIG.endpoints.two_colors_result, payload).subscribe({
-      next: (res) => {
-        console.log("Wynik zapisany", res);
+      next: () => {
         this.router.navigate(['/tests']);
       },
       error: (err) => {
