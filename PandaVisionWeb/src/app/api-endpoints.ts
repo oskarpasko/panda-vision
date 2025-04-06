@@ -6,5 +6,6 @@ export const API_CONFIG = {
     main_page: '/api/main_page',
     plots: '/api/plots',
     two_colors: '/two_color_test',
+    two_colors_result: '/two_color_test_result',
   }
 };
