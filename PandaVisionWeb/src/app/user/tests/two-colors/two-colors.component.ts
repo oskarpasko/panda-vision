@@ -26,6 +26,9 @@ export class TwoColorsComponent implements OnInit {
   isTestRunning: boolean = false;
   interval: any;
   isReversed: boolean = false;
+  showUserInfoPopup: boolean = false;
+  gender: 'male' | 'female' | null = null;
+  dateOfBirth: string = '';
 
   constructor(
     private http: HttpClient,
@@ -49,10 +52,21 @@ export class TwoColorsComponent implements OnInit {
   }
 
   startTest(): void {
+    if (!this.authService.isLoggedIn()) {
+      this.showUserInfoPopup = true;
+      return;
+    }
+  
+    this.runTest();
+  }
+  
+  runTest(): void {
     if (this.colors.length === 0) return;
+  
     this.isTestRunning = true;
     this.currentIndex = 0;
     this.randomizeOrder();
+  
     this.interval = setInterval(() => {
       this.currentIndex++;
       this.randomizeOrder();
@@ -62,6 +76,17 @@ export class TwoColorsComponent implements OnInit {
     }, 1000);
   }
 
+  confirmUserInfo(): void {
+  if (!this.gender || !this.dateOfBirth) {
+    alert('Proszę uzupełnić wszystkie pola.');
+    return;
+  }
+
+  this.showUserInfoPopup = false;
+  this.runTest();
+}
+
+
   randomizeOrder(): void {
     this.isReversed = Math.random() < 0.5;
   }
@@ -70,21 +95,20 @@ export class TwoColorsComponent implements OnInit {
     clearInterval(this.interval);
     this.isTestRunning = false;
   
+    const isLoggedIn = this.authService.isLoggedIn();
     const payload = {
-      time: this.colors.length, 
-      user: this.authService.getUsername() ?? 'N/A',                 
-      genre: 'unspecified',                      
-      date_of_birth: '2000-01-01T00:00:00.000Z' 
+      time: this.colors.length,
+      user: isLoggedIn ? this.authService.getUsername() : 'N/A',
+      genre: isLoggedIn ? 'unspecified' : this.gender,
+      date_of_birth: isLoggedIn ? '2000-01-01T00:00:00.000Z' : new Date(this.dateOfBirth).toISOString()
     };
   
-    this.http.post(API_CONFIG.baseUrl+API_CONFIG.endpoints.two_colors_result, payload).subscribe({
-      next: () => {
-        this.router.navigate(['/tests']);
-      },
+    this.http.post(API_CONFIG.baseUrl + API_CONFIG.endpoints.two_colors_result, payload).subscribe({
+      next: () => this.router.navigate(['/tests']),
       error: (err) => {
         console.error("Błąd przy zapisie wyniku:", err);
         this.router.navigate(['/tests']);
       }
     });
-  }  
+  }   
 }

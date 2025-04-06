@@ -38,6 +38,23 @@
         </div>                                    
       </div>
 
+      <div class="popup-overlay" *ngIf="showUserInfoPopup">
+        <div class="popup-content">
+          <h2>Wprowadź dane</h2>
+          <label>Płeć:</label>
+          <select [(ngModel)]="gender">
+            <option [value]="'male'">Mężczyzna</option>
+            <option [value]="'female'">Kobieta</option>
+          </select>
+      
+          <label>Data urodzenia:</label>
+          <input type="date" [(ngModel)]="dateOfBirth" />
+      
+          <button (click)="confirmUserInfo()">Zatwierdź</button>
+        </div>
+      </div>
+      
+
       <!-- Dodane obrazy do rogów w środku -->
       <img src="assets/images/tags/tag36h11_0.png" alt="Tag1" class="corner-image top-left">
       <img src="assets/images/tags/tag36h11_1.png" alt="Tag2" class="corner-image top-right">
