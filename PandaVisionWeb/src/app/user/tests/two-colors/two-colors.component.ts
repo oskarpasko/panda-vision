@@ -22,10 +22,6 @@ export class TwoColorsComponent implements OnInit {
     incorrect_blue: number;
   }[] = [];
 
-  /*
-    Time of test in miliseconds
-    1000 -> 1s
-  */
   TIME_OF_TEST: number = 1000;
 
   currentIndex: number = 0;
@@ -35,6 +31,7 @@ export class TwoColorsComponent implements OnInit {
   showUserInfoPopup: boolean = false;
   gender: 'male' | 'female' | null = null;
   dateOfBirth: string = '';
+  userInfoConfirmed: boolean = false;
 
   constructor(
     private http: HttpClient,
@@ -44,6 +41,12 @@ export class TwoColorsComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchColors();
+
+    if (!this.authService.isLoggedIn()) {
+      this.showUserInfoPopup = true;
+    } else {
+      this.userInfoConfirmed = true;
+    }
   }
 
   fetchColors(): void {
@@ -58,21 +61,31 @@ export class TwoColorsComponent implements OnInit {
   }
 
   startTest(): void {
-    if (!this.authService.isLoggedIn()) {
+    if (!this.userInfoConfirmed) {
       this.showUserInfoPopup = true;
       return;
     }
-  
+
     this.runTest();
   }
-  
+
+  confirmUserInfo(): void {
+    if (!this.gender || !this.dateOfBirth) {
+      alert('Proszę uzupełnić wszystkie pola.');
+      return;
+    }
+
+    this.userInfoConfirmed = true;
+    this.showUserInfoPopup = false;
+  }
+
   runTest(): void {
     if (this.colors.length === 0) return;
-  
+
     this.isTestRunning = true;
     this.currentIndex = 0;
     this.randomizeOrder();
-  
+
     this.interval = setInterval(() => {
       this.currentIndex++;
       this.randomizeOrder();
@@ -82,16 +95,6 @@ export class TwoColorsComponent implements OnInit {
     }, this.TIME_OF_TEST);
   }
 
-  confirmUserInfo(): void {
-  if (!this.gender || !this.dateOfBirth) {
-    alert('Proszę uzupełnić wszystkie pola.');
-    return;
-  }
-
-  this.showUserInfoPopup = false;
-  this.runTest();
-}
-
   randomizeOrder(): void {
     this.isReversed = Math.random() < 0.5;
   }
@@ -99,7 +102,7 @@ export class TwoColorsComponent implements OnInit {
   endTest(): void {
     clearInterval(this.interval);
     this.isTestRunning = false;
-  
+
     const isLoggedIn = this.authService.isLoggedIn();
     const payload = {
       time: this.colors.length,
@@ -107,7 +110,7 @@ export class TwoColorsComponent implements OnInit {
       genre: isLoggedIn ? null : this.gender,
       date_of_birth: isLoggedIn ? null : new Date(this.dateOfBirth).toISOString()
     };
-  
+
     this.http.post(API_CONFIG.baseUrl + API_CONFIG.endpoints.two_colors_result, payload).subscribe({
       next: () => this.router.navigate(['/tests']),
       error: (err) => {
@@ -115,5 +118,5 @@ export class TwoColorsComponent implements OnInit {
         this.router.navigate(['/tests']);
       }
     });
-  }   
+  }
 }

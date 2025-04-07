@@ -1,43 +1,37 @@
 <div class="home-container">
-  <!-- Navigation Bar -->  
-
   <div class="content-container">
     <section class="main-content">
       <div class="main-container">
         <div class="container">
-          <button *ngIf="!isTestRunning" (click)="startTest()">Start</button>
-          
+          <!-- Start dostępny tylko jeśli popup zamknięty i dane potwierdzone -->
+          <button *ngIf="!isTestRunning && userInfoConfirmed" (click)="startTest()">Start</button>
+
           <div *ngIf="isTestRunning && colors.length > 0" class="color-pair">
-            <!-- Wyświetlanie poprawnego i błędnego koloru -->
             <h2>Popatrz na kolor:</h2>
             <h2>{{ colors[currentIndex]?.correct_answer }}</h2>
             <div class="color-boxes">
-              <!-- Sprawdzanie, czy kolejność kolorów ma być odwrócona -->
               <ng-container *ngIf="!isReversed; else reversedColors">
-                <div 
-                  class="color-box" 
-                  [style.backgroundColor]="'rgb(' + colors[currentIndex]?.correct_red + ',' + colors[currentIndex]?.correct_green + ',' + colors[currentIndex]?.correct_blue + ')'"
-                ></div>
-                <div 
-                  class="color-box" 
-                  [style.backgroundColor]="'rgb(' + colors[currentIndex]?.incorrect_red + ',' + colors[currentIndex]?.incorrect_green + ',' + colors[currentIndex]?.incorrect_blue + ')'"
-                ></div>
+                <div class="color-box" 
+                  [style.backgroundColor]="'rgb(' + colors[currentIndex]?.correct_red + ',' + colors[currentIndex]?.correct_green + ',' + colors[currentIndex]?.correct_blue + ')'">
+                </div>
+                <div class="color-box" 
+                  [style.backgroundColor]="'rgb(' + colors[currentIndex]?.incorrect_red + ',' + colors[currentIndex]?.incorrect_green + ',' + colors[currentIndex]?.incorrect_blue + ')'">
+                </div>
               </ng-container>
               <ng-template #reversedColors>
-                <div 
-                  class="color-box" 
-                  [style.backgroundColor]="'rgb(' + colors[currentIndex]?.incorrect_red + ',' + colors[currentIndex]?.incorrect_green + ',' + colors[currentIndex]?.incorrect_blue + ')'"
-                ></div>
-                <div 
-                  class="color-box" 
-                  [style.backgroundColor]="'rgb(' + colors[currentIndex]?.correct_red + ',' + colors[currentIndex]?.correct_green + ',' + colors[currentIndex]?.correct_blue + ')'"
-                ></div>
+                <div class="color-box" 
+                  [style.backgroundColor]="'rgb(' + colors[currentIndex]?.incorrect_red + ',' + colors[currentIndex]?.incorrect_green + ',' + colors[currentIndex]?.incorrect_blue + ')'">
+                </div>
+                <div class="color-box" 
+                  [style.backgroundColor]="'rgb(' + colors[currentIndex]?.correct_red + ',' + colors[currentIndex]?.correct_green + ',' + colors[currentIndex]?.correct_blue + ')'">
+                </div>
               </ng-template>
             </div>
-          </div>                      
-        </div>                                    
+          </div>
+        </div>
       </div>
 
+      <!-- Popup do danych -->
       <div class="popup-overlay" *ngIf="showUserInfoPopup">
         <div class="popup-content">
           <h2>Wprowadź dane</h2>
@@ -46,20 +40,19 @@
             <option [value]="'male'">Mężczyzna</option>
             <option [value]="'female'">Kobieta</option>
           </select>
-      
+
           <label>Data urodzenia:</label>
           <input type="date" [(ngModel)]="dateOfBirth" />
-      
+
           <button (click)="confirmUserInfo()">Zatwierdź</button>
         </div>
       </div>
-      
 
-      <!-- Dodane obrazy do rogów w środku -->
+      <!-- Obrazy w rogach -->
       <img src="assets/images/tags/tag36h11_0.png" alt="Tag1" class="corner-image top-left">
       <img src="assets/images/tags/tag36h11_1.png" alt="Tag2" class="corner-image top-right">
       <img src="assets/images/tags/tag36h11_2.png" alt="Tag3" class="corner-image bottom-left">
       <img src="assets/images/tags/tag36h11_3.png" alt="Tag4" class="corner-image bottom-right">
     </section>
-  </div>  
+  </div>
 </div>
