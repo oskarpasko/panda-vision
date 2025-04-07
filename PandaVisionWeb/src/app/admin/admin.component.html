@@ -1,1 +1,81 @@
-<p>admin works!</p>
+<app-nav></app-nav>
+<div class="home-container">
+    <div class="content-container">
+      <section class="main-content">
+        <div class="main-container">
+            <h2>Color Tests</h2>
+                <table border="1">
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>User</th>
+                    <th>Correct</th>
+                    <th>Error</th>
+                </tr>
+                <tr *ngFor="let item of colorTests">
+                    <td>{{ item.date_of_test | date:'short' }}</td>
+                    <td>{{ item.time_of_test }}</td>
+                    <td>{{ item.user }}</td>
+                    <td>{{ item.correct_colors }}</td>
+                    <td>{{ item.error_colors }}</td>
+                </tr>
+                </table>
+
+                <h2>Taint Tests</h2>
+                <table border="1">
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>User</th>
+                    <th>Correct</th>
+                    <th>Error</th>
+                </tr>
+                <tr *ngFor="let item of taintTests">
+                    <td>{{ item.date_of_test | date:'short' }}</td>
+                    <td>{{ item.time_of_test }}</td>
+                    <td>{{ item.user }}</td>
+                    <td>{{ item.correct_colors }}</td>
+                    <td>{{ item.error_colors }}</td>
+                </tr>
+                </table>
+
+                <h2>Ishihara Tests</h2>
+                <table border="1">
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>User</th>
+                    <th>Correct</th>
+                    <th>Error</th>
+                </tr>
+                <tr *ngFor="let item of ishiharaTests">
+                    <td>{{ item.date_of_test | date:'short' }}</td>
+                    <td>{{ item.time_of_test }}</td>
+                    <td>{{ item.user }}</td>
+                    <td>{{ item.correct_colors }}</td>
+                    <td>{{ item.error_colors }}</td>
+                </tr>
+                </table>
+
+                <h2>Two Colors Tests</h2>
+                <table border="1">
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>User</th>
+                    <th>Genre</th>
+                    <th>Birth</th>
+                </tr>
+                <tr *ngFor="let item of twoColorsTests">
+                    <td>{{ item.date_of_test | date:'short' }}</td>
+                    <td>{{ item.time_of_test }}</td>
+                    <td>{{ item.genre }}</td>
+                    <td>{{ item.date_of_birth | date:'short' }}</td>
+                    <td>{{ item.user }}</td>
+                </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+</div>
+<app-footer></app-footer>
