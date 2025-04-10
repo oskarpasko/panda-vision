@@ -1,21 +1,47 @@
 <div class="home-container">
-    <!-- Navigation Bar -->  
-  
-    <div class="content-container">
-        <section class="main-content">
-            <div class="ishihara-wrapper">
-                <img [src]="currentImage" alt="Test Ishihary" />
-              
-                <div class="answer-section">
-                  <input
-                    type="number"
-                    [(ngModel)]="userInput"
-                    placeholder="Wpisz liczbę"
-                  />
-                  <button (click)="submitAnswer()">Zatwierdź</button>
-                </div>
-              </div>              
-        </section>
-    </div>  
+  <div class="content-container">
+    <section class="main-content">
+      <div class="main-container">
+        <div class="container">
+          <button *ngIf="!isTestRunning && userInfoConfirmed" (click)="startTest()">Start</button>
+
+          <div *ngIf="isTestRunning" class="ishihara-wrapper">
+            <img [src]="currentImage" alt="Test Ishihary" />
+
+            <div class="answer-section">
+              <input
+                type="number"
+                [(ngModel)]="userInput"
+                placeholder="Wpisz liczbę"
+              />
+              <button (click)="submitAnswer()">Zatwierdź</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Popup z danymi -->
+      <div class="popup-overlay" *ngIf="showUserInfoPopup">
+        <div class="popup-content">
+          <h2>Wprowadź dane</h2>
+          <label>Płeć:</label>
+          <select [(ngModel)]="gender">
+            <option [value]="'male'">Mężczyzna</option>
+            <option [value]="'female'">Kobieta</option>
+          </select>
+
+          <label>Data urodzenia:</label>
+          <input type="date" [(ngModel)]="dateOfBirth" />
+
+          <button (click)="confirmUserInfo()">Zatwierdź</button>
+        </div>
+      </div>
+
+      <!-- Obrazy w rogach -->
+      <img src="assets/images/tags/tag36h11_0.png" class="corner-image top-left" />
+      <img src="assets/images/tags/tag36h11_1.png" class="corner-image top-right" />
+      <img src="assets/images/tags/tag36h11_2.png" class="corner-image bottom-left" />
+      <img src="assets/images/tags/tag36h11_3.png" class="corner-image bottom-right" />
+    </section>
   </div>
-  
+</div>

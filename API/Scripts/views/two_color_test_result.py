@@ -23,6 +23,7 @@ def two_color_test_result():
         genre = data.get('genre') or None
         date_of_birth = None
         dob_str = data.get('date_of_birth')
+        web_test = data.get('web_test')
 
         if dob_str:
             try:
@@ -47,7 +48,8 @@ def two_color_test_result():
             "time_of_test": time,
             "user": user,
             "genre": genre,
-            "date_of_birth": date_of_birth
+            "date_of_birth": date_of_birth,
+            "WebTest": web_test
         }
 
         collection.insert_one(result_document)

@@ -8,53 +8,73 @@ $footer-color: #343a40;
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 .home-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-// Page Layout
 .content-container {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    padding: 20px;
-    padding-top: 40px;
-  }
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
 
-  h2 {
+.main-content {
+  width: 100%;
+  max-width: 1920px;
+  padding: 0;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  height: 800px;
+
+  .main-container {
     text-align: center;
-    margin-bottom: 50px;
-    color: #fff;
-    font-size: 50px;
-  }
-  
-  // Main Section
-  .main-content {
-    width: 80%;
-    max-width: 1500px;
-    padding: 100px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    background-color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      cursor: pointer;
+      border: none;
+      background-color: $primary-color;
+      color: white;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
 
     .ishihara-wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 30px;
-    
+
       img {
         width: 300px;
         height: auto;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       }
-    
+
       .answer-section {
         display: flex;
         gap: 10px;
-    
+
         input {
           padding: 10px;
           font-size: 18px;
@@ -62,21 +82,137 @@ $footer-color: #343a40;
           border: 1px solid #ccc;
           width: 150px;
         }
-    
+
         button {
           padding: 10px 20px;
           font-size: 16px;
-          background-color: rgb(114, 1, 220);
+          background-color: $primary-color;
           color: white;
           border: none;
           border-radius: 5px;
           cursor: pointer;
-    
+
           &:hover {
-            background-color: rgb(90, 0, 180);
+            background-color: darken($primary-color, 10%);
           }
         }
       }
     }
-    
   }
+
+  .popup-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .popup-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    animation: slideUp 0.3s ease-in-out;
+
+    h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      font-weight: 600;
+      color: #444;
+    }
+
+    select,
+    input[type="date"] {
+      padding: 0.6rem;
+      font-size: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      outline: none;
+      transition: border-color 0.2s ease;
+
+      &:focus {
+        border-color: $primary-color;
+      }
+    }
+
+    button {
+      padding: 0.7rem;
+      font-size: 1rem;
+      background-color: $primary-color;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .corner-image {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    pointer-events: none;
+
+    &.top-left {
+      top: 0;
+      left: 0;
+    }
+
+    &.top-right {
+      top: 0;
+      right: 0;
+    }
+
+    &.bottom-left {
+      bottom: 0;
+      left: 0;
+    }
+
+    &.bottom-right {
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

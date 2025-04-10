@@ -7,5 +7,6 @@ export const API_CONFIG = {
     plots: '/api/plots',
     two_colors: '/two_color_test',
     two_colors_result: '/two_color_test_result',
+    ishihara_result: '/ishihara_test_result',
   }
 };
