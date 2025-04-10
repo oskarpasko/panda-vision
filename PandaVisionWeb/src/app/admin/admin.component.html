@@ -45,15 +45,19 @@
                     <th>Date</th>
                     <th>Time</th>
                     <th>User</th>
-                    <th>Correct</th>
+                    <th>Genre</th>
+                    <th>Birth</th>
                     <th>Error</th>
+                    <th>WebTest</th>
                 </tr>
                 <tr *ngFor="let item of ishiharaTests">
                     <td>{{ item.date_of_test | date:'short' }}</td>
                     <td>{{ item.time_of_test }}</td>
                     <td>{{ item.user }}</td>
-                    <td>{{ item.correct_colors }}</td>
+                    <td>{{ item.genre }}</td>
+                    <td>{{ item.date_of_birth | date:'short' }}</td>
                     <td>{{ item.error_colors }}</td>
+                    <td>{{ item.WebTest }}</td>
                 </tr>
                 </table>
 
@@ -65,13 +69,15 @@
                     <th>User</th>
                     <th>Genre</th>
                     <th>Birth</th>
+                    <th>WebTest</th>
                 </tr>
                 <tr *ngFor="let item of twoColorsTests">
                     <td>{{ item.date_of_test | date:'short' }}</td>
                     <td>{{ item.time_of_test }}</td>
+                    <td>{{ item.user }}</td>
                     <td>{{ item.genre }}</td>
                     <td>{{ item.date_of_birth | date:'short' }}</td>
-                    <td>{{ item.user }}</td>
+                    <td>{{ item.WebTest }}</td>
                 </tr>
                 </table>
             </div>

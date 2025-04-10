@@ -19,6 +19,7 @@ export class IshiharaComponent implements OnInit {
   showUserInfoPopup = false;
   gender: 'male' | 'female' | null = null;
   dateOfBirth: string = '';
+  webTest: boolean = true;
   userInfoConfirmed: boolean = false;
 
   startTime: number = 0;
@@ -82,7 +83,8 @@ export class IshiharaComponent implements OnInit {
       time: elapsedTime,
       user: isLoggedIn ? this.authService.getUsername() : 'N/A',
       genre: isLoggedIn ? null : this.gender,
-      date_of_birth: isLoggedIn ? null : new Date(this.dateOfBirth).toISOString()
+      date_of_birth: isLoggedIn ? null : new Date(this.dateOfBirth).toISOString(),
+      web_test: this.webTest
     };
 
     this.http.post(API_CONFIG.baseUrl + API_CONFIG.endpoints.ishihara_result, payload).subscribe({

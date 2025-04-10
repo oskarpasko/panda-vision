@@ -22,7 +22,7 @@ export class TwoColorsComponent implements OnInit {
     incorrect_blue: number;
   }[] = [];
 
-  TIME_OF_TEST: number = 10000;
+  TIME_OF_TEST: number = 1000;
 
   currentIndex: number = 0;
   isTestRunning: boolean = false;
@@ -31,6 +31,7 @@ export class TwoColorsComponent implements OnInit {
   showUserInfoPopup: boolean = false;
   gender: 'male' | 'female' | null = null;
   dateOfBirth: string = '';
+  webTest: boolean = true;
   userInfoConfirmed: boolean = false;
 
   constructor(
@@ -108,7 +109,8 @@ export class TwoColorsComponent implements OnInit {
       time: this.colors.length,
       user: isLoggedIn ? this.authService.getUsername() : 'N/A',
       genre: isLoggedIn ? null : this.gender,
-      date_of_birth: isLoggedIn ? null : new Date(this.dateOfBirth).toISOString()
+      date_of_birth: isLoggedIn ? null : new Date(this.dateOfBirth).toISOString(),
+      web_test: this.webTest
     };
 
     this.http.post(API_CONFIG.baseUrl + API_CONFIG.endpoints.two_colors_result, payload).subscribe({
