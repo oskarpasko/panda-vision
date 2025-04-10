@@ -22,7 +22,7 @@ export class TwoColorsComponent implements OnInit {
     incorrect_blue: number;
   }[] = [];
 
-  TIME_OF_TEST: number = 1000;
+  TIME_OF_TEST: number = 10000;
 
   currentIndex: number = 0;
   isTestRunning: boolean = false;
