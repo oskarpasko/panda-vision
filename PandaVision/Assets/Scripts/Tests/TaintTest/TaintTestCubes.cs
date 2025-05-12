@@ -34,12 +34,12 @@ public class TaintTest : MonoBehaviour
                                                                              Convert.ToByte(x),
                                                                              255);
             cubes[i+5].name = $"{x}255{x}";
-            // Set blue color for 5 cubes
-            cubes[i+10].GetComponent<Renderer>().material.color = new Color32(Convert.ToByte(x),
-                                                                              Convert.ToByte(x),
+            // Set yellow color for 5 cubes
+            cubes[i+10].GetComponent<Renderer>().material.color = new Color32(255,
                                                                               255,
+                                                                              Convert.ToByte(x),
                                                                               255);
-            cubes[i+10].name = $"{x}{x}255";
+            cubes[i+10].name = $"255{x}{x}";
         }
     }
 
