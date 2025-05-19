@@ -16,7 +16,7 @@ def two_color_test():
         documents = list(collection.find({}, {'_id': 0}))  # exclude _id field
 
         # Shuffle the data
-        np.random.shuffle(documents)
+        # np.random.shuffle(documents)
 
         # Return as JSON
         return jsonify(documents), 200
