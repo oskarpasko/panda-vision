@@ -22,7 +22,10 @@ export class TwoColorsComponent implements OnInit {
     incorrect_blue: number;
   }[] = [];
 
-  TIME_OF_TEST: number = 1000;
+  TIME_OF_TEST: number = 2000;
+
+  // Iteracje w których prawidłowe kolory będą po prawe stronie
+  colorsOnRight = [3, 6, 8, 9, 13, 16, 17, 19, 22, 23, 25, 28]; 
 
   currentIndex: number = 0;
   isTestRunning: boolean = false;
@@ -97,7 +100,10 @@ export class TwoColorsComponent implements OnInit {
   }
 
   randomizeOrder(): void {
-    this.isReversed = Math.random() < 0.5;
+    // this.isReversed = Math.random() < 0.5;  // <- Poprawna odpowiedź jest losowo na lewo lub na prawo
+
+    // Poprawne kolory będa po praweh stronie przy iterajach z tablicy < colorsOnRight >
+    this.isReversed = this.colorsOnRight.includes(this.currentIndex + 1);
   }
 
   endTest(): void {
